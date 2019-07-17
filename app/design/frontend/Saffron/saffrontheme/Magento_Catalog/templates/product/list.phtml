@@ -19,7 +19,8 @@ use Magento\Framework\App\Action\Action;
 <?php 
     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
     $category = $objectManager->get('Magento\Framework\Registry')->registry('current_category');//get current category
- if($category->getId()=='3'){	
+    if($category->getId()=='3'){	
+ //Block for shop all page		
 ?>
 <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('shopall')->toHtml(); ?>				
 <?php } else { ?>
