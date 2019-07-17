@@ -1,0 +1,90 @@
+<style>
+.filter-options-item {
+    border-bottom: 0px solid #d1d1d1;
+}
+</style>
+<?php
+/**
+ * Blackbird ContentManager Module
+ *
+ * NOTICE OF LICENSE
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to contact@bird.eu so we can send you a copy immediately.
+ *
+ * @category        Blackbird
+ * @package         Blackbird_ContentManager
+ * @copyright       Copyright (c) 2018 Blackbird (https://black.bird.eu)
+ * @author          Blackbird Team
+ * @license         https://www.advancedcontentmanager.com/license/
+ */
+?>
+<?php
+/** @see \Blackbird\ContentManager\Block\Filter */
+/** @var $block \Blackbird\ContentManager\Block\Filter */
+?>
+<div class="block filter block-filter block-ct-filter" id="content-filter-block"
+     data-mage-init='{"collapsible":{"openedState": "active", "collapsible": true, "active": false, "collateral": { "openedState": "filter-active", "element": "body" } }}'>
+    <div class="block-content filter-content">
+        <?php if ($block->getFilters() && $block->getFilters()->count()): ?>
+            <?php if ($block->hasActiveFilters()): ?>
+                <!--<div class="filter-current">
+                    <div class="filter-current">
+                        <ol class="items">
+                            <?php foreach ($block->getActiveFilters() as $filter): ?>
+                                <li class="item">
+                                    <span class="filter-label"><?= $block->escapeHtml($filter->getTitle()) ?></span>
+                                    <span class="filter-value"><?= $block->escapeHtml($filter->getValue()) ?></span>
+                                    <a class="action remove"
+                                       href="<?= $block->getRemoveUrl($filter->getIdentifier()) ?>"
+                                       title="<?= __('Remove %1', $filter->getTitle()) ?>">
+                                        <span><?= $block->escapeHtml(__('Remove This Item')) ?></span>
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ol>
+                    </div>
+                </div>-->
+            <?php endif; ?>
+            <div class="filter-options" id="narrow-by-list" data-role="content"
+                 data-mage-init='{"accordion":{"openedState": "active", "collapsible": true, "active": false, "multipleCollapsible": false}}'>
+                <?php foreach ($block->getFilters() as $filter): ?>
+                    <div data-role="collapsible" class="filter-options-item">
+                        <div data-role="title" class="filter-options-title">
+                        </div>
+						<ol class="items">
+					<?php foreach ($filter->getAllOptions() as $option): ?>
+					<li class="item">
+		<a href="<?= $block->getFilterUrl($filter->getIdentifier(),
+										$option['value']) ?>"
+										<?php if ($block->isFilterActive($filter->getIdentifier(), $option['value'])): ?> class="current"<?php endif; ?>>
+										<?= $block->escapeHtml($option['label']) ?>
+										<span class="count">
+											<?= $block->getResultFilterCount($filter->getIdentifier(), $option['value']) ?>
+										</span>
+									</a>
+						</li>
+					<?php endforeach; ?>
+							<li class="item">
+								<a href="<?= $block->getClearUrl() ?>"
+									<span class="count">ALL</span>
+								</a>
+							</li>
+						</ol>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php else: ?>
+            <div class="message info empty">
+                <span><?= $block->escapeHtml(__('We can\'t find filters matching the selection.')) ?></span>
+            </div>
+            <script>
+                require([
+                    'jquery'
+                ], function ($) {
+                    $('#content-filter-block').addClass('filter-no-options');
+                });
+            </script>
+        <?php endif; ?>
+    </div>
+</div>

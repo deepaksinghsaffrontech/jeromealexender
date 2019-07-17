@@ -1,0 +1,120 @@
+<?php
+/**
+ * Blackbird ContentManager Module
+ *
+ * NOTICE OF LICENSE
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to contact@bird.eu so we can send you a copy immediately.
+ *
+ * @category        Blackbird
+ * @package         Blackbird_ContentManager
+ * @copyright       Copyright (c) 2018 Blackbird (https://black.bird.eu)
+ * @author          Blackbird Team
+ * @license         https://www.advancedcontentmanager.com/license/
+ */
+?>
+<?php
+/**
+ * @see \Blackbird\ContentManager\Block\View
+ */
+?>
+<?php
+/*
+ * 
+ * 
+ * AVAILABLE METHODS
+ * 
+ * Get all raw values as an array
+ * $content->getData();
+ * 
+ * Get a specific value by his field identifier
+ * $content->getData('field_identifier');
+ * $content->getFieldIdentifier();
+ * $content->getAttributeText('field_identifier');
+ * 
+ * Get content type model
+ * $content->getContentType();
+ * 
+ * Get image URL for an image field type.
+ * $content->getImage($attributeName, $width, $height, $keepRatio, $cropped = false);
+ * 
+ * Get file absolute URL, for a file field typ
+ * $content->getFile($field_identifier);
+ * 
+ * Get content url
+ * $content->getLinkUrl();
+ * 
+ * Render a field in HTML
+ * $content->render($element, $params);
+ * 
+ * See the complete documentation and more examples at:
+ * http://www.advancedcontentmanager.com/documentation/
+ * 
+ */
+?>
+<?php
+/** @var \Blackbird\ContentManager\Model\Content $content */
+$content = $block->getContent();
+/** @var \Blackbird\ContentManager\Model\ContentType $contentType */
+$contentType = $content->getContentType();
+//$repeaterValues = $content->getContentCollection('about_us_gasser_images', '*');
+$identifier = $contentType->getIdentifier();
+?>
+<!--<img src="http://localhost/gassernew/pub/media/contentmanager/content/image.png" class="ct-image" alt="">-->
+<?php if (!empty($block->getTitle())) : ?>
+        <div class="block-title">
+            <strong><?= $block->getTitle() ?></strong>
+        </div>
+    <?php endif; ?>
+
+
+<img src="<?= $content->getImage('thimble_images')?>" />
+
+<?= $content->getData('asfjerome_video'); ?>			
+			
+<div class="test_title">
+<?= $content->getData('asfjerome_title'); ?>
+</div>
+<?php print_r($content->getData('asfjerome_interested')); ?>
+<div class="test_name">
+<?= $content->getData('ask_description'); ?>
+</div>
+<?php echo date('jS \of F Y',strtotime($content->getData('created_at'))); ?>
+
+
+
+<script>
+    require([
+        'jquery'
+    ], function ($) {
+        $(document).ready(function(){
+            // move hero banner to top of the page
+            $('#my-gasser-hero-image').detach().insertAfter('.page-wrapper > .page-header');
+
+            // move the bottom outside main wrapper as well as it needs to have full width
+            //$('.job-posting').detach().insertAfter('#maincontent');
+        })
+    })
+</script>
+
+<style>
+
+.test_name_content .ct-field .testimonial-content {
+    font-family: Montserrat,Medium;
+    color: #8F89A2;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.testimonial-detail {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.testimonial-with-out-images-content {
+    float: left;
+    width: 100%;
+}
+
+</style>

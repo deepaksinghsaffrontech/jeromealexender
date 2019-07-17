@@ -1,0 +1,29 @@
+<div  class="shop_all">
+<?php  $categrie = $this->getShopall();
+//print_r($categrie);
+
+
+foreach($categrie['categries_id'] as $item){
+   //echo "<pre>";print_r($item->getData());
+   //echo $item->getName().'<br>';
+   //echo $item->getName().'<br>';
+   echo $item->getShopall().'<br>';
+   //echo $item->getUrl().'<br>';
+   echo $item['include_in_menu'].'<br>';
+   
+   ?>
+   <a href="<?php echo $item->getUrl()?>" ><?php  echo $item->getName() ;?> </a>
+    <?php 
+   $shopallproduct = $this->getShopallproduct($item->getId());
+	
+	foreach($shopallproduct as $_product){
+		 
+		 echo $_product->getName();
+		 
+	 } 
+	
+}
+
+?>
+
+</div>
