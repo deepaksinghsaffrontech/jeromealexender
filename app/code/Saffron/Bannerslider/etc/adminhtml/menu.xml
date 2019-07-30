@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+* Copyright © 2015 Saffron.com. All rights reserved.
+
+* @author Saffron Team <contact@Saffron.com>
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+  <add id="Saffron_Bannerslider::parent" title="Banner Slider" module="Saffron_Bannerslider" sortOrder="100" resource="Saffron_Bannerslider::parent"/>
+  <add id="Saffron_Bannerslider::bannerslider_banners" title="Manage Banners" module="Saffron_Bannerslider" sortOrder="10" parent="Saffron_Bannerslider::parent" action="bannerslideradmin/banner" resource="Saffron_Bannerslider::bannerslider_banners"/>
+  <add id="Saffron_Bannerslider::settings" title="Settings" module="Saffron_Bannerslider" sortOrder="20" parent="Saffron_Bannerslider::parent" action="adminhtml/system_config/edit/section/bannerslider" resource="Saffron_Bannerslider::settings"/>
+    </menu>
+</config>
+
+  
