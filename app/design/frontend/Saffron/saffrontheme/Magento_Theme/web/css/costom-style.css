@@ -1,4 +1,18 @@
 .minicart-wrapper {
     margin-left: 0;
 }
+
 .nav-sections{margin-bottom: 0px;}
+.page-header .header.panel {
+    padding: 0px 0px 0px 0px;
+    color: #053052;
+}
+.satisfaction-carousel {
+    margin: 5px auto;
+}
+.banner-caption .btn {
+    color: #fff;
+}
+.satisfaction-carousel .owl-theme .owl-nav button.owl-prev, .satisfaction-carousel .owl-theme .owl-nav button.owl-next{
+    box-shadow: 0px 0px;
+}

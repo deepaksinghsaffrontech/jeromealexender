@@ -39,12 +39,23 @@
         </referenceContainer>
         
 		
+		 
+		 
+		 
 		<referenceContainer name="header.container">
 		   
 		
             <container name="header.panel.wrapper" htmlClass="panel wrapper" htmlTag="div" before="-">
                 <container name="header.panel" label="Page Header Panel" htmlTag="div" htmlClass="panel header">
-        
+                    
+					<block class="Magento\Cms\Block\Block" name="head-top-offer"  after="header.panel">
+					<arguments>
+						<argument name="block_id" xsi:type="string">head-top-offer</argument>
+					</arguments>
+		            </block>
+		
+		
+		
 				   <block class="Magento\Framework\View\Element\Template" name="skip_to_content" template="Magento_Theme::html/skip.phtml">
                         <arguments>
                             <argument name="target" xsi:type="string">contentarea</argument>
@@ -87,8 +98,7 @@
 		    </container>
         </referenceContainer>
 		
-		<move element="top.search" as="topsearch" destination="header_right"/>
-        <move element="minicart" as="minicart" destination="header_right" />
+		 <move element="minicart" as="minicart" destination="header.right" before="-"/>
 	
 	   
         <referenceContainer name="page.top">
