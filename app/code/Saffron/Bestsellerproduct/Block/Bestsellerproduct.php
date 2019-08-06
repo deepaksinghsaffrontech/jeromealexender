@@ -96,33 +96,51 @@ class Bestsellerproduct extends \Magento\Catalog\Block\Product\AbstractProduct
  public function getBestsellerProduct()
 			{
 				
-				$qty = $this->getConfig('qty');
+				/*$qty = $this->getConfig('qty');
 			    $select = $this->connection->select()
 					 ->from($this->resource->getTableName('sales_order_item'), 'product_id')
 					 ->order('sum(`qty_ordered`) Desc')
 					 ->group('product_id')
-					 ->limit($qty);
-				   $producIds = array(); 
-				   foreach ($this->connection->query($select)->fetchAll() as $row) {
-					   $producIds[] = $row['product_id'];
-				   }
-				  
-				$products = array();
-				foreach($producIds as $product_id) {
-					$product = $this->productFactory->create()->load($product_id);
-						if($product->getVisibility() == 2||$product->getVisibility() == 3||$product->getVisibility() == 4)
-						// $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/test.log');
-						// $logger = new \Zend\Log\Logger();
-						// $logger->addWriter($writer);
-						// $logger->info($product);
-						$products[] = $product;	
+					 ->limit($qty);*/
+			$objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
+			$categoryFactory = $objectManager->get('\Magento\Catalog\Model\CategoryFactory');
+			$categoryId = 10;
+			$category = $categoryFactory->create()->load($categoryId);
+			$categoryProducts = $category->getProductCollection()->addAttributeToSelect('*');	 
+			$producIds = array(); 
+             //echo"<pre>";print_r($categoryProducts->getData());
+  			
+			
+			foreach ($categoryProducts as $row) {
+				$producIds[] = $row['entity_id'];
+			}
+			
+			//echo"<pre>";print_r($producIds);
+			$products = array();
+			foreach($producIds as $product_id) {
+			$product = $this->productFactory->create()->load($product_id);
+			if($product->getVisibility() == 2||$product->getVisibility() == 3||$product->getVisibility() == 4)
+				$products[] = $product;	
 					
-				}
+			}
+			
+			//echo count($products) ;
 			if(count($products)>=1)
 				return $products;
 				return array();
 			
 			}   
+
+ public function getBestsellercurl()
+			{
+            $objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
+			$categoryFactory = $objectManager->get('\Magento\Catalog\Model\CategoryFactory');
+			$categoryId = 10;
+			$category = $categoryFactory->create()->load($categoryId);
+			 
+			 return $category->getUrl();
 			
+			
+			}			
 
 }

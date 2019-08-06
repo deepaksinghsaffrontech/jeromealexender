@@ -16,3 +16,43 @@
 .satisfaction-carousel .owl-theme .owl-nav button.owl-prev, .satisfaction-carousel .owl-theme .owl-nav button.owl-next{
     box-shadow: 0px 0px;
 }
+
+.footer.content {
+    max-width: 100%;
+    padding: 0px;
+}
+
+footer.page-footer {
+    background: transparent;
+    padding: 0px;
+}
+
+.page-header .panel.wrapper {
+    background: #FCDCD4;
+    padding: 5px 0 5px;
+    text-align: center;
+}
+.page-header .header.panel {
+    padding: 0px 0px 0px 0px;
+    color: #053052;
+}
+.satisfaction-carousel {
+    margin: 5px auto;
+}
+.minicart-wrapper {
+    margin-left: 0;
+}
+.nav-sections {
+    margin-bottom: 0px;
+}
+.footer-links li {
+    display: block;
+    margin: 0 0 20px;
+}
+.ask-info-inner .inner {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    transform: translate(-10%, -30%);
+    width: 100%;
+}

@@ -1,0 +1,72 @@
+<?php  $subcats =  $this->getHomecategries(); ?>    
+	 
+	 <div class="front-shop-category" >
+                <div class="container">
+                  <h3>Shop by Category</h3>
+                  <div class="shop-category-carousel">
+                    <div class="owl-carousel owl-theme">
+	 <?php
+        foreach ($subcats as $subcat) {
+         $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+         $subcategory = $objectManager->create('Magento\Catalog\Model\Category')->load($subcat['entity_id']);   
+         $subcat_url = $subcat->getUrl();
+         $subcat_img = "";
+         $placeholder_img = "/media/placeholder.png";
+         ?>
+        <?php if($subcat->getIsActive()) : ?>
+        <?php //echo $subcategory['showhome'] ;?>
+		
+		 <?php if($subcategory['showhome']==1) : ?>
+           <div class="item">
+              <a href="<?php echo $subcat->getUrl() ;?>" class="category-link">
+              <figure>
+			 
+               <img src=" <?php echo $block->getMediaFolder().'catalog/category/'.$subcategory->getHomeimage();?>" alt="" class="img-fluid">
+              </figure>
+              <span class="name"><?php echo $subcat->getName() ;?></span>
+              </a>
+              </div>         
+                  
+		<?php endif ;?> 
+		<?php endif ;?> 
+		<?php  }  ?>
+     
+                </div>
+                  </div>
+                </div>
+              </div>
+<script type="text/javascript">
+	
+	require([
+	  "jquery",
+	  "owlcarousel/minjs"
+	 ], function($,owlCarousel){
+		$(document).ready(function(){
+		    $('.front-shop-category .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 50,
+            nav: true,
+            dots: false,
+            smartSpeed: 500,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                768: {
+                    items: 3
+                },
+                992: {
+                    items: 4
+                },
+                1025: {
+                    items: 6
+                }
+            }
+        });
+			
+		});
+	});
+</script>

@@ -21,15 +21,16 @@
 	
 ?>
 
-
 <div class="front-best-seller" >
-                <div class="container">
-                    <h2><?php echo $title;?></h2>
-                  <div class="bestseller-carousel">
-                      <div class="owl-carousel owl-theme">
+       <div class="container">
+        <h2><?php echo $title;?></h2>
+        <div class="bestseller-carousel">
+        <div class="owl-carousel owl-theme">
                         
 		<?php 
 			$saleItems =  $block -> getBestsellerProduct(); 
+			
+			//echo"<pre>";print_r($saleItems);
 			$imageBlock =  $block->getLayout()->createBlock('Magento\Catalog\Block\Product\Image');
 			$image = 'new_products_content_widget_grid';
 			$type = 'widget-new-grid';
@@ -40,21 +41,17 @@
 				?>
 						
 						<div class="item">
-                              <img src="images/best_seller_1.jpg" class="img-fluid" />
+                             	<?php echo $productImage->toHtml() ?>
                               <div class="seller-info">
-                                  <div class="star-col">
-                                    <i class="fa fa-star"></i>  
-                                    <i class="fa fa-star"></i>  
-                                    <i class="fa fa-star"></i>  
-                                    <i class="fa fa-star"></i>  
-                                    <i class="fa fa-star"></i>  
-                                  </div>
+                             <?php if ($templateType): ?>
+							<?php echo $block->getReviewsSummaryHtml($_item, $templateType,true); ?>
+							<?php endif; ?>
                                   <div class="seller-name-col">
-                                    <a href="javascript:void(0);" class="title-name">Lorem ipsum dolor</a>
-                                    <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consetetur sadipscing elitr sedconsetetur sadipscing elitr sed ipscing elitr sed</p>
+                                    <a href="<?php echo $block->getProductUrl($_item) ?>" class="title-name"> <?php echo $block->escapeHtml($_item->getName()) ?></a>
+                                    <p><?php echo $_item->getShortDescription(); ?></p>
                                   </div>
                                   <div class="shopnow-col">
-                                      <a href="javascript:void(0);" class="shopnow-btn">Shop Now</a>
+                                      <a href="<?php echo $block->getProductUrl($_item) ?>" class="shopnow-btn">Shop Now</a>
                                   </div>
                               </div>
                           </div>
@@ -64,7 +61,7 @@
                         
                       </div>
                       <div class="shopbest-col-btm">
-                        <a href="javascript:void(0);" class="btn btn-primary">Shop Best Sellers</a>
+                        <a href="<?php echo $this->getBestsellercurl();?>" class="btn btn-primary">Shop Best Sellers</a>
                       </div>
 					  
 					  

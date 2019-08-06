@@ -128,6 +128,7 @@ return [
         'Saffron_Bannerslider' => 1,
         'Saffron_Bestsellerproduct' => 1,
         'Saffron_Blog' => 1,
+        'Saffron_CCandition' => 1,
         'Saffron_Loadjs' => 1,
         'Saffron_Newproductslider' => 1,
         'Saffron_Shopall' => 1,

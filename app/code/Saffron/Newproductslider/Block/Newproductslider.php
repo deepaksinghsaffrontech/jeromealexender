@@ -78,11 +78,14 @@ class Newproductslider extends \Magento\Catalog\Block\Product\AbstractProduct
 		 
 		}
 			
-		public function getNewProduct() {
-				$id = $this->_storeManager->getStore()->getRootCategoryId();
+		
+		
+		
+public function getNewProduct() {
+				$id = 11; //$this->_storeManager->getStore()->getRootCategoryId();
 				$_category =  $this->_categoryFactory->create()->load($id);
-				$children_category = explode(",", $_category->getChildren());
-				$_category =  $this->_categoryFactory->create()->load($children_category[0]);
+				//$children_category = explode(",", $_category->getChildren());
+				//$_category =  $this->_categoryFactory->create()->load($children_category[0]);
 			
 				$todayStartOfDayDate = $this->_localeDate->date()->setTime(0, 0, 0)->format('Y-m-d H:i:s');
 				$todayEndOfDayDate = $this->_localeDate->date()->setTime(23, 59, 59)->format('Y-m-d H:i:s');
@@ -92,9 +95,9 @@ class Newproductslider extends \Magento\Catalog\Block\Product\AbstractProduct
 				$collection->setStoreId($storeId);
 				$collection->setVisibility($this->_catalogProductVisibility->getVisibleInCatalogIds());
 
-				$collection = $this->_addProductAttributesAndPrices(
-					$collection
-				)->addStoreFilter()->addAttributeToFilter(
+		        $collection = $this->_addProductAttributesAndPrices($collection)->addStoreFilter()
+				
+				/*->addAttributeToFilter(
 					'news_from_date',
 					[
 						'or' => [
@@ -117,20 +120,37 @@ class Newproductslider extends \Magento\Catalog\Block\Product\AbstractProduct
 						['attribute' => 'news_from_date', 'is' => new \Zend_Db_Expr('not null')],
 						['attribute' => 'news_to_date', 'is' => new \Zend_Db_Expr('not null')],
 					]
-				)->addAttributeToSort(
+				)
+				*/
+				->addAttributeToSort(
 					'news_from_date',
 					'desc'
-				)->setPageSize(
+				)
+				
+				
+				->setPageSize(
 					$this->getProductsCount()
 				)->setCurPage(
 					1
 				);
+				
+			
 			 $qty = $this->getConfig('qty');	
 			 if($qty<1) $qty = 8;
 			 $collection ->setPageSize($qty); 
-
-				return $collection;
+             
+			 return $collection;
 			}
 
 
+public function getMediaUrl(){
+	 $_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); 
+		$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+		$currentStore = $storeManager->getStore();
+		$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+				
+		return $mediaUrl;
+	
+}			
+			
 }

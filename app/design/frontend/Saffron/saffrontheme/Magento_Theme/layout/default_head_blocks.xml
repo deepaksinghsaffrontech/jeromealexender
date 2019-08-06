@@ -13,10 +13,12 @@
 		  <css src="css/font-style.css" />
 		  <css src="css/owl.carousel.css" />
 		  <css src="css/owl.theme.default.css" />
-		  <css src="css/responsive.css" />
+		 
 		  <css src="css/aos.css" />
-		  <css src="css/style.css" media='all' /> 
+		  <css src="css/style.css" media='all'  /> 
 		  <css src="mage/calendar.css"/>
-
+          <css src="mage/calendar.css"/>
+		  <css src='Magento_Theme::css/costom-style.css' media='all' />
+		  <css src="css/responsive.css" media='all'  />
 	</head>
 </page>
