@@ -83,3 +83,13 @@ ul.social-links li {
     color: #A9AAAC;
     font-family: "BentonSans-Medium";
 }
+.minicart-wrapper .action.showcart:before {
+	display:none;
+}
+
+.minicart-wrapper.bag-col .showcart span {
+    display: block;
+    margin: 6px 0 0;
+    color: #A9AAAC;
+    font-family: "BentonSans-Medium";
+}

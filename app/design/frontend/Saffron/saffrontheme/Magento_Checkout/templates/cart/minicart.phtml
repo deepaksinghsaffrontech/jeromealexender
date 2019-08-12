@@ -41,7 +41,7 @@ $isLoggedIn = $customerSession->isLoggedIn() ;
        data-bind="scope: 'minicart_content'">
     <i class="fa"><img src="<?php echo $mediaUrl ;?>themeimage/shopping_bag.png" alt=""></i>
 
-	  <span class="text"><?= /* @escapeNotVerified */ __('Bag') ?></span>
+	  <span class=""><?= /* @escapeNotVerified */ __('Bag') ?></span>
         <span class="counter qty empty"
               data-bind="css: { empty: !!getCartParam('summary_count') == false }, blockLoader: isLoading">
             <span class="counter-number"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span>
