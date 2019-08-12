@@ -121,3 +121,4 @@ a:visited, .alink:visited {
 .seller-info .product-reviews-summary .reviews-actions {
     display: none;
 }
+.minicart-wrapper .action.showcart.active:before{ display: none;}
