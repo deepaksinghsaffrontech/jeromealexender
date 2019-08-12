@@ -56,3 +56,30 @@ footer.page-footer {
     transform: translate(-10%, -30%);
     width: 100%;
 }
+.header.panel>.header.links {
+    display: none;
+}
+.header-bag {
+    float: right;
+}
+small.copyright {
+    display: none;
+}
+.satisfaction-carousel p {
+ color: #053052;
+}
+.satisfaction-carousel .owl-theme .owl-nav button.owl-prev, .satisfaction-carousel .owl-theme .owl-nav button.owl-next {
+    color: #053052;
+}	
+ul.header-top-menu li {
+    display: inline-block;
+}
+ul.social-links li {
+    display: inline-block;
+}
+.minicart-wrapper.bag-col .showcart span {
+    display: block;
+    margin: 6px 0 0;
+    color: #A9AAAC;
+    font-family: "BentonSans-Medium";
+}

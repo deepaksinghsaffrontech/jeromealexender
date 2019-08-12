@@ -1,7 +1,8 @@
 <?php
 	$isLoggedIn = $block->isLoggedIn();
 ?>
-                    <div class="content-menu">
+<header class="header-top-inner" id="lucian_header">
+   <div class="content-menu">
                       <ul class="header-top-menu">
                           <li><a href="<?php echo $this->getUrl('ask-jerome/'); ?>">Ask Jerome</a></li>
                           <li><a href="javascript:void(0);">Community Reviews</a></li>
@@ -11,11 +12,14 @@
 					
                     <div class="block block-search header-search">
                       <div class="block block-content form-group">
-                          <input type="text" class="form-control" placeholder="Search the website">
+					  
+	 	   <?php //echo $this->getChildHtml('minicart') ?>
+	<?php echo $block->getLayout()->createBlock('Magento\Framework\View\Element\Template')->setTemplate('Magento_Search::form.mini.phtml')->toHtml();?> 
+				  
+                          <!--<input type="text" class="form-control" placeholder="Search the website">
                           <button class="search-btn">
-                            <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
-                            <img src="<?php echo $this->getMediaurl()?>themeimage/search-icon.png" alt="">
-                          </button>
+                          <img src="<?php echo $this->getMediaurl()?>themeimage/search-icon.png" alt="">
+                          </button>-->
                       </div>    
                     </div>
 					
@@ -34,23 +38,22 @@
                       </a>
 					  
 					 <?php endif; ?>	  
-						  
-						  
-						  
-                      </div>
-                      <div class="minicart-wrapper bag-col">
+					 </div>
+                      
+					  <div class="minicart-wrapper bag-col">
                           <a href="javascript:void(0);" class="cart-link">
                               <i class="fa"><img src="<?php echo $this->getMediaurl()?>themeimage/shopping_bag.png" alt=""></i>
                               <span>Bag</span>
                               <span class="cart-circle">0</span>
                           </a>
                       </div>
-					  <?php echo $this->getChildHtml('minicart') ?>
+					
                     </div>
-					  <?php //echo $this->getChildHtml('minicart') ?>
-					  <?php //echo $this->getChildHtml('topsearch') ?>
+						<div class="minicart-header">
+		<?php echo $this->getChildHtml('minicart') ?>
+	</div>
                     
-    
+   </header> 
 		
 	
 		
