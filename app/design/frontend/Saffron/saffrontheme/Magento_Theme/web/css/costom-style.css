@@ -93,3 +93,21 @@ ul.social-links li {
     color: #A9AAAC;
     font-family: "BentonSans-Medium";
 }
+.nav-sections-item-content {
+    background: #F9F9F8;
+}
+.navigation li.level0 {
+    float: left;
+    width: 14.222%;
+    text-align: center;
+    padding: 10px 0;
+}
+.navigation .level0>.level-top {
+    color: #053052;
+}
+.breadcrumbs {
+    background: #f0f0f0;
+    max-width: 100%;
+    padding: 15px;
+    margin-top: 8px;
+}
