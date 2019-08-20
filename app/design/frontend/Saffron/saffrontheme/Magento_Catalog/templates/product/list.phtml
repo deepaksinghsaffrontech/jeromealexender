@@ -20,8 +20,10 @@ $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
 $category = $objectManager->get('Magento\Framework\Registry')->registry('current_category');//get current category
 if(!empty($category)){
 if($category->getId()=='3'){?>
+k;kl;;l
 <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('shopall')->toHtml(); ?>				
 <?php } else { ?>
+hjgjhjh
 <?php
 $_productCollection = $block->getLoadedProductCollection();
 $_helper = $this->helper('Magento\Catalog\Helper\Output');

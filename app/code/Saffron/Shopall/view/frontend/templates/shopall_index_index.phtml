@@ -1,29 +1,75 @@
-<div  class="shop_all">
+
 <?php  $categrie = $this->getShopall();
 //print_r($categrie);
+$templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::DEFAULT_VIEW;
+$imageBlock =  $block->getLayout()->createBlock('Magento\Catalog\Block\Product\Image');
+$image = 'new_products_content_widget_grid';
+$type = 'widget-new-grid';			
+?>
+<div class="category-lissting row-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
 
-
+<?php
 foreach($categrie['categries_id'] as $item){
    //echo "<pre>";print_r($item->getData());
    //echo $item->getName().'<br>';
    //echo $item->getName().'<br>';
-   echo $item->getShopall().'<br>';
+ 
    //echo $item->getUrl().'<br>';
-   echo $item['include_in_menu'].'<br>';
-   
+  
+   if($item->getShopall()== '1' ){
    ?>
-   <a href="<?php echo $item->getUrl()?>" ><?php  echo $item->getName() ;?> </a>
-    <?php 
+ <div class="category-row category-<?php echo $item->getName() ;?>">
+<h2 class="center"><?php echo $item->getName() ;?></h2>
+<div class="row">
+<?php 
    $shopallproduct = $this->getShopallproduct($item->getId());
 	
 	foreach($shopallproduct as $_product){
+		
+		$productImage = $block->getImage($_product, $image);
+		?>
 		 
-		 echo $_product->getName();
+		   <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+            <div class="category-item">
+            <figure>
+			
+			<a href="<?php echo $block->getProductUrl($_product) ?>" >
+			<?php echo $productImage->toHtml() ?>
+			</a>
+			</figure>
+            <div class="seller-info">
+             <div class="star-col">
+              <?php if ($templateType): ?>
+			<?php echo $block->getReviewsSummaryHtml($_product, $templateType,true); ?>
+			<?php endif; ?>
+            </div>
+            <div class="seller-name-col">
+            <a href="<?php  echo $_product->getUrl(); ?>" class="title-name"><?php  echo $_product->getName(); ?></a>
+            <p>  <?php echo $_product->getShortDescription(); ?> </p>
+             <span class="price-span"><?php
+								echo $block->getProductPrice($_product);
+							 ?></span>
+			 
+			 
+							
+			 
+            </div>
+           </div>
+           </div>
+           </div>
 		 
-	 } 
+		 
+		
+		 
+	 <?php } ?>
+	 <div class="col-12 shopall-col">
+     <a href="<?php echo $item->getUrl()?>" class="shopall-link">Shop all <?php  echo $item->getName() ;?></a>
+     </div>
+	 </div>
+</div>
 	
-}
+   <?php }}?>
 
-?>
+
 
 </div>

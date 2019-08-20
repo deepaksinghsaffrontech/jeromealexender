@@ -50,6 +50,9 @@
 		<referenceBlock name="register-link" remove="true"/>	
 		
         <referenceContainer name="header-wrapper" htmlClass="header-content" after="-">
+			
+			
+			
 			<container name="header.top" htmlClass="container" htmlTag="div" after="-">
 				<container name="header.top.row" htmlClass="row" htmlTag="div">
 					<container name="header.logo" htmlClass="col-lg-3 col-md-5 col-12 logo-col" htmlTag="div" before="-" >					

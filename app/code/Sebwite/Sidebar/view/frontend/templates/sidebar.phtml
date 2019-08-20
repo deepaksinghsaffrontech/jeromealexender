@@ -8,14 +8,15 @@ $categories = $block->getCategories();
 $brands     = $block->getBrands();
 ?>
 
-<h3><?php echo __('Categories'); ?></h3>
-<ul class="o-list">
+<div class="sidebar-shop-category row-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+                     
+<ul class="o-list sidebar-category" style="display: block;">
 
     <?php
     // Loop through categories
     foreach ( $categories as $category ) :
         ?>
-        <li class="level0<?php echo($block->isActive($category) ? ' active' : ''); ?>">
+        <li class="shop-item level0<?php echo($block->isActive($category) ? ' active' : ''); ?>">
             <a href="<?php echo $block->getCategoryUrl($category); ?>" title="<?php echo $category->getName(); ?>" class="<?php echo($block->isActive($category) ? ' active' : ''); ?>">
                 <?php echo $category->getName(); ?>
             </a>
@@ -27,6 +28,7 @@ $brands     = $block->getBrands();
         </li>
     <?php endforeach; ?>
 </ul>
+</div>
 <script type="text/javascript">
 	/* Simply invoke iffe of sidebarmodule */
 	require(['jquery','sidebarmodule'], function ($) {});
