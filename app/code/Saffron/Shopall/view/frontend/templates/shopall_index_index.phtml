@@ -10,14 +10,8 @@ $type = 'widget-new-grid';
 
 <?php
 foreach($categrie['categries_id'] as $item){
-   //echo "<pre>";print_r($item->getData());
-   //echo $item->getName().'<br>';
-   //echo $item->getName().'<br>';
- 
-   //echo $item->getUrl().'<br>';
-  
-   if($item->getShopall()== '1' ){
-   ?>
+ if($item->getShopall()== '1' ){
+?>
  <div class="category-row category-<?php echo $item->getName() ;?>">
 <h2 class="center"><?php echo $item->getName() ;?></h2>
 <div class="row">
