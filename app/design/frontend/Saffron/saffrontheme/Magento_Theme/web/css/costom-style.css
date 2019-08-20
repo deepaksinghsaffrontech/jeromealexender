@@ -122,3 +122,11 @@ a:visited, .alink:visited {
     display: none;
 }
 .minicart-wrapper .action.showcart.active:before{ display: none;}
+
+.catalog-category-view .page-title-wrapper.banner-title-notfront {
+    text-align: center;
+    font-size: 40px;
+}
+.category-image.shop-banner img {
+    width: 100%;
+}
