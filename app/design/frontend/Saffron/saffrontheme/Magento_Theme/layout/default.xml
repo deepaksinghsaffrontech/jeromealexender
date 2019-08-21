@@ -175,7 +175,12 @@
             <block class="Magento\Theme\Block\Html\Footer" name="absolute_footer" template="Magento_Theme::html/absolute_footer.phtml" />
         </referenceContainer>
         <referenceContainer name="content">
-            <block class="Magento\Framework\View\Element\FormKey" name="formkey"/>
-        </referenceContainer>
+         <block class="Magento\Framework\View\Element\FormKey" name="formkey"/>
+         <block name="customer.section.config" class="Magento\Customer\Block\SectionConfig"
+               template="Magento_Customer::js/section-config.phtml"/>
+        <block name="customer.customer.data"
+               class="Magento\Customer\Block\CustomerData"
+               template="Magento_Customer::js/customer-data.phtml"/>
+		</referenceContainer>
     </body>
 </page>

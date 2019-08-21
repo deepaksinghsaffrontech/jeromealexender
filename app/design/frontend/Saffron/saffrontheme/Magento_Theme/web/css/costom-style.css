@@ -146,3 +146,4 @@ a:visited, .alink:visited {
 .page-main {
   max-width: 100%;
 }
+.product.media{ display:inherit; }
