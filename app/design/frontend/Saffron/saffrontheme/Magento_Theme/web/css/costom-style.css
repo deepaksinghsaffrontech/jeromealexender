@@ -137,3 +137,9 @@ a:visited, .alink:visited {
     float: right;
     width: 79%;
 }
+.breadcrumbs ul {
+    max-width: 1600px;
+    width: 94%;
+    margin: 0 auto !important;
+    float: none;
+}
