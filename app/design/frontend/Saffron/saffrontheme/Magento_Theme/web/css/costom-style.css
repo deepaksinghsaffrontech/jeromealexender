@@ -106,10 +106,10 @@ ul.social-links li {
     color: #053052;
 }
 .breadcrumbs {
-    background: #f0f0f0;
+  
     max-width: 100%;
     padding: 15px;
-    margin-top: 8px;
+    
 }
 .nav-sections {
     background: #F9F9F8;
@@ -129,4 +129,11 @@ a:visited, .alink:visited {
 }
 .category-image.shop-banner img {
     width: 100%;
+}
+.storelocator-index-index .page-title-wrapper {
+    display: none;
+}
+.store-locator-module {
+    float: right;
+    width: 79%;
 }

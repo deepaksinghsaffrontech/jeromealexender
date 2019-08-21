@@ -6,6 +6,7 @@ return [
         'Magento_Eav' => 1,
         'Magento_Theme' => 1,
         'Magento_Cms' => 1,
+        'Ideo_StoreLocator' => 1,
         'Magento_Customer' => 1,
         'Magento_AdminNotification' => 1,
         'Magento_Indexer' => 1,
