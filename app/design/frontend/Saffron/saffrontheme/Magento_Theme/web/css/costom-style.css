@@ -143,3 +143,6 @@ a:visited, .alink:visited {
     margin: 0 auto !important;
     float: none;
 }
+.page-main {
+  max-width: 100%;
+}
