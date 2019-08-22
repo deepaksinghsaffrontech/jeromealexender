@@ -25,23 +25,116 @@ $collection = $block->getCollection();
 /** @var \Blackbird\ContentManager\Model\ContentList $contentList */
 $contentList = $block->getContentList();
 $link = $block->getLink();
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$storeManager = $objectManager->get('\Magento\Store\Model\StoreManagerInterface');
+$base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_WEB);
 
-echo "<pre>";print_r($block->getActiveFilters()) ;
+//echo "<pre>";print_r($block->getActiveFilters()) ;
 ?>
-<div class="block widget contents-grid grid ct-view ct-listing-<?= $contentList->getUrlKey() ?>"
-     id="ct-listing-<?= $contentList->getId() ?>">
-    <?php if (!empty($block->getTitle())) : ?>
-        <div class="block-title">
-            <strong><?= $block->getTitle() ?></strong>
+
+
+<div class="ask-jerome-inner row-col" data-aos="fade-up" data-aos-offset="150" data-aos-easing="ease-in-sine">
+      <?php if (!empty($block->getTitle())) : ?>
+        <h1><?= $block->getTitle() ?></h1>
+	  <?php endif; ?>
+	
+	
+    <div class="showing-result-col">
+        <div class="row">
+            <!--<div class="col-lg-10 col-md-9 col-12 left-col">
+                <span class="text">Showing results for</span>
+                <div class="show-list">
+                    <ul>
+                        <li><i class="fa fa-times"></i> Face</li>
+                        <li><i class="fa fa-times"></i> Cheeks</li>
+                        <li><i class="fa fa-times"></i> Eyes</li>
+                        <li><i class="fa fa-times"></i> Lips</li>
+                    </ul>
+                </div>
+            </div>-->
+            <div class="col-lg-2 col-md-3 right-col">
+                <div class="form-group">
+                    <select name="" class="form-control">
+                        <option value="">Sort By</option>
+                        <option value="">Sort By</option>
+                        <option value="">Sort By</option>
+                    </select>
+                </div>
+            </div>
         </div>
-    <?php endif; ?>
-    <div class="block-content">
+    </div>
 
-        <div class="text-before"><?= $block->getTextBefore() ?></div>
-<?= $block->getPagerHtml(); ?>
-        <?php if ($collection->count()) : ?>
+    <!--jerome-listing-->
+    <div class="jerome-listing row-col">
+        <div class="row">
+<?php if ($collection->count()) : ?>
+            
+		<?php foreach ($collection as $content) : ?>
+			<div class="col-lg-4 col-md-6 col-12">
+                <div class="jerome-item">
+            <figure>
+            <a  href="<?= $content->getLinkUrl(); ?>">
+			<img src="<?= $content->getImage('thimble_images')?>" class="img-fluid" />
+			</a>
+            </figure>
+              
+			  <div class="jerome-info">
+				<div class="column-1">
+				<a class="title" href="<?= $content->getLinkUrl(); ?>">
+				 <?= $content->getData('asfjerome_title'); ?>
+				</a>
+			    </div>
+                
+		<div class="column-2">
+		<?php //echo date('jS \of F Y',strtotime($content->getData('created_at'))); ?>
+			
+  <span class="date"><?php echo date('jS \of F Y',strtotime($content->getData('created_at'))); ?>
+			</span>
+	<?= $content->getData('asfjerome_video'); ?>
+    <?php $asfjerome_interested = (explode(",",$content->getData('asfjerome_interested'))); ?>
+	<?php $asfjerome_like_to = (explode(",",$content->getData('asfjerome_like_to'))); ?>
+	
+	    <ul>
+		 <?php foreach( $asfjerome_interested as $items ){ ?>
+          <li><a href="<?php echo $base_url.'ask-jerome?asfjerome_interested='.$items ;?>" class="name"><?php echo $items ;?></a></li>
+		 <?php } ?>
+		 <?php foreach( $asfjerome_like_to as $itemss ){ ?>
+          <li><a href="<?php echo $base_url.'ask-jerome?asfjerome_like_to='.$itemss  ;?>" class="name"><?php echo $itemss ;?></a></li>
+		 <?php } ?>
+		 
+		 </ul>
+       </div>
+              </div>
+					
+					
+                </div>
+            </div>
+        <?php endforeach; ?>
+	   <?php else: ?>
+            <div class="message info empty">
+                <span><?= __('We can\'t find contents matching the selection.') ?></span>
+            </div>
+        <?php endif; ?>
+          
 
-            <?php if ($block->hasPagerTop()) : ?>
+		  <div class="col-12 pagination-row">
+                <ul class="pagination-list">
+                    <li class="page-item"><a class="page-link" href="javascript:void(0);"><i class="fa fa-angle-left"></i></a></li>
+                    <li class="page-item"><a class="" href="javascript:void(0);">2</a></li>
+                    <li class="page-item"><span>/</span></li>
+                    <li class="page-item"><a class="" href="javascript:void(0);">4</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void(0);"><i class="fa fa-angle-right"></i></a></li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+    <!--/jerome-listing-->
+
+</div>
+
+<?php if ($block->hasPagerTop()) : ?>
                 <div class="toolbar-bottom">
                     <div class="toolbar top">
                         <?= $block->getPagerHtml(); ?>
@@ -49,47 +142,13 @@ echo "<pre>";print_r($block->getActiveFilters()) ;
                 </div>
             <?php endif; ?>
 
-            <div class="contents-items widget-content-grid">
-                <?php foreach ($collection as $content) : ?>
-				 <?php //echo $content->getData('created_at');?>
-				 
-			<div class="content-item">
-		    
-			<a  href="<?= $content->getLinkUrl(); ?>">
-			<img src="<?= $content->getImage('thimble_images')?>" />
-			</a>
-			<a  href="<?= $content->getLinkUrl(); ?>">
-			 <?= $content->getData('asfjerome_title'); ?>
-			</a>
-			<a  href="<?= $content->getLinkUrl(); ?>"><?= __($link['label']); ?></a>
-			<?= $content->getData('asfjerome_video'); ?>
-			<?php echo date('jS \of F Y',strtotime($content->getData('created_at'))); ?>
-			
-			<?php print_r($content->getData('asfjerome_interested')); ?>
-			<?php print_r($content->getData('asfjerome_like_to')); ?>
-			
-			 
-			 </div>	
-                    
-                <?php endforeach; ?>
-            </div>
-
-            <div style="clear: both"></div>
-
-            <?php if ($block->hasPagerBottom()) : ?>
+  <?php if ($block->hasPagerBottom()) : ?>
                 <div class="toolbar-bottom">
                     <div class="toolbar bottom">
                         <?= $block->getPagerHtml(); ?>
                     </div>
                 </div>
             <?php endif; ?>
+			
+			
 
-        <?php else: ?>
-            <div class="message info empty">
-                <span><?= __('We can\'t find contents matching the selection.') ?></span>
-            </div>
-        <?php endif; ?>
-
-        <div class="text-after"><?= $block->getTextAfter() ?></div>
-    </div>
-</div>

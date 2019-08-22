@@ -61,6 +61,7 @@ footer.page-footer {
 }
 .header-bag {
     float: right;
+	  order: 2;
 }
 small.copyright {
     display: none;
@@ -98,9 +99,8 @@ ul.social-links li {
 }
 .navigation li.level0 {
     float: left;
-    width: 14.222%;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 62px;
 }
 .navigation .level0>.level-top {
     color: #053052;
@@ -166,3 +166,6 @@ a:visited, .alink:visited {
 }
 .minicart-wrapper.bag-col .showcart span{  color: #fff;}
 .minicart-wrapper .action.showcart .bag {color: #A9AAAC;}
+.bag-col {
+  justify-content: center;
+}

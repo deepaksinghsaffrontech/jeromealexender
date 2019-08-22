@@ -1,19 +1,22 @@
-<div class="footer-top">
-<div class="container">
-              <div class="row">
-                <div class="col-md-6 col-12 left-col">
-                  <p>No Risk. Jerome Alexander <span>100% Satisfaction Guarantee</span>.</p>
-                </div>
-                <div class="col-md-6 col-12 right-col">
-                  <p>Free Shipping on Orders over $50</p>
-                </div>
-              </div>
-            </div>
-     </div>    
+<!--footer-->
+<footer class="page-footer"  data-aos="fade" data-aos-offset="100"  data-aos-easing="ease-in-sine">
+  <!--footer-top-->
+  <div class="footer-top">
+	<div class="container">
+			<p>No Risk. Jerome Alexander <span>100% Satisfaction Guarantee</span>.</p>
+			<p>Free Shipping on Orders over $50</p>
+	</div>
+  </div>    
 <div class="footer-bottom">
 <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_bottom')->toHtml(); ?>	
  </div>
-	 
+</footer>
+
+<div class="scroll-top">
+  <a href="javascript:void(0);" class="scroll-link" id="goTop">
+	<i class="fa fa-angle-up"></i>
+  </a>
+</div>	 
 	 
 <script type="text/javascript">
     require(['aos'], function (AOS) {
@@ -24,5 +27,40 @@
 	
 	 });
 		
+</script>
 
-</script>		 
+
+<script type="text/javascript">
+require([ 'jquery'], function($){
+
+$(document).ready(function(){			
+		
+$(window).scroll(function() {
+		if ($(this).scrollTop() > 500) {
+			$('#goTop').fadeIn();
+		} else {
+			$('#goTop').fadeOut();
+		}
+	});
+	// scroll body to 0px on click
+	$('#goTop').click(function() {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 800);
+		return false;
+	});
+
+   $(".sign-col .singin-link").on("click", function(){
+		$(this).toggleClass('active');
+		$(".singin-dropdown").slideToggle('slow');
+
+	 });
+
+	
+ });	
+
+
+});
+</script>	
+
+	 

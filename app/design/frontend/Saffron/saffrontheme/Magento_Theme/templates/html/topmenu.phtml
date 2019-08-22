@@ -23,3 +23,6 @@
         <?= /* @escapeNotVerified */ $block->getChildHtml() ?>
     </ul>
 </nav>
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('mobile_menu')->toHtml();?>
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('head-top-offer')->toHtml();?>
+

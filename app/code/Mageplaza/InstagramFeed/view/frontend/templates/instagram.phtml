@@ -31,7 +31,7 @@ if ($block->isEnable()) :
    
 	<div class="mpinstagramfeed-container get-social-row" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
         <div class="container">
-            <h3><?= /** @noEscape */ __($block->getData('title')) ?></h3>
+            <h3 class="title-main"><?= /** @noEscape */ __($block->getData('title')) ?></h3>
             <div><?= /** @noEscape */ __($block->getData('description')) ?></div>
         </div>
         <div id="mpinstagramfeed-photos-<?= /** @noEscape */ $widgetId ?>" class="row shuffle"></div>

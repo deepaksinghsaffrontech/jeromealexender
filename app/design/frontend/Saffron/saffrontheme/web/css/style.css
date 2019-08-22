@@ -5,9 +5,9 @@ body{
     color:#053052;
     font-size: 16px;
 }
-h1, h2,h3 { color:#053052; font-size:40px; font-family:"BentonSans-Bold"; }
+h1, h2,h3 { color:#053052; font-family:"BentonSans-Bold"; }
 h1, h2, h3 {
-    font-size: 40px;
+    font-size: 43px;
     margin: 0 0 30px;
     position: relative;
 }
@@ -27,9 +27,9 @@ li{ list-style: none; display: inline-block; }
 .btn-primary {
     background-color: #053052;
     border-color: #053052;
-    font-family: "BentonSans-Light";
+    font-family: "BentonSans-Medium";
     font-size: 18px;
-    padding: 12px 30px;
+    padding: 14px 31px;
     border: none;
     border-radius: 2px;
     box-shadow: none;
@@ -44,7 +44,7 @@ li{ list-style: none; display: inline-block; }
 .create-bx .btn:hover {
     background-color: #e7afa0;
     border-color: #e7afa0;
-    color:#fff;
+    color:#053052;
 }
 
 
@@ -159,7 +159,7 @@ footer.page-footer {
     content: "\f105";
 }
 .satisfaction-carousel p {
-    margin: 0; line-height:normal; 
+    margin:2px 0 0; line-height:normal; 
 }
 .satisfaction-carousel {
     max-width: 600px;
@@ -171,20 +171,21 @@ header .header-content {
     width: 100%;
 }
 .logo-col img {
-    max-width: 250px;
+    max-width:364px;
     width:100%;
 }
 .content-menu a {
     color: #6B6B6B;
-    font-size: 18px;
+    font-size: 17px;
     font-family: "GeorgiaRegular";
     text-transform: capitalize;
 }
 .content-menu {
     float: left;
     width: 50%;
-    padding-top: 38px;
-    text-align:center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .logo-col{
     padding-top:25px; padding-bottom:25px;  
@@ -194,30 +195,90 @@ header .header-content {
     margin: 0;
 }
 .content-menu li {
-    padding: 0px 12px;
+    padding: 0px 18px;
+}
+header .header-right {
+    display: flex;
 }
 .header-search {
     float: left;
     width: 30%;
-    padding:20px 15px 0; 
+    padding: 0 15px 0;
+    display: flex;
+    align-items: center;
 }
 .header-bag {
     float: left;
     width: 20%;
+    display: flex;
+    align-items: center;
 }
 .sign-col {
     float: left;
     width: 50%;
     text-align: center;
+    position: relative;
     border-right: 1px solid #F2F1F0;
     border-left: 1px solid #F2F1F0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.sign-col .singin-link {
+    float: left;
+    width: 100%;
+}
+.sign-col .singin-link:hover,
+.sign-col .singin-link.active {
+    /* background:#FCDCD4; */
+}
+.singin-dropdown {
+    min-width: 300px;
+    background: #e6afa1;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+}
+.singin-dropdown ul li {
+    display: block;
+}
+.singin-dropdown ul li a {
+    padding: 15px 0;
+    display: block;
+}
+.singin-dropdown ul li:hover a{
+    background:#fff; 
+}
+.singin-dropdown li a img {
+    width: auto;
+    height: 20px;
+    margin: 0 3px 0 0;
+    position: relative;
+    top: -3px;
 }
 
-.sign-col, .bag-col { padding:24px 4px 25px; }
-.bag-col {
+.singin-dropdown li a .fa-headphones {
+    font-size: 20px;
+    margin-right: 3px;
+}
+.singin-dropdown ul{ margin:0; }
+.singin-dropdown { display: none; }
+
+.bag-col .cart-link { 
+    position: relative;
+    float: left;
+    width: 100%;
+ }
+.bag-col  {
     float: left;
     width: 50%;
     text-align: center;
+    border-right: 1px solid #F2F1F0;
+    display: flex;
+    height: 100%;
+    align-items: center;
 }
 .singin-link span, .cart-link span {
     display: block;
@@ -234,12 +295,14 @@ header .header-content {
     padding-left: 7px;
     padding-right: 40px;
     font-family: "GeorgiaRegular";
+    padding:0 40px 3px 7px; 
+    height:auto;
 }
 header .header-search input { border-bottom: 1px solid #A9AAAC; }
 header .header-search .form-control:focus {
     color: #6B6B6B;
     border:none;
-    border-bottom: 1px solid #053052;
+    border-bottom: 1px solid #A9AAAC;
     box-shadow: none;
 }
 .header-search .form-group{
@@ -272,7 +335,15 @@ header .header-search .form-control:focus {
     float: left;
     width: 13.222%;
     text-align: center;
-    padding:20px 0; 
+}
+.header-navbar .navbar-nav > li > a {
+    padding: 20px 0;
+    display: block;
+}
+
+.header-navbar .navbar-nav > li:first-child a {
+    position: relative;
+    top: 2px;
 }
 .navbar-nav > li a{ 
     font-size: 17px;
@@ -330,7 +401,7 @@ header .header-search .form-control:focus {
 
 .banner-subtitle h3 {
     color: #E2AF9F;
-    font-size: 34px;
+    font-size: 40px;
     display: inline-block;
     float: none;
     margin: 0 0 0 5%;
@@ -362,6 +433,7 @@ header .header-search .form-control:focus {
     text-align: left;
     box-shadow: 0 0 10px #ccc;
     float: left;
+    display: none;
 }
 .advertise-bx .advertise-img {
     float: left;
@@ -408,7 +480,7 @@ header .header-search .form-control:focus {
     float: left;
     width: 100%;
 }
-.front-best-seller { padding: 50px 0 80px; }
+.front-best-seller { padding: 60px 0 118px; }
 .front-best-seller h2,
 .front-shop-category h3,
 .gift-inner h3,
@@ -443,11 +515,14 @@ header .header-search .form-control:focus {
     padding: 50px 0 0px;
 }
 .real-women-row {
-    background: #ECF1F3;
+    background: url(../images/graybg.png);
+    background-repeat: repeat-x;
+    background-size: 100% 87%;
+    background-position: center;
 }
 .realbx-col {
     position: relative;
-    padding: 5%;
+    padding:19% 5% 0;
     float: left;
     width: 100%;
     height: 100%;
@@ -515,12 +590,12 @@ header .header-search .form-control:focus {
 }
 .rating-box .left-col {
     float: left;
-    width: 25%;
-    padding: 0 15px 0 0;
+    width: 35%;
+    padding-right: 10px;
 }
 .rating-box .right-col {
     float: left;
-    width: 75%;;
+    width: 65%;;
 }
 .rating-box .right-col p {
     font-size: 13px;
@@ -548,29 +623,29 @@ header .header-search .form-control:focus {
     margin: 15px 0 0;
 }
 .magic-makeup-row {
-    margin: 80px 0;
+    margin: 120px 0 100px;
     background: url(../images/magic-bg-img.jpg);
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: 120%;
+    background-size: 100% 78%;
 }
 .magic-makeup-row .container{
     position: relative;
 }
 .magic-image-col {
     float: left;
-    width: 25%;
     position: absolute;
     top: -50px;
+    width: 300px;
 }
 .magic-carousel {
     float: left;
-    width: calc(100% - 25%);
+    width: calc(100% - 300px);
     padding: 0 50px;
-    margin-left: 25%;
+    margin-left: 300px;
 }
 .magic-descript {
-    padding: 50px 0 30px;
+    padding: 50px 0 40px;
 }
 .magic-item {
     background: #fff;
@@ -583,6 +658,7 @@ header .header-search .form-control:focus {
     width: 50px;
     border-radius: 0;
     background-position:center center; 
+    top:120px;
 }
 .magic-carousel .owl-theme .owl-nav button.owl-prev{
     background-image: url(../images/left_arrow_white.png);
@@ -609,8 +685,8 @@ header .header-search .form-control:focus {
     width: 100%;
 }
 .clock-item img {
-    max-height: 230px;
-    width: auto;
+    max-width: 220px;
+    width: 100%;
 }
 .clock-section .right-col {
     position: relative;
@@ -627,18 +703,16 @@ header .header-search .form-control:focus {
     position: absolute;
     left: 50%;
     top: 90%;
-    right: 0;
     transform: translate(-50%, -90%);
-    width: 90%;
     margin: 0;
-    font-size: 42px;
+    font-size: 50px;
     font-family: "BentonSans-Bold";
     color: #fff;
     text-shadow: 0 0 10px #949494;
     text-align: center;
 }
 .clock-item {
-    max-width: 400px;
+    max-width:65%;
     width: 100%;
     float: none;
     position: absolute;
@@ -659,13 +733,13 @@ header .header-search .form-control:focus {
 .clock-inner .infobx h5, 
 .ask-info-inner h5 {
     font-family: "BentonSans-Medium";
-    font-size: 22px;
+    font-size: 24px;
 }
 .clock-inner .infobx p{
     margin:0; 
 }
 .ask-jerome {
-    margin: 70px 0;
+    margin: 130px 0 120px;
 }
 .ask-inner .left-col {
     width: 100%;
@@ -689,28 +763,30 @@ header .header-search .form-control:focus {
 .category-link {
     display: block;
     text-align: center;
-    font-size: 17px;
+    font-size: 18px;
 }
 .palettes-gift-row {
     background: #F9F9F8;
-    margin: 60px 0;
+    margin: 100px 0 0;
 }
 .gift-inner {
     background: #fff;
-    margin: 40px 0;
-    padding: 40px;
+    margin: 60px 0;
+    padding:60px 40px 40px;
 }
 .gift-inner h4 {
-    font-size: 24px;
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 20px;
 }
 .gift-inner .btn2 {
     margin: 20px 0 0;
 }
 .gift-inner figure {
-    padding: 0 40px;
+    padding:0 40px 0 0;
 }
 .get-social-row {
-    margin: 0 0 40px;
+    margin: 70px 0 60px;
 }
 .get-social-row .owl-theme .owl-nav button.owl-prev,
 .get-social-row .owl-theme .owl-nav button.owl-next {
@@ -722,17 +798,27 @@ header .header-search .form-control:focus {
     background-position: center top;
     background-size: 30px auto;
     height: auto;
-    margin: 25px 0 0;
+    margin: 32px 0 0;
 }
 .get-social-row .owl-theme .owl-nav button.owl-prev {
     margin:20px 70px 0 0; 
 }
 .footer-top {
     background: #F9F9F8;
-    padding: 15px 0;
+    padding: 16px 0;
+}
+.footer-top .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .footer-top p {
     margin: 0;
+    line-height: normal;
+    padding: 0 40px;
+}
+.footer-top p:first-child {
+    border-right: 1px solid;
 }
 .footer-top p span{
     font-family: "BentonSans-Bold";
@@ -746,7 +832,7 @@ header .header-search .form-control:focus {
 }
 .footer-bottom {
     background: #FCDCD4;
-    padding: 50px 0 30px;
+    padding: 80px 0 30px;
 }
 .footer-bottom h5 {
     font-size: 18px;
@@ -767,7 +853,7 @@ header .header-search .form-control:focus {
     margin: -4px 0 0;
 }
 .signup-box h4 {
-    font-size: 32px;
+    font-size: 36px;
     margin: 0 0 20px;
     font-family: "BentonSans-Bold";
     line-height: normal;
@@ -781,7 +867,7 @@ header .header-search .form-control:focus {
     border: none;
     border-radius: 0;
     box-shadow: none;
-    height: calc(2.5em + .75rem + 2px);
+    height:51px;
     font-size: 14px;
     color: #6B6B6B;
     width: calc(100% - 170px);
@@ -792,10 +878,15 @@ header .header-search .form-control:focus {
     background: none;
     border: 2px solid #053052;
     color: #053052;
-    height: 49px;
+    height: auto;
     font-size: 18px;
     font-family: "BentonSans-Bold";
     margin: 0 0 0 10px;
+    line-height: 47px;
+    padding: 0;
+    position: relative;
+    float: left;
+    border-radius:2px; 
 }
 .signup-box .form-group .singup-btn:hover{
     background:#053052;
@@ -824,6 +915,9 @@ header .header-search .form-control:focus {
     position: relative;
 }
 
+.cart-link .fa {
+    position: relative;
+}
 .cart-link .cart-circle {
     background: #053052;
     width: 20px;
@@ -831,16 +925,17 @@ header .header-search .form-control:focus {
     border-radius: 50%;
     color: #fff;
     position: absolute;
-    top: -7px;
-    right: 12px;
+    top: -4px;
+    right: -12px;
     font-family: "BentonSans-Regular";
     font-size: 13px;
     line-height: 20px;
-    margin:0; 
+    margin: 0;
+    text-align: center;
 }
 header.page-header {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 .row-col,
 .notfront-container {
@@ -1571,7 +1666,58 @@ ul.pagination2 li {
 .sign-col .singin-link {
     text-decoration: none;
 }
-
+.title-main{
+    font-size: 50px;
+    padding: 0 12px;
+    position: relative;
+    margin: 0 auto 50px;
+    float: none;
+    display: table;
+    z-index:1;
+    line-height: normal;
+}
+.title-main:before {
+    content: "";
+    width: 100%;
+    height: 19px;
+    background: #dce6ec;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.ask-jerome .title-main {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom:30px;
+}
+.ask-jerome .title-main:before {
+    background: #f2f5f6;
+}
+.real-women-row .title-main {
+    font-size: 41px;
+    margin-bottom: 30px;
+    margin-left:0; 
+}
+.magic-makeup-row .title-main {
+    font-size: 44px;
+    margin-left: 0;
+    margin-bottom: 35px;
+}
+.magic-makeup-row .title-main:before{
+    background: #f9f0ec;
+}
+.palettes-gift-row .title-main {
+    margin-bottom: 60px;
+}
+.real-right {
+    position: relative;
+}
+.real-women-row .btn {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
 /*===============-magento-common-classes-css-===============*/
 .columns {
