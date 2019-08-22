@@ -70,12 +70,7 @@
 					
 					<container name="content.menu" htmlClass="content-menu" htmlTag="div" after="-">	
 				    
-						<block class="Magento\Cms\Block\Block" name="header-top-menu">
-								<arguments>
-									<argument name="block_id" xsi:type="string">header-top-menu</argument>
-								</arguments>
-						</block>
-					
+					 <block class="Saffron\Theme\Block\Html\Header" name="header-top-menu" template="Magento_Theme::header/header-explore.phtml" />
 					</container>
 					
 					<container name="header.bag" htmlClass="header-bag" htmlTag="div" after="-">							

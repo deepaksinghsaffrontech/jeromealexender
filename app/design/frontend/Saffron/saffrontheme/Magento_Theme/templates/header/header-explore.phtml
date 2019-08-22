@@ -1,122 +1,15 @@
-<div class="menu-button-content">
-	<div class="menu-button in-menu">
-		<div></div>
-		<div></div>
-		<div></div>
-	</div>
-</div>
-
-<?php /* <a href="#" class="shop-button"><?php echo __('Shop') ?></a> */ ?>
-
-<div class="left-menu">
-	<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('explore_menu')->toHtml();?>
-</div>
+<?php //echo $_SERVER['REQUEST_URI'] ;?>
+<ul class="header-top-menu">
+<li <?php if(($_SERVER['REQUEST_URI']=='/ask-jerome')||($_SERVER['REQUEST_URI']=='/ask-jerome/')){echo 'class="active"';} ?> ><a href="<?php echo $this->getUrl('ask-jerome'); ?>" >Ask Jerome</a></li>
+<li <?php if(($_SERVER['REQUEST_URI']=='/community-reviews')||($_SERVER['REQUEST_URI']=='/community-reviews/')){echo 'class="active"';} ?> ><a href="<?php echo $this->getUrl('community-reviews'); ?>" >Community Reviews</a></li>
+<li <?php if(($_SERVER['REQUEST_URI']=='/contact')||($_SERVER['REQUEST_URI']=='/contact/')){echo 'class="active"';} ?> ><a href="<?php echo $this->getUrl('contact'); ?>">Contact Us</a></li>
+</ul>
 
 <script type="text/javascript">
 	require([ 'jquery'], function($){
 
 		$(document).ready(function(){	
 
-		//our story read more & read less
-		   function btnUpdate() {
-			   var btn = document.querySelector('.read_ourstory .readmore_btn');
-			   $('.read_ourstory .readmore_btn').on('click', function(){
-				   if( btn.textContent === 'Read More') {
-						btn.textContent = 'Read Less';
-					}
-					else {
-					 btn.textContent = 'Read More';
-					}
-			   })
-		   }
-		   btnUpdate();
-		   if( $(window).width() <=767 ){
-			$('.read_ourstory .readmore_btn').click(function(){
-			 $('.expand_our_story').slideToggle(500);
-			})  
-			
-			
-		   }
-		$( ".title.block-collapsible-nav-title" ).append( $('#block-collapsible-nav ul.nav.items li.nav.item.current') );
-		
-		var lastScrollTop = 80;
-			$(window).scroll(function(event){
-			   var st = $(this).scrollTop();
-			   if (st > lastScrollTop){
-			       
-			    	$('.page-header').addClass('header-scroll'); 	
-			       
-			   } else {
-			    	$('.page-header').removeClass('header-scroll');
-			      
-			   }
-			   lastScrollTop = st;
-			});
-			
-			//new custom scroll add class for mobile
-			if( $(window).width() <=767 ){
-				$(window).scroll(function(event){
-					if($(window).scrollTop()> 80 ){
-						$('header').addClass('header-scroll2');
-					}
-					else {
-						$('header').removeClass('header-scroll2');
-					}
-				});	
-			}
-			
-			
-					
-			
-			
-
-			$('.in-menu').click(function(evt){
-                evt.stopPropagation();
-				$('.left-menu').addClass('open');
-				$(this).hide();
-				$('.button-content-cms').show(); 
-			});
-			$('body').click(function(){
-				$('.left-menu').removeClass('open');
-				$('.in-menu').show();
-				$('.button-content-cms').hide();
-			});
-            $('.in-cms').click(function(){
-                $('.left-menu').removeClass('open');
-                $('.in-menu').show();
-                $('.button-content-cms').hide();
-            });
-            $('.left-menu').click(function(evt) { evt.stopPropagation(); });
-
-			//explore menu script
-			$('.explore_menu .heading-medium').on('click', function() {
-			  $('.explore_menu .heading-medium').removeClass('active');
-			  $(this).addClass('active');
-			  var $box = $(this).closest('.explore_menu');
-			  $box.siblings().find('.sub_menu').stop().slideUp();
-			  $box.find('.sub_menu').stop().slideToggle();
-			 })		
-			
-
-		   //PLP filter menu script
-		   $('.filter-options-item').removeClass('active'); 
-		   $('.filter-options-item').removeAttr('data-role');
-		   $('.filter-options-title').on('click', function() {
-			$('.filter-options-title').parent().removeClass('active'); 
-			$(this).parent().addClass('active'); 
-			$(this).toggleClass('current');
-			var $box = $(this).closest('.filter-options-item');
-			$box.siblings().find('.filter-options-content').stop().slideUp();
-			$box.find('.filter-options-content').stop().slideToggle();
-		   })
-		
-		   $('.nav-toggle').on('click', function(){
-			// alert();
-			})
-		
-		
-		
-		
 		
 		
 		});	
