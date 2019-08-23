@@ -98,9 +98,7 @@ ul.social-links li {
     background: #F9F9F8;
 }
 .navigation li.level0 {
-    float: left;
-    text-align: center;
-    padding: 10px 62px;
+   
 }
 .navigation .level0>.level-top {
     color: #053052;
