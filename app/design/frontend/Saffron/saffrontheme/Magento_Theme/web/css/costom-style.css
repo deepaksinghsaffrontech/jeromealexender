@@ -49,11 +49,11 @@ footer.page-footer {
     margin: 0 0 20px;
 }
 .ask-info-inner .inner {
-    position: absolute;
+   /* position: absolute;
     top: 30%;
     left: 10%;
     transform: translate(-10%, -30%);
-    width: 100%;
+    width: 100%;*/
 }
 .header.panel>.header.links {
     display: none;
