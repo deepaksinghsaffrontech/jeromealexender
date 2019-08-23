@@ -1791,6 +1791,7 @@ select:not([disabled]):focus {
 .owl-theme .owl-nav button.owl-prev:hover,
 .owl-theme .owl-nav button.owl-next,
 .owl-theme .owl-nav button.owl-next:hover { box-shadow: none;}
+.block-search .action.search:before {  display: none;    }
 
 /*===============-magento-common-classes-css-===============*/
 .columns {
