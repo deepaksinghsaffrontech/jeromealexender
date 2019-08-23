@@ -179,6 +179,15 @@ header .header-content {
     font-size: 17px;
     font-family: "GeorgiaRegular";
     text-transform: capitalize;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+}
+.content-menu li:hover a,
+.content-menu li.active a {
+    background: #F9F9F8;
+    text-decoration: underline;
 }
 .content-menu {
     float: left;
@@ -193,9 +202,16 @@ header .header-content {
 
 .content-menu ul {
     margin: 0;
+    display: flex;
+    height: 100%;
+    align-items: center;
 }
 .content-menu li {
-    padding: 0px 18px;
+    padding: 0px;
+    margin: 0;
+    height: 100%;
+    align-items: center;
+    display: flex !important;
 }
 header .header-right {
     display: flex;
@@ -212,6 +228,17 @@ header .header-right {
     width: 20%;
     display: flex;
     align-items: center;
+}
+.minicart-wrapper .action.showcart {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.minicart-wrapper .action.showcart:hover {
+    background: #ffdcd5;
 }
 .sign-col {
     float: left;
@@ -230,11 +257,11 @@ header .header-right {
 }
 .sign-col .singin-link:hover,
 .sign-col .singin-link.active {
-    /* background:#FCDCD4; */
+    background:#ffdcd5;
 }
 .singin-dropdown {
     min-width: 300px;
-    background: #e6afa1;
+    background: #ffdcd5;
     padding: 10px;
     position: absolute;
     right: 0;
@@ -887,6 +914,7 @@ header .header-search .form-control:focus {
     position: relative;
     float: left;
     border-radius:2px; 
+	box-shadow:none;
 }
 .signup-box .form-group .singup-btn:hover{
     background:#053052;
@@ -1665,6 +1693,10 @@ ul.pagination2 li {
 }
 .sign-col .singin-link {
     text-decoration: none;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 .title-main{
     font-size: 50px;
@@ -1718,6 +1750,24 @@ ul.pagination2 li {
     padding-left: 20px;
     padding-right: 20px;
 }
+/*---magento-css---*/
+._keyfocus *:focus, input:not([disabled]):focus,
+textarea:not([disabled]):focus,
+select:not([disabled]):focus {
+    box-shadow: none;
+}
+.header-search input::placeholder { color:#6B6B6B; }
+.header-search input:-ms-input-placeholder { color:#6B6B6B; }
+.header-search input::-ms-input-placeholder { color:#6B6B6B; }
+.page-header .panel.wrapper { border: none !important; }
+.bestseller-carousel img { max-width: 210px; }
+.rating-summary .rating-result>span:before {
+    color: #F3CF85;
+}
+.product-reviews-summary {
+    margin-bottom: 10px;
+}
+
 
 /*===============-magento-common-classes-css-===============*/
 .columns {

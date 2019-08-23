@@ -71,6 +71,23 @@
     .footer-top .left-col { padding-right: 40px; }
     .footer-top .right-col { padding-left: 40px; }
     .review-bx .descript-col {  border-left: 1px solid #e7afa0; }
+	
+	/*--magento-navigation-css--*/
+	.navigation { z-index: 1; }
+	.navigation li.level0 {
+		float: left;
+		width: 13.222%;
+		text-align: center;
+		margin: 0;
+	}
+	.navigation .level0>.level-top {
+		display: block;
+		padding: 20px 10px;
+		line-height: normal;
+	}
+	.navigation li.level0:hover a {
+		background: #ffdcd5;
+	}
 
   
 /*==============magento-common-classes-css=================*/
