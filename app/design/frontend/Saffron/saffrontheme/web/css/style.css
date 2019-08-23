@@ -13,7 +13,7 @@ h1, h2, h3 {
 }
 a { color:#053052; }
 a:hover { color:#053052; }
-a:visited, .alink:visited {  color: inherit; }
+a:visited, .alink:visited {  color: #053052; }
 
 a:hover{ text-decoration: none; }
 p{
@@ -34,6 +34,7 @@ li{ list-style: none; display: inline-block; }
     border-radius: 2px;
     box-shadow: none;
     outline: none;
+	color:#fff !important;
 }
 .btn2{
     color: #053052;

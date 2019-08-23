@@ -141,6 +141,8 @@
     .gift-inner { padding-left:20px; padding-right:20px;  }
     .title-main, .magic-makeup-row .title-main,
     .real-women-row .title-main { font-size:40px; }
+	.navigation li.level0 { width:auto; padding:0 25px;}
+	.content-menu a { padding:0 8px; font-size:16px; }
 
 
 }
@@ -175,6 +177,12 @@
     .navigation li.level0 { width: auto; padding: 0 9px; }
     .navigation {  width: 98%; }
     .footer-top p { padding: 0 5px; }
+	header .header-right {
+    max-width: 100%;
+    flex: 100%;
+    padding: 0 10px;
+    border-top: 1px solid #F2F1F0;
+}
 
 }
 
