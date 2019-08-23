@@ -138,12 +138,13 @@ footer.page-footer {
  
 .satisfaction-carousel .owl-theme .owl-nav button.owl-prev,
 .satisfaction-carousel .owl-theme .owl-nav button.owl-next {
-    font-size: 30px;
     margin: 0;
     outline: none;
     background: none;
     height: auto;
     width: auto;
+    font-size: 24px;
+    margin-top: -1px;
 }
 .satisfaction-carousel .owl-theme .owl-nav button.owl-prev:hover,
 .satisfaction-carousel .owl-theme .owl-nav button.owl-next:hover{
@@ -163,6 +164,7 @@ footer.page-footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .satisfaction-carousel .owl-carousel.owl-loaded {
     display: flex;
@@ -1770,7 +1772,11 @@ select:not([disabled]):focus {
 .header-search input::placeholder { color:#6B6B6B; }
 .header-search input:-ms-input-placeholder { color:#6B6B6B; }
 .header-search input::-ms-input-placeholder { color:#6B6B6B; }
-.page-header .panel.wrapper { border: none !important; }
+.page-header .panel.wrapper { 
+    border: none !important;
+    background: #FCDCD4;
+    padding: 8px 0;
+ }
 .bestseller-carousel img { max-width: 210px; }
 .rating-summary .rating-result>span:before {
     color: #F3CF85;
