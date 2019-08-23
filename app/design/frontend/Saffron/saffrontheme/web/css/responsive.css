@@ -219,7 +219,7 @@
     .sign-col, .bag-col { border:none; padding:10px 0 0;  }
     .singin-link span, .cart-link span { display:none; }
     .cart-link .cart-circle{ display: block;  }
-    .header-content .header-right { background: #f9f9f8; padding:12px 10px; }
+    .header-content .header-right { background:none; padding:12px 10px; }
 
     .logo-col { text-align:center;  }   
     .logo-col img{ max-width:170px;}
@@ -330,50 +330,50 @@
     .down-arrow-col img {  width: 40px;  }
     .satisfaction-carousel .owl-theme .owl-nav button.owl-prev {  left: -20px;  }
     .satisfaction-carousel .owl-theme .owl-nav button.owl-next {  right: -20px;    }
-    .sections.nav-sections {  background: #ffded8;    }
+    .sections.nav-sections,
+    .navigation ul,
+    .nav-sections-item-content {  background: #ffded8;    }
     .minicart-wrapper .action.showcart .bag { display: none; }
     .nav-toggle {
-        /* background: url(../images/menu-bar.png); */
-        height: 28px;
-        width: 28px;
-        background: red;
+        background: url(../images/menu-bar.png);
+        height: 22px;
+        width: 24px;
+        background-repeat: no-repeat;
+        left: 10px;
+        top: 24px;
+        cursor: pointer;
     }
-    .header-content .header-right {
-        max-width: 35%;
+    .nav-toggle:before {  display: none;    }
+    .header-content .header-right {  max-width: 40%;  }
+    .logo-col { padding: 20px 8px 20px; max-width: 60%; text-align: left;    }
+    .logo-col a { display: inline-block; margin-left: 43px;    }
+    .minicart-wrapper .action.showcart img { height: 20px; width: auto;    }
+    .sign-col .singin-link img { width: auto; height: 20px;    }
+    .block-search .control { border: none; margin: 0; padding: 0;     }
+    .header-search.block-search .label { width: 35px; margin: 0; float: left;    }
+    .navigation {  background: #fff;    }
+    .navigation .level0 { border-top: 1px solid #ffeeea; display: block;     }
+    .navigation .level0>.level-top { padding: 14px 40px 14px 15px; text-transform: capitalize; font-weight: 400;     }
+    .navigation .parent .level-top:after{ top: 15px; font-size: 14px;     }
+    .nav-sections-item-content { padding: 0; margin-top: 46px;     }
+    .nav-sections-item-title { height: auto; padding: 0; background: #fff; border: none; padding: 14px 10px; width: 50%;     }
+    .nav-sections .header.links li { padding: 0; display: block; border-top: 1px solid #ffeeea;    }
+    .nav-sections .header.links li.greet.welcome { padding: 0; border-top: 1px solid #ffeeea;    }
+    .nav-sections .header.links li a, .nav-sections .header.links li span { border: none; padding: 14px 15px; color: #053052; display: block;
+        font-weight: 400;
     }
-    
-    .logo-col {
-        padding: 20px 8px 20px;
-        max-width: 65%;
-        text-align: left;
-    }
-    
-    .logo-col a {
-        display: inline-block;
-        margin-left: 40px;
-    }
-    
-    .minicart-wrapper .action.showcart img {
-        height: 20px;
-        width: auto;
-    }
-    
-    .sign-col .singin-link img {
-        width: auto;
-        height: 20px;
-    }
-    
-    .block-search .control {
-        border: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .header-search.block-search .label {
-        width: 35px;
-        margin: 0;
-        float: left;
-    }
+    .nav-sections .header.links { border-bottom: 1px solid #ffeeea;     }
+    .customer-service-mobile li {margin: 0;display: block;}
+    .customer-service-mobile { background: #fcfcfc; padding: 6px 0;  }
+    .navigation li.level0:last-child {  border-bottom: none;   }
+    .customer-service-mobile li a { padding: 9px 15px; display: block; color: #6B6B6B;font-family: "GeorgiaRegular"; font-weight: normal;    }
+    .sections.nav-sections .satisfaction-carousel { margin-top: 10px; padding: 0 26px;     }
+    .navigation .level0>.level-top:hover {  color: #053052;  }
+    .navigation .submenu>li { display: block;  }
+    .navigation .submenu:not(:first-child)>li>a { color: #053052; font-weight: normal; font-size: 14px;   }
+    .nav-open .nav-toggle:before {content: "\f00d";font-family: fontawesome;color: #fff;position: fixed;top: 0;right: 0;z-index: 99;font-weight: normal;font-size: 20px;padding: 10px;cursor: pointer;}
+    header.page-header {  border-bottom: none; margin:0;    }
+
 
 }
 
