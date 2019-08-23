@@ -8,7 +8,7 @@
     color: #053052;
 }
 .satisfaction-carousel {
-    margin: 5px auto;
+   /* margin: 5px auto;*/
 }
 .banner-caption .btn {
     color: #fff;
@@ -28,9 +28,9 @@ footer.page-footer {
 }
 
 .page-header .panel.wrapper {
-    background: #FCDCD4;
+   /* background: #FCDCD4;
     padding: 5px 0 5px;
-    text-align: center;
+    text-align: center;*/
 }
 .page-header .header.panel {
     padding: 0px 0px 0px 0px;
@@ -166,4 +166,7 @@ a:visited, .alink:visited {
 .minicart-wrapper .action.showcart .bag {color: #A9AAAC;}
 .bag-col {
   justify-content: center;
+}
+.contentmanager-index-contentlist .page-main .columns .sidebar-main .sidebar-shop-category {
+    display: none;
 }
