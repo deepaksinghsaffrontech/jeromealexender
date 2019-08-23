@@ -169,3 +169,4 @@ a:visited, .alink:visited {
 .contentmanager-index-contentlist .page-main .columns .sidebar-main .sidebar-shop-category {
     display: none;
 }
+.block-search .action.search:before{display:none}
