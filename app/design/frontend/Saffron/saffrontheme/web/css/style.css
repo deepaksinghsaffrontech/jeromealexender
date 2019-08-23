@@ -13,7 +13,7 @@ h1, h2, h3 {
 }
 a { color:#053052; }
 a:hover { color:#053052; }
-
+a:visited, .alink:visited {  color: inherit; }
 
 a:hover{ text-decoration: none; }
 p{
@@ -67,10 +67,11 @@ li{ list-style: none; display: inline-block; }
 .satisfaction-carousel p span {
     font-family: BentonSans-Bold;
 }
-.page-header .panel {
-    background: #FCDCD4;
-    padding: 10px 0 5px;
+.page-headern.page-header .panel {
+    background: #FCDCD4 !important;
+    padding: 8px 0;
     text-align: center;
+    display: flex;
 }
 footer.page-footer {
     float: left;
@@ -158,8 +159,16 @@ footer.page-footer {
 .satisfaction-carousel .owl-theme .owl-nav button.owl-next:before {
     content: "\f105";
 }
+.satisfaction-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.satisfaction-carousel .owl-carousel.owl-loaded {
+    display: flex;
+}
 .satisfaction-carousel p {
-    margin:2px 0 0; line-height:normal; 
+    margin:0; line-height:normal; 
 }
 .satisfaction-carousel {
     max-width: 600px;
@@ -182,12 +191,13 @@ header .header-content {
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 0 18px;
+    padding: 0 20px;
 }
 .content-menu li:hover a,
 .content-menu li.active a {
     background: #F9F9F8;
     text-decoration: underline;
+    color:#053052;
 }
 .content-menu {
     float: left;
@@ -360,7 +370,7 @@ header .header-search .form-control:focus {
 .header-navbar .navbar{ padding:0; }
 .header-navbar .navbar-nav > li {
     float: left;
-    width: 13.222%;
+    width: 14.28%;
     text-align: center;
 }
 .header-navbar .navbar-nav > li > a {
@@ -520,6 +530,7 @@ header .header-search .form-control:focus {
     font-size: 14px;
     margin: 0 0 8px;
     display: inline-block;
+    line-height:20px; 
 }
 .seller-name-col p {
     font-size: 13px;
@@ -1767,7 +1778,9 @@ select:not([disabled]):focus {
 .product-reviews-summary {
     margin-bottom: 10px;
 }
-
+.page-header .header.panel {
+    display: none;
+}
 
 /*===============-magento-common-classes-css-===============*/
 .columns {
