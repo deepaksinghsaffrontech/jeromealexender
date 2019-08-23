@@ -331,10 +331,48 @@
     .satisfaction-carousel .owl-theme .owl-nav button.owl-prev {  left: -20px;  }
     .satisfaction-carousel .owl-theme .owl-nav button.owl-next {  right: -20px;    }
     .sections.nav-sections {  background: #ffded8;    }
+    .minicart-wrapper .action.showcart .bag { display: none; }
     .nav-toggle {
-        background: url(../images/menu-bar.png);
-        height: 50px;
-        width: 50px;
+        /* background: url(../images/menu-bar.png); */
+        height: 28px;
+        width: 28px;
+        background: red;
+    }
+    .header-content .header-right {
+        max-width: 35%;
+    }
+    
+    .logo-col {
+        padding: 20px 8px 20px;
+        max-width: 65%;
+        text-align: left;
+    }
+    
+    .logo-col a {
+        display: inline-block;
+        margin-left: 40px;
+    }
+    
+    .minicart-wrapper .action.showcart img {
+        height: 20px;
+        width: auto;
+    }
+    
+    .sign-col .singin-link img {
+        width: auto;
+        height: 20px;
+    }
+    
+    .block-search .control {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .header-search.block-search .label {
+        width: 35px;
+        margin: 0;
+        float: left;
     }
 
 }
