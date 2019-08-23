@@ -10,6 +10,16 @@
 /** @var $block \Magento\Framework\View\Element\Template */
 /** @var $helper \Magento\Search\Helper\Data */
 $helper = $this->helper(\Magento\Search\Helper\Data::class);
+
+
+?>
+
+<?php 
+
+$om = \Magento\Framework\App\ObjectManager::getInstance();
+$storeManager = $om->get('\Magento\Store\Model\StoreManagerInterface');
+$mediaurl = ($storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA));
+
 ?>
 <div class="block block-search header-search">
     <div class="block block-title"><strong><?= /* @escapeNotVerified */ __('Search') ?></strong></div>
@@ -40,11 +50,13 @@ $helper = $this->helper(\Magento\Search\Helper\Data::class);
                     <?= $block->getChildHtml() ?>
                 </div>
             </div>
+
             <div class="actions">
                 <button type="submit"
                         title="<?= $block->escapeHtml(__('Search')) ?>"
                         class="action search">
-                    <span><?= /* @escapeNotVerified */ __('Search') ?></span>
+               <img src="<?php echo $mediaurl ;?>wysiwyg/images/search-icon.png"  alt="search" />
+				   <span><?= /* @escapeNotVerified */ __('Search') ?></span>
                 </button>
             </div>
         </form>
