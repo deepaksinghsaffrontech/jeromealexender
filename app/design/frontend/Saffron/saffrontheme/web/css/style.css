@@ -195,6 +195,7 @@ header .header-content {
     display: flex;
     align-items: center;
     padding: 0 20px;
+    text-align: center;
 }
 .content-menu li:hover a,
 .content-menu li.active a {
@@ -587,7 +588,7 @@ header .header-search .form-control:focus {
     z-index: 1;
 }
 .real-women-row .video-col img{
-    cursor: pointer;
+    cursor: pointer; width:100%;
 }
 .rating-box .h-col,
 .rating-box .title-row,
@@ -1793,6 +1794,7 @@ select:not([disabled]):focus {
 .owl-theme .owl-nav button.owl-next,
 .owl-theme .owl-nav button.owl-next:hover { box-shadow: none;}
 .block-search .action.search:before {  display: none;    }
+.minicart-wrapper .action.showcart.active { display: flex; }
 
 /*===============-magento-common-classes-css-===============*/
 .columns {
