@@ -30,125 +30,238 @@ $storeManager = $objectManager->get('\Magento\Store\Model\StoreManagerInterface'
 $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_WEB);
 
 //echo "<pre>";print_r($block->getActiveFilters()) ;
+
 ?>
 
 
-<div class="ask-jerome-inner row-col" data-aos="fade-up" data-aos-offset="150" data-aos-easing="ease-in-sine">
-      <?php if (!empty($block->getTitle())) : ?>
-        <h1><?= $block->getTitle() ?></h1>
-	  <?php endif; ?>
-	
-	
-    <div class="showing-result-col">
-        <div class="row">
-            <!--<div class="col-lg-10 col-md-9 col-12 left-col">
-                <span class="text">Showing results for</span>
-                <div class="show-list">
-                    <ul>
-                        <li><i class="fa fa-times"></i> Face</li>
-                        <li><i class="fa fa-times"></i> Cheeks</li>
-                        <li><i class="fa fa-times"></i> Eyes</li>
-                        <li><i class="fa fa-times"></i> Lips</li>
-                    </ul>
-                </div>
-            </div>-->
-            <div class="col-lg-2 col-md-3 right-col">
-                <div class="form-group">
-                    <select name="" class="form-control">
-                        <option value="">Sort By</option>
-                        <option value="">Sort By</option>
-                        <option value="">Sort By</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="breadcrumbs">
+              <ul class="items">
+                  <li class="item home"><a href="index.html">Home</a></li>
+                  <li class="item">Ask Jerome</li>
+              </ul>
+          </div>
 
-    <!--jerome-listing-->
-    <div class="jerome-listing row-col">
-        <div class="row">
-<?php if ($collection->count()) : ?>
-            
-		<?php foreach ($collection as $content) : ?>
-			<div class="col-lg-4 col-md-6 col-12">
-                <div class="jerome-item">
-            <figure>
-            <a  href="<?= $content->getLinkUrl(); ?>">
-			<img src="<?= $content->getImage('thimble_images')?>" class="img-fluid" />
-			</a>
-            </figure>
-              
-			  <div class="jerome-info">
-				<div class="column-1">
-				<a class="title" href="<?= $content->getLinkUrl(); ?>">
-				 <?= $content->getData('asfjerome_title'); ?>
-				</a>
-			    </div>
-                
-		<div class="column-2">
-		<?php //echo date('jS \of F Y',strtotime($content->getData('created_at'))); ?>
-			
-  <span class="date"><?php echo date('jS \of F Y',strtotime($content->getData('created_at'))); ?>
-			</span>
-	<?= $content->getData('asfjerome_video'); ?>
-    <?php $asfjerome_interested = (explode(",",$content->getData('asfjerome_interested'))); ?>
-	<?php $asfjerome_like_to = (explode(",",$content->getData('asfjerome_like_to'))); ?>
-	
-	    <ul>
-		 <?php foreach( $asfjerome_interested as $items ){ ?>
-          <li><a href="<?php echo $base_url.'ask-jerome?asfjerome_interested='.$items ;?>" class="name"><?php echo $items ;?></a></li>
-		 <?php } ?>
-		 <?php foreach( $asfjerome_like_to as $itemss ){ ?>
-          <li><a href="<?php echo $base_url.'ask-jerome?asfjerome_like_to='.$itemss  ;?>" class="name"><?php echo $itemss ;?></a></li>
-		 <?php } ?>
-		 
-		 </ul>
-       </div>
+      <div class="sidebar-ask">
+         <div class="sidebar-filter row-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+             <h5>Choose all that apply:</h5>
+               <h6>I'm interested in:</h6>
+                <ul class="filter-ul">
+				<?php 
+				if(!empty($_GET['asfjerome_interested'])){
+					$asfjerome_interested = $_GET['asfjerome_interested'];
+				}else{
+				$asfjerome_interested = 'dd';	
+				} 
+				?>
+				
+				<?php 
+				if(!empty($_GET['asfjerome_like_to'])){
+					$asfjerome_like_to = $_GET['asfjerome_like_to'];
+				}else{
+				$asfjerome_like_to = 'dd';	
+				} 
+				?>
+                  <li class="custom-control custom-radio">
+                   <input type="radio" name="asfjerome_interested" class="custom-control-input" value="face" id="customRadio1"  <?php if($asfjerome_interested == 'face'){echo 'checked';} ?>>
+                   <label class="custom-control-label" for="customRadio1">Face</label>
+                   </li>
+                   <li class="custom-control custom-radio">
+                    <input type="radio" name="asfjerome_interested" class="custom-control-input"  value="cheeks" id="customRadio2" <?php if($asfjerome_interested == 'cheeks'){echo 'checked';} ?>>
+                    <label class="custom-control-label" for="customRadio2">Cheeks</label>
+                   </li>
+                   <li class="custom-control custom-radio">
+                    <input type="radio" name="asfjerome_interested" class="custom-control-input" value="eyes" id="customRadio3" <?php if($asfjerome_interested == 'eyes'){echo 'checked';} ?>>
+                    <label class="custom-control-label" for="customRadio3">Eyes</label>
+                    </li>
+                   <li class="custom-control custom-radio">
+                     <input type="radio" name="asfjerome_interested"class="custom-control-input" value="lips" id="customRadio4"  <?php if($asfjerome_interested =='lips'){echo 'checked';} ?>>
+                     <label class="custom-control-label" for="customRadio4">Lips</label>
+                    </li>
+                   <li class="custom-control custom-radio">
+                     <input type="radio" name="asfjerome_interested" class="custom-control-input" value="makeup-tips-education" id="customRadio5" <?php if($asfjerome_interested == 'makeup-tips-education'){echo 'checked';} ?>>
+                     <label class="custom-control-label" for="customRadio5">Makeup Tips & Education</label>
+                   </li>
+                   <li class="custom-control custom-radio">
+                     <input type="radio" name="asfjerome_interested" class="custom-control-input" value="glamour" id="customRadio6" <?php if($asfjerome_interested == 'glamour'){echo 'checked';} ?>>
+                     <label class="custom-control-label" for="customRadio6">Glamour</label>
+                   </li>
+                  </ul>
+						
+                 <h6>I would like to:</h6>
+                 <ul class="filter-ul">
+				   <li class="custom-control custom-radio">
+                    <input type="radio" name="asfjerome_like_to" class="custom-control-input" value="videos" id="customRadio7" <?php if($asfjerome_like_to == 'videos'){echo 'checked';} ?>>
+                    <label class="custom-control-label" for="customRadio7">Watch Videos</label>
+                   </li>
+                   <li class="custom-control custom-radio">
+                     <input type="radio" name="asfjerome_like_to" class="custom-control-input" value="read" id="customRadio8" <?php if($asfjerome_like_to == 'read'){ echo 'checked';} ?>>
+                    <label class="custom-control-label" for="customRadio8">Read Tutorials</label>
+                   </li>
+                 </ul>
+              <div class="side-btn">
+               <button type="button" class="btn btn-primary btn1">Clear</button>
+				<button type="button" class="btn btn-primary btn2">Done</button>
               </div>
+						
+						
+             </div>
+             </div>
 					
 					
-                </div>
-            </div>
-        <?php endforeach; ?>
+					
+                    
+					
+					
+			<div class="column-ask">
+                      <!--ask-jerome-inner-->
+                      <div class="ask-jerome-inner row-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+						
+						<div class="ask-jerome-banner banner-notfront row-col">
+							<figure>
+								<?= $block->getTextBefore() ?>
+							</figure>
+							<div class="caption-inner">
+							<?php if (!empty($block->getTitle())) : ?>
+                             <h1 class="title-main"><?= $block->getTitle() ?></h1>
+	                        <?php endif; ?>
+									
+								<?= $block->getTextAfter() ?>
+							</div>
+						</div>
+						
+						
+						
+						
+				<!--popular-tutorials-->
+				<div class="popular-tutorials row-col">
+				<h2 class="title-main title2">Popular Tutorials</h2>
+				<div class="popular-list row-col">
+				<div class="row">
+				<?php if ($collection->count()) : ?>
+            
+		         <?php foreach ($collection as $content) : ?>
+				<div class="col-md-4 col-12">
+					<div class="popular-item">
+					<div class="video-col">
+					
+					<img src="<?= $content->getImage('thimble_images')?>" class="img-fluid" />
+			       <div class="play-tutorial">
+					<a href="javascript:void(0);" class="icon">
+					<i class="fa"><img src="<?php echo $base_url ;?>pub/media/themeimage/arrow-right-white.png"></i>
+					<span>Play Tutorial</span>
+					</a>
+					</div>
+					</div>
+					<div class="info-col">
+				    <p><?= $content->getData('asfjerome_title'); ?></p>
+					<a href="<?= $content->getLinkUrl(); ?>" class="read-more-link">Read More</a>
+					</div>
+					</div>
+					</div>
+	   <?php endforeach; ?>
 	   <?php else: ?>
             <div class="message info empty">
                 <span><?= __('We can\'t find contents matching the selection.') ?></span>
             </div>
-        <?php endif; ?>
-          
-
-		  <div class="col-12 pagination-row">
-                <ul class="pagination-list">
-                    <li class="page-item"><a class="page-link" href="javascript:void(0);"><i class="fa fa-angle-left"></i></a></li>
-                    <li class="page-item"><a class="" href="javascript:void(0);">2</a></li>
-                    <li class="page-item"><span>/</span></li>
-                    <li class="page-item"><a class="" href="javascript:void(0);">4</a></li>
-                    <li class="page-item"><a class="page-link" href="javascript:void(0);"><i class="fa fa-angle-right"></i></a></li>
-                </ul>
-
-            </div>
-
-        </div>
-    </div>
-    <!--/jerome-listing-->
-
-</div>
-
-<?php if ($block->hasPagerTop()) : ?>
-                <div class="toolbar-bottom">
-                    <div class="toolbar top">
-                        <?= $block->getPagerHtml(); ?>
-                    </div>
-                </div>
-            <?php endif; ?>
-
-  <?php if ($block->hasPagerBottom()) : ?>
+        <?php endif; ?>				
+									
+									
+				<div class="col-12 pagination-col">
+										
+				<?php if ($block->hasPagerBottom()) : ?>
                 <div class="toolbar-bottom">
                     <div class="toolbar bottom">
                         <?= $block->getPagerHtml(); ?>
                     </div>
                 </div>
             <?php endif; ?>
+			 </div>	
+		        
+				</div>
+				</div>
+				</div>
+		<!--/popular-tutorials-->
+				              		
+                          
+
+                         
+
+                      </div>
+                    <!--/ask-jerome-inner-->
+
+                   
+                   
+                    </div>
+            
+             
+
+
+          
+
+
+
+
+
+
+
+ 
+
+
+            
+		
+			
+    
+            <!--<a  href="<?php //echo $content->getLinkUrl(); ?>">
+			</a>-->
+        	<?php  //echo $content->getData('asfjerome_video'); ?>
+  
+       
+					
+			
+          
+
+		 
+
+ 
+
+
+
+  
 			
 			
 
+<script>
+require([
+	'jquery',
+	], function () {
+	jQuery(document).ready(function($) {
+	 jQuery('.breadcrumbs').detach().insertBefore('.page-main');
+   //jQuery(".toolbar-bottom").detach().insertAfter(".contents-items.widget-content-grid");		
+   jQuery(".btn2").click(function(){
+	 
+     var interested = $("input[name='asfjerome_interested']:checked").val();
+     var like_to = $("input[name='asfjerome_like_to']:checked").val();
+     if (typeof interested === "undefined") {
+       var value1 = '';
+	 }else{
+		var value1 = 'asfjerome_interested='+interested ;
+	 }
+	 if (typeof like_to === "undefined") {
+       var value2 = '';
+	 }else{
+		var value2 = 'asfjerome_like_to='+like_to ;
+	 }
+	 var val = value2+'&'+value1 ;
+	//alert(val);
+	var baseurl = '<?php echo $base_url.'ask-jerome'?>';
+	
+	window.location.href = baseurl+'?'+val;
+	});
+   
+    jQuery(".btn1").click(function(){
+	var baseurl = '<?php echo $base_url.'ask-jerome'?>';	
+	window.location.href = baseurl;	
+	});	
+   });
+});
+</script>

@@ -170,3 +170,13 @@ a:visited, .alink:visited {
     display: none;
 }
 .block-search .action.search:before{display:none}
+
+.sidebar-ask {
+    width: 21%;
+    float: left;
+}
+
+.column-ask {
+    float: left;
+    width: 79%;
+}

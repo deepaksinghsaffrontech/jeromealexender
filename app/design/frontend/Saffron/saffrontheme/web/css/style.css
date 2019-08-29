@@ -27,18 +27,27 @@ li{ list-style: none; display: inline-block; }
 .btn-primary {
     background-color: #053052;
     border-color: #053052;
-    font-family: "BentonSans-Medium";
+    font-family: "BentonSans-Bold";
     font-size: 18px;
     padding: 14px 31px;
     border: none;
     border-radius: 2px;
     box-shadow: none;
     outline: none;
-	color:#fff !important;
+	color:#fff;
 }
 .btn2{
     color: #053052;
     background: #E2AF9F;
+}
+.btn1 {
+    background: none;
+    border: 2px solid #E2AF9F;
+    color: #053052;
+    padding: 12px 31px;
+}
+.shopbest-col-btm .btn {
+    color: #fff;
 }
 .btn-primary:hover,
 .btn2:hover,
@@ -66,7 +75,9 @@ li{ list-style: none; display: inline-block; }
     width: 100%;
 }
 .satisfaction-carousel p span {
-    font-family: BentonSans-Bold;
+   font-family: BentonSans-Medium;
+    border-bottom: 1px solid;
+    display: inline-block;
 }
 .page-headern.page-header .panel {
     background: #FCDCD4 !important;
@@ -92,7 +103,7 @@ footer.page-footer {
     height: 50px;
     background: #fff;
     border-radius: 100%;
-    font-size: 40px;
+    font-size: 28px;
     text-align: center;
     line-height: 46px;
     box-shadow: 0 0 10px #c5b8b8;
@@ -188,7 +199,7 @@ header .header-content {
 }
 .content-menu a {
     color: #6B6B6B;
-    font-size: 17px;
+    font-size: 18px;
     font-family: "GeorgiaRegular";
     text-transform: capitalize;
     height: 100%;
@@ -387,7 +398,7 @@ header .header-search .form-control:focus {
     top: 2px;
 }
 .navbar-nav > li a{ 
-    font-size: 17px;
+    font-size: 19px;
     font-family: "BentonSans-Medium";
  }
   .menu-child { 
@@ -422,7 +433,7 @@ header .header-search .form-control:focus {
     text-align: center;
 }
 .front-banner h1 {
-    font-size: 80px;
+    font-size: 100px;
     color: #fff;
     font-weight: bold;
     text-shadow: 0 0 6px #9e9e9e;
@@ -442,7 +453,7 @@ header .header-search .form-control:focus {
 
 .banner-subtitle h3 {
     color: #E2AF9F;
-    font-size: 40px;
+    font-size: 45px;
     display: inline-block;
     float: none;
     margin: 0 0 0 5%;
@@ -521,7 +532,7 @@ header .header-search .form-control:focus {
     float: left;
     width: 100%;
 }
-.front-best-seller { padding: 60px 0 118px; }
+.front-best-seller { padding: 60px 0 100px; }
 .front-best-seller h2,
 .front-shop-category h3,
 .gift-inner h3,
@@ -530,7 +541,7 @@ header .header-search .form-control:focus {
  }
 .star-col .fa { color: #F3CF85; font-size:14px; }
 .seller-name-col .title-name {
-    font-family: "BentonSans-Medium";
+    font-family: "BentonSans-Bold";
     font-size: 14px;
     margin: 0 0 8px;
     display: inline-block;
@@ -564,7 +575,7 @@ header .header-search .form-control:focus {
 }
 .realbx-col {
     position: relative;
-    padding:19% 5% 0;
+    padding:18% 5% 0;
     float: left;
     width: 100%;
     height: 100%;
@@ -573,7 +584,7 @@ header .header-search .form-control:focus {
 .real-info span {
     display: block;
     margin: 0 0 15px;
-    font-size: 26px;
+    font-size: 28px;
 }
 .rating-box {
     width: 100%;
@@ -645,7 +656,7 @@ header .header-search .form-control:focus {
     margin: 0 0 5px;
 }
 .rating-box .right-col h5 {
-    font-family: "BentonSans-Medium";
+    font-family: "BentonSans-Bold";
     font-size: 16px;
     margin: 15px 0 0;
 }
@@ -665,7 +676,7 @@ header .header-search .form-control:focus {
     margin: 15px 0 0;
 }
 .magic-makeup-row {
-    margin: 120px 0 100px;
+    margin: 100px 0 80px;
     background: url(../images/magic-bg-img.jpg);
     background-repeat: no-repeat;
     background-position: center top;
@@ -692,6 +703,21 @@ header .header-search .form-control:focus {
 .magic-item {
     background: #fff;
     padding: 15px;
+    text-align: center;
+    float: left;
+    width: 100%;
+}
+.magic-carousel .owl-item img {
+    height: 190px;
+    width: auto;
+    display: inline-block;
+}
+
+.magic-item .seller-info {
+    float: left;
+    width: 100%;
+    padding-top: 30px;
+    text-align: left;
 }
 .magic-carousel .owl-theme .owl-nav button.owl-prev,
 .magic-carousel .owl-theme .owl-nav button.owl-next {
@@ -774,14 +800,13 @@ header .header-search .form-control:focus {
 }
 .clock-inner .infobx h5, 
 .ask-info-inner h5 {
-    font-family: "BentonSans-Medium";
-    font-size: 24px;
+    font-size: 28px;
 }
 .clock-inner .infobx p{
     margin:0; 
 }
 .ask-jerome {
-    margin: 130px 0 120px;
+    margin: 100px 0;
 }
 .ask-inner .left-col {
     width: 100%;
@@ -817,7 +842,7 @@ header .header-search .form-control:focus {
     padding:60px 40px 40px;
 }
 .gift-inner h4 {
-    font-size: 26px;
+    font-size: 28px;
     line-height: 36px;
     margin-bottom: 20px;
 }
@@ -863,7 +888,8 @@ header .header-search .form-control:focus {
     border-right: 1px solid;
 }
 .footer-top p span{
-    font-family: "BentonSans-Bold";
+    font-family: "BentonSans-Medium";
+    border-bottom: 1px solid;
 }
 .footer-top .left-col {
     text-align: right;
@@ -877,7 +903,7 @@ header .header-search .form-control:focus {
     padding: 80px 0 30px;
 }
 .footer-bottom h5 {
-    font-size: 18px;
+    font-size: 19px;
     font-family: "BentonSans-Bold";
     margin: 0 0 25px;
 }
@@ -895,15 +921,15 @@ header .header-search .form-control:focus {
     margin: -4px 0 0;
 }
 .signup-box h4 {
-    font-size: 36px;
+    font-size: 38px;
     margin: 0 0 20px;
     font-family: "BentonSans-Bold";
     line-height: normal;
 }
 .signup-box p {
     font-family: GeorgiaRegular;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 26px;
 }
 .signup-box .form-group input {
     border: none;
@@ -1069,7 +1095,7 @@ header.page-header {
     float: right;
 }
 .breadcrumbs {
-    padding: 15px 0;
+    padding: 20px 0;
     margin: 0 0 25px;
     float: left;
     width: 100%;
@@ -1177,19 +1203,17 @@ textarea{ resize:none; }
     top: 0;
 }
 .sidebar-filter h5 {
-    border-bottom: 1px solid  #053052;
-    padding-bottom: 15px;
     margin: 0 0 22px;
+    font-size: 24px;
 }
 .sidebar-filter h6 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-family: "BentonSans-Bold";
 }
 .filter-ul li.custom-control {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 ul.filter-ul {
-    border-bottom: 1px solid  #053052;
-    padding-bottom: 10px;
     margin-bottom: 22px;
 }
 .custom-control-input:checked~.custom-control-label::before {
@@ -1530,11 +1554,18 @@ ul.sidebar-category {
     padding: 30px 0;
 }
 .pagination2 {
-    text-align: center;
+   text-align: center;
+    margin: 30px 0 0;
 }
 .pagination2 a {
-    padding: 9px 16px;
-    display: inline-block;
+   padding: 9px 16px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-family: "BentonSans-Medium";
 }
 .pagination2 a.active {
     background: #f9f9f9;
@@ -1544,12 +1575,17 @@ ul.sidebar-category {
     margin-right: -14px;
 }
 ul.pagination2 li {
-    font-size: 14px;
+    font-size: 16px;
+    font-family: "BentonSans-Medium";
 }
 .pagination2 .form-control {
-    height: auto;
-    padding: 9px;
+   padding: 9px;
     margin-left: 10px;
+    background: #f9f9f9;
+    border: none;
+    height: 50px;
+    font-size: 16px;
+    font-family: "BentonSans-Medium";
 }
 .pagination2 .form-control:focus {
     border: none;
@@ -1795,6 +1831,133 @@ select:not([disabled]):focus {
 .owl-theme .owl-nav button.owl-next:hover { box-shadow: none;}
 .block-search .action.search:before {  display: none;    }
 .minicart-wrapper .action.showcart.active { display: flex; }
+.custom-control-label::before { width:20px; height:20px; }
+.custom-control-label::after { width:20px; height:20px; }
+.custom-control-label::before, .custom-control-label::after { top:-1px; }
+.side-btn .btn1 { margin-right: 5px; }
+.popular-item {
+    float: left;
+    width: 100%;
+	margin-bottom: 40px;
+}
+
+.popular-item .video-col {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.play-tutorial .icon {
+    width: 58px;
+    height: 58px;
+    background: rgba(15,30,41,0.4);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+	transition:all 0.5s ease;
+	
+}
+.popular-item .video-col:hover .play-tutorial .icon {
+    width: 100%;
+    height: 100%;
+}
+.popular-item .video-col:hover .play-tutorial{
+	background: rgba(15,30,41,0.4);
+}
+.popular-item .video-col:hover .play-tutorial .icon span {
+    display: block;
+	transition:all 0.5s ease;
+}
+.popular-item .video-col:hover .play-tutorial .icon .fa {
+	width:60px;
+	height:60px;
+}
+.popular-item .video-col:hover .play-tutorial .icon .fa img {
+	width:16px;
+}
+.play-tutorial .icon .fa {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	
+}
+
+.play-tutorial .icon .fa img {
+    width: 11px;
+    height: auto;
+    display: inline-block;
+	transition:all 0.5s ease;
+}
+
+.play-tutorial .icon span {
+    display: none;
+	order: 2;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 12px;
+	
+}
+
+.popular-item .info-col p {
+    font-size: 15px;
+    margin-bottom: 10px;
+	line-height:24px;
+}
+.read-more-link {
+    font-size: 15px;
+    text-decoration: underline;
+    font-family: "BentonSans-Bold";
+    display: inline-block;
+	text-transform:capitalize;
+}
+.read-more-link:hover{
+	text-decoration:none;
+}
+.ask-jerome-inner {
+    margin-bottom: 80px;
+}
+.title-main.title2 {
+    margin-left: 0;
+    margin-right: 0;
+}
+.banner-notfront{
+    position: relative;
+}
+
+
+.caption-inner {
+    background: rgba(252,220,212, 0.9);
+    padding: 25px 30px;
+    width: 80%;
+}
+
+.ask-jerome-banner figure {
+    margin: 0;
+}
+
+.caption-inner .title-main {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 15px;
+}
+
+.caption-inner .title-main:before {
+    background: #ffece7;
+}
+.caption-inner p {
+    margin: 0;
+}
+
+.ask-jerome-banner {
+    margin-bottom: 100px;
+}
 
 /*===============-magento-common-classes-css-===============*/
 .columns {

@@ -78,18 +78,28 @@
     .nav-sections-item-content>.navigation {  background: none;  }
     .navigation { max-width: 1600px; width: 94%; padding: 0 7px;    }
     .nav-sections .satisfaction-carousel { display:none; }
+	.caption-inner p {
+    font-size: 28px;
+    line-height: 38px;
+}
+.caption-inner {
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+}
+
 
   
 /*==============magento-common-classes-css=================*/
     .column.main{
-        width: 79.16666667%;
+        width: 78.16666667%;
         float: right;
         -ms-flex-order: 2;
         -webkit-order: 2;
         order: 2;
     }
     .sidebar-main {
-        width: 20.83333333%;
+        width: 21.83333333%;
         float: left;
         -ms-flex-order: 1;
         -webkit-order: 1;
@@ -401,6 +411,14 @@
     .singin-dropdown { min-width:220px; top:120%; }
     .header-search .form-group { margin:0; }
     .minicart-wrapper .action.showcart.active {   display: flex;    }
+	.caption-inner {
+    width: calc(100% - 30px);
+    margin: -20px 15px 0;
+    position: relative;
+}
+.ask-jerome-banner {
+    margin-bottom: 50px;
+}
 
 
 }
