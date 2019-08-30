@@ -1226,12 +1226,15 @@ textarea{ resize:none; }
     margin: 0 0 22px;
     font-size: 24px;
 }
+.custom-control-label {
+    padding-left: 10px;
+}
 .sidebar-filter h6 {
     margin-bottom: 15px;
     font-family: "BentonSans-Bold";
 }
 .filter-ul li.custom-control {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
 ul.filter-ul {
     margin-bottom: 22px;
