@@ -34,3 +34,26 @@ $brands     = $block->getBrands();
 	/* Simply invoke iffe of sidebarmodule */
 	require(['jquery','sidebarmodule'], function ($) {});
 </script>
+
+
+<script type="text/javascript">
+	require([ 'jquery'], function($){
+
+		$(document).ready(function(){	
+
+		$(".sidebar-category .shop-item .fa").on("click", function(){
+		$(this).next().slideToggle();
+		$(this).parent().siblings().children(".category-body").slideUp();
+		$(this).parent().toggleClass("active").siblings().removeClass("active");
+		$(".sidebar-category .shop-item .fa").addClass("fa-angle-down");
+
+		if( $(this).parent().hasClass("active")  ){
+			$(this).addClass("fa-angle-up").removeClass("fa-angle-down");
+		}
+	   });
+		
+		});	
+
+
+	});
+</script>

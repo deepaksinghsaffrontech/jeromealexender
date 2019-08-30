@@ -5,25 +5,5 @@
 <li <?php if(($_SERVER['REQUEST_URI']=='/contact')||($_SERVER['REQUEST_URI']=='/contact/')){echo 'class="active"';} ?> ><a href="<?php echo $this->getUrl('contact'); ?>">Contact Us</a></li>
 </ul>
 
-<script type="text/javascript">
-	require([ 'jquery'], function($){
 
-		$(document).ready(function(){	
-
-		$(".sidebar-category .shop-item .fa").on("click", function(){
-		$(this).next().slideToggle();
-		$(this).parent().siblings().children(".category-body").slideUp();
-		$(this).parent().toggleClass("active").siblings().removeClass("active");
-		$(".sidebar-category .shop-item .fa").addClass("fa-angle-down");
-
-		if( $(this).parent().hasClass("active")  ){
-			$(this).addClass("fa-angle-up").removeClass("fa-angle-down");
-		}
-	   });
-		
-		});	
-
-
-	});
-</script>
 
