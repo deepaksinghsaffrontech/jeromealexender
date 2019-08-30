@@ -171,3 +171,9 @@ a:visited, .alink:visited {
 .sidebar.sidebar-additional .block-wishlist {
     display: none;
 }
+.filter-ul li.custom-control {
+    margin-bottom: 16px;
+}
+.custom-control-label {
+    padding-left: 10px;
+}
