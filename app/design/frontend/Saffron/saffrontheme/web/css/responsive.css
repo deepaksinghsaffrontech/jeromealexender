@@ -79,7 +79,7 @@
     .navigation { max-width: 1600px; width: 94%; padding: 0 7px;    }
     .nav-sections .satisfaction-carousel { display:none; }
 	.caption-inner p {  font-size: 28px; line-height: 38px; }
-    .caption-inner {  position: absolute;  bottom: -20px;  left: 20px; }
+    .caption-inner {  position: absolute;  bottom: -20px;  left: 20px; width:92%;  }
     .sign-container .left-col {  padding-right: 5px;  }
     .sign-container .right-col { padding-left: 5px;  }
     .sidebar-ask { width: 20.83333333%; float: left; padding-right: 2%;    }
@@ -115,6 +115,7 @@
 
 
 @media (min-width: 768px) and (max-width: 1199px) {
+    .columns{ width:95%;  }
     .bestseller-carousel,
     .shop-category-carousel {  padding: 0 20px;  }    
     .container { max-width:97%;  } 
@@ -199,6 +200,9 @@
     header .header-right { max-width: 100%;  flex: 100%;  padding: 0 10px; border-top: 1px solid #F2F1F0; }
     .quick-item p { font-size: 14px; }
     .quick-item figure {   width: 25px;   }
+    .caption-inner p {  font-size: 22px; line-height: 28px; }
+    .side-btn button {  min-width: 120px;    }
+    .side-btn .btn1 {  margin-bottom: 10px;    }
 
 }
 
@@ -341,7 +345,7 @@
     .magic-makeup-row .container { padding:0; }
     .magic-para {  padding: 20px 15px;   background: #fff;   text-align: left;    }
     .ask-jerome .container {  padding: 0;    }
-    .get-social-row {  margin: 20px 0 40px;    }
+    .get-social-row {  margin: 20px 0 0px;    }
     .footer-top p:first-child {   border: none;   display: inline-block;    float: none;    }
     .footer-top p span {   display: block;  border-bottom: 1px solid;    }
     .footer-top p { padding:0; text-align: center; }

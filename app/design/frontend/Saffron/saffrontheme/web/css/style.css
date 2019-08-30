@@ -43,12 +43,22 @@ li{ list-style: none; display: inline-block; }
 .btn2{
     color: #053052;
     background: #E2AF9F;
+    border: none;
+    box-shadow: none !important;
 }
 .btn1 {
     background: none;
     border: 2px solid #E2AF9F;
     color: #053052;
     padding: 12px 31px;
+    box-shadow: none !important;
+}
+.side-btn .btn1:hover {
+    border: 2px solid #E2AF9F;
+}
+
+.btn2:hover {
+    border: none;
 }
 .btn-4 {
     border-radius: 4px;
@@ -62,6 +72,7 @@ li{ list-style: none; display: inline-block; }
     background-color: #E2AF9F;
     border-color: #E2AF9F;
     color:#053052;
+    box-shadow: none;
 }
 
 
@@ -408,6 +419,7 @@ header .header-search .form-control:focus {
 .navigation .level0>.level-top{ 
     font-size: 19px;
     font-family: "BentonSans-Medium";
+    font-weight: normal;
  }
   .menu-child { 
     background: #053052;
@@ -877,8 +889,8 @@ header .header-search .form-control:focus {
     height: auto;
     margin: 32px 0 0;
 }
-.get-social-row .owl-theme .owl-nav button.owl-prev {
-    margin:20px 70px 0 0; 
+.get-social-row .owl-theme .owl-nav button.owl-prev, .get-social-row .owl-theme .owl-nav button.owl-next {
+    margin:20px 35px; 
 }
 .footer-top {
     background: #F9F9F8;
@@ -1224,20 +1236,18 @@ textarea{ resize:none; }
 }
 .sidebar-filter h5 {
     margin: 0 0 22px;
-    font-size: 24px;
-}
-.custom-control-label {
-    padding-left: 10px;
+    font-size: 23px;
 }
 .sidebar-filter h6 {
     margin-bottom: 15px;
     font-family: "BentonSans-Bold";
+    font-size:16px; 
 }
 .filter-ul li.custom-control {
-    margin-bottom: 16px;
+    margin-bottom: 10px;
 }
 ul.filter-ul {
-    margin-bottom: 22px;
+    margin-bottom: 25px;
 }
 .custom-control-input:checked~.custom-control-label::before {
     border-color: #053052;
@@ -1850,7 +1860,7 @@ select:not([disabled]):focus {
     background: #FCDCD4;
     padding: 8px 0;
  }
-
+ 
 .rating-summary .rating-result>span:before {
     color: #F3CF85;
 }
@@ -2170,3 +2180,4 @@ select:not([disabled]):focus {
     max-width: 1600px;
     width: 94%;
 }
+.navigation .level0.parent>.level-top>.ui-menu-icon:after{ display:none;}
