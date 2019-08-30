@@ -2181,3 +2181,6 @@ select:not([disabled]):focus {
     width: 94%;
 }
 .navigation .level0.parent>.level-top>.ui-menu-icon:after{ display:none;}
+.real-right .star-col .fa,
+.magic-item .star-col .fa,
+.clock-section .star-col .fa { color: #F3CF85; }
