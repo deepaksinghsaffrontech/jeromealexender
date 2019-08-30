@@ -1850,10 +1850,7 @@ select:not([disabled]):focus {
     background: #FCDCD4;
     padding: 8px 0;
  }
- .bestseller-carousel .owl-item img {
-    max-height: 200px;
-    width: auto;
-}
+
 .rating-summary .rating-result>span:before {
     color: #F3CF85;
 }
