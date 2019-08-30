@@ -6,6 +6,10 @@ body{
     font-size: 16px;
 }
 h1, h2,h3 { color:#053052; font-family:"BentonSans-Bold"; }
+.benton-m{ font-family:"BentonSans-Medium"; }
+.benton-b{ font-family:"BentonSans-Bold"; }
+.georgia{ font-family:"GeorgiaRegular"; }
+.h30 { font-size:30px; }
 h1, h2, h3 {
     font-size: 43px;
     margin: 0 0 30px;
@@ -46,14 +50,17 @@ li{ list-style: none; display: inline-block; }
     color: #053052;
     padding: 12px 31px;
 }
+.btn-4 {
+    border-radius: 4px;
+}
 .shopbest-col-btm .btn {
     color: #fff;
 }
 .btn-primary:hover,
 .btn2:hover,
 .create-bx .btn:hover {
-    background-color: #e7afa0;
-    border-color: #e7afa0;
+    background-color: #E2AF9F;
+    border-color: #E2AF9F;
     color:#053052;
 }
 
@@ -397,7 +404,8 @@ header .header-search .form-control:focus {
     position: relative;
     top: 2px;
 }
-.navbar-nav > li a{ 
+.navbar-nav > li a,
+.navigation .level0>.level-top{ 
     font-size: 19px;
     font-family: "BentonSans-Medium";
  }
@@ -539,7 +547,9 @@ header .header-search .form-control:focus {
 .get-social-row h3 { 
     text-align: center;
  }
-.star-col .fa { color: #F3CF85; font-size:14px; }
+ .front-page .star-col .fa { color: #F3CF85; }
+ .star-col .fa { color: #053052; font-size:14px; }
+
 .seller-name-col .title-name {
     font-family: "BentonSans-Bold";
     font-size: 14px;
@@ -555,7 +565,7 @@ header .header-search .form-control:focus {
     margin-bottom: 20px;
 }
 .seller-info .star-col {
-    margin: 0 0 7px;
+    margin: 0 0 9px;
 }
 .shopnow-col .shopnow-btn {
     font-size: 17px;
@@ -927,7 +937,7 @@ header .header-search .form-control:focus {
     line-height: normal;
 }
 .signup-box p {
-    font-family: GeorgiaRegular;
+    font-family: "GeorgiaRegular";
     font-size: 18px;
     line-height: 26px;
 }
@@ -1013,8 +1023,8 @@ header.page-header {
 }
 .signin-page .notfront-container,
 .create-account-page .notfront-container {
-    padding: 5% 0;
-    background: #f9f7f8;
+    padding:6% 0 8%;
+    background: #F9F8F8;
 }
 .signin-page .columns,
 .create-account-page .columns {
@@ -1025,13 +1035,13 @@ header.page-header {
     float: left;
     width: 100%;
     background: #fff;
-    padding: 7%;
-    margin-bottom: 30px;
+    padding: 7% 12%;
 }
 .sign-feature {
     float: left;
     width: 100%;
-	margin: 20px 0 10px;
+    margin: 20px 0;
+    display: flex;
 }
 .remember-col {
     float: left;
@@ -1039,7 +1049,7 @@ header.page-header {
 }
 .view-password-link {
     float: right;
-    color: #979797;
+    color: #A9AAAC;
     margin-top: 8px;
 }
 .form-group {
@@ -1049,8 +1059,7 @@ header.page-header {
     
 }
 .sign-feature .quick-item {
-    float: left;
-    width: 33.333%;
+    padding-right: 30px;
 }
 .quick-item figure {
     float: left;
@@ -1065,7 +1074,7 @@ header.page-header {
     width: 100%;
     margin: 0 0 10px;
     line-height: normal;
-    font-size: 24px;
+    font-size: 28px;
     font-family: "BentonSans-Regular";
 }
 .create-account-page .col-12 {
@@ -1099,6 +1108,14 @@ header.page-header {
     margin: 0 0 25px;
     float: left;
     width: 100%;
+}
+.breadcrumbs a,
+.breadcrumbs a:visited { color:#053052; }
+.breadcrumbs .item:not(:last-child):after {
+    display:none;
+}
+.breadcrumbs .items {
+    font-size: 16px;
 }
 .breadcrumbs ul {
     max-width: 1600px;
@@ -1134,13 +1151,13 @@ header.page-header {
 	margin:0; font-size:22px;
 }
 .sidebar-list li:first-child {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #DDE6EC;
 }
 .sidebar-list li,
 .sidebar-category li.shop-item {
     display: block;
     padding: 15px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #DDE6EC;
     float: left;
     width: 100%;
 }
@@ -1177,23 +1194,26 @@ textarea{ resize:none; }
 }
 .quick-item figure {
     float: left;
-    width: 30px;
-    margin-right:5px;
+    width: 40px;
+    margin-right: 5px;
+    text-align: right;
 }
 .quick-item p {
     float: left;
-    width: calc(100% - 35px);
+    width: calc(100% - 50px);
     line-height: 22px;
-    color: #e7afa0;
-    font-size:15px; 
+    color: #E2AF9F;
+    font-size: 19px;
+    font-family: "BentonSans-Medium";
+    white-space: nowrap;
 }
 .tm-link, .singin-link {
     text-decoration: underline;
 }
 .account-bx .tm-col p, .account-bx .tm-col a {
     margin: 0;
-    color: #979797;
-    font-size: 13px;
+    color: #6B6B6B;
+    font-size: 12px;
 }
 .account-bx .tm-col {
     margin-bottom: 12px;
@@ -1275,7 +1295,7 @@ ul.filter-ul {
 }
 .form-control {  
     font-size: 14px;
-    border: 1px solid #c3c2c7;
+    border: 1px solid #A9AAAC;
     border-radius: 0;
     height: 44px;
  }
@@ -1316,7 +1336,7 @@ ul.pagination-list {
     width: 100%;
 }
 .shop-banner {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .shop-banner-content img {
     width: 100%;
@@ -1325,20 +1345,21 @@ ul.pagination-list {
     position: relative;
 }
 .banner-content-bx .text {
-    background: rgba(217,217,219,0.8);
+    background: rgba(221,230,236,0.8);
     width: 100%;
     max-width: 80%;
     padding: 12px 20px;
-    margin: -50px 0 0 20px;
-    position: relative;
+    margin: 0;
+    position: absolute;
+    left: 12px;
+    bottom: -30px;
 }
 .banner-content-bx h5 {
-    margin-bottom: 3px;
+    margin-bottom: 8px;
+    font-size: 28px;
 }
 .banner-content-bx p {
     margin: 0;
-    line-height: 20px;
-    font-size: 14px;
 }
 .shop-banner-content {
     margin-bottom: 8%;
@@ -1357,22 +1378,23 @@ ul.pagination-list {
 .category-row {
     float: left;
     width: 100%;
-    margin-bottom: 9%;
+    margin-bottom:9%;
 }
 .shopall-col {
     text-align: center;
 }
 .shopall-link {
-    color: #e7afa0;
+    color: #E2AF9F;
     text-transform: capitalize;
     text-decoration: underline;
 }
 .category-row .seller-name-col .title-name {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 21px;
+    font-family: "BentonSans-Regular";
 }
 .review-bx {
-    border: 1px solid #e7afa0;
+    border: 1px solid #E2AF9F;
     padding: 0;
     float: none;
     width: 99%;
@@ -1401,32 +1423,35 @@ ul.pagination-list {
 }
 .review-descpt .review-txt {
     float: left;
-    width: 75%;
+    width: 100%;
     padding-right: 20px;
 }
 .owl-theme .owl-dots .owl-dot{ outline: none; }
 .owl-theme .owl-dots .owl-dot span {
     background: transparent;
-    border: 1px solid #e7afa0;
+    border: 1px solid #E2AF9F;
 }
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-    background: #e7afa0;
-    border-color: #e7afa0;
+    background: #E2AF9F;
+    border-color: #E2AF9F;
 }
 .customer-reviews {
-    margin-bottom: 6%; padding:0 20px; 
+    margin-bottom: 6%; 
 }
 
 .name-section p {
-    color: #e7afa0;
+    color: #E2AF9F;
     margin-bottom: 5px;
+    font-family: "GeorgiaRegular";
+    font-size: 18px;
 }
 .name-section h5 {
-    font-size: 22px;
-    margin-bottom: 15px;
+    font-size: 28px;
+    margin-bottom: 12px;
 }
 .review-descpt .review-txt p {
-    color: #7a7a7a;
+    color: #6B6B6B;
+    font-family: "GeorgiaRegular";
 }
 .category-body {
     display: none; padding: 10px 0 0;
@@ -1442,8 +1467,8 @@ ul.pagination-list {
     padding: 8px 0;
 }
 .category-body li a {
-    line-height: normal;
-    font-size: 14px;
+    line-height: 22px;
+    font-size: 15px;
 }
 .sidebar-category li.shop-item .item-name {
     font-family: "BentonSans-bold";
@@ -1454,17 +1479,13 @@ ul.sidebar-category {
     width: 100%;
 }
 .how-toplay .video-column {
-    border: 1px solid #e5edf0;
     margin-bottom: 70px;
 }
-.how-toplay .video-column img {
-    width: 100%;
-    float: left; cursor: pointer;
-}
+
 .how-toplay{  padding: 0 20px; }
 .notfront-banner img { float: left; width:100%; }
 .fluid-img { max-width:100%; width:100%; float:left; }
-.community-reviews {  margin-top: 30px; }
+.community-reviews {  margin-top: 10px; }
 .before-after-item figure {
     float: left;
     width: 100%;
@@ -1474,35 +1495,39 @@ ul.sidebar-category {
     width: 100%;
 }
 .before-after-item {
-    margin-bottom: 10%;
+    margin-bottom: 13%;
     float: left;
     width: 100%;
 }
 .before-after-info h5 {
-    margin: 10px 0 15px;
+    margin: 15px 0 15px; font-size:22px; 
 }
 .before-after-info span.small-text {
     display: block;
     margin-bottom: 10px;
 }
 .before-after-info p {
-    color: #7a7a7a;
+    color: #6B6B6B;
+    font-family: "GeorgiaRegular";
 }
 .shop-link {
-    border: 1px solid #e7afa0;
-    color: #e7afa0;
-    padding: 12px 15px;
+    border: 1px solid #053052;
+    color: #053052;
+    padding: 11px 15px 10px;
     border-radius: 2px;
     min-width: 120px;
     display: inline-block;
     text-align: center;
+    font-size: 15px;
+    font-family: "BentonSans-Medium";
+    text-transform: uppercase;
 }
 .shop-link:hover {
     color: #fff;
-    background: #e7afa0;
+    background: #053052;
 }
 .shop-link:focus {
-    color: #e7afa0;
+    color: #053052;
     background: none;
 }
 .before-after-info .shop-btn-col {
@@ -1511,12 +1536,12 @@ ul.sidebar-category {
 }
 .loadmore-inner {
     background: #f9f9f9;
-    padding: 15px;
     text-align: center;
     margin-bottom: 70px;
+    border-radius: 2px;
 }
 .featured-row2 .right-col figure {
-    border: 1px solid #e5edf0;
+    border: 1px solid #DDE6EC;
     float: left;
     width: 100%;
     margin: 0;
@@ -1534,19 +1559,19 @@ ul.sidebar-category {
     float: left;
 }
 .tab-pane-inner .form-control {
-    background: #f9f9f9;
+    background: #f9f9f8;
     border: none;
     border-radius: 0;
     height: 50px;
-}
-.form-group label {
-    font-size: 14px;
+    color: #053052;
+    font-size: 16px;
 }
 .form-group > label {
     font-family: "BentonSans-Medium";
+    font-size:14px; 
 }
 .form-group > label span {
-    color: #e7afa0;
+    color: #E2AF9F;
 }
 .tab-pane-inner {
     float: left;
@@ -1592,22 +1617,32 @@ ul.pagination2 li {
     box-shadow: none;
 }
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active { 
-    border:none; color:#053052; background:#ffdcd6; text-decoration:underline; 
+    border:2px solid #FCDCD4; color:#053052; background:#ffdcd6; 
   }
 .nav-tabs {
-    border-bottom: 1px solid #ffdcd6;
+    border-bottom: 2px solid #FCDCD4;
     display: initial;
     float: left;
     width: 100%;
 }
-.nav-tabs .nav-link{  border-radius:0; border:none; padding:1rem 1.5rem;  }
-.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover { border: none; }
+.nav-tabs .nav-link{  
+    border-radius: 0;
+    padding: 1rem 1.5rem;
+    border: 2px solid #FCDCD4;
+    font-size: 18px;
+    font-family: "BentonSans-Medium";
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover { border-color:#FCDCD4; }
 .customer-tab .nav-tabs { text-align:right;  }
 .nav-tabs .customer-item,
 .nav-tabs .question-item { float: left; }
 .nav-tabs .ask-item { float: right; }
 .nav-tabs li.nav-item.write-item a {
-    border-right: 1px solid #ffdcd6;
+    border-right: 1px solid #FCDCD4;
+}
+.nav-tabs .write-item a, .nav-tabs .ask-item a {
+    font-family: "BentonSans-Regular";
+    font-style: italic;
 }
 .customer-tab .nav-item .fa {
     margin-left: 5px;
@@ -1621,7 +1656,7 @@ ul.pagination2 li {
 .nav-tabs .write-item, 
 .nav-tabs .ask-item { position: relative;  bottom:-1px;  }
 .question-click h5 {
-    color: #e7afa0;
+    color: #E2AF9F;
     padding-left: 0px;
     font-size:18px; 
     line-height:26px; 
@@ -1645,14 +1680,14 @@ ul.pagination2 li {
 }
 
 .answer-column {
-    border-left: 2px solid #e7afa0;
+    border-left: 2px solid #E2AF9F;
     padding-left: 15px;
     float: left;
     width: 100%;
 }
 
 .name-date-column h6 {
-    color: #e7afa0;
+    color: #E2AF9F;
     float: left;
     animation: q;
 }
@@ -1686,7 +1721,7 @@ ul.pagination2 li {
 .tab-pane-inner .name-col .form-control,
 .tab-pane-inner .review-comment-col .form-control {
     background: none;
-    border: 1px solid #c3c2c7;
+    border: 1px solid #A9AAAC;
 }
 
 .tab-pane-inner .review-comment-col .form-control { height:auto; }
@@ -1696,7 +1731,7 @@ ul.pagination2 li {
     width: 100%;
 }
 .done-btn {
-    background: #e7afa0;
+    background: #E2AF9F;
     color: #053052;
     min-width: 140px;
 }
@@ -1715,19 +1750,16 @@ ul.pagination2 li {
     margin: 0;
 }
 .account-bx .text {
-    font-size: 14px;
     font-style: italic;
     float: left;
     width: 100%;
-    line-height: 22px;
     margin: 0 0 5px;
 }
 .form-group > label .forgot-link {
     font-family: "BentonSans-Regular";
-    font-size: 13px;
 }
 .remember-col label {
-    color: #979797;
+    color: #6B6B6B;
 }
 .remember-group {
     margin-bottom: 10px;
@@ -1815,7 +1847,10 @@ select:not([disabled]):focus {
     background: #FCDCD4;
     padding: 8px 0;
  }
-.bestseller-carousel img { max-width: 210px; }
+ .bestseller-carousel .owl-item img {
+    max-height: 200px;
+    width: auto;
+}
 .rating-summary .rating-result>span:before {
     color: #F3CF85;
 }
@@ -1878,7 +1913,7 @@ select:not([disabled]):focus {
 .popular-item .video-col:hover .play-tutorial .icon .fa img {
 	width:16px;
 }
-.play-tutorial .icon .fa {
+.icon .fa {
     width: 40px;
     height: 40px;
     border: 1px solid #fff;
@@ -1889,7 +1924,7 @@ select:not([disabled]):focus {
 	
 }
 
-.play-tutorial .icon .fa img {
+.icon .fa img {
     width: 11px;
     height: auto;
     display: inline-block;
@@ -1957,6 +1992,175 @@ select:not([disabled]):focus {
 
 .ask-jerome-banner {
     margin-bottom: 100px;
+}
+.sign-feature .quick-item:last-child img {
+    max-height: 28px;
+}
+.date-col span {
+    color: #A9AAAC; font-size:14px; 
+}
+.review-bx .star-col .fa {
+    color: #053052;
+}
+.loadmore-link {  
+    font-size: 18px;
+    display:block;
+    padding: 15px;
+ }
+.loadmore-link .fa {
+    font-size: 22px;
+    position: relative;
+    top: 2px;
+    left: 3px;
+}
+.video-column {
+    position: relative;
+}
+.video-container {
+    float: left;
+    width: 100%; position: relative;
+}
+.video-container figure {
+    margin: 0;
+}
+.video-text-col {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    background: #fff;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+}
+.video-text-col p {
+    margin: 0;
+}
+.video-text-col h4 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+.play-video-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: rgba(15,30,41,0.4);
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+.play-video-icon span {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+.right-col .play-video-icon span {
+    font-size: 15px;
+}
+.right-col .play-video-icon{
+    padding:8px 12px; 
+}
+.tab-pane-inner .loadmore-inner {
+    margin-bottom: 0;
+}
+.cummunity-page .get-social-row {
+    margin-top: 40px;
+}
+.shopall-inner h1 {
+    margin-bottom: 50px;
+}
+.seller-name-col .price-span {
+    display: block;
+    font-family: "BentonSans-Bold";
+    font-size: 17px;
+}
+.seller-name-col .shop-link {
+    margin-top: 20px;
+}
+.shopall-col .loadmore-inner {
+    background: #053052; margin-bottom: 0;
+}
+
+.shopall-col .loadmore-inner a {
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.shopall-page .ask-jerome-inner {
+    margin-bottom: 20px;
+}
+.banner-content-bx figure {
+    margin: 0;
+}
+.catalog-product-view .product-info-main .page-title-wrapper h1 {
+    font-size: 28px;
+    font-family: "BentonSans-Regular";
+    margin-bottom: 20px;
+}
+.product-info-main .product-reviews-summary {
+    margin-bottom: 30px;
+}
+.product-reviews-summary .reviews-actions a {
+    font-size: 13px;
+    font-family: "BentonSans-Medium";
+    text-decoration: underline;
+}
+.rating-summary .rating-result>span:before, .rating-summary .rating-result:before {
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.product-reviews-summary .reviews-actions a:not(:last-child) {
+    margin-right: 12px;
+}
+.product-info-main .product-info-price {
+    border: none;
+    color: #053052;
+}
+.catalog-product-view .product-info-main .product-info-price .price {
+    color: #053052;
+    font-family: "BentonSans-Medium";
+    font-size: 28px;
+}
+.product-info-main .product-info-stock-sku span, .product-info-main .product.attribute.sku {
+    font-size: 13px;
+}
+.box-tocart input#qty {
+    border: 1px solid #A9AAAC;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #053052;
+}
+.catalog-product-view .box-tocart label.label {
+    font-size: 16px;
+    font-family: "BentonSans-Regular";
+    font-weight: normal;
+}
+.box-tocart .field.qty {
+    float: left;
+    width: auto;
+    padding-right: 25px;
+}
+.catalog-product-view .box-tocart .action.tocart {
+    margin: 6px 0 0;
+    background: #053052;
+    border: none;
+    opacity: 1;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.product-social-links .product-addto-links .action, .product-social-links .action.mailto.friend {
+    color: #053052;
+    font-size: 12px;
+    font-family: "BentonSans-Medium";
+    text-transform: inherit;
+    font-weight: normal;
+    text-decoration: underline;
+}
+.product.attribute.overview {
+    font-size: 13px;
+}
+.product-social-links .product-addto-links .action:hover, .product-social-links .action.mailto.friend:hover {
+    color: #053052;
 }
 
 /*===============-magento-common-classes-css-===============*/

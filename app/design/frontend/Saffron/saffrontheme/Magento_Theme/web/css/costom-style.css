@@ -102,12 +102,6 @@ ul.social-links li {
 .navigation .level0>.level-top {
     color: #053052;
 }
-.breadcrumbs {
-  
-    max-width: 100%;
-    padding: 15px;
-    
-}
 .nav-sections {
     background: #F9F9F8;
 }
@@ -170,13 +164,3 @@ a:visited, .alink:visited {
     display: none;
 }
 .block-search .action.search:before{display:none}
-
-.sidebar-ask {
-    width: 21%;
-    float: left;
-}
-
-.column-ask {
-    float: left;
-    width: 79%;
-}

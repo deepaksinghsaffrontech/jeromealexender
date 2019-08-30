@@ -73,21 +73,19 @@
 	/*--magento-navigation-css--*/
 	.navigation { z-index: 1; }
 	.navigation li.level0 { float: left; width:14.28%; text-align: center; margin: 0;	}
-	.navigation .level0>.level-top { display: block; padding: 20px 10px; line-height: normal; font-size:15px; }
+	.navigation .level0>.level-top { display: block; padding: 20px 10px; line-height: normal;  }
 	.navigation li.level0:hover a { background: #ffdcd5;   }
     .nav-sections-item-content>.navigation {  background: none;  }
     .navigation { max-width: 1600px; width: 94%; padding: 0 7px;    }
     .nav-sections .satisfaction-carousel { display:none; }
-	.caption-inner p {
-    font-size: 28px;
-    line-height: 38px;
-}
-.caption-inner {
-    position: absolute;
-    bottom: -20px;
-    left: 20px;
-}
-
+	.caption-inner p {  font-size: 28px; line-height: 38px; }
+    .caption-inner {  position: absolute;  bottom: -20px;  left: 20px; }
+    .sign-container .left-col {  padding-right: 5px;  }
+    .sign-container .right-col { padding-left: 5px;  }
+    .sidebar-ask { width: 20.83333333%; float: left; padding-right: 2%;    }
+    .column-ask { float: left; width: 79.16666667%;    }
+    .page-main { padding:0; }
+    .navigation .level0.active>.level-top, .navigation .level0.has-active>.level-top { display: block; }
 
   
 /*==============magento-common-classes-css=================*/
@@ -110,7 +108,7 @@
     
 }
 @media (max-width: 1370px) {
-    .navbar-nav > li a{  font-size:15px; }
+    .navbar-nav > li a, .navigation .level0>.level-top{  font-size:15px; }
     .content-menu a { font-size:16px; padding: 0 10px; }
 
 }
@@ -155,7 +153,15 @@
     .title-main, .magic-makeup-row .title-main,
     .real-women-row .title-main { font-size:40px; }
 	.navigation li.level0 { width:auto; padding:0; min-width:13%;}
-	.content-menu a { padding:0 8px; font-size:15px; }
+    .content-menu a { padding:0 8px; font-size:15px; }
+    .account-bx { padding:7%; }
+    .quick-item p { font-size:16px; }
+    .nav-tabs .nav-link { padding:1rem 15px; font-size:16px;  }
+    .community-reviews { padding:0 20px; }
+    .customer-reviews .owl-carousel { padding:0 30px; }
+    .owl-theme .owl-nav button.owl-prev, .owl-theme .owl-nav button.owl-prev:hover { left:-10px; }
+    .owl-theme .owl-nav button.owl-next, .owl-theme .owl-nav button.owl-next:hover { right:-10px; }
+
 
 
 }
@@ -190,12 +196,9 @@
     .navigation li.level0 { width: auto; padding:0; min-width:12%; }
     .navigation {  width: 98%; }
     .footer-top p { padding: 0 5px; }
-	header .header-right {
-    max-width: 100%;
-    flex: 100%;
-    padding: 0 10px;
-    border-top: 1px solid #F2F1F0;
-}
+    header .header-right { max-width: 100%;  flex: 100%;  padding: 0 10px; border-top: 1px solid #F2F1F0; }
+    .quick-item p { font-size: 14px; }
+    .quick-item figure {   width: 25px;   }
 
 }
 
@@ -304,7 +307,7 @@
     .social-links {  padding: 0 0 10px; }
     .footer-bottom h5 { font-size:17px; }
     .signup-box p{ font-size:15px; }
-    .banner-content-bx .text { max-width:94%; margin:-50px auto 0; }
+    .banner-content-bx .text {  position: relative; bottom: inherit; top: -50px; margin: 0 auto; float: none; max-width: 90%; left: inherit;  }
     .columns { width: 100%; float: left; padding: 0 20px; }
     .category-row {  margin-bottom: 15%; }
     .customer-reviews .name-section, .customer-reviews .descript-col { padding:15px; }
@@ -316,15 +319,14 @@
     .category-airbrush {  margin-bottom: 0;  }
     .real-women-row .video-col { margin:0; }
     .featured-row2 .right-col { margin: 20px 0; }
-    .nav-tabs .nav-link { margin:2px; font-size:12px; background: #f7f7f7; padding:10px 5px;  }
+    .nav-tabs .nav-link { margin:2px; font-size:11px; background: #f7f7f7; padding:10px 5px;  }
     .nav-tabs .nav-item { float: left; width: 50%; position: inherit; bottom: inherit;   }
     .customer-tab .nav-tabs { text-align:center; }
     .question-click h5 { font-size:16px; line-height:24px;  }
     .name-date-column { margin-bottom:10p;  }
     .contact-form, .callus-col {  margin-top: 40px; }
     .sign-feature .quick-item { text-align: center; }
-    .quick-item figure { width:100%; margin:0 0 5px; }
-    .quick-item p { width:100%; font-size:13px; line-height:20px;  }
+    .quick-item p { font-size:13px; margin:0;   }
     .quick-item p br, .account-bx .text br { display:none; }
     .account-bx h3 { font-size:22px;  }
     .title-main,
@@ -411,14 +413,13 @@
     .singin-dropdown { min-width:220px; top:120%; }
     .header-search .form-group { margin:0; }
     .minicart-wrapper .action.showcart.active {   display: flex;    }
-	.caption-inner {
-    width: calc(100% - 30px);
-    margin: -20px 15px 0;
-    position: relative;
-}
-.ask-jerome-banner {
-    margin-bottom: 50px;
-}
+	.caption-inner { width: calc(100% - 30px);  margin: -20px 15px 0;  position: relative; }
+    .ask-jerome-banner { margin-bottom: 50px; }
+    .sign-feature { flex-wrap: wrap; margin:0;  }
+    .sign-feature .quick-item { padding:0 0 20px; display: flex;     align-items: center;     }
+    .btn-primary { padding:11px 10px; }
+    .customer-reviews { padding:0 25px; }
+
 
 
 }
