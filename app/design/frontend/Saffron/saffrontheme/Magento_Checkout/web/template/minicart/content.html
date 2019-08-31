@@ -38,7 +38,7 @@
         </div>
     </if>
 
-    <ifnot args="getCartParam('summary_count')">
+     <ifnot args="getCartParam('summary_count')">
         <strong class="subtitle empty"
                 data-bind="visible: closeSidebar()"
                 translate="'You have no items in your shopping cart.'"
@@ -55,10 +55,7 @@
         </if>
     </ifnot>
 
-  
-
-    
-	<if args="getCartParam('summary_count')">
+   <if args="getCartParam('summary_count')">
    <div class="bottom-cart" >       
 	   
 	   <div  class="sub-totel-cart">
