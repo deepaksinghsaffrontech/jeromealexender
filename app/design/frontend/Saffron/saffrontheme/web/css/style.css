@@ -1120,6 +1120,7 @@ header.page-header {
     margin: 0 0 25px;
     float: left;
     width: 100%;
+    max-width:100%;
 }
 .breadcrumbs a,
 .breadcrumbs a:visited { color:#053052; }
@@ -1172,6 +1173,7 @@ header.page-header {
     border-bottom: 1px solid #DDE6EC;
     float: left;
     width: 100%;
+    margin:0; 
 }
 textarea{ resize:none; }
 .contact-form h4 {
@@ -1478,6 +1480,7 @@ ul.pagination-list {
 }
 .category-body li {
     padding: 8px 0;
+    margin:0; 
 }
 .category-body li a {
     line-height: 22px;
@@ -2172,6 +2175,117 @@ select:not([disabled]):focus {
 .product-social-links .product-addto-links .action:hover, .product-social-links .action.mailto.friend:hover {
     color: #053052;
 }
+.real-right .star-col .fa,
+ .magic-item .star-col .fa,
+ .clock-section .star-col .fa { color: #F3CF85; }
+ button{ outline: none; }
+
+/*---mini-cart-css-start-here---*/
+.minicart-wrapper .block-minicart .minicart-items-wrapper::-webkit-scrollbar {
+    width: 4px;
+  }
+.minicart-wrapper .block-minicart .minicart-items-wrapper::-webkit-scrollbar-thumb {
+    background: #cecece;
+    border-radius: 30px;
+  }
+.minicart-wrapper .block-minicart .minicart-items-wrapper::-webkit-scrollbar-track {
+    background: #e8e8e8;
+    border-radius: 30px;
+  }
+
+.minicart-wrapper .block-minicart {
+    border: none;
+    background: #fff;
+    box-shadow: 0 0 10px #ccc;
+    padding: 0;
+    right:0;
+}
+.minicart-wrapper .block-minicart .minicart-items-wrapper {
+    border: none;
+    height: 290px !important;
+    overflow: auto;
+}
+.minicart-items .product-item-name, .minicart-items .product-item-name a {
+    text-align: left;
+    color: #053052;
+    font-size: 14px;
+    line-height: 20px;
+}
+.minicart-items .product-item-details .price {
+    font-size: 16px;
+    font-family: "BentonSans-Medium";
+    font-weight: normal;
+}
+.minicart-items .product-item-details .price-including-tax, .minicart-items .product-item-details .price-excluding-tax {
+    text-align: left;
+    margin: 15px 0;
+}
+.minicart-items .product-item-details .details-qty {
+    text-align: left;
+}
+.minicart-items .action.edit:before,
+.minicart-items .action.delete:before,
+.minicart-items .action.edit:hover:before,
+.minicart-items .action.delete:hover:before {color:#053052;font-weight:normal;font-size: 15px;}
+
+.minicart-items .product-item-pricing .label {font-size: 14px;}
+.minicart-items .product-item:not(:first-child) {
+    border-top:  1px solid #DDE6EC;
+}
+.minicart-wrapper .block-minicart li {
+    display: block;
+}
+.bottom-cart {
+    background: #f9f7f8;
+    padding: 20px 15px 10px;
+    float: left;
+    width: 100%;
+}
+.minicart-items {
+    padding: 15px;
+}
+.minicart-wrapper .minicart-widgets {
+    margin: 0;
+}
+#top-cart-btn-checkout {
+    background: #053052;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    float: left;
+    width: 100%;
+}
+.bottom-cart .actions {float: left;width: 100%;text-align: center;margin: 10px 0;}
+.bottom-cart .primary {
+    float: left;
+    width: 100%;
+}
+.minicart-wrapper .block-minicart:before,
+.minicart-wrapper .block-minicart:after{ display:none; }
+.bottom-cart .action.viewcart {
+    font-size: 14px;
+    text-decoration: underline;
+    font-family: "BentonSans-Medium";
+    font-weight: normal;
+}
+.block-minicart .items-total .count, .block-minicart .items-total {
+    font-size: 14px;
+    font-weight: normal;
+}
+.block-minicart .subtotal {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 5px;
+}
+.block-minicart .amount .price-wrapper:first-child .price {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "BentonSans-Medium";
+}
+.amount.price-container {
+    margin-top: 6px;
+}
+/*---end-here-mini-cart-css----*/
 
 /*===============-magento-common-classes-css-===============*/
 .columns {
@@ -2181,6 +2295,3 @@ select:not([disabled]):focus {
     width: 94%;
 }
 .navigation .level0.parent>.level-top>.ui-menu-icon:after{ display:none;}
-.real-right .star-col .fa,
-.magic-item .star-col .fa,
-.clock-section .star-col .fa { color: #F3CF85; }
