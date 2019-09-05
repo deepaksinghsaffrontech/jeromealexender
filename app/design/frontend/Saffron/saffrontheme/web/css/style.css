@@ -9,7 +9,7 @@ h1, h2,h3 { color:#053052; font-family:"BentonSans-Bold"; }
 .benton-m{ font-family:"BentonSans-Medium"; }
 .benton-b{ font-family:"BentonSans-Bold"; }
 .georgia{ font-family:"GeorgiaRegular"; }
-.h30 { font-size:30px; margin-bottom: 40px; }
+.h30 { font-size:30px;  }
 h1, h2, h3 {
     font-size: 43px;
     margin: 0 0 32px;
@@ -43,22 +43,24 @@ li{ list-style: none; display: inline-block; }
 .btn2{
     color: #053052;
     background: #E2AF9F;
-    border: none;
+	border: 2px solid #E2AF9F;
     box-shadow: none !important;
 }
 .btn1 {
     background: none;
     border: 2px solid #E2AF9F;
     color: #053052;
-    padding: 12px 31px;
     box-shadow: none !important;
 }
 .side-btn .btn1:hover {
     border: 2px solid #E2AF9F;
 }
-
 .btn2:hover {
-    border: none;
+    border: 2px solid #E2AF9F;
+}
+.side-btn .btn {
+    padding: 12px;
+    width: 110px;
 }
 .btn-4 {
     border-radius: 4px;
@@ -572,6 +574,7 @@ header .header-search .form-control:focus {
 .seller-name-col p {
     font-size: 13px;
     line-height: 20px;
+	margin-bottom:16px;
 }
 .bestseller-carousel img {
     margin-bottom: 20px;
@@ -1130,12 +1133,12 @@ header.page-header {
 .breadcrumbs .items {
     font-size: 16px;
 }
-.breadcrumbs ul {
+.breadcrumbs .items {
     max-width: 1600px;
     width: 94%;
-    margin: 0 auto;
+    margin: 0 auto !important;
     float: none;
-    padding:0 15px; 
+    padding: 0 15px !important; 
 }
 .breadcrumbs li {
     color: #333;
@@ -1378,7 +1381,7 @@ ul.pagination-list {
     margin: 0;
 }
 .shop-banner-content {
-    margin-bottom: 8%;
+    margin-bottom: 100px;
 }
 .shop-all-banner img {
     width: 100%;
@@ -1390,11 +1393,11 @@ ul.pagination-list {
     margin-bottom: 50px;
 }
 .category-item figure { text-align: center; }
-.category-item img { width:100%; max-width: 230px; }
+.category-item img { width:100%; max-width: 300px; }
 .category-row {
     float: left;
     width: 100%;
-    margin-bottom:9%;
+    margin-bottom:70px;
 }
 .shopall-col {
     text-align: center;
@@ -1538,15 +1541,16 @@ ul.sidebar-category {
     font-size: 15px;
     font-family: "BentonSans-Medium";
     text-transform: uppercase;
+	background:none;
+	font-weight:normal;
 }
-.shop-link:hover {
+.shop-link:hover,
+.shop-link:focus {
     color: #fff;
     background: #053052;
+	box-shadow:none;
 }
-.shop-link:focus {
-    color: #053052;
-    background: none;
-}
+
 .before-after-info .shop-btn-col {
     margin-top: 20px;
     display: block;
@@ -2085,7 +2089,8 @@ select:not([disabled]):focus {
 .shopall-inner h1 {
     margin-bottom: 50px;
 }
-.seller-name-col .price-span {
+.seller-name-col .price-span,
+.price-container .price {
     display: block;
     font-family: "BentonSans-Bold";
     font-size: 17px;
@@ -2145,7 +2150,7 @@ select:not([disabled]):focus {
     color: #053052; margin-bottom:30px; 
 }
 .catalog-product-view .product-info-main .product-info-price .price,
-.price-box.price-final_price .price {
+.product-detail-page .price-box.price-final_price .price {
     color: #053052;
     font-family: "BentonSans-Bold";
     font-size: 28px;
@@ -2262,7 +2267,7 @@ select:not([disabled]):focus {
 }
 .minicart-wrapper .block-minicart .minicart-items-wrapper {
     border: none;
-    height: 290px !important;
+    max-height: 290px;
     overflow: auto;
 }
 .minicart-items .product-item-name, .minicart-items .product-item-name a {
@@ -2505,7 +2510,165 @@ select:not([disabled]):focus {
 }
 .category-detail-list .category-row { margin-bottom:6%;  }
 .airbrush-listing .category-row {  margin-bottom: 0; }
+.navigation .level0.active>.level-top, .navigation .level0.has-active>.level-top {
+    border: none;
+}
+.minicart-wrapper .action.close {  outline: none; }
 
+/*--checkout-css--*/
+
+.checkout-cart-index .page-title-wrapper, .checkout-cart-index .page.messages {
+    max-width: 1600px;
+    width: 94%;
+    margin: 0 auto;
+    float: none;
+    padding: 0 15px;
+}
+.checkout-cart-index .page-title-wrapper {
+    padding-top: 50px;
+}
+.checkout-cart-index .page-title-wrapper h1.page-title {
+    font-size: 30px;
+}
+.cart.table-wrapper .cart thead tr th.col {
+    border-bottom: 1px solid #DDE6EC;
+    font-size: 14px;
+    font-family: "BentonSans-Medium";
+    font-weight: normal;
+    padding-top: 15px;
+}
+.cart.table-wrapper .product-item-name {
+    font-size: 14px;
+    color: #053052;
+}
+.paypal-review .table-paypal-review-items .col.price .price-including-tax .price, .paypal-review .table-paypal-review-items .col.price .price-excluding-tax .price, .paypal-review .table-paypal-review-items .col.subtotal .price-including-tax .price, .paypal-review .table-paypal-review-items .col.subtotal .price-excluding-tax .price, .cart.table-wrapper .col.price .price-including-tax .price, .cart.table-wrapper .col.price .price-excluding-tax .price, .cart.table-wrapper .col.subtotal .price-including-tax .price, .cart.table-wrapper .col.subtotal .price-excluding-tax .price, .cart.table-wrapper .col.msrp .price-including-tax .price, .cart.table-wrapper .col.msrp .price-excluding-tax .price, .order-details-items .col.price .price-including-tax .price, .order-details-items .col.price .price-excluding-tax .price, .order-details-items .col.subtotal .price-including-tax .price, .order-details-items .col.subtotal .price-excluding-tax .price {
+    color: #053052;
+    font-weight: normal;
+    font-family: "BentonSans-Medium";
+    font-size: 16px;
+}
+
+.table {  color: #053052; }
+.cart.table-wrapper .col.qty .input-text { border: 1px solid #DDE6EC;  font-size: 16px; }
+.cart.table-wrapper .product-item-details { vertical-align: middle; }
+.table td, .table th { vertical-align: middle; }
+td.col.item img.product-image-photo { width: 90px; height: auto; }
+
+.cart.table-wrapper .actions-toolbar>.action-edit:before,
+.cart.table-wrapper .actions-toolbar>.action-delete:before {
+    color: #053052;
+    font-size: 14px;
+}
+.cart.table-wrapper .actions-toolbar>.action-delete {
+    right: 0;
+    top: -4px;
+}
+.cart.table-wrapper .cart>.item { border-bottom: 1px solid #DDE6EC; }
+.cart.table-wrapper .item-actions td { padding-bottom: 10px; }
+.paypal-review-discount .block>.title strong, .cart-discount .block>.title strong, .abs-discount-block .block>.title:after, .cart-summary .block>.title:after, .paypal-review-discount .block>.title:after, .cart-discount .block>.title:after {
+    color: #053052;
+}
+.paypal-review-discount .block>.title strong,
+.cart-discount .block>.title strong {  font-size: 14px; }
+
+input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"] {
+    border: 1px solid #A9AAAC;
+}
+
+.abs-discount-block .actions-toolbar .action.primary:not(:focus), .abs-discount-block .actions-toolbar .action.cancel:not(:focus), .block-compare .action.primary:not(:focus), .cart-summary .block .actions-toolbar>.primary .action.primary:not(:focus), .cart-summary .form.giftregistry .fieldset .action.primary:not(:focus), .paypal-review-discount .actions-toolbar .action.primary:not(:focus), .paypal-review-discount .actions-toolbar .action.cancel:not(:focus), .cart-discount .actions-toolbar .action.primary:not(:focus), .cart-discount .actions-toolbar .action.cancel:not(:focus) {
+    box-shadow: none;
+    background: #053052;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.abs-revert-secondary-color:focus, .abs-revert-secondary-color:active, .abs-revert-to-action-secondary:focus, .abs-revert-to-action-secondary:active, .paypal-review .block .actions-toolbar .action.primary:focus, .paypal-review .block .actions-toolbar .action.primary:active, .abs-discount-block .actions-toolbar .action.primary:focus, .abs-discount-block .actions-toolbar .action.primary:active, .abs-discount-block .actions-toolbar .action.cancel:focus, .abs-discount-block .actions-toolbar .action.cancel:active, .block-compare .action.primary:focus, .block-compare .action.primary:active, .cart-summary .block .actions-toolbar>.primary .action.primary:focus, .cart-summary .block .actions-toolbar>.primary .action.primary:active, .cart-summary .form.giftregistry .fieldset .action.primary:focus, .cart-summary .form.giftregistry .fieldset .action.primary:active, .paypal-review-discount .actions-toolbar .action.primary:focus, .paypal-review-discount .actions-toolbar .action.primary:active, .paypal-review-discount .actions-toolbar .action.cancel:focus, .paypal-review-discount .actions-toolbar .action.cancel:active, .cart-discount .actions-toolbar .action.primary:focus, .cart-discount .actions-toolbar .action.primary:active, .cart-discount .actions-toolbar .action.cancel:focus, .cart-discount .actions-toolbar .action.cancel:active {
+    background: #053052;
+    border: none;
+    color: #fff;
+    outline: none;
+}
+
+button:not(.primary) {
+    box-shadow: none;
+    outline: none;
+}
+button {
+    background: #053052;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 12px 20px;
+    font-family: "BentonSans-Medium";
+}
+button:hover, button:focus {
+    border: none;
+    box-shadow: none;
+    background: #053052;
+    color: #fff;
+}
+
+#discount-coupon-form input#coupon_code { height: 33px;  border-right: none; }
+.cart-summary { background: #F9F9F8; }
+.cart-totals tbody .mark, .cart-totals tfoot .mark { background: none; font-size: 13px; }
+
+.abs-cart-block>.title, .minicart-items .product .toggle, .abs-discount-block .block>.title, .cart-summary .block>.title, .paypal-review-discount .block>.title, .cart-totals, .opc-block-summary .table-totals, .cart-totals .grand .amount, .opc-block-summary .table-totals .grand .amount, .cart-totals .grand .mark, .opc-block-summary .table-totals .grand .mark {
+    border-top: 1px solid #DDE6EC;
+}
+
+.cart-summary .block .title strong {  font-weight: normal; font-size: 13px; }
+.cart-totals tbody .amount, .cart-totals tfoot .amount,
+.opc-block-summary .table-totals tbody .amount,
+.opc-block-summary .table-totals tfoot .amount { font-size: 13px; font-family: "BentonSans-Medium"; }
+
+div#cart-totals th.mark,
+div#cart-totals td.amount { padding-bottom: 15px; }
+.cart-totals .grand strong,
+.opc-block-summary .table-totals .grand strong { font-weight: normal; font-size: 16px; }
+.cart-summary>.title {
+    font-size: 20px;
+    font-family: "BentonSans-Medium";
+}
+.action.primary {
+    background: #053052;
+    border-color: #053052;
+    outline: none;
+    box-shadow: none;
+}
+.action.primary:hover, .action.primary:focus {
+    background: #053052;
+    border-color: #053052;
+}
+.action.primary span {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "BentonSans-Medium";
+}
+.cart-summary .action.multicheckout {
+    font-size: 13px;
+    text-decoration: underline;
+    color: #053052;
+}
+.fieldset>.field>.label, .fieldset>.fields>.field>.label {
+    font-weight: normal;
+    font-size: 13px;
+}
+#shipping-zip-form select {
+    border: 1px solid #A9AAAC;
+    font-size: 13px;
+}
+dt {
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.cart-summary .block .item-options .field .radio+.label , .cart-summary .block .price {
+    font-weight: normal;
+    font-size: 14px;
+}
 
 /*===============-magento-common-classes-css-===============*/
 .columns {
@@ -2513,6 +2676,7 @@ select:not([disabled]):focus {
     float: none;
     max-width: 1600px;
     width: 94%;
+	padding:0 15px;
 }
 .navigation .level0.parent>.level-top>.ui-menu-icon:after{ display:none;}
 
