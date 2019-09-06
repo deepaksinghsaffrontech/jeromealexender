@@ -2147,7 +2147,7 @@ select:not([disabled]):focus {
 }
 .product-info-main .product-info-price {
     border: none;
-    color: #053052; margin-bottom:30px; 
+    color: #053052; margin-bottom:0px; 
 }
 .catalog-product-view .product-info-main .product-info-price .price,
 .product-detail-page .price-box.price-final_price .price {
@@ -2160,10 +2160,17 @@ select:not([disabled]):focus {
     font-size: 13px;
 }
 .box-tocart input#qty {
-    border: 1px solid #A9AAAC;
-    border-radius: 4px;
+   color: #053052;
+    float: left;
+    border: none;
+    border-left: 1px solid #6B6B6B;
+    border-right: 1px solid #6B6B6B;
+    border-radius: 0;
+    height: 36px;
+    box-shadow: none;
     font-size: 16px;
-    color: #053052;
+    width: 60px;
+    box-sizing: border-box;
 }
 .catalog-product-view .box-tocart label.label {
     font-size: 16px;
@@ -2172,8 +2179,8 @@ select:not([disabled]):focus {
 }
 .box-tocart .field.qty {
     float: left;
-    width: auto;
-    padding-right: 25px;
+    width: 146px;
+    padding-right: 0;
 }
 .box-tocart {
     float: left;
@@ -2198,7 +2205,7 @@ select:not([disabled]):focus {
     border-radius: 4px;
     font-size: 18px;
     cursor: pointer;
-    min-width: 56%;
+    width: 80%;
     height: 58px;
     outline: none;
 }
@@ -2433,7 +2440,7 @@ select:not([disabled]):focus {
 }
 .qty-input {
     float: left;
-    width: 150px;
+    width: 142px;
     border: 1px solid #6B6B6B;
     border-radius: 4px;
 }
@@ -2451,6 +2458,7 @@ select:not([disabled]):focus {
     font-size: 22px;
     color: #6B6B6B;
     outline: none;
+    box-shadow: none;
 }
 .qty-container input#IncDec {
     width: 58px;
@@ -2467,7 +2475,7 @@ select:not([disabled]):focus {
 .product-social-links {
     float: left;
     width: 100%;
-    margin-top: 35px;
+    margin-top:0px;
 }
 
 .product-social-links .product-addto-links .action {
@@ -2508,7 +2516,7 @@ select:not([disabled]):focus {
     text-align: center;
     margin-bottom: 15px;
 }
-.category-detail-list .category-row { margin-bottom:6%;  }
+.category-detail-list .category-row { margin-bottom:0;  }
 .airbrush-listing .category-row {  margin-bottom: 0; }
 .navigation .level0.active>.level-top, .navigation .level0.has-active>.level-top {
     border: none;
@@ -2669,6 +2677,39 @@ dt {
     font-weight: normal;
     font-size: 14px;
 }
+.product-info-price .price-box .price-container span.price-label {
+    color: #053052;
+    font-size: 16px;
+}
+.swatch-attribute-label {
+    font-weight: normal;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.product-info-main .product-add-form { padding-top: 0; }
+.swatch-option {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+}
+.swatch-option.image:not(.disabled):hover,
+.swatch-option.color:not(.disabled):hover { outline: none; border: none; }
+.product-info-main .product-options-bottom .box-tocart {  margin-top: 0; }
+.product-info-main .product-options-bottom .box-tocart .fieldset { display: flex; }
+.product-info-main .product-options-bottom .box-tocart .fieldset .actions { width: 100%; }
+.product-social-links .product-addto-links .action:before,
+.product-social-links .action.mailto.friend:before { display: none; }
+.product-info-main .stock.available {  color: green; }
+.product-info-main .stock.unavailable {  color: red; }
+.fotorama__caption__wrap { color: #053052; }
+.product.data.items>.item.content { border: none; background: #fafaf9; border-top: 2px solid #FCDCD4; }
+.product .video-container h4 { text-align: center; margin-bottom: 15px; }
+.content-panel p { margin-bottom: 20px; }
+.product.data.items { margin-top: 80px; float: left; width: 100%; }
+.category-lissting.category-detail-list {  margin-top: 80px; }
+.price-box.price-final_price .price {  font-size: 17px; }
+
 
 /*===============-magento-common-classes-css-===============*/
 .columns {
