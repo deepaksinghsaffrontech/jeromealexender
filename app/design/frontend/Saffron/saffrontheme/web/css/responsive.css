@@ -423,7 +423,8 @@
     .customer-service-mobile li {margin: 0;display: block;}
     .customer-service-mobile { background: #fcfcfc; padding: 6px 0;  }
     .navigation li.level0:last-child {  border-bottom: none;   }
-    .customer-service-mobile li a { padding: 9px 15px; display: block; color: #6B6B6B;font-family: "GeorgiaRegular"; font-weight: normal;    }
+    .customer-service-mobile li a { padding: 9px 15px; display: block; color: #6B6B6B;
+		font-family: "GeorgiaRegular"; font-weight: normal;    }
     .sections.nav-sections .satisfaction-carousel { margin-top: 10px; padding: 0 26px;     }
     .navigation .level0>.level-top:hover {  color: #053052;  }
     .navigation .submenu>li { display: block;  }

@@ -27,6 +27,46 @@ p{
 ul{ padding:0; }
 li{ list-style: none; display: inline-block; }
 
+input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"] {
+    border: 1px solid #A9AAAC;
+}
+
+.abs-discount-block .actions-toolbar .action.primary:not(:focus), .abs-discount-block .actions-toolbar .action.cancel:not(:focus), .block-compare .action.primary:not(:focus), .cart-summary .block .actions-toolbar>.primary .action.primary:not(:focus), .cart-summary .form.giftregistry .fieldset .action.primary:not(:focus), .paypal-review-discount .actions-toolbar .action.primary:not(:focus), .paypal-review-discount .actions-toolbar .action.cancel:not(:focus), .cart-discount .actions-toolbar .action.primary:not(:focus), .cart-discount .actions-toolbar .action.cancel:not(:focus) {
+    box-shadow: none;
+    background: #053052;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.abs-revert-secondary-color:focus, .abs-revert-secondary-color:active, .abs-revert-to-action-secondary:focus, .abs-revert-to-action-secondary:active, .paypal-review .block .actions-toolbar .action.primary:focus, .paypal-review .block .actions-toolbar .action.primary:active, .abs-discount-block .actions-toolbar .action.primary:focus, .abs-discount-block .actions-toolbar .action.primary:active, .abs-discount-block .actions-toolbar .action.cancel:focus, .abs-discount-block .actions-toolbar .action.cancel:active, .block-compare .action.primary:focus, .block-compare .action.primary:active, .cart-summary .block .actions-toolbar>.primary .action.primary:focus, .cart-summary .block .actions-toolbar>.primary .action.primary:active, .cart-summary .form.giftregistry .fieldset .action.primary:focus, .cart-summary .form.giftregistry .fieldset .action.primary:active, .paypal-review-discount .actions-toolbar .action.primary:focus, .paypal-review-discount .actions-toolbar .action.primary:active, .paypal-review-discount .actions-toolbar .action.cancel:focus, .paypal-review-discount .actions-toolbar .action.cancel:active, .cart-discount .actions-toolbar .action.primary:focus, .cart-discount .actions-toolbar .action.primary:active, .cart-discount .actions-toolbar .action.cancel:focus, .cart-discount .actions-toolbar .action.cancel:active {
+    background: #053052;
+    border: none;
+    color: #fff;
+    outline: none;
+}
+
+button:not(.primary) {
+    box-shadow: none;
+    outline: none;
+}
+button {
+    background: #053052;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 12px 20px;
+    font-family: "BentonSans-Medium";
+}
+button:hover, button:focus {
+    border: none;
+    box-shadow: none;
+    background: #053052;
+    color: #fff;
+}
+
 /*--btn-css--*/
 .btn-primary {
     background-color: #053052;
@@ -2579,45 +2619,7 @@ td.col.item img.product-image-photo { width: 90px; height: auto; }
 .paypal-review-discount .block>.title strong,
 .cart-discount .block>.title strong {  font-size: 14px; }
 
-input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"] {
-    border: 1px solid #A9AAAC;
-}
 
-.abs-discount-block .actions-toolbar .action.primary:not(:focus), .abs-discount-block .actions-toolbar .action.cancel:not(:focus), .block-compare .action.primary:not(:focus), .cart-summary .block .actions-toolbar>.primary .action.primary:not(:focus), .cart-summary .form.giftregistry .fieldset .action.primary:not(:focus), .paypal-review-discount .actions-toolbar .action.primary:not(:focus), .paypal-review-discount .actions-toolbar .action.cancel:not(:focus), .cart-discount .actions-toolbar .action.primary:not(:focus), .cart-discount .actions-toolbar .action.cancel:not(:focus) {
-    box-shadow: none;
-    background: #053052;
-    color: #fff;
-    border: none;
-    outline: none;
-}
-
-.abs-revert-secondary-color:focus, .abs-revert-secondary-color:active, .abs-revert-to-action-secondary:focus, .abs-revert-to-action-secondary:active, .paypal-review .block .actions-toolbar .action.primary:focus, .paypal-review .block .actions-toolbar .action.primary:active, .abs-discount-block .actions-toolbar .action.primary:focus, .abs-discount-block .actions-toolbar .action.primary:active, .abs-discount-block .actions-toolbar .action.cancel:focus, .abs-discount-block .actions-toolbar .action.cancel:active, .block-compare .action.primary:focus, .block-compare .action.primary:active, .cart-summary .block .actions-toolbar>.primary .action.primary:focus, .cart-summary .block .actions-toolbar>.primary .action.primary:active, .cart-summary .form.giftregistry .fieldset .action.primary:focus, .cart-summary .form.giftregistry .fieldset .action.primary:active, .paypal-review-discount .actions-toolbar .action.primary:focus, .paypal-review-discount .actions-toolbar .action.primary:active, .paypal-review-discount .actions-toolbar .action.cancel:focus, .paypal-review-discount .actions-toolbar .action.cancel:active, .cart-discount .actions-toolbar .action.primary:focus, .cart-discount .actions-toolbar .action.primary:active, .cart-discount .actions-toolbar .action.cancel:focus, .cart-discount .actions-toolbar .action.cancel:active {
-    background: #053052;
-    border: none;
-    color: #fff;
-    outline: none;
-}
-
-button:not(.primary) {
-    box-shadow: none;
-    outline: none;
-}
-button {
-    background: #053052;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 15px;
-    font-weight: normal;
-    padding: 12px 20px;
-    font-family: "BentonSans-Medium";
-}
-button:hover, button:focus {
-    border: none;
-    box-shadow: none;
-    background: #053052;
-    color: #fff;
-}
 
 #discount-coupon-form input#coupon_code { height: 33px;  border-right: none; }
 .cart-summary { background: #F9F9F8; }
