@@ -25,7 +25,6 @@
 }
 
 
-
 @media (min-width: 992px) {
     .ask-inner { display: flex; display: -webkit-flex; }
     .ask-inner .left-col,
@@ -88,6 +87,40 @@
     .page-main { padding:0; }
     .navigation .level0.active>.level-top, .navigation .level0.has-active>.level-top { display: block; }
 	.checkout-cart-index .column.main {  padding-bottom: 80px; }
+	.page-products .product-item-info,
+	.products-grid .product-item-info:hover,
+	.products-grid .product-item-info.active { padding: 10px; }
+	.products-grid .product-item-info:hover,
+	.products-grid .product-item-info.active { margin:0; }
+	.product.data.items>.item.title.active>.switch,
+	.product.data.items>.item.title.active>.switch:focus,
+	.product.data.items>.item.title.active>.switch:hover {
+		padding-bottom: 5px;
+	}
+	.product.data.items>.item.title>.switch:visited{ color: #053052; }
+	.product.data.items>.item.title>.switch:hover { color: #053052; }
+	.product.data.items>.item.title>.switch {
+		padding: 5px 35px 5px;
+		background: #FFF;
+		border-radius: 0;
+		border: 2px solid #FCDCD4;
+		font-size: 18px;
+		font-family: "BentonSans-Medium";
+		text-align: center;
+		margin-right: -2px;
+		height: auto;
+		margin-top: -1px;
+		color: #053052;
+		font-weight: normal;
+		min-width:190px;
+		position:relative;
+	}
+	.product.data.items>.item.content {
+		border: none;
+		background: #fafaf9;
+		border-top: 2px solid #FCDCD4;
+		margin-top: 51px;
+	}
 
   
 /*==============magento-common-classes-css=================*/
@@ -111,6 +144,8 @@
 
     
 }
+
+
 @media (max-width: 1370px) {
     .navbar-nav > li a, .navigation .level0>.level-top{  font-size:15px; }
     .content-menu a { font-size:16px; padding: 0 10px; }

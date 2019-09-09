@@ -1218,6 +1218,7 @@ header.page-header {
     float: left;
     width: 100%;
     margin:0; 
+	line-height:22px;
 }
 textarea{ resize:none; }
 .contact-form h4 {
@@ -1914,6 +1915,9 @@ select:not([disabled]):focus {
  
 .rating-summary .rating-result>span:before {
     color: #053052;
+}
+.magic-item .rating-summary .rating-result>span:before {
+    color: #F3CF85;
 }
 .product-reviews-summary {
     margin-bottom: 10px;
@@ -2704,13 +2708,63 @@ dt {
 .product-social-links .action.mailto.friend:before { display: none; }
 .product-info-main .stock.available {  color: green; }
 .product-info-main .stock.unavailable {  color: red; }
-.fotorama__caption__wrap { color: #053052; }
-.product.data.items>.item.content { border: none; background: #fafaf9; border-top: 2px solid #FCDCD4; }
+.fotorama__caption__wrap { color: #053052; font-size: 16px; text-transform: capitalize; }
+.product.data.items>.item.content { border: none; background: #fafaf9; border-top: 2px solid #FCDCD4;
+ padding-top:50px; padding-bottom:50px;  }
 .product .video-container h4 { text-align: center; margin-bottom: 15px; }
 .content-panel p { margin-bottom: 20px; }
 .product.data.items { margin-top: 80px; float: left; width: 100%; }
 .category-lissting.category-detail-list {  margin-top: 80px; }
-.price-box.price-final_price .price {  font-size: 17px; }
+.price-box.price-final_price .price {  font-size: 17px; font-weight:normal; }
+.product-item .price-box { margin-top: 15px; }
+.product-item .price-box .price-label {  color: #053052;  margin-bottom: 5px; display: inline-block; }
+.product-item-name a:hover { color: #053052; }
+.abs-product-link>a:visited,
+.product-item-name>a:visited,
+.product.name a>a:visited { color: #053052;  }
+.bundle-options-container .block-bundle-summary .product-addto-links>.action,
+.product-item-actions .actions-secondary>.action,
+.product-social-links .action.tocompare,
+.wishlist.split.button>.action.split,
+.product-social-links .action.mailto.friend,
+.product-social-links .action.towishlist,
+.block-bundle-summary .action.towishlist,
+.product-item .action.towishlist,
+.table-comparison .action.towishlist { color: #053052;  font-weight: 400; }
+.catalog-product-view .product-info-main .page-title-wrapper h1:first-letter,
+.product-info-main .page-title-wrapper h1.page-title:first-letter {  text-transform: uppercase; }
+.product.info.detailed { float: left;  width: 100%; }
+.block.related { float: left; width: 100%; margin-top: 50px; }
+.product.data.items>.item.title>.switch:hover {
+    color: #053052;
+}
+.product.info.detailed {
+    float: left;
+    width: 100%;
+}
+.block.related {
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+}
+.block.related .block-title.title {
+    text-align: center;
+}
+.block.related .block-title.title strong {
+    font-size: 30px;
+    color: #053052;
+    font-family: "BentonSans-Bold";
+}
+.block.related .block-actions {
+    text-align: center;
+    margin-bottom: 30px;
+    float: left;
+    width: 100%;
+}
+.block.related .block-actions button.action.select {
+	color: #053052;text-transform: capitalize;text-decoration: underline;
+}
+
 
 
 /*===============-magento-common-classes-css-===============*/
