@@ -94,8 +94,13 @@
 	.products-grid .product-item-info.active { margin:0; }
 	.product.data.items>.item.title.active>.switch,
 	.product.data.items>.item.title.active>.switch:focus,
-	.product.data.items>.item.title.active>.switch:hover {
+	.product.data.items>.item.title.active>.switch:hover,
+	.product.data.items>.item.title:not(.disabled)>.switch:active,
+	.product.data.items>.item.title.active>.switch,
+	.product.data.items>.item.title.active>.switch:focus,
+	.product.data.items>.item.title.active>.switch:hover	{
 		padding-bottom: 5px;
+		background:#FCDCD4;
 	}
 	.product.data.items>.item.title>.switch:visited{ color: #053052; }
 	.product.data.items>.item.title>.switch:hover { color: #053052; }
@@ -121,8 +126,11 @@
 		border-top: 2px solid #FCDCD4;
 		margin-top: 51px;
 	}
-
-  
+	.block-content.content { float: left; width: 100%;	}
+	.review-control-vote label:before { color:#053052;	}
+	.page-layout-1column .products-grid .product-item {	width: 25%;	padding: 0 20px;}
+	
+	
 /*==============magento-common-classes-css=================*/
     .column.main{
         width: 78.16666667%;

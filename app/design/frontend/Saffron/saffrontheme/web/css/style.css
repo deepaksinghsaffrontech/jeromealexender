@@ -29,6 +29,8 @@ li{ list-style: none; display: inline-block; }
 
 input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"] {
     border: 1px solid #A9AAAC;
+	height:44px;
+	font-size:15px;
 }
 
 .abs-discount-block .actions-toolbar .action.primary:not(:focus), .abs-discount-block .actions-toolbar .action.cancel:not(:focus), .block-compare .action.primary:not(:focus), .cart-summary .block .actions-toolbar>.primary .action.primary:not(:focus), .cart-summary .form.giftregistry .fieldset .action.primary:not(:focus), .paypal-review-discount .actions-toolbar .action.primary:not(:focus), .paypal-review-discount .actions-toolbar .action.cancel:not(:focus), .cart-discount .actions-toolbar .action.primary:not(:focus), .cart-discount .actions-toolbar .action.cancel:not(:focus) {
@@ -2764,7 +2766,71 @@ dt {
 .block.related .block-actions button.action.select {
 	color: #053052;text-transform: capitalize;text-decoration: underline;
 }
-
+#review-form .fieldset>.field>.label,
+#review-form .fieldset>.fields>.field>.label {
+    font-size: 14px;
+    font-family: "BentonSans-Medium";
+}
+.field.review-field-text.required .control textarea {
+    height: 160px;
+}
+.fieldset>.field.required>.label:after,
+.fieldset>.fields>.field.required>.label:after,
+.fieldset>.field._required>.label:after,
+.fieldset>.fields>.field._required>.label:after {
+	font-size:16px;
+}
+form#review-form .review-field-rating {
+    margin-bottom: 15px;
+    float: left;
+    width: 100%;
+}
+#review-form .fieldset>.field>.label,
+#review-form .fieldset>.fields>.field>.label {
+    font-size: 14px;
+    font-family: "BentonSans-Medium";
+}
+.field.review-field-text.required .control textarea {
+    height: 160px;
+}
+form#review-form .review-field-rating {
+    margin-bottom: 15px;
+    float: left;
+    width: 100%;
+}
+.review-form .action.submit.primary {
+    background: #E2AF9F;
+    border: none;
+    font-family: "BentonSans-Bold";
+    font-size: 18px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+    outline: none;
+    color: #053052;
+    height: auto;
+    line-height: 1.5;
+}
+.review-form .action.submit.primary span {
+    font-size: 18px;
+}
+.review-form .action.submit.primary:hover {
+    border: none;
+    background: #E2AF9F;
+}
+.product.info.detailed .additional-attributes .col {
+    float: left;
+    width: 100%;
+}
+.page-layout-1column .products-grid .product-item .product-item-info {
+    width: 100%;
+}
+.products-grid .product-item-info:hover, .products-grid .product-item-info.active {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+}
 
 
 /*===============-magento-common-classes-css-===============*/
