@@ -2988,7 +2988,7 @@ tr.totals .mark {  background: none; }
 .minicart-items .product-item-name {margin-bottom: 0px;}
 .minicart-items .product .toggle { border-top: none; }
 .minicart-items .item-qty { width:50px; height:38px; }
-
+.clock1 .clock-image { display: flex;  justify-content: center; }
 
 /*===============-magento-common-classes-css-===============*/
 .columns {
