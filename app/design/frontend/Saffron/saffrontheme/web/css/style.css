@@ -2975,6 +2975,7 @@ tr.totals .mark {  background: none; }
 .minicart-items .product .toggle { padding-top:10px; padding-bottom:10px; }
 .sign-container .right-col, .sign-container .left-col { display: flex; }
 .password-strength-meter { font-size:13px; }
+.customer-account-create .col-12 {  margin: 0 auto; }
 
 
 /*===============-magento-common-classes-css-===============*/
