@@ -20,6 +20,7 @@
         bottom: 60px;
         z-index: 1;
     }
+    .nav-tabs .nav-link { min-width:190px;}
 
 }
 
@@ -86,6 +87,7 @@
     .column-ask { float: left; width: 79.16666667%;    }
     .page-main { padding:0; }
     .navigation .level0.active>.level-top, .navigation .level0.has-active>.level-top { display: block; }
+	.checkout-cart-index .column.main {  padding-bottom: 80px; }
 
   
 /*==============magento-common-classes-css=================*/
@@ -104,6 +106,8 @@
         order: 1;
         padding-right: 2%;
     }
+    .product.media { width:57%; float: left;}
+    .product-info-main { float:right; width:40%;  }
 
     
 }
@@ -115,7 +119,7 @@
 
 
 @media (min-width: 768px) and (max-width: 1199px) {
-    .columns{ width:95%;  }
+    .columns, .breadcrumbs .items { width:98%;  }
     .bestseller-carousel,
     .shop-category-carousel {  padding: 0 20px;  }    
     .container { max-width:97%;  } 
@@ -162,8 +166,21 @@
     .customer-reviews .owl-carousel { padding:0 30px; }
     .owl-theme .owl-nav button.owl-prev, .owl-theme .owl-nav button.owl-prev:hover { left:-10px; }
     .owl-theme .owl-nav button.owl-next, .owl-theme .owl-nav button.owl-next:hover { right:-10px; }
+	.sidebar-ask,
+	.page-layout-2columns-left .sidebar-main	{ width: 24.83333333%; }
+    .column-ask,
+	.page-layout-2columns-left .column.main	{ width: 75.16666667%;  }
+	.side-btn .btn { padding: 10px 5px; width: 72px; font-size: 16px;	}
+	.sidebar-category li.shop-item .item-name {	
+		font-family: "BentonSans-Medium"; width: 78%;float: left; font-size: 15px;
+	}
 
 
+
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    .product-tabs .nav-tabs { top:-55px; } 
 
 }
 
@@ -171,6 +188,7 @@
     .magic-makeup-row { margin:90px 0; }
 
 }
+
 
 @media (min-width: 768px) and (max-width: 991px) {
     .logo-col .logo { display: block; margin-left: 40px; }
@@ -201,8 +219,8 @@
     .quick-item p { font-size: 14px; }
     .quick-item figure {   width: 25px;   }
     .caption-inner p {  font-size: 22px; line-height: 28px; }
-    .side-btn button {  min-width: 120px;    }
     .side-btn .btn1 {  margin-bottom: 10px;    }
+    
 
 }
 
@@ -323,7 +341,7 @@
     .category-airbrush {  margin-bottom: 0;  }
     .real-women-row .video-col { margin:0; }
     .featured-row2 .right-col { margin: 20px 0; }
-    .nav-tabs .nav-link { margin:2px; font-size:11px; background: #f7f7f7; padding:10px 5px;  }
+    .nav-tabs .nav-link { margin:2px; font-size:12px; background: #f7f7f7; padding:10px 5px;  }
     .nav-tabs .nav-item { float: left; width: 50%; position: inherit; bottom: inherit;   }
     .customer-tab .nav-tabs { text-align:center; }
     .question-click h5 { font-size:16px; line-height:24px;  }
@@ -423,6 +441,19 @@
     .sign-feature .quick-item { padding:0 0 20px; display: flex;     align-items: center;     }
     .btn-primary { padding:11px 10px; }
     .customer-reviews { padding:0 25px; }
+    .nav-tabs .nav-link { min-width:inherit; }
+    .box-tocart .actions { float: left; width: 100%; margin-top: 10px;    }
+    .catalog-product-view .box-tocart .action.tocart, .box-tocart .action.tocart { min-width:100%;}
+    .product-tabs .nav-tabs .nav-item { width: auto; }
+    .product-tabs .nav-tabs { top:-39px; }
+    .product-tabs .video-container {  margin-top: 30px;   }
+    .catalog-product-view .product-info-main .page-title-wrapper h1, 
+	.product-info-main .page-title-wrapper h1.page-title { font-size:28px; line-height: normal; }
+    .product.media { margin-bottom: 30px; }
+    .review-bx .name-section { padding-bottom: 0; }
+	.page-layout-2columns-left header .header-content {  border-bottom: 1px solid #DDE6EC; }
+	.page-products .columns { padding: 20px 0 0; }
+	.shop-banner-content { margin-bottom:30px; }
 
 
 
