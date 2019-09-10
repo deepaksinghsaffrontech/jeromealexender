@@ -2375,9 +2375,15 @@ select:not([disabled]):focus {
     background: #053052;
     border: none;
     border-radius: 4px;
-    padding: 10px;
+    padding: 14px 10px;
     float: left;
     width: 100%;
+    font-size: 18px;
+    font-family: "BentonSans-Medium";
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .bottom-cart .actions {float: left;width: 100%;text-align: center;margin: 10px 0;}
 .bottom-cart .primary {
@@ -2942,7 +2948,7 @@ tr.totals .mark {  background: none; }
 .page.messages {
     max-width: 1600px;
     width: 94%;
-    margin: 0 auto 50px; 
+    margin: 0 auto; 
     float: none;
     padding: 0 15px;
 }
@@ -2976,7 +2982,8 @@ tr.totals .mark {  background: none; }
 .sign-container .right-col, .sign-container .left-col { display: flex; }
 .password-strength-meter { font-size:13px; }
 .customer-account-create .col-12 {  margin: 0 auto; }
-
+.minicart-items .product-item-details { text-align:left; }
+.minicart-wrapper .action.showcart .fa {  position: relative; }
 
 /*===============-magento-common-classes-css-===============*/
 .columns {
