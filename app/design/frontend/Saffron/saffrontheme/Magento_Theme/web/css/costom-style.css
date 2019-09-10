@@ -177,3 +177,28 @@ a:visited, .alink:visited {
 .custom-control-label {
     padding-left: 10px;
 }
+.customer-account-login .page-main {
+    padding: 6% 0 8%;
+    background: #F9F8F8;
+}
+
+.customer-account-login .page-main .page-title-wrapper {
+    display: none;
+}
+.field.confirmation.required.form-group {
+    display: none;
+}
+.customer-account-create .page-wrapper .page-main .page-title-wrapper {
+    display: none;
+}
+.form-control {
+ height: 44px;
+}
+.form-create-account {
+    min-width: 100%;
+    width: 100%;
+}
+body.customer-account-create .page-wrapper .page-main {
+    padding: 6% 0 8%;
+    background: #F9F8F8;
+}
