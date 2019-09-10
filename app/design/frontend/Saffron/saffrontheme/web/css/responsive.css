@@ -141,6 +141,8 @@
 	.opc-progress-bar-item._active>span { color: #053052;  font-weight: 400; }
 	.opc-progress-bar-item>span { font-size:18px; }
 	table.table-checkout-shipping-method {  text-align: center; }
+	.form.password.reset, .form.send.confirmation,
+	.form.password.forget, .form.create.account { min-width: inherit; width: 100%; 	}
 	
 	
 /*==============magento-common-classes-css=================*/
