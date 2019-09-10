@@ -843,15 +843,12 @@ header .header-search .form-control:focus {
 
 .clock1 .right-col h4 {
     position: absolute;
-    left: 50%;
-    top: 90%;
-    transform: translate(-50%, -90%);
-    margin: 0;
+	bottom: 0;
     font-size: 50px;
     font-family: "BentonSans-Bold";
     color: #fff;
     text-shadow: 0 0 10px #949494;
-    text-align: center;
+    margin-bottom: 40px;
 }
 .clock-item {
     max-width:65%;
