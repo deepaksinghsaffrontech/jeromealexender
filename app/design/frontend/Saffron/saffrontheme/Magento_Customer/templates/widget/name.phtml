@@ -61,7 +61,7 @@ $suffix = $block->showSuffix();
     <?php endif; ?>
 	
         <div class="field field-name-firstname form-group required">
-            <label class="label" for="<?= $block->escapeHtmlAttr($block->getFieldId('firstname')) ?>"><?= $block->escapeHtml($block->getStoreLabel('firstname')) ?><span>*</span></label>
+            <label class="label" for="<?= $block->escapeHtmlAttr($block->getFieldId('firstname')) ?>"><?= $block->escapeHtml($block->getStoreLabel('firstname')) ?> <span>*</span></label>
           
                 <input type="text" id="<?= $block->escapeHtmlAttr($block->getFieldId('firstname')) ?>"
                        name="<?= $block->escapeHtmlAttr($block->getFieldName('firstname')) ?>"

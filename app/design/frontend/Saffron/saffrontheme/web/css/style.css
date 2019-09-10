@@ -1,4 +1,3 @@
-     
 body{
     font-family: "BentonSans-Regular";
     line-height: normal;
@@ -2997,5 +2996,10 @@ tr.totals .mark {  background: none; }
 	padding:0 15px;
 }
 .navigation .level0.parent>.level-top>.ui-menu-icon:after{ display:none;}
-
-
+.form-create-account {
+    min-width: 100%;
+    width: 100%;
+}
+.form-control {
+    height: 44px;
+}

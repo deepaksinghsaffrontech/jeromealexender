@@ -161,23 +161,20 @@ $mediaurl = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
         </fieldset>
 
     <?php endif; ?>
-	<div class="form-group">
-        <label for="">Name <span>*</span></label>
-        <input type="text"  value="" name="name" id="name" class="form-control">
-   </div>
+	
     <!--<fieldset class="fieldset create account" data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>">
        
 
 	   <legend class="legend"><span><?= $block->escapeHtml(__('Sign-in Information')) ?></span></legend><br>
           </fieldset> -->  
 		<div class="field required form-group">
-            <label for="email_address" class="label"><?= $block->escapeHtml(__('Email')) ?><span>*</span></label>
+            <label for="email_address" class="label"><?= $block->escapeHtml(__('Email')) ?> <span>*</span></label>
          
                 <input type="email" name="email" autocomplete="email" id="email_address" value="<?= $block->escapeHtmlAttr($block->getFormData()->getEmail()) ?>" title="<?= $block->escapeHtmlAttr(__('Email')) ?>" data-mage-init='{"mage/trim-input":{}}' class="input-text form-control" data-validate="{required:true, 'validate-email':true}">
           
         </div>
         <div class="field password required form-group">
-            <label for="password" class="label"><?= $block->escapeHtml(__('Password')) ?><span>*</span></label>
+            <label for="password" class="label"><?= $block->escapeHtml(__('Password')) ?> <span>*</span></label>
           
                 <input type="password" name="password" id="password"
                        title="<?= $block->escapeHtmlAttr(__('Password')) ?>"
