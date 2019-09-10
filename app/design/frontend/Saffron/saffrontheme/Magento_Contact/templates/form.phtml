@@ -1,0 +1,101 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+/** @var \Magento\Contact\Block\ContactForm $block */
+?>
+
+<div class="banner-inner row-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+            <div class="container">
+                <h1 data-aos="fade" data-aos-offset="150"  data-aos-easing="ease-in-sine">Contact Us</h1>
+                <p>How can we help?</p>
+            </div>
+        </div>
+
+<div class="breadcrumbs"  data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+              <ul class="items">
+                  <li class="item home"><a href="index.php">Home</a></li>
+                  <li class="item">Contact Us</li>
+              </ul>
+          </div>		
+
+		  
+<div class="sidebar-ask"> 
+               <div class="sidebar-list row-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+ <?php echo $this->getLayout()->createBlock("Magento\Framework\View\Element\Template")->setTemplate("Magento_Theme::header/costom-sidebar.phtml")->toHtml();?>              
+   </div> 
+				
+				
+            </div> 
+            <div class="column-ask">
+              <div class="contact-section" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+               <div class="contact-form">
+                  <h2>Contact Us</h2>
+                  <h4>Write Us</h4>
+ <form class="form contact" action="<?= $block->escapeUrl($block->getFormAction()) ?>"  id="contact-form" method="post"
+      data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>"
+      data-mage-init='{"validation":{}}'>
+  
+       <div class="field name form-group required">
+            <label class="label" for="name"><?= $block->escapeHtml(__('Name')) ?> <span>*</span></label>
+           <input name="name" id="name" title="<?= $block->escapeHtmlAttr(__('Name')) ?>" value="<?= $block->escapeHtmlAttr($this->helper('Magento\Contact\Helper\Data')->getPostValue('name') ?: $this->helper('Magento\Contact\Helper\Data')->getUserName()) ?>" class="input-text" type="text" data-validate="{required:true}"/>
+           
+        </div>
+        <div class="field email form-group required">
+            <label class="label" for="email"><?= $block->escapeHtml(__('Email')) ?> <span>*</span></label>
+            <input name="email" id="email" title="<?= $block->escapeHtmlAttr(__('Email')) ?>" value="<?= $block->escapeHtmlAttr($this->helper('Magento\Contact\Helper\Data')->getPostValue('email') ?: $this->helper('Magento\Contact\Helper\Data')->getUserEmail()) ?>" class="input-text" type="email" data-validate="{required:true, 'validate-email':true}"/>
+           
+        </div>
+        <div class="field form-group telephone">
+            <label class="label" for="telephone"><?= $block->escapeHtml(__('Phone Number')) ?> <span>*</span></label>
+            <input name="telephone" id="telephone" title="<?= $block->escapeHtmlAttr(__('Phone Number')) ?>" value="<?= $block->escapeHtmlAttr($this->helper('Magento\Contact\Helper\Data')->getPostValue('telephone')) ?>" class="input-text" type="text" />
+          
+        </div>
+        <div class="field form-group comment required">
+            <label class="label" for="comment"><?= $block->escapeHtml(__('What’s on your mind?')) ?> <span>*</span></label>
+            <textarea name="comment" id="comment" title="<?= $block->escapeHtmlAttr(__('What’s on your mind?')) ?>" class="input-text" cols="5" rows="3" data-validate="{required:true}"><?= $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getPostValue('comment')) ?></textarea>
+            
+        </div>
+        <?= $block->getChildHtml('form.additional.info') ?>
+   
+      <div class="form-group">
+      <p>Please allow 24-48 hours for a Jerome Alexander to get back to you. Need to help soon? Please chat us or give us a call during our posted working hours.</p>
+      </div>
+      <div class="form-group">
+	     <input type="hidden" name="hideit" id="hideit" value="" />
+          <button class="action submit btn btn-primary" title="<?= $block->escapeHtmlAttr(__('Submit')) ?>" ><?= $block->escapeHtml(__('Submit')) ?></button>
+      </div>
+   
+    <!--<div class="actions-toolbar">
+        <div class="primary">
+            <input type="hidden" name="hideit" id="hideit" value="" />
+            <button type="submit" title="<?= $block->escapeHtmlAttr(__('Submit')) ?>" class="action submit primary">
+                <span><?= $block->escapeHtml(__('Submit')) ?></span>
+            </button>
+        </div>
+    </div>-->
+</form>
+                </div>
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('contact-us-info')->toHtml();?>
+                
+              </div>
+            </div>  		  
+		  
+
+
+<script>
+    require([
+        'jquery'
+    ], function ($) {
+        $(document).ready(function(){
+            // move hero banner to top of the page
+            $('.banner-inner').detach().insertBefore('.page-main');
+            $('.breadcrumbs').detach().insertBefore('.page-main');
+  
+         
+		});
+    });
+</script>

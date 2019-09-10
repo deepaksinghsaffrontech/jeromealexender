@@ -138,23 +138,7 @@ a:visited, .alink:visited {
   max-width: 100%;
 }
 .product.media{ display:inherit; }
-.minicart-wrapper .action.showcart .counter.qty {
-    background: #053052;
-    color: #fff;
-    position: absolute;
-    height: 18px;
-    line-height: 7px;
-    border-radius: 50%;
-    margin: 3px 0 0;
-    min-width: 19px;
-    overflow: hidden;
-    font-size: 11px;
-    padding: 0 3px;
-    text-align: center;
-    white-space: normal;
-    top: 17px;
-    left: 47px;
-}
+
 .minicart-wrapper.bag-col .showcart span{  color: #fff;}
 .minicart-wrapper .action.showcart .bag {color: #A9AAAC;}
 .bag-col {
@@ -201,4 +185,8 @@ a:visited, .alink:visited {
 body.customer-account-create .page-wrapper .page-main {
     padding: 6% 0 8%;
     background: #F9F8F8;
+}
+
+.contact-index-index .page-wrapper .page-main .page-title-wrapper {
+    display: none;
 }
