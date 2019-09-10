@@ -1141,7 +1141,7 @@ header.page-header {
     margin: 0 auto;
 }
 .banner-inner {
-    background: #eff9ff;
+    background: #FCDCD4;
     padding: 50px 0;
     text-align: center;
 }
@@ -1171,7 +1171,9 @@ header.page-header {
     max-width:100%;
 }
 .breadcrumbs a,
+.breadcrumbs a:hover,
 .breadcrumbs a:visited { color:#053052; }
+.breadcrumbs a:hover { text-decoration:none;}
 .breadcrumbs .item:not(:last-child):after {
     display:none;
 }
@@ -1812,7 +1814,7 @@ ul.pagination2 li {
     margin-bottom: 30px;
 }
 .contact-section h2, .contact-section h3 {
-    font-size: 24px;
+    font-size: 30px;
     font-family: "BentonSans-Medium";
 }
 .singin-group p {
@@ -2951,23 +2953,23 @@ tr.totals .mark {  background: none; }
     float: none;
     padding: 0 15px;
 }
+.minicart-wrapper .action.showcart .counter.qty.empty { display:block; }
 .minicart-wrapper .action.showcart .counter.qty {
     background: #053052;
-    width: 20px;
-    height: 20px;
+    width: 19px;
+    height: 19px;
     border-radius: 50%;
     color: #fff;
     position: absolute;
-    top: -4px;
-    right: -12px;
+    top: -7px;
+    right: -11px;
     font-family: "BentonSans-Regular";
-    font-size: 13px;
-    line-height: normal;
+    font-size: 11px;
     margin: 0;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0;
+    line-height: 20px;
+    font-weight: normal;
 }
 .minicart-wrapper .action.showcart .counter-number {
     margin: 0 !important;
@@ -2986,6 +2988,7 @@ tr.totals .mark {  background: none; }
 .minicart-items .product-item-name {margin-bottom: 0px;}
 .minicart-items .product .toggle { border-top: none; }
 .minicart-items .item-qty { width:50px; height:38px; }
+
 
 /*===============-magento-common-classes-css-===============*/
 .columns {
