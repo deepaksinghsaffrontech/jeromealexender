@@ -117,6 +117,8 @@ $store = $objectManager->get('Magento\Store\Model\StoreManagerInterface')->getSt
 $category = $categoryFactory->create()->load($categoryId);
 
 $categoryProducts = $category->getProductCollection()
+                               ->setPageSize(3)
+							   ->addAttributeToSort('entity_id', 'desc')
                              ->addAttributeToSelect('*');
 							 
 	

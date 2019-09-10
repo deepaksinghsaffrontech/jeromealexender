@@ -6,16 +6,18 @@ $imageBlock =  $block->getLayout()->createBlock('Magento\Catalog\Block\Product\I
 $image = 'new_products_content_widget_grid';
 $type = 'widget-new-grid';			
 ?>
-<div class="category-lissting row-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+<div class="category-lissting row-col" >
 
 <?php
 foreach($categrie['categries_id'] as $item){
  if($item->getShopall()== '1' ){
 ?>
- <div class="category-row category-<?php echo $item->getName() ;?>">
-<h2 class="center"><?php echo $item->getName() ;?></h2>
-<div class="row">
-<?php 
+
+  <div class="category-row category-row-1" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+                              <h2 class="center h30"><?php echo $item->getName() ;?></h2>
+                              <div class="row">
+                              
+       <?php 
    $shopallproduct = $this->getShopallproduct($item->getId());
 	
 	foreach($shopallproduct as $_product){
@@ -23,44 +25,74 @@ foreach($categrie['categries_id'] as $item){
 		$productImage = $block->getImage($_product, $image);
 		?>
 		 
-		   <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
-            <div class="category-item">
-            <figure>
-			
-			<a href="<?php echo $block->getProductUrl($_product) ?>" >
-			<?php echo $productImage->toHtml() ?>
-			</a>
-			</figure>
-            <div class="seller-info">
-             <div class="star-col">
+		 
+		 
+		 
+                                <div class="col-lg-4 col-md-6 col-12" >
+                                  <div class="category-item">
+                                      <figure><?php echo $productImage->toHtml() ?></figure>
+                                      <div class="seller-info">
+                                          <div class="star-col">
+                                             
               <?php if ($templateType): ?>
 			<?php echo $block->getReviewsSummaryHtml($_product, $templateType,true); ?>
 			<?php endif; ?>
-            </div>
-            <div class="seller-name-col">
-            <a href="<?php  echo $_product->getUrl(); ?>" class="title-name"><?php  echo $_product->getName(); ?></a>
-            <p>  <?php echo $_product->getShortDescription(); ?> </p>
-             <span class="price-span"><?php
-								echo $block->getProductPrice($_product);
-							 ?></span>
-			 
-			 
-							
-			 
-            </div>
-           </div>
-           </div>
-           </div>
-		 
-		 
-		
-		 
-	 <?php } ?>
-	 <div class="col-12 shopall-col">
-     <a href="<?php echo $item->getUrl()?>" class="shopall-link">Shop all <?php  echo $item->getName() ;?></a>
-     </div>
-	 </div>
-</div>
+        
+                                          </div>
+                                          <div class="seller-name-col">
+                                            <a href="<?php  echo $_product->getUrl(); ?>" class="title-name">MagicMinerals AirBrush Foundation Spray</a>
+                                            <p> <?php echo $_product->getShortDescription(); ?></p>
+                                            <span class="price-span"><?php echo $block->getProductPrice($_product);?></span>
+											
+											
+											<?php if ($_product->isSaleable()): ?>
+											<?php if ($_product->getTypeInstance()->hasRequiredOptions($_product)): ?>
+												<button class="shop-link"
+														data-mage-init='{"redirectUrl":{"url":"<?php echo $block->getAddToCartUrl($_product) ?>"}}'
+														type="button" title="<?php echo __('SHOP NOW') ?>">
+													<span><?php echo __('SHOP NOW') ?></span>
+												</button>
+											<?php else: ?>
+												<?php
+													$postDataHelper = $this->helper('Magento\Framework\Data\Helper\PostHelper');
+													$postData = $postDataHelper->getPostData($block->getAddToCartUrl($_product), ['product' => $_product->getEntityId()])
+												?>
+												<button class="shop-link"
+														data-post='<?php echo $postData; ?>'
+														type="button" title="<?php echo __('SHOP NOW') ?>">
+													<span><?php echo __('SHOP NOW') ?></span>
+												</button>
+											<?php endif; ?>
+										<?php else: ?>
+											<?php if ($_product->getIsSalable()): ?>
+												<div class="stock available"><span><?php echo __('In stock') ?></span></div>
+											<?php else: ?>
+												<div class="stock unavailable"><span><?php echo __('Out of stock') ?></span></div>
+											<?php endif; ?>
+										<?php endif; ?>
+								
+											
+											
+											
+											
+											
+											
+                                            
+                                          </div>
+                                      </div>
+                                  </div>
+                                </div>
+								
+							 <?php } ?>
+	 
+                                <div class="col-12 shopall-col">
+                                  <div class="loadmore-inner">
+                                      <a href="<?php echo $item->getUrl() ;?>" class="loadmore-link benton-b">Shop All <?php echo $item->getName() ;?> </a>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
 	
    <?php }}?>
 

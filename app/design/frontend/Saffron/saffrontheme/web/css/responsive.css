@@ -447,6 +447,7 @@
     .product-tabs .nav-tabs .nav-item { width: auto; }
     .product-tabs .nav-tabs { top:-39px; }
     .product-tabs .video-container {  margin-top: 30px;   }
+<<<<<<< HEAD
     .catalog-product-view .product-info-main .page-title-wrapper h1, 
 	.product-info-main .page-title-wrapper h1.page-title { font-size:28px; line-height: normal; }
     .product.media { margin-bottom: 30px; }
@@ -454,6 +455,13 @@
 	.page-layout-2columns-left header .header-content {  border-bottom: 1px solid #DDE6EC; }
 	.page-products .columns { padding: 20px 0 0; }
 	.shop-banner-content { margin-bottom:30px; }
+=======
+    .catalog-product-view .product-info-main .page-title-wrapper h1, .product-info-main .page-title-wrapper h1.page-title {
+        font-size:28px; line-height: normal;  
+    }
+    .product.media {   margin-bottom: 30px;    }
+    .review-bx .name-section {    padding-bottom: 0;     }
+>>>>>>> 061a0e7b326d6dc9d39a166792fa87ab99a0dd5a
 
 
 

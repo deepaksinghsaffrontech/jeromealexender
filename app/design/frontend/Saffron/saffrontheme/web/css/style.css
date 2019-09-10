@@ -9,7 +9,11 @@ h1, h2,h3 { color:#053052; font-family:"BentonSans-Bold"; }
 .benton-m{ font-family:"BentonSans-Medium"; }
 .benton-b{ font-family:"BentonSans-Bold"; }
 .georgia{ font-family:"GeorgiaRegular"; }
+<<<<<<< HEAD
 .h30 { font-size:30px;  }
+=======
+.h30 { font-size:30px; margin-bottom: 40px; }
+>>>>>>> 061a0e7b326d6dc9d39a166792fa87ab99a0dd5a
 h1, h2, h3 {
     font-size: 43px;
     margin: 0 0 32px;
@@ -1138,7 +1142,11 @@ header.page-header {
     width: 94%;
     margin: 0 auto !important;
     float: none;
+<<<<<<< HEAD
     padding: 0 15px !important; 
+=======
+    padding:0 15px; 
+>>>>>>> 061a0e7b326d6dc9d39a166792fa87ab99a0dd5a
 }
 .breadcrumbs li {
     color: #333;
@@ -2150,7 +2158,11 @@ select:not([disabled]):focus {
     color: #053052; margin-bottom:30px; 
 }
 .catalog-product-view .product-info-main .product-info-price .price,
+<<<<<<< HEAD
 .product-detail-page .price-box.price-final_price .price {
+=======
+.price-box.price-final_price .price {
+>>>>>>> 061a0e7b326d6dc9d39a166792fa87ab99a0dd5a
     color: #053052;
     font-family: "BentonSans-Bold";
     font-size: 28px;
@@ -2267,7 +2279,11 @@ select:not([disabled]):focus {
 }
 .minicart-wrapper .block-minicart .minicart-items-wrapper {
     border: none;
+<<<<<<< HEAD
     max-height: 290px;
+=======
+    height: 290px !important;
+>>>>>>> 061a0e7b326d6dc9d39a166792fa87ab99a0dd5a
     overflow: auto;
 }
 .minicart-items .product-item-name, .minicart-items .product-item-name a {
@@ -2510,6 +2526,7 @@ select:not([disabled]):focus {
 }
 .category-detail-list .category-row { margin-bottom:6%;  }
 .airbrush-listing .category-row {  margin-bottom: 0; }
+<<<<<<< HEAD
 .navigation .level0.active>.level-top, .navigation .level0.has-active>.level-top {
     border: none;
 }
@@ -2669,6 +2686,9 @@ dt {
     font-weight: normal;
     font-size: 14px;
 }
+=======
+
+>>>>>>> 061a0e7b326d6dc9d39a166792fa87ab99a0dd5a
 
 /*===============-magento-common-classes-css-===============*/
 .columns {
