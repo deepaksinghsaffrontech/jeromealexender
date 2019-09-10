@@ -2786,7 +2786,7 @@ dt {
 .fieldset>.fields>.field.required>.label:after,
 .fieldset>.field._required>.label:after,
 .fieldset>.fields>.field._required>.label:after {
-	font-size:16px;
+	font-size:16px; margin:0;
 }
 form#review-form .review-field-rating {
     margin-bottom: 15px;
