@@ -129,6 +129,18 @@
 	.block-content.content { float: left; width: 100%;	}
 	.review-control-vote label:before { color:#053052;	}
 	.page-layout-1column .products-grid .product-item {	width: 25%;	padding: 0 20px;}
+	.product.data.items>.item.title>.switch:before {
+		content: "\f105";font-family: fontawesome;order: 2;margin-left: 8px;font-size: 22px;
+	}
+	.product.data.items>.item.title>.switch { display: flex; justify-content: center; align-items: center;	}
+	.product.data.items>.item.title.active>.switch:before { content: "\f107"; }
+	.opc-progress-bar-item._active:before,
+	.opc-progress-bar-item._active>span:before	{ background: #053052; border-color: #053052; }
+	.opc-progress-bar-item._active>span:after { border-color: #053052; }
+	.opc-progress-bar { margin-bottom:50px; }
+	.opc-progress-bar-item._active>span { color: #053052;  font-weight: 400; }
+	.opc-progress-bar-item>span { font-size:18px; }
+	table.table-checkout-shipping-method {  text-align: center; }
 	
 	
 /*==============magento-common-classes-css=================*/

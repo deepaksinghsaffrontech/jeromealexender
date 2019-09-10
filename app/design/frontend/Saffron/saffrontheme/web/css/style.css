@@ -30,7 +30,8 @@ li{ list-style: none; display: inline-block; }
 input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"] {
     border: 1px solid #A9AAAC;
 	height:44px;
-	font-size:15px;
+	font-size:16px;
+	color:#053052;
 }
 
 .abs-discount-block .actions-toolbar .action.primary:not(:focus), .abs-discount-block .actions-toolbar .action.cancel:not(:focus), .block-compare .action.primary:not(:focus), .cart-summary .block .actions-toolbar>.primary .action.primary:not(:focus), .cart-summary .form.giftregistry .fieldset .action.primary:not(:focus), .paypal-review-discount .actions-toolbar .action.primary:not(:focus), .paypal-review-discount .actions-toolbar .action.cancel:not(:focus), .cart-discount .actions-toolbar .action.primary:not(:focus), .cart-discount .actions-toolbar .action.cancel:not(:focus) {
@@ -46,6 +47,12 @@ input[type="text"], input[type="password"], input[type="url"], input[type="tel"]
     border: none;
     color: #fff;
     outline: none;
+}
+.order-review-form .action.primary, .bundle-actions .action.primary.customize, .bundle-options-container .block-bundle-summary .box-tocart .action.primary, .box-tocart .action.tocart, .cart-summary .checkout-methods-items .action.primary.checkout, .block-minicart .block-content>.actions>.primary .action.primary, .methods-shipping .actions-toolbar .action.primary, .block-authentication .action.action-register, .block-authentication .action.action-login, .checkout-payment-method .payment-method-content>.actions-toolbar>.primary .action.primary, .form-address-edit .actions-toolbar .action.primary, .box-tocart .action.instant-purchase, .multicheckout .action.primary {
+    font-size: 18px;
+    line-height: normal;
+    height: auto;
+    display: flex;
 }
 
 button:not(.primary) {
@@ -2669,8 +2676,9 @@ div#cart-totals td.amount { padding-bottom: 15px; }
     color: #053052;
 }
 .fieldset>.field>.label, .fieldset>.fields>.field>.label {
-    font-weight: normal;
-    font-size: 13px;
+	font-weight: 400;
+    font-family: "BentonSans-Medium";
+    font-size: 14px;
 }
 #shipping-zip-form select {
     border: 1px solid #A9AAAC;
@@ -2840,6 +2848,81 @@ form#review-form .review-field-rating {
 .swatch-option.selected:hover { border: 2px solid #053052 !important; }
 .swatch-attribute-selected-option { color: #053052; }
 .product-info-main .product.attribute.sku .value { text-transform: capitalize; }
+.box-tocart .actions {
+    width: calc(100% - 176px);
+    float: left;
+}
+.data.switch .counter { color:#053052; }
+.product.info.detailed .additional-attributes tr {
+    padding-bottom: 20px;
+    float: left;
+    width: 100%;
+}
+.review-control-vote label:before, .review-control-vote:before { font-size:24px; }
+.review-ratings .rating-label, .customer-review .review-details .customer-review-rating .rating-label {
+	padding-bottom:12px;
+}
+.fieldset .review-legend.legend strong {  margin-top: 10px; }
+.fieldset>.field.required>.label:after,
+.fieldset>.fields>.field.required>.label:after,
+.fieldset>.field._required>.label:after,
+.fieldset>.fields>.field._required>.label:after {
+	color: #E2AF9F;
+}
+.opc-wrapper .form-login .fieldset .field .label,
+.opc-wrapper .form-shipping-address .fieldset .field .label {
+    font-weight: 400;
+    font-family: "BentonSans-Medium";
+    font-size: 14px;
+}
+.opc-wrapper .step-title, .opc-block-shipping-information .shipping-information-title,
+.opc-block-summary>.title, .checkout-agreements-items .checkout-agreements-item-title {
+    padding-bottom: 20px;
+    color: #053052;
+    font-weight: 400;
+}
+.opc-block-summary>.title {
+    font-size: 28px;
+}
+.opc-block-shipping-information .shipping-information-title .action-edit {
+	top:0;
+}
+.opc-wrapper .form-login {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.opc-wrapper .form-login .field.required {
+    margin-bottom: 0;
+}
+fieldset.field.street.admin__control-fields .control > .field > .label {
+    display: none;
+}
+select {
+    border: 1px solid #A9AAAC;
+    height: 44px;
+    font-size: 15px;
+    color: #053052;
+}
+.opc-wrapper .step-title {  border-bottom: 1px solid #A9AAAC; }
+.table-checkout-shipping-method tbody .col-price { font-weight: 400; }
+button.button.action.continue.primary {
+    line-height: normal;
+    height: auto;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	margin-top:20px;
+}
+.opc-wrapper .step-title, .opc-block-shipping-information .shipping-information-title, .opc-block-summary>.title, .checkout-agreements-items .checkout-agreements-item-title { padding-bottom:20px; }
+.opc-block-summary { background: #F9F9F8; }
+.opc-summary-wrapper .modal-content {border: none;}
+.opc-summary-wrapper .modal-header { border: none; }
+tr.totals .mark {  background: none; }
+.opc-block-summary .minicart-items-wrapper {  padding: 0; }
+.checkout-billing-address .actions-toolbar { margin: 30px 0 10px; }
+
 
 /*===============-magento-common-classes-css-===============*/
 .columns {
