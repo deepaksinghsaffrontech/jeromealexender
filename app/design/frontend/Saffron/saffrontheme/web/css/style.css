@@ -2831,7 +2831,15 @@ form#review-form .review-field-rating {
     border: none;
     padding: 0;
 }
-
+.swatch-option.selected {
+    outline: none;
+    color: #053052;
+    border-radius: 50%;
+    border: 2px solid #053052;
+}
+.swatch-option.selected:hover { border: 2px solid #053052 !important; }
+.swatch-attribute-selected-option { color: #053052; }
+.product-info-main .product.attribute.sku .value { text-transform: capitalize; }
 
 /*===============-magento-common-classes-css-===============*/
 .columns {
