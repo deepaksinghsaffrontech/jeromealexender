@@ -525,6 +525,10 @@
 	.ask-jerome .inner .title-main { display: none; }
 	.ask-jerome .title-m { display: inline-block; margin-left:20px; }
 	footer.page-footer { margin-top:0; }
+	.navigation .level0.active>a:not(.ui-state-active),
+	.navigation .level0.has-active>a:not(.ui-state-active) {
+		border-color: #053052; color: #053052;
+	}
 
 
 
