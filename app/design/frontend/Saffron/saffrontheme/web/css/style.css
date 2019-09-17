@@ -2985,7 +2985,7 @@ tr.totals .mark {  background: none; }
 .customer-account-create .col-12 {  margin: 0 auto; }
 .minicart-items .product-item-details { text-align:left; }
 .minicart-wrapper .action.showcart .fa {  position: relative; }
-.minicart-items .product-item-name {margin-bottom: 0px;}
+.minicart-items .product-item-name {margin-bottom: 0px; text-transform: capitalize; }
 .minicart-items .product .toggle { border-top: none; }
 .minicart-items .item-qty { width:50px; height:38px; }
 .clock1 .clock-image { display: flex;  justify-content: center; }
@@ -2999,11 +2999,9 @@ tr.totals .mark {  background: none; }
     width: 94%;
 	padding:0 15px;
 }
-.navigation .level0.parent>.level-top>.ui-menu-icon:after{ display:none;}
+.navigation .level0.parent>.level-top>.ui-menu-icon:after{ display:none; }
 .form-create-account {
     min-width: 100%;
     width: 100%;
 }
-.form-control {
-    height: 44px;
-}
+.form-control {  height: 44px; }

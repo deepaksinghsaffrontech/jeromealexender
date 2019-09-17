@@ -321,11 +321,11 @@
     h1, h2, h3 { font-size: 28px; }
     .header-search { padding: 0;position: absolute; right: 86px; top:0; width: auto; height:100%; margin:0;    }
     .header-search .form-group{ margin:0; }
-    .header-bag { float: right;  width: auto; padding-left: 0; margin-top: 14px; width:80px;    }
-    .sign-col, .bag-col { border:none; padding:0 10px; margin:0; display: inherit; height: inherit; align-items: inherit;  }
+    .header-bag { float: right;  padding-left: 0; width:80px; margin-left: auto;   }
+    .sign-col, .bag-col { border:none; padding:0 10px; margin:0;  }
     .singin-link span, .cart-link span { display:none; }
     .cart-link .cart-circle{ display: block;  }
-    .header-content .header-right { background:none; padding:0 6px; display:initial; }
+    .header-content .header-right { background:none; padding:0 6px; }
 
     .logo-col { text-align:center;  }   
     .logo-col img{ max-width:inherit; width:140px; } 
@@ -339,7 +339,7 @@
     .down-arrow-col{ right:15px;}
     .front-banner .owl-carousel .owl-item img {  min-height: 300px;  object-fit: cover; }
     .advertise-bx { position: relative; top: inherit; left: inherit; right: inherit; float: none; margin: 0 auto 20px;  }
-    .banner-subtitle h3 { font-size: 24px;  margin: 0 0 5px; }
+    .banner-subtitle h3 { font-size: 26px;  margin: 0 0 5px; }
     .banner-subtitle .inner-col span {display:block; font-size:15px;  }
     h2, h3 {font-size: 26px; margin: 0 0 20px;  }
     .front-best-seller{ padding:40px 0; }
@@ -410,7 +410,7 @@
     .account-bx h3 { font-size:22px;  }
     .title-main,
     .real-women-row .title-main,
-    .magic-makeup-row .title-main { font-size:30px; margin-bottom:28px;  }
+    .magic-makeup-row .title-main { font-size:30px; margin-bottom:35px;  }
     .real-women-row { background-size: cover; padding: 20px 0 50px; }
     .real-left .realbx-col .btn { display: none;  }
     .real-right {  padding: 0;    }
@@ -441,16 +441,16 @@
     .minicart-wrapper .action.showcart .bag { display: none; }
     .nav-toggle {
         background: url(../images/menu-bar.png);
-        height: 22px;
-        width: 24px;
-        background-repeat: no-repeat;
-        left: 10px;
-        top: 16px;
-        cursor: pointer;
+		height: 22px;
+		width: 24px;
+		background-repeat: no-repeat;
+		left: 10px;
+		top: 21px;
+		cursor: pointer;
     }
     .nav-toggle:before {  display: none;    }
     .header-content .header-right {  max-width: 42%;  }
-    .logo-col { padding: 12px 8px; max-width: 58%; text-align: left;    }
+    .logo-col { padding: 18px 8px; max-width: 58%; text-align: left;    }
     .logo-col a { display: inline-block; margin-left: 32px;    }
     .minicart-wrapper .action.showcart img { height: 20px; width: auto;    }
     .sign-col .singin-link img { width: auto; height: 20px;    }
@@ -459,11 +459,15 @@
     .block-search .label:before { color:#b4b5b6; display: none; }
     header .header-search input { font-size:15px; }
     .header-search.block-search .label { width: 35px; margin: 0; float: left; 
-        background: url(../images/search-icon.png);
-        height: 24px;
-        background-repeat: no-repeat;
-        background-position: center top;
-       }
+		width: 35px;
+		margin: 0 5px 0 0;
+		float: left;
+		background: url(../images/search-icon.png);
+		height: 24px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 20px auto;
+	}
     .navigation {  background: #fff;    }
     .navigation .level0 { border-top: 1px solid #ffeeea; display: block;     }
     .navigation .level0>.level-top { padding: 14px 40px 14px 15px; text-transform: capitalize; font-weight: 400; 
@@ -497,7 +501,7 @@
     .ask-jerome-banner { margin-bottom: 50px; }
     .sign-feature { flex-wrap: wrap; margin:0;  }
     .sign-feature .quick-item { padding:0 0 20px; display: flex;     align-items: center;     }
-    .btn-primary { padding:11px 10px; }
+    .btn-primary { padding:11px 20px; }
     .customer-reviews { padding:0 25px; }
     .nav-tabs .nav-link { min-width:inherit; }
     .box-tocart .actions { float: left; width: 100%; margin-top: 10px;    }
