@@ -369,7 +369,8 @@
     .clock1 .right-col h4 { font-size:28px; line-height:normal; margin-bottom:20px;  }
     .clock-inner .infobx { position: inherit; transform: none;  width: 100%;  }
     .ask-jerome { margin: 30px 0 50px; }
-    .ask-jerome-info{padding:50px 20px 40px; background:rgba(216,224,230,0.7); max-width:92%; margin:-20px auto 0;}
+    .ask-jerome-info{padding:40px 20px; background:rgba(216,224,230,0.7); max-width:92%; margin:-20px auto 0;}
+	.ask-info-inner h5 { margin-bottom: 10px; }
     .ask-info-inner .btn { margin:10px 0 0; }
     .shop-category-carousel .owl-carousel .owl-item img{ max-width:200px; display:inline-block } 
     .palettes-gift-row { margin:50px 0 40px; }
@@ -386,7 +387,7 @@
     .footer-links {  margin: 0 0 30px; }
     .social-links {  padding: 0 0 10px; }
     .footer-bottom h5 { font-size:17px; }
-    .signup-box p{ font-size:15px; }
+    .signup-box p{ font-size:16px; }
     .banner-content-bx .text {  position: relative; bottom: inherit; top: -50px; margin: 0 auto; float: none; max-width: 90%; left: inherit;  }
     .columns { width: 100%; float: left; padding: 0 20px; }
     .category-row {  margin-bottom: 15%; }
@@ -423,7 +424,7 @@
     .magic-makeup-row .container { padding:0; }
     .magic-para {  padding: 20px 15px;   background: #fff;   text-align: left;    }
     .ask-jerome .container {  padding: 0;    }
-    .get-social-row {  margin: 20px 0 0px;    }
+    .get-social-row {  margin: 20px 0;    }
     .footer-top p:first-child {   border: none;   display: inline-block;    float: none;    }
     .footer-top p span {   display: block;  border-bottom: 1px solid;    }
     .footer-top p { padding:0; text-align: center; }
@@ -521,6 +522,9 @@
 	.shop-banner-content { margin-bottom:30px; }
 	.shopbest-col-btm { padding:0; }
 	.clock-section .left-col { padding:60px 20px; }
+	.ask-jerome .inner .title-main { display: none; }
+	.ask-jerome .title-m { display: inline-block; margin-left:20px; }
+	footer.page-footer { margin-top:0; }
 
 
 

@@ -1001,6 +1001,7 @@ header .header-search .form-control:focus {
     font-family: "GeorgiaRegular";
     font-size: 18px;
     line-height: 26px;
+	margin-bottom:25px;
 }
 .signup-box .form-group input {
     border: none;
@@ -2994,6 +2995,7 @@ tr.totals .mark {  background: none; }
 .seller-name-col .title-name:first-letter { text-transform: capitalize; }
 p:empty { display: none; }
 .clock-item figure { margin-bottom:20px; } 
+.ask-jerome .title-m { display: none; }
 
 /*===============-magento-common-classes-css-===============*/
 .columns {
