@@ -10,7 +10,7 @@ h1, h2,h3 { color:#053052; font-family:"BentonSans-Bold"; }
 .georgia{ font-family:"GeorgiaRegular"; }
 .h30 { font-size:30px;  }
 h1, h2, h3 {
-    font-size: 43px;
+    font-size: 50px;
     margin: 0 0 32px;
     position: relative;
 }
@@ -87,6 +87,7 @@ button:hover, button:focus {
     box-shadow: none;
     outline: none;
 	color:#fff;
+	min-width:170px;
 }
 .btn2{
     color: #053052;
@@ -526,7 +527,7 @@ header .header-search .form-control:focus {
     font-size: 45px;
     display: inline-block;
     float: none;
-    margin: 0 0 0 5%;
+    margin: 0;
     font-family: "GeorgiaRegular";
 }
 .banner-subtitle .inner-col span {
@@ -1857,7 +1858,7 @@ ul.pagination2 li {
     font-size: 50px;
     padding: 0 12px;
     position: relative;
-    margin: 0 auto 50px;
+    margin: 0 auto 60px;
     float: none;
     display: table;
     z-index:1;
@@ -2990,6 +2991,9 @@ tr.totals .mark {  background: none; }
 .minicart-items .item-qty { width:50px; height:38px; }
 .clock1 .clock-image { display: flex;  justify-content: center; }
 .magic-para { line-height: 26px; }
+.seller-name-col .title-name:first-letter { text-transform: capitalize; }
+p:empty { display: none; }
+.clock-item figure { margin-bottom:20px; } 
 
 /*===============-magento-common-classes-css-===============*/
 .columns {

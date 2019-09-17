@@ -318,11 +318,11 @@
 @media (max-width: 767px) {
     .content-menu { display:none; }   
     .container { max-width:100%; }
-    h1, h2, h3 { font-size: 28px; }
+    h1, h2, h3 { font-size: 30px; }
     .header-search { padding: 0;position: absolute; right: 86px; top:0; width: auto; height:100%; margin:0;    }
     .header-search .form-group{ margin:0; }
     .header-bag { float: right;  padding-left: 0; width:80px; margin-left: auto;   }
-    .sign-col, .bag-col { border:none; padding:0 10px; margin:0;  }
+    .sign-col, .bag-col { border:none; padding:0 11px 0 6px; margin:0;  }
     .singin-link span, .cart-link span { display:none; }
     .cart-link .cart-circle{ display: block;  }
     .header-content .header-right { background:none; padding:0 6px; }
@@ -337,27 +337,28 @@
     .front-banner h1 { font-size:48px; line-height: normal; }
     .banner-caption .btn { margin: 10% 0 0; }
     .down-arrow-col{ right:15px;}
-    .front-banner .owl-carousel .owl-item img {  min-height: 300px;  object-fit: cover; }
+    .front-banner .owl-carousel .owl-item img {  min-height: 350px;  object-fit: cover; }
     .advertise-bx { position: relative; top: inherit; left: inherit; right: inherit; float: none; margin: 0 auto 20px;  }
     .banner-subtitle h3 { font-size: 26px;  margin: 0 0 5px; }
     .banner-subtitle .inner-col span {display:block; font-size:15px;  }
-    h2, h3 {font-size: 26px; margin: 0 0 20px;  }
-    .front-best-seller{ padding:40px 0; }
-    .realbx-col{ padding:25px 0; min-height: inherit }
+    h2, h3 {font-size: 30px; margin: 0 0 20px;  }
+    .front-best-seller{ padding:40px 0 70px; }
+    .realbx-col{ padding:25px 0 30px; min-height: inherit }
     .magic-image-col { 
         width: 100%;
     position: relative;
     text-align: center;
     padding: 0 15px;
+	top:-60px;
      }
-    .magic-makeup-row {  margin-top: 90px;
+    .magic-makeup-row {  margin-top: 100px;
         background-size:cover;
         background-position: left top;
     margin-bottom:-15px;   }
     .magic-image-col img {  width: 150px; }
     .magic-carousel { width: 100%; padding: 0; margin: 0; }
     .magic-descript { padding: 0; text-align: center; }
-    .magic-carousel .owl-carousel {  padding: 0 30px 20px; background:#fff;  }
+    .magic-carousel .owl-carousel {  padding: 0 30px 30px; background:#fff;  }
     .magic-carousel .owl-theme .owl-nav button.owl-next{ right: 0px; }
     .magic-carousel .owl-theme .owl-nav button.owl-prev{ left: 0px;  }
     .magic-carousel .owl-theme .owl-nav button.owl-prev,
@@ -365,7 +366,7 @@
     .clock-section .left-col, .clock-section .right-col { width:100%; }
     .clock-item { position: initial; left: inherit; top: inherit; transform: none; max-width:100%; }
     .clock-item figure {   text-align: center;    }
-    .clock1 .right-col h4 { font-size:28px; line-height:normal;  }
+    .clock1 .right-col h4 { font-size:28px; line-height:normal; margin-bottom:20px;  }
     .clock-inner .infobx { position: inherit; transform: none;  width: 100%;  }
     .ask-jerome { margin: 30px 0 50px; }
     .ask-jerome-info{padding:50px 20px 40px; background:rgba(216,224,230,0.7); max-width:92%; margin:-20px auto 0;}
@@ -375,7 +376,7 @@
     .gift-inner { margin:40px 0; margin:40px 0; }
     .gift-inner { padding:50px 20px; }
     .gift-inner figure {  padding: 0 0 20px; }
-    .gift-inner h4 { font-size: 24px; }
+    .gift-inner h4 { font-size: 24px; margin-bottom:10px; }
     .footer-top .left-col, .footer-top .right-col { text-align:center; border:none; }
     .signup-box h4 { font-size: 30px; margin: 0 0 10px; }
     .signup-box .form-group input {  width: calc(100% - 110px);  margin: 0;     }
@@ -411,12 +412,14 @@
     .title-main,
     .real-women-row .title-main,
     .magic-makeup-row .title-main { font-size:30px; margin-bottom:35px;  }
+	.real-women-row .title-main { margin-bottom: 22px; }
     .real-women-row { background-size: cover; padding: 20px 0 50px; }
     .real-left .realbx-col .btn { display: none;  }
     .real-right {  padding: 0;    }
-    .rating-box {   width: calc(100% - 40px);  margin: -30px 20px 20px    }
+    .rating-box {   width: calc(100% - 40px);  margin: -40px 20px 20px    }
     .watch-btn-mobile {   margin-left: 20px;    }
-    .magic-makeup-row .title-main {  margin: 0 15px 30px;   display: inline-block;   text-align: center;    }
+    .magic-makeup-row .title-main {  margin: 0 15px 30px;   display: inline-block;text-align: center;
+		margin-top: -40px;    }
     .magic-makeup-row .container { padding:0; }
     .magic-para {  padding: 20px 15px;   background: #fff;   text-align: left;    }
     .ask-jerome .container {  padding: 0;    }
@@ -445,7 +448,7 @@
 		width: 24px;
 		background-repeat: no-repeat;
 		left: 10px;
-		top: 21px;
+		top: 22px;
 		cursor: pointer;
     }
     .nav-toggle:before {  display: none;    }
@@ -516,6 +519,8 @@
 	.page-layout-2columns-left header .header-content {  border-bottom: 1px solid #DDE6EC; }
 	.page-products .columns { padding: 20px 0 0; }
 	.shop-banner-content { margin-bottom:30px; }
+	.shopbest-col-btm { padding:0; }
+	.clock-section .left-col { padding:60px 20px; }
 
 
 
