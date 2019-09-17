@@ -1923,7 +1923,7 @@ select:not([disabled]):focus {
 .rating-summary .rating-result>span:before {
     color: #053052;
 }
-.magic-item .rating-summary .rating-result>span:before {
+.cms-home .rating-summary .rating-result>span:before {
     color: #F3CF85;
 }
 .product-reviews-summary {
