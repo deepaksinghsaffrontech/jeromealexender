@@ -520,7 +520,7 @@
 	.page-layout-2columns-left header .header-content {  border-bottom: 1px solid #DDE6EC; }
 	.page-products .columns { padding: 20px 0 0; }
 	.shop-banner-content { margin-bottom:30px; }
-	.shopbest-col-btm { padding:0; }
+	.shopbest-col-btm { padding-top:30px; }
 	.clock-section .left-col { padding:60px 20px; }
 	.ask-jerome .inner .title-main { display: none; }
 	.ask-jerome .title-m { display: inline-block; margin-left:20px; }
