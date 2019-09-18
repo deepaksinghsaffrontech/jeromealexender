@@ -8,12 +8,13 @@
 	
 	/*--magento-navigation-css--*/
 	.navigation { z-index: 1; }
-	.navigation ul.ui-menu { display: flex; }
+	.navigation ul.ui-menu { display: flex; align-items: center; }
 	.navigation li.level0 { flex: 1; text-align: center; margin: 0;	}
-	.navigation .level0>.level-top { display: block; padding: 20px 10px; line-height: normal;  }
+	.navigation > ul{ padding:0; }
+	.navigation .level0>.level-top { display: block; padding: 20px 10px; line-height:20px;  }
 	.navigation li.level0:hover a { background: #ffdcd5;   }
     .nav-sections-item-content>.navigation {  background: none;  }
-    .navigation { max-width: 1600px; width: 94%; }
+    .navigation { max-width: 1600px; width: 100%; }
     .nav-sections .satisfaction-carousel { display:none; }
 	.caption-inner p {  font-size: 28px; line-height: 38px; }
     .caption-inner {  position: absolute;  bottom: -20px;  left: 20px; width:92%;  }
@@ -162,8 +163,10 @@
     }
     .nav-tabs .nav-link { min-width:190px;}
 	.navigation { padding: 0 7px; width:94%;   }
+	.navigation > ul{ padding:0 8px; }
 
 }
+
 @media (min-width: 1400px) {
     .clock-item img { max-width: 58%; }
 }
@@ -183,8 +186,8 @@
     .menu-child{ display:none; }   
     /* .header-navbar .navbar-nav > li{ width: auto; padding: 20px 23px;  } */
     .front-banner h1{ font-size:60px; }
-    .advertise-bx { position: relative; top: inherit; left: inherit; right: inherit; float: none; margin: 0 auto 12px; }
-    .banner-subtitle h3 { font-size:30px; margin:0 0 6px; display:block;   }
+    .advertise-bx{ position:relative; top:inherit; left:inherit; right:inherit; float:none; margin:0 auto 12px;}
+    .banner-subtitle h3 { font-size:36px; margin:0 0 6px; display:block;   }
     h2, h3{ font-size:32px;  }
     .clock-inner .infobx p { font-size:13px; line-height:18px;  }
     .clock-item{ max-width:80%;}
@@ -213,15 +216,15 @@
     .gift-inner { padding-left:20px; padding-right:20px;  }
     .title-main, .magic-makeup-row .title-main,
     .real-women-row .title-main { font-size:40px; }
-	.navigation li.level0 { width:auto; padding:0; min-width:13%;}
+	.navigation li.level0 { width:auto; padding:0; }
     .content-menu a { padding:0 8px; font-size:15px; }
     .account-bx { padding:7%; }
     .quick-item p { font-size:16px; }
     .nav-tabs .nav-link { padding:1rem 15px; font-size:16px;  }
     .community-reviews { padding:0 20px; }
     .customer-reviews .owl-carousel { padding:0 30px; }
-    .owl-theme .owl-nav button.owl-prev, .owl-theme .owl-nav button.owl-prev:hover { left:-10px; }
-    .owl-theme .owl-nav button.owl-next, .owl-theme .owl-nav button.owl-next:hover { right:-10px; }
+    .owl-theme .owl-nav button.owl-prev, .owl-theme .owl-nav button.owl-prev:hover { left:-35px; }
+    .owl-theme .owl-nav button.owl-next, .owl-theme .owl-nav button.owl-next:hover { right:-35px; }
 	.sidebar-ask,
 	.page-layout-2columns-left .sidebar-main	{ width: 24.83333333%; }
     .column-ask,
@@ -240,11 +243,16 @@
 
 @media (min-width:768px) and (max-width:1024px) {
     .product-tabs .nav-tabs { top:-55px; } 
+	.clock-inner .infobx{ background: rgba(255,255,255,0.8); }
 
 }
 
 @media (min-width: 992px) and (max-width:1199px) {
     .magic-makeup-row { margin:90px 0; }
+	.ask-info-inner { width:260%;}
+	.ask-jerome .title-main { margin-bottom:20px; }
+	.ask-jerome-info { padding-left:40px; }
+	.ask-info-inner .btn { margin-top:20px}
 
 }
 
@@ -254,25 +262,28 @@
     .header-content .container { max-width:100%; }
     .header-search { width:30%; padding:0 10px;  }
     .header-bag { width:18%; }
-    .ask-jerome-info { background: rgba(216,224,230,0.7); max-width: 92%; margin: -20px auto 0; }
+	.ask-jerome { text-align: center; }
+	.ask-jerome .title-m { display: inline-block; margin-bottom: 40px; font-size: 40px; margin: 0 auto 45px; }
+	.ask-jerome-info { background: rgba(216,224,230,0.7); max-width: 92%; margin: -20px auto 0;
+		text-align:left; padding:40px; }
     .real-women-row .video-col { padding:0; margin-bottom: 0;  }
     .real-right { padding:0 7%; }
     .realbx-col { padding:5% 5% 0; min-height: inherit; }
     .front-banner .item img {  min-height: 400px;   object-fit: cover;   }
-    .magic-makeup-row .title-main { font-size:32px; margin-bottom:28px;  }
+    .magic-makeup-row .title-main {  margin-bottom:28px;  }
     .real-women-row { background-size: cover; padding: 20px 0 50px; }
     .real-left .realbx-col .btn { display: none;  }
     .rating-box {   width: calc(100% - 40px);  margin: -30px 20px 20px  }
     .watch-btn-mobile {  margin-left: 20px;    }
     .clock-item img { max-width:80px; }
     .logo-col img {   max-width: 240px; }
-    .logo-col { max-width: 100%; flex: 100%; text-align: center; padding: 15px; }
+    .logo-col { max-width: 100%; flex: 100%; text-align: center; padding:20px 15px; }
     .minicart-wrapper .action.showcart { padding: 20px 0; }
 	.header-search input { font-size:16px; padding-bottom:5px; }
     .content-menu { display: block; width:52%;  }
     .content-menu a {  padding: 0 10px; font-size: 16px; text-align: center; }
     .singin-link span, .cart-link span, .minicart-wrapper .action.showcart { font-size: 14px;}
-    .navigation li.level0 { width: auto; padding:0; min-width:12%; }
+    .navigation li.level0 { width: auto; padding:0;  }
     .navigation {  width: 98%; }
     .footer-top p { padding: 0 5px; }
     header .header-right { max-width: 100%;  flex: 100%;  padding: 0 10px; border-top: 1px solid #F2F1F0; }
@@ -280,6 +291,9 @@
     .quick-item figure {   width: 25px;   }
     .caption-inner p {  font-size: 22px; line-height: 28px; }
     .side-btn .btn1 {  margin-bottom: 10px;    }
+	.clock1 .right-col h4 { font-size:34px; }
+	
+	
 	
 
 }
@@ -311,8 +325,8 @@
     .navbar-light .navbar-toggler { padding: 0; border: none; box-shadow: none; outline:none;  margin:27px 0 0 10px;  }
     .header-navbar .container { padding: 0; max-width:100%; }
     .bg-light{ background:none !important; }
-
     /*--/navigation-and-search-css--*/
+	.ask-jerome .inner .title-main { display: none; }
 
 }
 
@@ -522,12 +536,11 @@
 	.shop-banner-content { margin-bottom:30px; }
 	.shopbest-col-btm { padding-top:30px; }
 	.clock-section .left-col { padding:60px 20px; }
-	.ask-jerome .inner .title-main { display: none; }
-	.ask-jerome .title-m { display: inline-block; margin-left:20px; }
 	footer.page-footer { margin-top:0; }
 	.navigation .level0.active>a:not(.ui-state-active),
 	.navigation .level0.has-active>a:not(.ui-state-active) { border-color: #053052; color: #053052;	}
 	.shop-category-carousel { flex-wrap: wrap; }
 	.shop-category-carousel .item {	padding: 0 10px 40px; flex: 1 1 50%; text-align: center; }
+	.ask-jerome .title-m { display: inline-block; margin-left:20px; }
 
 }

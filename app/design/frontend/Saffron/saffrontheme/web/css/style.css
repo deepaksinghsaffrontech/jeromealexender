@@ -3001,6 +3001,7 @@ tr.totals .mark {  background: none; }
 p:empty { display: none; }
 .clock-item figure { margin-bottom:20px; } 
 .ask-jerome .title-m, .seller-name-col span.price-label { display: none; }
+.ask-info-inner h5 { margin-bottom: 15px; }
 
 
 /*===============-magento-common-classes-css-===============*/
