@@ -1423,10 +1423,8 @@ ul.pagination-list {
     width: 100%;
     max-width: 80%;
     padding: 12px 20px;
-    margin: 0;
-    position: absolute;
-    left: 12px;
-    bottom: -30px;
+	margin: -113px 0 0 15px;
+    position: relative;
 }
 .banner-content-bx h5 {
     margin-bottom: 8px;

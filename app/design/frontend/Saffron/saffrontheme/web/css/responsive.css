@@ -215,7 +215,8 @@
     .gift-inner figure { padding:0; }
     .gift-inner { padding-left:20px; padding-right:20px;  }
     .title-main, .magic-makeup-row .title-main,
-    .real-women-row .title-main { font-size:40px; }
+    .real-women-row .title-main,
+	h1, h2, h3	{ font-size:40px; }
 	.navigation li.level0 { width:auto; padding:0; }
     .content-menu a { padding:0 8px; font-size:15px; }
     .account-bx { padding:7%; }
@@ -236,6 +237,7 @@
 	.shop-category-carousel { flex-wrap: wrap; }
 	.shop-category-carousel .item {	padding: 0 10px 40px; flex: 1 1 33.333%; text-align: center; }
 	.palettes-gift-row { margin-top:40px;}
+	.banner-content-bx .text { margin-top: -55px;  max-width:90%; }
 
 
 
@@ -533,7 +535,6 @@
     .product.media { margin-bottom: 30px; }
     .review-bx .name-section { padding-bottom: 0; }
 	.page-layout-2columns-left header .header-content {  border-bottom: 1px solid #DDE6EC; }
-	.page-products .columns { padding: 20px 0 0; }
 	.shop-banner-content { margin-bottom:30px; }
 	.shopbest-col-btm { padding-top:30px; }
 	.clock-section .left-col { padding:60px 20px; }
