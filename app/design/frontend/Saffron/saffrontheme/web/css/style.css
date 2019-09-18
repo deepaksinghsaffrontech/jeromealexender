@@ -3000,7 +3000,8 @@ tr.totals .mark {  background: none; }
 .seller-name-col .title-name:first-letter { text-transform: capitalize; }
 p:empty { display: none; }
 .clock-item figure { margin-bottom:20px; } 
-.ask-jerome .title-m { display: none; }
+.ask-jerome .title-m, .seller-name-col span.price-label { display: none; }
+
 
 /*===============-magento-common-classes-css-===============*/
 .columns {
