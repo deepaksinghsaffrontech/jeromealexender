@@ -231,6 +231,9 @@
 	.sidebar-category li.shop-item .item-name {	
 		font-family: "BentonSans-Medium"; width: 78%;float: left; font-size: 15px;
 	}
+	.shop-category-carousel { flex-wrap: wrap; }
+	.shop-category-carousel .item {	padding: 0 10px 40px; flex: 1 1 33.333%; text-align: center; }
+	.palettes-gift-row { margin-top:40px;}
 
 
 
@@ -277,11 +280,9 @@
     .quick-item figure {   width: 25px;   }
     .caption-inner p {  font-size: 22px; line-height: 28px; }
     .side-btn .btn1 {  margin-bottom: 10px;    }
-    
+	
 
 }
-
-
 
 @media (max-width:991px) {
 
@@ -372,7 +373,7 @@
 	.ask-info-inner h5 { margin-bottom: 10px; }
     .ask-info-inner .btn { margin:10px 0 0; }
     .shop-category-carousel .owl-carousel .owl-item img{ max-width:200px; display:inline-block } 
-    .palettes-gift-row { margin:50px 0 40px; }
+    .palettes-gift-row { margin:20px 0 40px; }
     .gift-inner { margin:40px 0; margin:40px 0; }
     .gift-inner { padding:50px 20px; }
     .gift-inner figure {  padding: 0 0 20px; }
@@ -525,10 +526,8 @@
 	.ask-jerome .title-m { display: inline-block; margin-left:20px; }
 	footer.page-footer { margin-top:0; }
 	.navigation .level0.active>a:not(.ui-state-active),
-	.navigation .level0.has-active>a:not(.ui-state-active) {
-		border-color: #053052; color: #053052;
-	}
-
-
+	.navigation .level0.has-active>a:not(.ui-state-active) { border-color: #053052; color: #053052;	}
+	.shop-category-carousel { flex-wrap: wrap; }
+	.shop-category-carousel .item {	padding: 0 10px 40px; flex: 1 1 50%; text-align: center; }
 
 }
