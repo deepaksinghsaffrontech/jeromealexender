@@ -19,10 +19,7 @@ a:hover { color:#053052; }
 a:visited, .alink:visited {  color: #053052; }
 
 a:hover{ text-decoration: none; }
-p{
-    line-height: 26px;
-    font-size:16px; 
-}
+p{ line-height: 26px;  font-size:16px; }
 ul{ padding:0; }
 li{ list-style: none; display: inline-block; }
 
@@ -32,7 +29,6 @@ input[type="text"], input[type="password"], input[type="url"], input[type="tel"]
 	font-size:16px;
 	color:#053052;
 }
-
 .abs-discount-block .actions-toolbar .action.primary:not(:focus), .abs-discount-block .actions-toolbar .action.cancel:not(:focus), .block-compare .action.primary:not(:focus), .cart-summary .block .actions-toolbar>.primary .action.primary:not(:focus), .cart-summary .form.giftregistry .fieldset .action.primary:not(:focus), .paypal-review-discount .actions-toolbar .action.primary:not(:focus), .paypal-review-discount .actions-toolbar .action.cancel:not(:focus), .cart-discount .actions-toolbar .action.primary:not(:focus), .cart-discount .actions-toolbar .action.cancel:not(:focus) {
     box-shadow: none;
     background: #053052;
@@ -40,7 +36,6 @@ input[type="text"], input[type="password"], input[type="url"], input[type="tel"]
     border: none;
     outline: none;
 }
-
 .abs-revert-secondary-color:focus, .abs-revert-secondary-color:active, .abs-revert-to-action-secondary:focus, .abs-revert-to-action-secondary:active, .paypal-review .block .actions-toolbar .action.primary:focus, .paypal-review .block .actions-toolbar .action.primary:active, .abs-discount-block .actions-toolbar .action.primary:focus, .abs-discount-block .actions-toolbar .action.primary:active, .abs-discount-block .actions-toolbar .action.cancel:focus, .abs-discount-block .actions-toolbar .action.cancel:active, .block-compare .action.primary:focus, .block-compare .action.primary:active, .cart-summary .block .actions-toolbar>.primary .action.primary:focus, .cart-summary .block .actions-toolbar>.primary .action.primary:active, .cart-summary .form.giftregistry .fieldset .action.primary:focus, .cart-summary .form.giftregistry .fieldset .action.primary:active, .paypal-review-discount .actions-toolbar .action.primary:focus, .paypal-review-discount .actions-toolbar .action.primary:active, .paypal-review-discount .actions-toolbar .action.cancel:focus, .paypal-review-discount .actions-toolbar .action.cancel:active, .cart-discount .actions-toolbar .action.primary:focus, .cart-discount .actions-toolbar .action.primary:active, .cart-discount .actions-toolbar .action.cancel:focus, .cart-discount .actions-toolbar .action.cancel:active {
     background: #053052;
     border: none;
@@ -182,7 +177,6 @@ footer.page-footer {
     outline: none;
     margin:0; 
  }
- 
 .satisfaction-carousel .owl-theme .owl-nav button.owl-prev,
 .satisfaction-carousel .owl-theme .owl-nav button.owl-next {
     margin: 0;
