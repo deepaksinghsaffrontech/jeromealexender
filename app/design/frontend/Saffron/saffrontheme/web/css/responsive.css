@@ -521,8 +521,8 @@
     .singin-dropdown { min-width:220px; top:100%; }
     .header-search .form-group { margin:0; }
     .minicart-wrapper .action.showcart.active {   display: flex;    }
-	.caption-inner { width: calc(100% - 30px);  margin: -20px 15px 0;  position: relative; }
-    .ask-jerome-banner { margin-bottom: 50px; }
+	.caption-inner { width: calc(100% - 30px);  margin: -20px 15px 0;  position: relative; padding:20px 15px; }
+    .ask-jerome-banner { margin-bottom: 30px; }
     .sign-feature { flex-wrap: wrap; margin:0;  }
     .sign-feature .quick-item { padding:0 0 20px; display: flex;     align-items: center;     }
     .btn-primary { padding:11px 20px; }
@@ -551,7 +551,25 @@
 	.copyright-col .span-bdr { padding-right:5px; margin-right:5px; }
 	.ask-container {  display: flex;  flex-direction: column; }
 	.sidebar-ask {  order: 2; }
-	.column-ask {  order: 3; }
-	.sidebar-filter {  display: none; }
+	.column-ask {  order: 3; margin-top:20px; }
+	.sidebar-filter {  display: none; padding:0 15px; }
+	.filter-tutorials-m {
+		display: flex;
+		background: #f8f8f8;
+		padding: 15px;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 20px;
+		font-size: 18px;
+		font-family: "BentonSans-Bold";
+	}
+	.column-ask .title-main.title2 {
+		font-size: 26px;
+		text-align: center;
+		display: inherit;
+		margin: 0 0 20px;
+	}
+	.column-ask .title-main.title2:before {  display: none; }
+	.sidebar-filter h5 { font-size:20px; }
 
 }
