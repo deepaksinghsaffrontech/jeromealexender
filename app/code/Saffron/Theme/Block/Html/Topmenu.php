@@ -149,7 +149,7 @@ class Topmenu extends \Magento\Theme\Block\Html\Topmenu
         
 		$html .= '<div class="menu-product-lists">'. $menuShowmenu .'</div>';
 		$html .= '<div class="menu-best-seller">'. $menuproduct .'</div>';
-		$html .= $this->_getHtml($child, $childrenWrapClass, $limit, $colStops);
+		//$html .= $this->_getHtml($child, $childrenWrapClass, $limit, $colStops);
        
 	   
 	   
