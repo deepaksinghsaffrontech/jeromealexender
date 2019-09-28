@@ -18,7 +18,7 @@ public function getAllItems()
     foreach ($orderItems as $item) {
     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
     $product = $objectManager->create('Magento\Catalog\Model\Product')->load($item->getId());
-    $itemQty[]=array('quantity'=>$item->getQtyOrdered(),'description'=>$product->getShortDescription(),'name'=>$item->getName(),'productImage'=>$product->getImage(),'producturl'=>$product->getUrl(),'price'=>$item->getPrice(),'product_id'=>$item->getId());
+    $itemQty['items'][]=array('quantity'=>$item->getQtyOrdered(),'description'=>$product->getShortDescription(),'name'=>$item->getName(),'productImage'=>$product->getImage(),'producturl'=>$product->getUrl(),'price'=>$item->getPrice(),'product_id'=>$item->getId());
 
     }
     return $itemQty;
