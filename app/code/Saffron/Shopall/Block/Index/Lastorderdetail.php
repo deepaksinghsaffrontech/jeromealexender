@@ -16,8 +16,9 @@ public function getAllItems()
 	$itemQty['order_date']= $order->getCreatedAt() ;
 	
     foreach ($orderItems as $item) {
-    
-    $itemQty[]=array('quantity'=>$item->getQtyOrdered(),'description'=>$item->getDescription(),'name'=>$item->getName(),'productImage'=>$item->getImage(),'producturl'=>$item->getUrl(),'price'=>$item->getPrice(),'product_id'=>$item->getId());
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$product = $objectManager->create('Magento\Catalog\Model\Product')->load($item->getId());
+    $itemQty[]=array('quantity'=>$item->getQtyOrdered(),'description'=>$item->getDescription(),'name'=>$item->getName(),'productImage'=>$product->getImage(),'producturl'=>$product->getUrl(),'price'=>$item->getPrice(),'product_id'=>$item->getId());
 
     }
     return $itemQty;
