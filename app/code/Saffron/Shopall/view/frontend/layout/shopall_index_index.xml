@@ -22,7 +22,7 @@
         </referenceContainer>
 
         <referenceContainer name="content">
-            <block class="Saffron\Shopall\Block\Index\Index" name="shopall_index_index" template="Saffron_Shopall::shopall_index_index.phtml"/>
+            <block class="Saffron\Shopall\Block\Index\Lastorderdetail" name="shopall_index_index" template="Saffron_Shopall::shopall_index_lastorderdetail.phtml"/>
         </referenceContainer>
 
 
