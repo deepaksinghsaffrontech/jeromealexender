@@ -130,16 +130,16 @@ class Topmenu extends \Magento\Theme\Block\Html\Topmenu
     {
         $html = '';
 		
-        //if (!$child->hasChildren()) {
-            //return $html;
-        //}
+        if (!$child->hasChildren()) {
+            return $html;
+        }
 		
-		if($checkmenu == '0'){
+		//if($checkmenu == '0'){
 			return $html;
-		}
-         $checkmenu = $this->Checkmenu($child->getId())  ; 
-		$menuproduct = $this->menuProduct($child->getId())  ;
-		$menuShowmenu = $this->menuShowmenu($child->getId())  ;
+		//}
+         //$checkmenu = $this->Checkmenu($child->getId())  ; 
+		//$menuproduct = $this->menuProduct($child->getId())  ;
+		//$menuShowmenu = $this->menuShowmenu($child->getId())  ;
         $colStops = null;
         if ($childLevel == 0 && $limit) {
             $colStops = $this->_columnBrake($child->getChildren(), $limit);
@@ -147,9 +147,9 @@ class Topmenu extends \Magento\Theme\Block\Html\Topmenu
           
         $html .= '<ul class="level ' . $childLevel . ' ' . $childrenWrapClass .'">';
         
-		$html .= '<div class="menu-product-lists">'. $menuShowmenu .'</div>';
-		$html .= '<div class="menu-best-seller">'. $menuproduct .'</div>';
-		//$html .= $this->_getHtml($child, $childrenWrapClass, $limit, $colStops);
+		//$html .= '<div class="menu-product-lists">'. $menuShowmenu .'</div>';
+		//$html .= '<div class="menu-best-seller">'. $menuproduct .'</div>';
+		$html .= $this->_getHtml($child, $childrenWrapClass, $limit, $colStops);
        
 	   
 	   
