@@ -17,7 +17,7 @@ public function getAllItems()
 	
     foreach ($orderItems as $item) {
     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-$product = $objectManager->create('Magento\Catalog\Model\Product')->load($item->getId());
+    $product = $objectManager->create('Magento\Catalog\Model\Product')->load($item->getId());
     $itemQty[]=array('quantity'=>$item->getQtyOrdered(),'description'=>$item->getDescription(),'name'=>$item->getName(),'productImage'=>$product->getImage(),'producturl'=>$product->getUrl(),'price'=>$item->getPrice(),'product_id'=>$item->getId());
 
     }
@@ -31,9 +31,18 @@ $order = $checkout_session->getLastRealOrder();
 $orderId= $order->getEntityId();
 
 return $order->getIncrementId();
-
-
-
 }
+
+public function getMedia(){
+	$_objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+	$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+	$currentStore = $storeManager->getStore();
+	$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+     
+	  return $mediaUrl ;
+} 
+
+
+
 
 }
