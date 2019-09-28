@@ -376,7 +376,7 @@ foreach ($categoryProducts as $product)
 
         $classes[] = 'level' . $item->getLevel();
         $classes[] = $item->getPositionClass();
-
+        $checkmenu = $this->Checkmenu($item->getId());
         if ($item->getIsCategory()) {
             $classes[] = 'category-item';
         }
@@ -402,7 +402,9 @@ foreach ($categoryProducts as $product)
         if ($item->hasChildren()) {
             $classes[] = 'parent';
         }
-
+        if($checkmenu == '1'){
+			$classes[] = 'parent';
+		}
         return $classes;
     }
 
