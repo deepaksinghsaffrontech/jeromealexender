@@ -135,7 +135,7 @@ class Topmenu extends \Magento\Theme\Block\Html\Topmenu
         //}
 		$checkmenu = $this->Checkmenu($child->getId())  ;
 		if($checkmenu == '0'){
-			//return $html;
+			return $html;
 		}
           
 		$menuproduct = $this->menuProduct($child->getId())  ;
@@ -145,7 +145,7 @@ class Topmenu extends \Magento\Theme\Block\Html\Topmenu
             $colStops = $this->_columnBrake($child->getChildren(), $limit);
         }
           
-        $html .= '<ul class="level ' . $childLevel . ' ' . $childrenWrapClass .'">';
+        $html .= '<ul class="level' . $childLevel . ' ' . $childrenWrapClass .'">';
         
 		$html .= '<div class="menu-product-lists">'. $menuShowmenu .'</div>';
 		$html .= '<div class="menu-best-seller">'. $menuproduct .'</div>';
@@ -229,7 +229,7 @@ $category = $categoryFactory->create()->load($categoryId);
 $categoryProducts = $category->getProductCollection()
                              ->addAttributeToSelect('*')
 							  ->addAttributeToFilter('best_seller',['eq'=>'1'])
-							  ->setPageSize(10);
+							  ->setPageSize(4);
 
 foreach ($categoryProducts as $product) 
 {
