@@ -139,6 +139,19 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
     <?php endif; ?>
 <?php endif; ?>
 
+<script>
+    require([
+        'jquery'
+    ], function ($) {
+        $(document).ready(function(){
+            // move hero banner to top of the page
+          
+            $('.breadcrumbs').detach().insertAfter('.category-view');		
+			 $('.page-title-wrapper').detach().insertAfter('.breadcrumbs');	
+			
+		})
+    })
+</script>
 
 <?php } ?>
 
