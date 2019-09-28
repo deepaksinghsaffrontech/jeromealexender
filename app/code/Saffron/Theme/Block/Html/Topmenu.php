@@ -133,11 +133,11 @@ class Topmenu extends \Magento\Theme\Block\Html\Topmenu
         //if (!$child->hasChildren()) {
             //return $html;
         //}
-		
-		//if($checkmenu == '0'){
+		$checkmenu = $this->Checkmenu($child->getId())  ;
+		if($checkmenu == '0'){
 			//return $html;
-		//}
-         $checkmenu = $this->Checkmenu($child->getId())  ; 
+		}
+          
 		$menuproduct = $this->menuProduct($child->getId())  ;
 		$menuShowmenu = $this->menuShowmenu($child->getId())  ;
         $colStops = null;
@@ -193,12 +193,12 @@ $categoryProducts = $category->getProductCollection()
 
 $i = 0;
 $reponse .='<div class="nemu-list">';
-$reponse .='<div class="nemu-list-categries"> </div>';
+$reponse .='<div class="nemu-list-categries"><li>'.$category->getName().'</li> </div>';
 
 foreach ($categoryProducts as $product) {
-if(($i%5==0)OR($i==0)){
-	$reponse .='<div class="menu-product-list">';
-}
+//if(($i%5==0)OR($i==0)){
+	//$reponse .='<div class="menu-product-list">';
+//}
 $reponse .='<li>
              <a href="'.$product->getProductUrl().'">
                     <span class="menu-name">'.$product->getName().'</span>
@@ -206,9 +206,9 @@ $reponse .='<li>
              </a>
 		    </li>';
 			
-if(($i%5==0)OR($i==0)){
-	$reponse .='</div>';	
-}
+//if(($i%5==0)OR($i==0)){
+	//$reponse .='</div>';	
+//}
 
 $i++;			
 }	
@@ -228,7 +228,8 @@ $categoryId =  $id[2]; // YOUR CATEGORY ID
 $category = $categoryFactory->create()->load($categoryId);
 $categoryProducts = $category->getProductCollection()
                              ->addAttributeToSelect('*')
-							  ->addAttributeToFilter('best_seller',['eq'=>'1']);
+							  ->addAttributeToFilter('best_seller',['eq'=>'1'])
+							  ->setPageSize(10);
 
 foreach ($categoryProducts as $product) 
 {
