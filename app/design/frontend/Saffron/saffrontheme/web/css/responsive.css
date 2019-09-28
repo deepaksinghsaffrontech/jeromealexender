@@ -21,7 +21,9 @@
     .sign-container .left-col {  padding-right: 5px;  }
     .sign-container .right-col { padding-left: 5px;  }
     .sidebar-ask { width: 20.83333333%; float: left; padding-right: 2%;    }
-    .column-ask { float: left; width: 79.16666667%;    }
+    .ask-jerome-banner { float: left; width: 79.16666667%;    }
+	.column-ask {  margin-left: 20.83333333%;  width: calc(100% - 20.83333333%);   float: left; }
+	.filter-tutorials-m { display:none; }
     .page-main { padding:0; }
     .navigation .level0.active>.level-top, .navigation .level0.has-active>.level-top { display: block; }
 	.checkout-cart-index .column.main {  padding-bottom: 80px; }
