@@ -408,7 +408,7 @@
     .footer-bottom h5 { font-size:17px; }
     .signup-box p{ font-size:16px; }
     .banner-content-bx .text {  position: relative; bottom: inherit; top: -50px; margin: 0 auto; float: none; max-width: 90%; left: inherit;  }
-    .columns { width: 100%; float: left; padding: 0 20px; }
+    .columns { width: 100%; float: left; padding:0; }
     .category-row {  margin-bottom: 15%; }
     .customer-reviews .name-section, .customer-reviews .descript-col { padding:15px; }
     .review-descpt .review-image { float: left; width: 100%; margin-bottom: 20px; }
@@ -549,5 +549,9 @@
 	.ask-jerome .title-m { display: inline-block; margin-left:20px; }
 	.copyright-col span, .copyright-col a { font-size:10px; }
 	.copyright-col .span-bdr { padding-right:5px; margin-right:5px; }
+	.ask-container {  display: flex;  flex-direction: column; }
+	.sidebar-ask {  order: 2; }
+	.column-ask {  order: 3; }
+	.sidebar-filter {  display: none; }
 
 }

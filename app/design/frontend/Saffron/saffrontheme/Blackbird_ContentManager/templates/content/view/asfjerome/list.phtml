@@ -41,6 +41,8 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
               </ul>
           </div>
 
+	<div class="ask-container">
+
       <div class="sidebar-ask">
 		<div class="filter-tutorials-m">
 			<span>Filter Tutorials</span>
@@ -196,12 +198,9 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
                    
                    
                     </div>
-            
-             
-
-
+        
           
-
+		</div>
 
 
 
@@ -265,7 +264,13 @@ require([
     jQuery(".btn1").click(function(){
 	var baseurl = '<?php echo $base_url.'ask-jerome'?>';	
 	window.location.href = baseurl;	
-	});	
+	});
+
+	//filter tutorials jQuery
+	jQuery(".filter-tutorials-m").on("click", function(){
+		jQuery(this).next(".sidebar-filter").slideToggle();	
+	})
+
    });
 });
 </script>
