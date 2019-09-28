@@ -238,6 +238,7 @@
 	.shop-category-carousel .item {	padding: 0 10px 40px; flex: 1 1 33.333%; text-align: center; }
 	.palettes-gift-row { margin-top:40px;}
 	.banner-content-bx .text { margin-top: -55px;  max-width:90%; }
+	.front-banner .item img {  min-height: 400px;   object-fit: cover;   }
 
 
 
@@ -271,7 +272,6 @@
     .real-women-row .video-col { padding:0; margin-bottom: 0;  }
     .real-right { padding:0 7%; }
     .realbx-col { padding:5% 5% 0; min-height: inherit; }
-    .front-banner .item img {  min-height: 400px;   object-fit: cover;   }
     .magic-makeup-row .title-main {  margin-bottom:28px;  }
     .real-women-row { background-size: cover; padding: 20px 0 50px; }
     .real-left .realbx-col .btn { display: none;  }
@@ -401,7 +401,7 @@
     .signup-box .form-group .singup-btn {  margin: 0; float: left;  width: 100px;  margin-left: 10px;     }
     .signup-box { margin: 0 0 30px; }
     .footer-bottom h5, .footer-links li{ margin: 0 0 15px; }
-    .footer-links {  margin: 0 0 30px; }
+    .footer-links {  margin: 0 0 40px; }
     .social-links {  padding: 0 0 10px; }
     .footer-bottom h5 { font-size:17px; }
     .signup-box p{ font-size:16px; }
@@ -475,7 +475,7 @@
     .logo-col a { display: inline-block; margin-left: 32px;    }
     .minicart-wrapper .action.showcart img { height: 20px; width: auto;    }
     .sign-col .singin-link img { width: auto; height: 20px;    }
-    .block-search .control { border: none; margin: 0; padding: 0; position: fixed; left: 0; right: 0; width: 100%; top: 85px;       }
+    .block-search .control { border: none; margin: 0; padding: 0; position: fixed; left: 0; right: 0; width: 100%; top: 100px;       }
     .block-search .minisearch.active  .control { background: #fff;  padding: 20px;  }
     .block-search .label:before { color:#b4b5b6; display: none; }
     header .header-search input { font-size:15px; }
@@ -515,7 +515,8 @@
     .minicart-wrapper .action.showcart.active { display: flex; }
     .sign-col .singin-link:hover, .sign-col .singin-link.active,
     .minicart-wrapper .action.showcart:hover {  background: none;    } 
-    .singin-dropdown { min-width:220px; top:120%; }
+	.sign-col { position:initial; }
+    .singin-dropdown { min-width:220px; top:100%; }
     .header-search .form-group { margin:0; }
     .minicart-wrapper .action.showcart.active {   display: flex;    }
 	.caption-inner { width: calc(100% - 30px);  margin: -20px 15px 0;  position: relative; }
@@ -544,5 +545,7 @@
 	.shop-category-carousel { flex-wrap: wrap; }
 	.shop-category-carousel .item {	padding: 0 10px 40px; flex: 1 1 50%; text-align: center; }
 	.ask-jerome .title-m { display: inline-block; margin-left:20px; }
+	.copyright-col span, .copyright-col a { font-size:10px; }
+	.copyright-col .span-bdr { padding-right:5px; margin-right:5px; }
 
 }
