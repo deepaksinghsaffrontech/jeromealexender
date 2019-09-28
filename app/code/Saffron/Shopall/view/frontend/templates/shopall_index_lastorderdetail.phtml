@@ -6,4 +6,7 @@ $objectManager = \Magento\Framework\App\ObjectManager::getInstance(); // Instanc
 $priceHelper = $objectManager->create('Magento\Framework\Pricing\Helper\Data'); // Instance of Pricing Helper
 $value =  19.0000; // or whatever value you have in your template
 $formattedCurrencyValue = $priceHelper->currency($value, true, false);
+
+echo $formattedCurrencyValue ;
+
 ?>
