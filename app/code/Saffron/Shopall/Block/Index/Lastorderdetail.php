@@ -15,7 +15,7 @@ public function getAllItems()
     $itemQty = array();
 	$itemQty['order_date']= $order->getCreatedAt() ;
     foreach ($orderItems as $item) {
-        $itemQty[]=array('quantity'=>$item->getQtyOrdered(),'description'=>$item->getDescription(),'name'=>$item->getName(),'price'=>$item->getPrice());
+        $itemQty[]=array('quantity'=>$item->getQtyOrdered(),'description'=>$item->getDescription(),'name'=>$item->getName(),'productImage'=>$item->getImage(),'producturl'=>$item->getUrl(),'price'=>$item->getPrice());
 
     }
     return $itemQty;
