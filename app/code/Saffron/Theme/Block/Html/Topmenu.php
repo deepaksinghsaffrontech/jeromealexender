@@ -130,9 +130,9 @@ class Topmenu extends \Magento\Theme\Block\Html\Topmenu
     {
         $html = '';
 		
-        if (!$child->hasChildren()) {
-            return $html;
-        }
+        //if (!$child->hasChildren()) {
+            //return $html;
+        //}
 		
 		//if($checkmenu == '0'){
 			//return $html;
