@@ -25,12 +25,11 @@ public function getAllItems()
 }
 
 public function LastorderId(){
-$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-$checkout_session = $objectManager->get('Magento\Checkout\Model\Session');
-$order = $checkout_session->getLastRealOrder();
-$orderId= $order->getEntityId();
 
-return $order->getIncrementId();
+$objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
+$orderDatamodel = $objectManager->get('Magento\Sales\Model\Order')->getCollection()->getLastItem();
+$orderId   =   $orderDatamodel->getId();
+return $orderId;
 }
 
 public function getMedia(){
