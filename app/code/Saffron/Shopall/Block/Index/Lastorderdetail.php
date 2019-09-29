@@ -29,7 +29,9 @@ public function LastorderId(){
 $objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
 $orderDatamodel = $objectManager->get('Magento\Sales\Model\Order')->getCollection()->getLastItem();
 $orderId   =   $orderDatamodel->getId();
-return $orderId;
+//return $orderId;
+
+return $orderDatamodel->getIncrementId();
 }
 
 public function getMedia(){
