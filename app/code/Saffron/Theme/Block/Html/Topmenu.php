@@ -147,8 +147,8 @@ class Topmenu extends \Magento\Theme\Block\Html\Topmenu
           
         $html .= '<ul class="level' . $childLevel . ' ' . $childrenWrapClass .'">';
         
-		$html .= '<div class="menu-product-lists">'. $menuShowmenu .'</div>';
-		$html .= '<div class="menu-best-seller">'. $menuproduct .'</div>';
+		$html .= '<div class="menu-container"><div class="menu-product-lists">'. $menuShowmenu .'</div>';
+		$html .= '<div class="menu-best-seller">'. $menuproduct .'</div></div>';
 		//$html .= $this->_getHtml($child, $childrenWrapClass, $limit, $colStops);
        
 	   
@@ -193,7 +193,7 @@ $categoryProducts = $category->getProductCollection()
 
 $i = 0;
 $reponse .='<div class="nemu-list">';
-$reponse .='<div class="nemu-list-categries"><li>'.$category->getName().'</li> </div>';
+$reponse .='<li class="menu-title"><a href="'.$category->getUrl().'"><span>Shop All </span>'.$category->getName().'</a></li> ';
 
 foreach ($categoryProducts as $product) {
 //if(($i%5==0)OR($i==0)){
@@ -230,6 +230,9 @@ $categoryProducts = $category->getProductCollection()
                              ->addAttributeToSelect('*')
 							  ->addAttributeToFilter('best_seller',['eq'=>'1'])
 							  ->setPageSize(4);
+
+
+$reponse .='<div class="menu-title-product">'.$category->getName().'<span> Best Sellers</span></div>'; 
 
 foreach ($categoryProducts as $product) 
 {
