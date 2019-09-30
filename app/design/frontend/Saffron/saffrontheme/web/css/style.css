@@ -1602,7 +1602,7 @@ select:not([disabled]):focus {  box-shadow: none; }
 .product-reviews-summary .reviews-actions a:not(:last-child) {  margin-right: 12px; }
 .product-info-main .product-info-price {
     border: none;
-    color: #053052; margin-bottom:0px; 
+    color: #053052; 
 }
 .catalog-product-view .product-info-main .product-info-price .price,
 .product-detail-page .price-box.price-final_price .price {
@@ -2281,7 +2281,22 @@ p:empty { display: none; }
 .storelocator-index-index .columns .column.main {  margin-bottom: 40px; }
 .store-locator-result { line-height: 30px; border-bottom: 1px solid #DDE6EC; margin: 30px 0; }
 .store-locator-result h4 { text-transform: capitalize; font-family: "BentonSans-Bold"; }
-
+.description .details {
+    float: left;
+    width: 100%;
+    margin: 30px 0 0;
+}
+.description .details img {
+    float: left;
+    margin-right: 20px;
+}
+.description .details h5 {font-size: 16px;font-family: "BentonSans-Bold";}
+.value h4 {color: #e49400;}
+.det_img {
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+}
 
 /*===============-magento-common-classes-css-===============*/
 .columns {
