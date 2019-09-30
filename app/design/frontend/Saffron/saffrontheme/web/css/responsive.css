@@ -18,8 +18,8 @@
     .nav-sections .satisfaction-carousel { display:none; }
 	.nav-sections { z-index:2;}
 	.navigation .level0 .submenu {  left: 0 !important; right: 0;  border: none;  background: #fff;
-	box-shadow: 0 10px 10px #ddd; transition:all 0.3s ease; }
-	.menu-container { max-width: 1600px; display: flex; margin: 0 auto; width: 92%; padding:30px 0; }
+	box-shadow: 0 3px 5px #a7a7a7; transition:all 0.3s ease; z-index:-1; }
+	.menu-container { max-width: 1600px; display: flex; margin: 0 auto; width: 92%; padding:40px 0; }
 	.menu-container .ui-menu-item { flex: 1; padding: 20px; }
 	.nemu-list li { display: flex; text-align: left; }
 	.navigation .level0 .submenu  a { position: relative; color: #053052; font-size: 12px;
@@ -33,6 +33,14 @@
 	.nemu-list { border-right: 1px solid #ddd;  height: 100%; padding-right:30px; }
 	.navigation li.level0:hover .submenu a {  background: none; color:#053052; }
 	.navigation .level0 .submenu .menu-title a {  font-family: "BentonSans-Bold";  }
+	.menu-product-list img { max-width: inherit; height: 130px;  width: auto; margin-bottom: 10px; }
+	.menu-title-product span { margin-left: 4px; }
+	.navigation li.level0.nav-2 .menu-title-product span { display: none; }
+	.navigation .level0.parent>.level-top:after { content: "\f107"; font-family: fontawesome; padding-left: 6px;
+		font-size: 20px; position: relative; top: 2px; }
+	.navigation li.level0:last-child {  flex: 1.3; }
+	.navigation .level0.parent>.level-top:hover{ color:#053052; }
+	.navigation .level0.nav-1>.level-top {  top: 1px; }
 	
 	.caption-inner p {  font-size: 28px; line-height: 38px; }
     .caption-inner {  position: absolute;  bottom: -20px;  left: 20px; width:92%;  }
