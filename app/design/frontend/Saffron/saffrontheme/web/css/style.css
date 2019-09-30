@@ -107,9 +107,6 @@ button:hover, button:focus {
 }
 /*--/btn-css--*/
 
-.navigation ul.ui-menu { display: flex; align-items: center; position: initial; }
-.navigation li.level0 { flex: 1; text-align: center; margin: 0;	position:initial; }
-
 .header-navbar { float: left; background: #F9F9F8;  width: 100%; }
 .page-main, .front-banner { float: left; width: 100%; }
 .satisfaction-carousel p span {
@@ -2280,6 +2277,10 @@ p:empty { display: none; }
 .contentmanager-contentlist-2 .front-best-seller .title-main:before,
 .contentmanager-contentlist-2 .shopbest-col-btm{  display:none; }
 .contentmanager-contentlist-2 .front-best-seller { padding-bottom:50px; }
+.storelocator-index-index .columns .column.main {  margin-bottom: 40px; }
+.storelocator-index-index .columns .column.main {  margin-bottom: 40px; }
+.store-locator-result { line-height: 30px; border-bottom: 1px solid #DDE6EC; margin: 30px 0; }
+.store-locator-result h4 { text-transform: capitalize; font-family: "BentonSans-Bold"; }
 
 
 /*===============-magento-common-classes-css-===============*/

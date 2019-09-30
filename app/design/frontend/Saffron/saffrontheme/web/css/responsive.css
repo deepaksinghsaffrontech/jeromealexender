@@ -8,8 +8,8 @@
 	
 	/*--magento-navigation-css--*/
 	.navigation { z-index: 1; }
-	/* .navigation ul.ui-menu { display: flex; align-items: center; position: initial; } */
-	/* .navigation li.level0 { flex: 1; text-align: center; margin: 0;	position:initial; } */
+	.navigation ul.ui-menu { display: flex; align-items: center; position: initial; }
+	.navigation li.level0 { flex: 1; text-align: center; margin: 0;	position:initial; }
 	.navigation > ul{ padding:0; }
 	.navigation .level0>.level-top { display: block; padding: 20px 10px; line-height:20px;  }
 	.navigation li.level0:hover a { background: #ffdcd5;   }
