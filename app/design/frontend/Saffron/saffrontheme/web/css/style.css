@@ -105,8 +105,11 @@ button:hover, button:focus {
     color:#053052;
     box-shadow: none;
 }
-
 /*--/btn-css--*/
+
+.navigation ul.ui-menu { display: flex; align-items: center; position: initial; }
+.navigation li.level0 { flex: 1; text-align: center; margin: 0;	position:initial; }
+
 .header-navbar { float: left; background: #F9F9F8;  width: 100%; }
 .page-main, .front-banner { float: left; width: 100%; }
 .satisfaction-carousel p span {
