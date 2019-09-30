@@ -8,14 +8,17 @@
 	
 	/*--magento-navigation-css--*/
 	.navigation { z-index: 1; }
-	.navigation ul.ui-menu { display: flex; align-items: center; }
-	.navigation li.level0 { flex: 1; text-align: center; margin: 0;	}
+	.navigation ul.ui-menu { display: flex; align-items: center; position: initial; }
+	.navigation li.level0 { flex: 1; text-align: center; margin: 0;	position:initial; }
 	.navigation > ul{ padding:0; }
 	.navigation .level0>.level-top { display: block; padding: 20px 10px; line-height:20px;  }
 	.navigation li.level0:hover a { background: #ffdcd5;   }
-    .nav-sections-item-content>.navigation {  background: none;  }
+    .nav-sections-item-content>.navigation {  background: none; position: initial;  }
     .navigation { max-width: 1600px; width: 100%; }
     .nav-sections .satisfaction-carousel { display:none; }
+	.nav-sections { z-index:2;}
+	.navigation .level0 .submenu {  left: 0 !important; }
+	
 	.caption-inner p {  font-size: 28px; line-height: 38px; }
     .caption-inner {  position: absolute;  bottom: -20px;  left: 20px; width:92%;  }
     .sign-container .left-col {  padding-right: 5px;  }
