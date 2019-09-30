@@ -2281,22 +2281,32 @@ p:empty { display: none; }
 .storelocator-index-index .columns .column.main {  margin-bottom: 40px; }
 .store-locator-result { line-height: 30px; border-bottom: 1px solid #DDE6EC; margin: 30px 0; }
 .store-locator-result h4 { text-transform: capitalize; font-family: "BentonSans-Bold"; }
-.description .details {
-    float: left;
-    width: 100%;
-    margin: 30px 0 0;
-}
-.description .details img {
-    float: left;
-    margin-right: 20px;
-}
+.description .details {  float: left; width: 100%; margin: 30px 0 0; }
+.description .details img {  float: left;  margin-right: 20px; }
 .description .details h5 {font-size: 16px;font-family: "BentonSans-Bold";}
 .value h4 {color: #e49400;}
-.det_img {
-    float: left;
-    width: 100%;
-    margin-top: 30px;
+.det_img { float: left; width: 100%;  margin-top: 30px; }
+.checkout-index-index .container {width: 100%;order: 2;}
+.checkout-index-index .header-content > a img {  max-width: 364px;  width: 100%; }
+.checkout-index-index .header-content {
+    max-width: 1600px;
+    width: 94%;
+    padding: 0 15px;
+    margin: 0 auto;
+    float: none;
+    display: flex;
 }
+.checkout-index-index header .header-right { margin: 0; max-width: 100%; flex: 0 0 100%; }
+.checkout-index-index .header-content > a { display: flex; padding: 25px 0; max-width: 22%; order: 1; }
+.checkout-index-index .container .row {  min-height: 105px; }
+.checkout-index-index header.page-header { border-bottom: 1px solid #ddd; }
+.checkout-index-index .page-main {  background: #f8f8f8;  padding: 50px 0; }
+body.checkout-index-index #checkout.am-checkout {
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
 
 /*===============-magento-common-classes-css-===============*/
 .columns {
