@@ -49,7 +49,8 @@
     .sign-container .right-col { padding-left: 5px;  }
     .sidebar-ask { width: 20.83333333%; float: left; padding-right: 2%;    }
     .ask-jerome-banner { float: left; width: 79.16666667%;    }
-	.column-ask {  margin-left: 20.83333333%;  width: calc(100% - 20.83333333%);   float: left; }
+	.column-ask {   width: calc(100% - 20.83333333%);   float: left; }
+	.contentmanager-contentlist-1 .column-ask {  margin-left: 20.83333333%;  width: calc(100% - 20.83333333%);   float: left; }
 	.filter-tutorials-m { display:none; }
     .page-main { padding:0; }
     .navigation .level0.active>.level-top, .navigation .level0.has-active>.level-top { display: block; }
