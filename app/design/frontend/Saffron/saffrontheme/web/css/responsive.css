@@ -22,8 +22,8 @@
 	.menu-container { max-width: 1600px; display: flex; margin: 0 auto; width: 92%; }
 	.menu-container .ui-menu-item { flex: 1; padding: 20px; }
 	.nemu-list li { display: flex; text-align: left; }
-	.navigation .level0 .submenu a { position: relative; color: #053052; }
-	.navigation .level0 .submenu a:before { content: "\f105"; font-family: fontawesome;
+	.navigation .level0 .submenu  a { position: relative; color: #053052; }
+	.navigation .level0 .submenu .nemu-list a:before { content: "\f105"; font-family: fontawesome;
 	position: absolute; top: 8px; left: 0px; }	
 	
 	.caption-inner p {  font-size: 28px; line-height: 38px; }

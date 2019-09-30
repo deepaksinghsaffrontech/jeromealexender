@@ -233,7 +233,7 @@ $categoryProducts = $category->getProductCollection()
 
 
 $reponse .='<div class="menu-title-product">'.$category->getName().'<span> Best Sellers</span></div>'; 
-
+$reponse .='<div class="menu-product-list">'; 
 foreach ($categoryProducts as $product) 
 {
     $imageUrl = $store->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) . 'catalog/product' . $product->getImage();
@@ -255,7 +255,7 @@ foreach ($categoryProducts as $product)
 
 }
 
-	  
+	 $reponse .='</div>';  
 	  
 	   return $reponse ;
    }
