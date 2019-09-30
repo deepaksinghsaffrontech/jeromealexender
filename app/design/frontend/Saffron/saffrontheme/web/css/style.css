@@ -940,7 +940,7 @@ header.page-header { position: relative;  z-index: 2; }
     font-size: 40px;
 }
 
-.banner-inner p{ margin:0; font-size:22px; }
+.banner-inner p{ margin:0; font-size:20px; }
 .sidebar-list li:first-child {  border-top: 1px solid #DDE6EC; }
 .sidebar-list li,
 .sidebar-category li.shop-item {
@@ -2273,6 +2273,10 @@ p:empty { display: none; }
 .clock-item figure { margin-bottom:20px; } 
 .ask-jerome .title-m, .seller-name-col span.price-label { display: none; }
 .ask-info-inner h5 { margin-bottom: 15px; }
+.contentmanager-contentlist-2 .front-best-seller .title-main {  font-size: 30px; }
+.contentmanager-contentlist-2 .front-best-seller .title-main:before,
+.contentmanager-contentlist-2 .shopbest-col-btm{  display:none; }
+.contentmanager-contentlist-2 .front-best-seller { padding-bottom:50px; }
 
 
 /*===============-magento-common-classes-css-===============*/
