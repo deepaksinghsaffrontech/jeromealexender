@@ -917,11 +917,29 @@ header.page-header { position: relative;  z-index: 2; }
 .banner-inner .header-search { width: 100%; }
 .banner-inner .header-search .form-group {
     margin: 0 auto 20px;
-    max-width: 600px;
+    max-width: 500px;
     width: 100%;
     float: none;
 }
-.banner-inner h1 { margin: 0 0 6px; }
+.banner-inner .form-group input {
+    height: 46px;
+    line-height: normal;
+    padding: 0 10px 0 50px;
+    margin-top: 10px;
+    color: #053052;
+}
+.banner-inner .header-search button.search-btn {
+    height: 46px;
+    left: 0;
+    right: inherit;
+}
+.banner-inner h1 { 
+	font-weight: 400;
+    font-family: "BentonSans-Regular";
+    margin: 0 0 10px;
+    font-size: 40px;
+}
+
 .banner-inner p{ margin:0; font-size:22px; }
 .sidebar-list li:first-child {  border-top: 1px solid #DDE6EC; }
 .sidebar-list li,
