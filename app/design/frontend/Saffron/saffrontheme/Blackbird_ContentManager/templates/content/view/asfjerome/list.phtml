@@ -150,14 +150,14 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 				 //print_r($interested);
 				 ?>
 				 <?php if($interested[0]= 'videos'){ ?>
-				 
+				
 				<div class="col-md-4 col-12">
 					<div class="popular-item">
 					<div class="video-col">
 					
 					<img src="<?= $content->getImage('thimble_images')?>" class="img-fluid" />
 			       <div class="play-tutorial">
-					<a href="javascript:void(0);" class="icon">
+					<a href="javascript:void(0);" class="icon click-me bt-action"  data="More Info"  data-type="<?php echo $content->getId();?>" id="video_titorial_<?php echo $content->getId(); ?>" >
 					<i class="fa"><img src="<?php echo $base_url ;?>pub/media/themeimage/arrow-right-white.png"></i>
 					<span>Play Tutorial</span>
 					</a>
@@ -169,6 +169,9 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 					</div>
 					</div>
 					</div>
+					
+
+					
 				 <?php } ?>	
 	   <?php endforeach; ?>
 	   
@@ -176,15 +179,15 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 				 <?php $interested= (explode(",",$content->getData('asfjerome_like_to'))); 
 				 //print_r($interested);
 				 ?>
-				 <?php if($interested[0]= 'read'){ ?>
-				 
+			<?php if($interested[0]= 'read'){ ?>
+				
 				<div class="col-md-4 col-12">
 					<div class="popular-item">
 					<div class="video-col">
 					
 					<img src="<?= $content->getImage('thimble_images')?>" class="img-fluid" />
 			       <div class="play-tutorial">
-					<a href="javascript:void(0);" class="icon">
+					<a href="javascript:void(0);" data="More Info"  class="icon bt-action" data-type="<?php echo $content->getId();?>" id="video_titorial_<?php echo $content->getId();?>" >
 					<i class="fa"><img src="<?php echo $base_url ;?>pub/media/themeimage/arrow-right-white.png"></i>
 					<span>Play Tutorial</span>
 					</a>
@@ -196,6 +199,12 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 					</div>
 					</div>
 					</div>
+					
+					<div class="bt-action-file" style="display: none;"> 
+				 <iframe id="cartoonVideo-<?php echo $content->getId();?>" width="560" height="315" src="//www.youtube.com/embed/YE7VzlLtp-4?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1" frameborder="0"  allow="autoplay ,fullscreen" style="border: solid 4px #37474F"></iframe>
+ 	                  </div>
+  
+					
 				 <?php } ?>	
 	   <?php endforeach; ?>
 	   <?php else: ?>
@@ -256,7 +265,83 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 			
           
 
-		 
+
+<a href="javascript:;"  class="bt-action" data="More Info"  >More Info</a>
+
+
+<script>
+    require(
+        [
+            'jquery',
+            'Magento_Ui/js/modal/modal'
+        ],
+        function(
+            $,
+            modal
+        ) {
+            var options = {
+                type: 'popup',
+                responsive: true,
+                innerScroll: true,
+                title: 'popup modal title',
+                buttons: [{
+                    text: $.mage.__('Continue'),
+                    class: '',
+                    click: function () {
+                        this.closeModal();
+                    }
+                }]
+            };
+ 
+        
+		//var popup = modal(options, $('#popup-modal' ));
+            $("click-me").on('click',function(){ 
+			
+			var link = $(this).attr("data-type");
+			var popup = modal(options, $('#popup-modal-'+link ));
+			$("#popup-modal-"+link).modal("openModal");
+			var url = $("#cartoonVideo-"+link).attr('src');
+            $("#cartoonVideo-"+link).attr('src', '');
+			$("#cartoonVideo-"+link).attr('src', url);
+    
+	
+ 
+
+ });
+
+
+        }
+    );
+	
+	
+	
+	require(
+        [
+            'jquery',
+            'Magento_Ui/js/modal/modal'
+        ],
+        function(
+            $,
+            modal
+        ) {
+
+            var options = {
+                type: 'popup',
+                responsive: true,
+                innerScroll: false,
+                title: 'My Title',
+                buttons: []
+            };
+
+            $(".bt-action").click(function() {
+
+                $(".bt-action-file").modal(options).modal('openModal');
+
+            });
+
+        }
+    );
+</script>	 
 
  
 
