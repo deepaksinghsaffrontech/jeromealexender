@@ -1760,6 +1760,7 @@ select:not([disabled]):focus {  box-shadow: none; }
     text-align: left;
     margin: 2px 0 15px;
 }
+.checkout-index-index  .minicart-items .product-item-details .price-excluding-tax { text-align:right; }
 .minicart-items .product-item-details .details-qty {
     text-align: left;
 }
@@ -1780,6 +1781,7 @@ select:not([disabled]):focus {  box-shadow: none; }
     width: 100%;
 }
 .minicart-items {  padding: 15px; }
+.content.minicart-items { padding: 0; }
 .minicart-wrapper .minicart-widgets {  margin: 0; }
 #top-cart-btn-checkout {
     background: #053052;
@@ -2573,6 +2575,59 @@ body.checkout-index-index .additional-options { margin:0; }
 }
 .tutorials-1 { border-bottom: 1px solid #053052;  margin-bottom: 60px;  padding-bottom: 20px; }
 .other-results {  padding-bottom: 60px;  float: left;  width: 100%; }
+body button.action.action-cancel:hover span {  color: #053052;}
+.checkout-payment-method .checkout-billing-address .action-cancel:hover { color: #053052; }
+.checkout-payment-method .checkout-billing-address .action-cancel {  margin-top: 12px; }
+.column.main .opc-block-summary .product-item {  float: left;  width: 100%; }
+
+.checkout-onepage-success .page-title-wrapper.banner-title-notfront {
+    max-width: 1600px;
+    width: 94%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.checkout-onepage-success main#maincontent { padding: 70px 0; }
+.checkout-success .success-messages p { font-size: 20px; }
+.checkout-success .success-messages p span { font-family: "BentonSans-Bold"; }
+.checkout-onepage-success .account .column.main .block:not(.widget) .block-title>strong {
+    font-size: 28px;
+    text-transform: capitalize;
+}
+.block-order-details-view .box-title { font-weight: normal; font-family: "BentonSans-Medium"; }
+body address {
+    font-size: 16px;
+    line-height: 28px;
+    text-transform: capitalize;
+}
+.checkout-onepage-success .table-order-items th { font-weight: normal; font-family: "BentonSans-Medium"; }
+.checkout-onepage-success .table-order-items .col { min-width: 200px; }
+body .mark, body mark { background: none; }
+.checkout-onepage-success .table tfoot { background: none; }
+.checkout-onepage-success .order-details-items tfoot td { background: none; }
+.checkout-onepage-success  .account .table-wrapper { border: none; }
+.checkout-onepage-success #registration { border-left: 3px solid #053052; margin-top: 50px; }
+.checkout-onepage-success .action.primary {
+    border-radius: 4px;
+    border: none;
+    padding: 16px 20px;
+    font-size: 18px;
+}
+.checkout-onepage-success #registration form {
+    float: left;
+    width: 100%;
+    position: inherit;
+    top: inherit;
+    right: inherit;
+    transform: none;
+    margin-top: 20px;
+}
+.checkout-onepage-success .account .column.main {  margin-bottom: 0; }
+.checkout-onepage-success tr.grand_total strong {
+    font-weight: normal;
+    font-family: "BentonSans-Bold";
+    font-size: 20px;
+}
+
 
 
 /*===============-magento-common-classes-css-===============*/
