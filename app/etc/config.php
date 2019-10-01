@@ -141,6 +141,7 @@ return [
         'Saffron_CCandition' => 1,
         'Saffron_Loadjs' => 1,
         'Saffron_Newproductslider' => 1,
+        'Saffron_Newsletterpopup' => 1,
         'Saffron_Shopall' => 1,
         'Saffron_Showsubmenu' => 1,
         'Saffron_Testimonial' => 1,
