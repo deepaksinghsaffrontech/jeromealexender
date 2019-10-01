@@ -871,17 +871,32 @@ header.page-header { position: relative;  z-index: 2; }
     font-family: "BentonSans-Regular";
 }
 .create-account-page .col-12 {  margin: 0 auto; }
-.banner-inner { background: #FCDCD4;  padding: 50px 0;  text-align: center; }
+.banner-inner { padding: 50px 0;  text-align: center; border-bottom:2px solid #FCDCD4; }
+.contentmanager-contentlist-2 .banner-inner { background: #FCDCD4;  padding: 80px 0; border-bottom:none;}
 .faq-panel {
     float: left;
     width: 100%;
-    border: 1px solid #ddd;
-    margin: 0 0 15px;
+    border-bottom:1px solid #DDE6EC;
+    margin:0;
+}
+.faq-panel.in {
+    background: #F9F9F8;
+    border-bottom: none;
+}
+.faq-panel.in .fa:before {
+    content: "\f106";
+}
+.faq-panel p {
+    color: #6B6B6B;
+    font-family: "GeorgiaRegular";
+	line-height:28px;
 }
 .faq-panel h5 {
-    padding: 12px 20px;
+   padding: 25px 20px;
     margin: 0;
-    cursor: pointer; font-size:20px;
+    cursor: pointer;
+    color: #6B6B6B;
+    font-size: 24px;
 }
 .faq-panel .faq-body {  padding: 0 20px;  display: none; }
 .faq-panel h5 .fa {  float: right; }
@@ -907,7 +922,7 @@ header.page-header { position: relative;  z-index: 2; }
     float: none;
     padding: 0 15px !important; 
 }
-.breadcrumbs li {  color: #333;  padding: 0 8px 0 0; }
+.breadcrumbs li {  color: #053052;  padding: 0 8px 0 0; }
 .breadcrumbs li a {  text-decoration: underline; }
 .banner-inner .header-search {
     margin: 0 auto;
@@ -917,30 +932,38 @@ header.page-header { position: relative;  z-index: 2; }
 .banner-inner .header-search { width: 100%; }
 .banner-inner .header-search .form-group {
     margin: 0 auto 20px;
-    max-width: 500px;
+    max-width: 920px;
     width: 100%;
     float: none;
 }
 .banner-inner .form-group input {
-    height: 46px;
+    height: 52px;
     line-height: normal;
     padding: 0 10px 0 50px;
     margin-top: 10px;
     color: #053052;
+	font-size:19px;
+	font-family: "BentonSans-Regular";
 }
+.banner-inner .form-group input::placeholder { color:#053052; }
+.banner-inner .form-group input:-ms-input-placeholder { color:#053052; }
+.banner-inner .form-group input::-ms-input-placeholder { color:#053052; }
 .banner-inner .header-search button.search-btn {
-    height: 46px;
+    height: 52px;
     left: 0;
     right: inherit;
+    padding: 0 15px;
 }
 .banner-inner h1 { 
 	font-weight: 400;
-    font-family: "BentonSans-Regular";
     margin: 0 0 10px;
-    font-size: 40px;
+    font-size: 50px;
 }
-
-.banner-inner p{ margin:0; font-size:20px; }
+.banner-inner h1,
+.banner-inner p { color:#E2AF9F}
+.contentmanager-contentlist-2 .banner-inner h1,
+.contentmanager-contentlist-2 .banner-inner p { color:#053052}
+.banner-inner p{ margin:0; font-size:28px; display:none; }
 .sidebar-list li:first-child {  border-top: 1px solid #DDE6EC; }
 .sidebar-list li,
 .sidebar-category li.shop-item {
@@ -1072,7 +1095,7 @@ ul.pagination-list {
     margin: 30px 0;
 }
 .pagination-list li.page-item {  margin: 0 3px;  padding: 0.3rem; }
-.other-tutorials {  border-top: 1px solid #053052;  padding-top: 50px; }
+.other-tutorials {  padding-top: 100px; }
 .tutorial-item-name .name {  text-decoration: underline; }
 .side-btn { margin-bottom: 40px; }
 .tutorial-item {  margin-bottom: 30px; }
@@ -1223,7 +1246,7 @@ ul.sidebar-category {
     color: #053052;
     font-size: 16px;
 }
-.form-group > label {  font-family: "BentonSans-Medium";   font-size:14px;  }
+.form-group > label {  font-family: "BentonSans-Medium";   font-size:16px;  }
 .form-group > label span {  color: #E2AF9F; }
 .tab-pane-inner {  float: left;  width: 100%;   padding: 30px 0; }
 .pagination2 {  text-align: center;  margin: 30px 0 0; }
@@ -1349,7 +1372,7 @@ ul.pagination2 li {   font-size: 16px;  font-family: "BentonSans-Medium"; }
 .tab-pane-inner .write-review-form {  margin-bottom: 30px; }
 .write-review-form h4 {  margin-bottom: 30px; }
 .contact-section h2, .contact-section h3 { font-size: 30px;  font-family: "BentonSans-Medium"; }
-.singin-group p {  text-align: center;  margin: 0; }
+.singin-group p {  text-align: center;  margin: 0; font-size:18px; }
 .account-bx .text {
     font-style: italic;
     float: left;
@@ -1928,7 +1951,7 @@ select:not([disabled]):focus {  box-shadow: none; }
 }
 .cart.table-wrapper .product-item-name {
     font-size: 14px;
-    color: #053052;
+    color: #053052; text-decoration: underline;
 }
 .paypal-review .table-paypal-review-items .col.price .price-including-tax .price, .paypal-review .table-paypal-review-items .col.price .price-excluding-tax .price, .paypal-review .table-paypal-review-items .col.subtotal .price-including-tax .price, .paypal-review .table-paypal-review-items .col.subtotal .price-excluding-tax .price, .cart.table-wrapper .col.price .price-including-tax .price, .cart.table-wrapper .col.price .price-excluding-tax .price, .cart.table-wrapper .col.subtotal .price-including-tax .price, .cart.table-wrapper .col.subtotal .price-excluding-tax .price, .cart.table-wrapper .col.msrp .price-including-tax .price, .cart.table-wrapper .col.msrp .price-excluding-tax .price, .order-details-items .col.price .price-including-tax .price, .order-details-items .col.price .price-excluding-tax .price, .order-details-items .col.subtotal .price-including-tax .price, .order-details-items .col.subtotal .price-excluding-tax .price {
     color: #053052;
@@ -2089,9 +2112,10 @@ dt {
 }
 #review-form .fieldset>.field>.label,
 #review-form .fieldset>.fields>.field>.label {
-    font-size: 14px;
+    font-size: 16px;
     font-family: "BentonSans-Medium";
 }
+.fieldset>.field, .fieldset>.fields>.field {  margin: 0 0 30px; }
 .field.review-field-text.required .control textarea {  height: 160px; }
 .fieldset>.field.required>.label:after,
 .fieldset>.fields>.field.required>.label:after,
@@ -2306,6 +2330,97 @@ body.checkout-index-index #checkout.am-checkout {
     margin: 0;
     padding: 0;
 }
+.cart-empty a {  text-decoration: underline; }
+button.action.apply.primary span {  font-size: 16px; }
+.checkout-index-index .checkout-header .title {  font-size: 36px; }
+.checkout-index-index .checkout-block {  padding: 40px; }
+.checkout-index-index .opc-block-summary { background:none; }
+body.checkout-index-index .opc-wrapper.am-opc-wrapper .payment-method-content,
+body.checkout-index-index .opc-wrapper.am-opc-wrapper .payment-option-content { padding-left:0; padding-right:0;}
+.checkout-index-index .opc-wrapper.am-opc-wrapper .checkout-block>li { width:100%; }
+.create-account-bx { text-align: center; }
+.create-account-bx > p { font-style: italic; }
+.create-account-bx .form-group {  text-align: left; }
+.singin-group p a {  font-family: "BentonSans-Bold"; }
+
+.faq-question {  float: left;  width: 100%;  margin: 80px 0 20px; }
+.faq-question h2 {  margin-bottom: 8px; }
+.faq-question h4 {  margin-bottom: 30px; font-size:24px; }
+.faq-question .question-bx {
+   display: flex;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
+    text-align: center;
+	margin-bottom:30px;
+}
+.faq-question .bx {  display: flex;  justify-content: center;  flex-direction: column; }
+.faq-question .question-bx a {
+    float: left;
+    width: 100%;
+    padding: 50px 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    background: #F9F9F8;
+    border: 2px solid #F9F9F8;
+    transition: all 0.5s ease;
+}
+.faq-question .question-bx a:hover {  border-color: #e2af9f; }
+.faq-question .row { margin: 0 -8px;}
+.faq-question .row .bx {  padding: 0 8px; }
+.question-bx img {  width: 65px;  height: auto; }
+.question-bx figure { margin-bottom: 10px; }
+.question-bx span { font-size: 20px; font-family: "BentonSans-Bold"; margin-bottom:5px; }
+.question-bx small { font-size:13px; }
+.ask-detail-banner .container {  position: relative; }
+.ask-detail-banner figure {  margin: 0; }
+.ask-detail-banner .ask-caption {
+    position: absolute;
+    top: 85%;
+    left: 0;
+    right: 0;
+    max-width: 1010px;
+    transform: translate(0, -85%);
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+}
+.ask-detail-banner .ask-caption .title {
+    background: rgba(252,220,212,0.6);
+    padding: 10px;
+    text-align: center;
+}
+.ask-caption .title h1 {margin: 0 0 10px;position: relative;}
+.ask-caption .title h1:after { content: ""; width: 100%;height:19px;background:#FDF2EF; position:absolute;
+	left: 0;right: 0;bottom: 0;z-index: -1;}
+.ask-caption .title span { font-size: 14px; }
+.ask-caption .tag-title span {
+    background: #fff;
+    padding: 4px 8px;
+    font-size: 16px;
+    color: #CC9C8D;
+    font-family: "BentonSans-Bold";
+    display: inline-block;
+    margin: 0 1px 10px;
+    text-transform: uppercase;
+}
+.ask-caption .tag-title { text-align: center; }
+.ask-jerome-detail-page .breadcrumbs {  text-align: center; }
+.jerome-description ul.social-links { border: 1px solid #E2AF9F;  display: inline-block;  padding: 10px 5px; }
+.jerome-description ul.social-links li {  padding: 0 12px; color:#E2AF9F; }
+.jerome-description ul.social-links li a {  color: #E2AF9F; }
+.jerome-description ul.social-links li.beauty-li { font-family:"BentonSans-Bold";}
+.jerome-description .social-col {  margin: 70px 0 0; }
+.ask-social-col li img { width: 25px; }
+.ask-social-col li.facebook-link img {  width: 34px; }
+.ask-social-col li.twitter-link img { width: 26px; }
+.ask-social-col li.pinterest-link img {  width: 18px; }
+.no-shipped p { color: #e49479; }
+.description h3 {  font-size: 30px; }
+.review-form .action.submit.primary:hover { color:#053052; }
 
 
 /*===============-magento-common-classes-css-===============*/
