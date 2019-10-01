@@ -112,6 +112,10 @@
 	.form.password.reset, .form.send.confirmation,
 	.form.password.forget, .form.create.account { min-width: inherit; width: 100%; 	}
 	.front-best-seller .title-main {  margin-bottom: 60px; }
+	body.checkout-payment-method .payment-option-title{ padding-left:0; }
+	body .cart-summary .block .fieldset .field { margin-bottom:20px; }
+	body .block.items-in-cart {  margin-bottom: 0; }
+	.checkout-payment-method .payment-methods .actions-toolbar .primary { min-width:200px; }
 	
 	
 /*==============magento-common-classes-css=================*/
