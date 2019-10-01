@@ -41,8 +41,12 @@
 				?>
 						
 						<div class="item">
-                             	<?php echo $productImage->toHtml() ?>
-                              <div class="seller-info">
+                          <a href="<?php echo $block->getProductUrl($_item) ?>">    	<?php echo $productImage->toHtml() ?></a>
+                             
+                 <div id="quickview-<?php echo $_item->getId();?>" class="bss-bt-quickview">
+				<a class="bss-quickview" data-quickview-url="<?php echo $this->getUrl('');?>/bss_quickview/catalog_product/view/id/<?php echo $_item->getId();?>" href="javascript:void(0);"><span>Quick View </span></a>
+				</div>
+							 <div class="seller-info">
                            <?php if ($templateType): ?>
 								<?php echo $block->getReviewsSummaryHtml($_item, $templateType,true); ?>
 							<?php endif; ?>
@@ -50,13 +54,22 @@
                                     <a href="<?php echo $block->getProductUrl($_item) ?>" class="title-name"> <?php echo $block->escapeHtml($_item->getName()) ?></a>
                                     <p><?php echo $_item->getShortDescription(); ?></p>
                                   </div>
-                                  <div class="shopnow-col">
+                                  
+								
+								  
+								  <div class="shopnow-col">
                                       <a href="<?php echo $block->getProductUrl($_item) ?>" class="shopnow-btn">Shop Now</a>
                                   </div>
                               </div>
-                          </div>
+                          
+						  
+						  
+						  </div>
          
-                 <?php }?>
+                 
+
+				 
+				 <?php }?>
                          
                         
                       </div>

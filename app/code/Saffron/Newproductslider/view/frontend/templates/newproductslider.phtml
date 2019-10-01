@@ -42,9 +42,14 @@
 		$productImage = $block->getImage($_item, $image);
 		$productImagess= $this->getMediaUrl().'catalog/product'.$_item->getImage();
 		?>
-					 <div class="item">
-                          <div class="magic-item">
-                          <img src="<?php echo $productImagess ;?>" class="img-fluid" />
+		 <div class="item">
+                 <div class="magic-item">
+                <a href="<?php echo $block->getProductUrl($_item) ?>">  <img src="<?php echo $productImagess ;?>" class="img-fluid" /></a>
+						  
+				<div id="quickview-<?php echo $_item->getId();?>" class="bss-bt-quickview">
+				<a class="bss-quickview" data-quickview-url="<?php echo $this->getUrl('');?>/bss_quickview/catalog_product/view/id/<?php echo $_item->getId();?>" href="javascript:void(0);"><span>Quick View </span></a>
+				</div>
+						  
                             <div class="seller-info">
                              <?php if ($templateType): ?>
 							<?php echo $block->getReviewsSummaryHtml($_item, $templateType,true); ?>
