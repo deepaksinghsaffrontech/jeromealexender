@@ -2627,6 +2627,14 @@ body .mark, body mark { background: none; }
     font-family: "BentonSans-Bold";
     font-size: 20px;
 }
+body.checkout-index-index .opc-wrapper.am-opc-wrapper .discount-code .payment-option-title { padding-left:0;}
+.checkout-index-index .authentication-wrapper button.action.action-auth-toggle {
+    background: #053052;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+.checkout-index-index .authentication-wrapper button.action.action-auth-toggle:hover { text-decoration: none; }
 
 
 
