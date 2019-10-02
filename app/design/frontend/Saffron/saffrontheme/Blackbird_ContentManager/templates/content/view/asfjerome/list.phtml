@@ -146,11 +146,11 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 				<?php if ($collection->count()) : ?>
             
 		         <?php foreach ($collection as $content) : ?>
-				 <?php //$interested= (explode(",",$content->getData('asfjerome_like_to'))); 
+				 <?php $interested1= (explode(",",$content->getData('asfjerome_like_to'))); 
 				 $interested=  $content->getData('asfjerome_like_to') ; 
 				 //echo($interested);
 				 ?>
-				 <?php if($interested = 'videos'){ ?>
+				 <?php if($interested1[0] = 'videos'){ ?>
 				
 				<div class="col-md-4 col-12">
 					<div class="popular-item">
@@ -179,11 +179,11 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 	    <?php foreach ($collection as $content) : ?>
 				 <?php $interested1= (explode(",",$content->getData('asfjerome_like_to'))); 
 				 print_r($interested1);
-				 $interested= $content->getData('asfjerome_like_to'); 
-			echo($interested);
+				 //$interested= $content->getData('asfjerome_like_to'); 
+			//echo($interested);
 				 
 				 ?>
-			<?php if($interested = 'read'){ ?>
+			<?php if($interested1[0] = 'read'){ ?>
 				
 				<div class="col-md-4 col-12">
 					<div class="popular-item">
