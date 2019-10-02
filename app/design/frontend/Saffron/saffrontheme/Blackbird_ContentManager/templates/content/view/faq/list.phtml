@@ -80,6 +80,9 @@ $link = $block->getLink();
             </div>
         <?php endif; ?>
 
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('faq_info')->toHtml(); ?>		
+		
+		
  <?php echo $block->getLayout()->createBlock('Saffron\Bestsellerproduct\Block\Bestsellerproduct')->setTemplate('bestsellerproduct.phtml')->toHtml();?> 
        
 <script>

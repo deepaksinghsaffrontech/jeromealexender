@@ -10,3 +10,20 @@
 </ul>
 
               
+			  
+<style>
+.cms-page-view .columns .sidebar-main .sidebar-shop-category {
+    display: none;
+}
+</style>			  
+
+<script>
+require([
+	'jquery',
+	], function () {
+	jQuery(document).ready(function($) {
+	 jQuery('#customer-service-cms').detach().insertAfter('.nav-sections');
+  
+  });
+});
+</script>			  
