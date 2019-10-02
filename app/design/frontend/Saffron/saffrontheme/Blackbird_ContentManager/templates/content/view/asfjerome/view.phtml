@@ -60,65 +60,90 @@ $content = $block->getContent();
 $contentType = $content->getContentType();
 //$repeaterValues = $content->getContentCollection('about_us_gasser_images', '*');
 $identifier = $contentType->getIdentifier();
+
+ $om = \Magento\Framework\App\ObjectManager::getInstance();
+    $storeManager = $om->get('\Magento\Store\Model\StoreManagerInterface');
+   $media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
 ?>
+
+
+<div class="ask-detail-banner row-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+			<div class="container">
+			<?php if(!empty($content->getData('asfjerome_banner'))){?>
+				<figure>
+					<img src="<?php echo $content->getData('asfjerome_banner'); ?>" alt="<?php echo $content->getData('asfjerome_title'); ?>" class="img-fluid">
+				</figure>
+			<?php }?>	
+				<div class="ask-caption">
+					<div class="tag-title">
+						<?php $interested= (explode(",",$content->getData('asfjerome_interested'))); ?>
+						<?php foreach($interested as $item){?>
+						<span> <?php echo $item ;?></span>
+					   <?php }?>
+					</div>
+					<div class="title">
+						<h1><?php echo $content->getData('asfjerome_title'); ?></h1>
+						<span><?php echo date('jS \of F Y',strtotime($content->getData('created_at'))); ?></span>
+					</div>
+				</div>
+			</div>
+		</div>
 
   <div class="breadcrumbs">
               <ul class="items">
 				  <li class="item home"><a href="<?php echo $this->getUrl('');?>">Home</a></li>
 				  <li class="item"><a href="<?php echo $this->getUrl('ask-jerome/');?>">Ask Jerome</a></li>
-                  <li class="item">Five Easy Steps to Flawless Foundation</li>
+                  <li class="item"><?php echo $content->getData('asfjerome_title'); ?></li>
               </ul>
           </div>
 		  
 		  
 		  
- <div class="ask-jerome-detail-container" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
-						<!--banner-notfront-->
-						<div class="banner-inner row-col" >
-						<?php //if (!empty($block->getTitle())) : ?>
-                       <h1><?php echo $content->getData('asfjerome_title'); ?></h1>
-                        <?php //endif; ?>
-							
-						</div>
-						<!--/banner-notfront-->
+	 <div class="ask-jerome-detail-container" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+						
 
 						<div class="jerome-description row-col">
-							<div class="jerome-detail-title">
-								<p><?php echo date('jS \of F Y',strtotime($content->getData('created_at'))); ?></p>
-								
-								<?php $interested= (explode(",",$content->getData('asfjerome_interested'))); ?>
-								
-								<?php foreach($interested as $item){?>
-								<span class="title"><i class="fa fa-times"></i> <?php echo $item ;?></span>
-								<?php }?>
-								
-							</div>
 							<div class="content">
-								<?= $content->getData('ask_description'); ?>
-								
-								
-								<div class="social-col">
+					  <?= $content->getData('ask_description'); ?>
+		  
+		  
+		                  </div>
+		  
+		              	<div class="social-col ask-social-col">
 									<ul class="social-links">
+									<li class="beauty-li">SHARE BEAUTY</li>
 									<li class="facebook-link">
-										<a href="javascript:void(0);"><i class="fa fa-facebook"></i></a>
-									</li>
-									<li class="instagram-link">
-										<a href="javascript:void(0);"><i class="fa fa-instagram"></i></a>
+										<a href="javascript:void(0);">
+											<img src="<?php echo  $media_url ; ?>themeimage/facebook-icon.png" alt="">
+										</a>
 									</li>
 									<li class="twitter-link">
-										<a href="javascript:void(0);"><i class="fa fa-twitter"></i></a>
-									</li>
-									<li class="youtube-link">
-										<a href="javascript:void(0);"><i class="fa fa-youtube-play"></i></a>
+										<a href="javascript:void(0);">
+											<img src="<?php echo  $media_url ; ?>themeimage/twitter-icon.png" alt="">
+										</a>
 									</li>
 									<li class="pinterest-link">
-										<a href="javascript:void(0);"><i class="fa fa-pinterest-p"></i></a>
+										<a href="javascript:void(0);">
+											<img src="<?php echo  $media_url ; ?>themeimage/pinterest-icon.png" alt="">
+										</a>
+									</li>
+									<li class="email-link">
+										<a href="javascript:void(0);">
+											<img src="<?php echo  $media_url ; ?>themeimage/envelope-icon.png" alt="">
+										</a>
+									</li>
+									<li class="link-link">
+										<a href="javascript:void(0);">
+											<img src="<?php echo  $media_url ; ?>themeimage/link-icon.png" alt="">	
+										</a>
 									</li>
 									</ul>
 								</div>
-								
-							</div>
-						</div>		  
+		            
+		             </div>
+	</div>	  
+		  
+
 
 
 
@@ -140,7 +165,7 @@ $identifier = $contentType->getIdentifier();
     ], function ($) {
         $(document).ready(function(){
             // move hero banner to top of the page
-            $('.breadcrumbs').detach().insertAfter('.page-wrapper > .nav-sections');
+            //$('.breadcrumbs').detach().insertAfter('.page-wrapper > .nav-sections');
 
             // move the bottom outside main wrapper as well as it needs to have full width
             //$('.job-posting').detach().insertAfter('#maincontent');
