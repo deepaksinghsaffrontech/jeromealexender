@@ -44,8 +44,22 @@ foreach($categrie['categries_id'] as $item){
         
                                           </div>
                                           <div class="seller-name-col">
-                                            <a href="<?php  echo $_product->getUrl(); ?>" class="title-name">MagicMinerals AirBrush Foundation Spray</a>
-                                            <p> <?php echo $_product->getShortDescription(); ?></p>
+                                 <a href="<?php  echo $_product->getUrl(); ?>" class="title-name"><?php  echo $_product->getName(); ?></a>
+                                            <p>
+
+											<?php //echo $_product->getShortDescription(); ?>
+						<?php 
+						$short_description = $_product->getShortDescription();
+	                    $short_description = preg_replace("/<img[^>]+\>/i", "", $short_description); 
+                         if (strlen($short_description) > 100){
+                        echo strip_tags(substr($short_description, 0, strpos($short_description,' ',100))).'...';
+                           } 
+                       else { 
+                       echo ($short_description); 
+                           }
+                           ?>
+											
+											</p>
                                             <span class="price-span"><?php echo $block->getProductPrice($_product);?></span>
 											
 											
