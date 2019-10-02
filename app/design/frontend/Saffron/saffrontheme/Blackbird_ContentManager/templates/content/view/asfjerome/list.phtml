@@ -149,7 +149,7 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 				 <?php $interested= (explode(",",$content->getData('asfjerome_like_to'))); 
 				 //print_r($interested);
 				 ?>
-				 <?php if($interested[0]= 'videos'){ ?>
+				 <?php if($content->getData('asfjerome_like_to')== 'videos'){ ?>
 				
 				<div class="col-md-4 col-12">
 					<div class="popular-item">
@@ -176,6 +176,36 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 				 <?php } ?>	
 	   <?php endforeach; ?>
 	   
+	    <?php foreach ($collection as $content) : ?>
+				 <?php $interested= (explode(",",$content->getData('asfjerome_like_to'))); 
+				 //print_r($interested);
+				 ?>
+				 <?php if($content->getData('asfjerome_like_to')== 'read'){ ?>
+				
+				<div class="col-md-4 col-12">
+					<div class="popular-item">
+					<div class="video-col">
+					
+					<img src="<?= $content->getImage('thimble_images')?>" class="img-fluid" />
+			       <div class="play-tutorial">
+					<a href="javascript:void(0);" class="icon click-me bt-action"  data="More Info"  data-type="<?php echo $content->getId();?>" id="video_titorial_<?php echo $content->getId(); ?>" >
+					<i class="fa"><img src="<?php echo $base_url ;?>pub/media/themeimage/arrow-right-white.png"></i>
+					<span>Play Tutorial</span>
+					</a>
+					</div>
+					</div>
+					<div class="info-col">
+				    <p><?= $content->getData('asfjerome_title'); ?></p>
+					<!--<a href="<?= $content->getLinkUrl(); ?>" class="read-more-link">Read More</a>-->
+					<?php echo $content->getData('asfjerome_like_to') ;?>
+					</div>
+					</div>
+					</div>
+					
+
+					
+				 <?php } ?>	
+	   <?php endforeach; ?>
 	   
 	   <?php else: ?>
             <div class="message info empty">
