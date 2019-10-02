@@ -31,7 +31,7 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
 <?php if (!$_productCollection->count()): ?>
     <div class="message info empty"><div><?= /* @escapeNotVerified */ __('We can\'t find products matching the selection.') ?></div></div>
 <?php else: ?>
-    <?= $block->getToolbarHtml() ?>
+    <?php //$block->getToolbarHtml() ?>
     <?= $block->getAdditionalHtml() ?>
     <?php
     if ($block->getMode() == 'grid') {
@@ -73,7 +73,10 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                     <a href="<?= /* @escapeNotVerified */ $_product->getProductUrl() ?>" class="product photo product-item-photo" tabindex="-1">
                        <figure> <?= $productImage->toHtml() ?></figure>
                     </a>
-					
+		
+                <div id="quickview-<?php echo $_product->getId();?>" class="bss-bt-quickview">
+				<a class="bss-quickview" data-quickview-url="<?php echo $this->getUrl('');?>/bss_quickview/catalog_product/view/id/<?php echo $_product->getId();?>" href="javascript:void(0);"><span>Quick View </span></a>
+				</div>		
                     <div class="seller-info">
                        <div class="star-col">
                       <?= $block->getReviewsSummaryHtml($_product, $templateType) ?>
@@ -89,7 +92,18 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                                href="<?= /* @escapeNotVerified */ $_product->getProductUrl() ?>">
                                 <?= /* @escapeNotVerified */ $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
                             </a>
-							<p> <?= /* @escapeNotVerified */ $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></p>
+							<p> 
+					    <?php 
+							$short_description = $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description');
+	                      $short_description = preg_replace("/<img[^>]+\>/i", "", $short_description); 
+                         if (strlen($short_description) > 100){
+                        echo substr($short_description, 0, strpos($short_description,' ',100)).'...';
+                           } 
+                       else { 
+                      echo $short_description; 
+                           }
+                           ?>
+							</p>
                            <span class="price-span"><?= /* @escapeNotVerified */ $block->getProductPrice($_product) ?>
                         </span>
                       </div>
@@ -143,7 +157,7 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
         </div>
 		</div>
     </div>
-	<?= $block->getToolbarHtml() ?>
+	<?php $block->getToolbarHtml() ?>
     <?php if (!$block->isRedirectToCartEnabled()) : ?>
         <script type="text/x-magento-init">
         {
@@ -181,7 +195,7 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
 <?php if (!$_productCollection->count()): ?>
     <div class="message info empty"><div><?= /* @escapeNotVerified */ __('We can\'t find products matching the selection.') ?></div></div>
 <?php else: ?>
-    <?= $block->getToolbarHtml() ?>
+    <?php //$block->getToolbarHtml() ?>
     <?= $block->getAdditionalHtml() ?>
     <?php
     if ($block->getMode() == 'grid') {
@@ -224,6 +238,11 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                        <figure> <?= $productImage->toHtml() ?></figure>
                     </a>
 					
+			<div id="quickview-<?php echo $_product->getId();?>" class="bss-bt-quickview">
+				<a class="bss-quickview" data-quickview-url="<?php echo $this->getUrl('');?>/bss_quickview/catalog_product/view/id/<?php echo $_product->getId();?>" href="javascript:void(0);"><span>Quick View </span></a>
+				</div>
+				
+					
                     <div class="seller-info">
                        <div class="star-col">
                       <?= $block->getReviewsSummaryHtml($_product, $templateType) ?>
@@ -239,7 +258,18 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                                href="<?= /* @escapeNotVerified */ $_product->getProductUrl() ?>">
                                 <?= /* @escapeNotVerified */ $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
                             </a>
-							<p> <?= /* @escapeNotVerified */ $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></p>
+						<p> 
+					    <?php 
+							$short_description = $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description');
+	                      $short_description = preg_replace("/<img[^>]+\>/i", "", $short_description); 
+                         if (strlen($short_description) > 100){
+                        echo substr($short_description, 0, strpos($short_description,' ',100)).'...';
+                           } 
+                       else { 
+                      echo $short_description; 
+                           }
+                           ?>
+					</p>
                            <span class="price-span"><?= /* @escapeNotVerified */ $block->getProductPrice($_product) ?>
                         </span>
                       </div>
@@ -293,7 +323,7 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
         </div>
 		</div>
     </div>
-    <?= $block->getToolbarHtml() ?>
+    <?php //$block->getToolbarHtml() ?>
     <?php if (!$block->isRedirectToCartEnabled()) : ?>
         <script type="text/x-magento-init">
         {
