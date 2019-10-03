@@ -2635,7 +2635,150 @@ body.checkout-index-index .opc-wrapper.am-opc-wrapper .discount-code .payment-op
     font-size: 18px;
 }
 .checkout-index-index .authentication-wrapper button.action.action-auth-toggle:hover { text-decoration: none; }
+form#newsletter-validate-details {
+    background: #fff;
+    padding: 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    float: none;
+    width: 100%;
+    display: table;
+    border-radius: 0 0 6px 6px;
+}
+form#newsletter-validate-details label.label {
+    font-size: 45px;
+    color: #E2AF9F;
+    margin-bottom: 30px;
+}
+form#newsletter-validate-details label.label span span {
+    color: #053052;
+    font-family: "BentonSans-Bold";
+}
+.subscribe-bottom, .subscribe-bottom a {
+    color: #CC9C8D;
+    font-size: 14px;
+    line-height: 24px;
+}
+.subscribe-bottom a {  text-decoration: underline;}
+.subscribe-bottom {
+    position: relative;
+    padding-left: 20px;
+    float: left;
+    width: 100%;
+}
+.subscribe-bottom input[type="radio"] {
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+.news-control-field input {
+    border: 1px solid #E2AF9F;
+    height: 58px;
+    font-size: 14px;
+    padding: 0 20px;
+}
+.news-control-field button { background: #E2AF9F; }
+.news-control-field .action.primary {
+    background: #E2AF9F;
+    border: none;
+    border-radius: 0;
+    height: 58px;
+    font-size: 18px;
+    font-family: "BentonSans-Bold";
+    width: 100%;
+    cursor: pointer;
+}
+.news-control-field  .actions { width: 160px;  float: left; }
+.news-control-field .control {
+    width: calc(100% - 170px);
+    float: left;
+    margin-right: 10px;
+}
+.news-control-field {
+    float: left;
+    width: 100%;
+    margin: 0 0 15px;
+}
+.form.subscribe span.b-close {
+    float: right;
+    width: 26px;
+    cursor: pointer;
+}
+form#newsletter-validate-details {
+    background: #fff;
+    padding: 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    float: none;
+    width: 100%;
+    display: table;
+    border-radius: 0 0 6px 6px;
+}
 
+form#newsletter-validate-details label.label {
+    font-size: 45px;
+    color: #E2AF9F;
+    margin-bottom: 30px;
+}
+
+form#newsletter-validate-details label.label span span {
+    color: #053052;
+    font-family: "BentonSans-Bold";
+}
+
+.subscribe-bottom, .subscribe-bottom a {
+    color: #CC9C8D;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.form.subscribe .subscribe-bottom a {
+    text-decoration: underline;
+}
+.form.subscribe .subscribe-bottom {
+    position: relative;
+    padding-left: 20px;
+    float: left;
+    width: 100%;
+}
+.subscribe-bottom input[type="radio"] {
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+.news-control-field input {
+    border: 1px solid #E2AF9F;
+    height: 58px;
+    font-size: 14px;
+    padding: 0 20px;
+}
+.news-control-field button { background: #E2AF9F; }
+.news-control-field .action.primary {
+    background: #E2AF9F;
+    border: none;
+    border-radius: 0;
+    height: 58px;
+    font-size: 18px;
+    font-family: "BentonSans-Bold";
+    width: 100%;
+    cursor: pointer;
+}
+.news-control-field  .actions {  width: 160px;  float: left; }
+.news-control-field .control {
+    width: calc(100% - 170px);
+    float: left;
+    margin-right: 10px;
+}
+.news-control-field {
+    float: left;
+    width: 100%;
+    margin: 0 0 15px;
+}
+.form.subscribe span.b-close {
+    float: right;
+    width: 26px;
+    cursor: pointer;
+}
 
 
 /*===============-magento-common-classes-css-===============*/

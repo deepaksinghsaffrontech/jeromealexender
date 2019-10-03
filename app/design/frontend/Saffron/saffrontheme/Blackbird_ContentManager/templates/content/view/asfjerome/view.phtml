@@ -60,10 +60,10 @@ $content = $block->getContent();
 $contentType = $content->getContentType();
 //$repeaterValues = $content->getContentCollection('about_us_gasser_images', '*');
 $identifier = $contentType->getIdentifier();
-
- $om = \Magento\Framework\App\ObjectManager::getInstance();
-    $storeManager = $om->get('\Magento\Store\Model\StoreManagerInterface');
-   $media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+$askjerome = $contentType->load(1)->getContentCollection()->setPageSize(4);  
+$om = \Magento\Framework\App\ObjectManager::getInstance();
+$storeManager = $om->get('\Magento\Store\Model\StoreManagerInterface');
+$media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
 ?>
 
 
@@ -102,12 +102,10 @@ $identifier = $contentType->getIdentifier();
 	 <div class="ask-jerome-detail-container" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
 						
 
-						<div class="jerome-description row-col">
-							<div class="content">
+					  <div class="jerome-description row-col">
+					  <div class="content">
 					  <?= $content->getData('ask_description'); ?>
-		  
-		  
-		                  </div>
+		             </div>
 		  
 		              	<div class="social-col ask-social-col">
 									<ul class="social-links">
@@ -147,20 +145,44 @@ $identifier = $contentType->getIdentifier();
 							<h2 class="h30 center">Other Tutorials You Might Love</h2>	
 							
 							<div class="row">
-							
-							<div class="col-md-3 col-12">
-									<div class="popular-item">
-										<div class="video-col">
-											<img src="images/tutorial-img10.png" class="img-fluid">
-										</div>
-										<div class="info-col">
-											<p>Cleanse And Moisturize Your Face For Best Makeup Results</p>
-											<a href="ask-jerome-detail.php" class="read-more-link">Read More</a>
-										</div>
-									</div>
-								</div>
+							<?php foreach($askjerome as $testimonial){?>
+						
+						<?php $testimonialValues = $testimonial->load($testimonial->getData('entity_id')); ?>	
+									<?php //echo"<pre>";print_r($testimonialValues);?>
+					
 								
-							
+								<?php //echo $testimonialValues['thimble_images']; ?>
+								<?php //echo $testimonialValues['Id']; ?>
+								<?php //echo $testimonialValues['asfjerome_like_to']; ?>
+								
+								
+					<div class="col-md-3 col-12">
+					<div class="popular-item">
+					<div class="video-col">
+					
+					<img src="<?php echo $media_url ; ?>contentmanager/content/<?php echo $testimonialValues['thimble_images'] ;?>" class="img-fluid" />
+			       <div class="play-tutorial">
+					<a href="javascript:void(0);" class="icon click-me bt-action"  data="More Info"  data-type="<?php echo $testimonialValues['id'];?>" id="video_titorial_<?php echo $testimonialValues['id']; ?>" >
+					<i class="fa"><img src="<?php echo $media_url ;?>themeimage/arrow-right-white.png"></i>
+					<span>Play Tutorial</span>
+					</a>
+					</div>
+					</div>
+					<div class="info-col">
+				    <p><?php echo $testimonialValues['asfjerome_title']; ?></p>
+					
+							<?php if($testimonialValues['asfjerome_like_to']=='read' ){?>
+					<a href="<?= $this->getBaseUrl() . $testimonialValues['url_key']; ?>" class="read-more-link">
+					Read More</a>
+							<?php }?>
+				
+					</div>
+					</div>
+					</div>
+								
+								
+								
+							<?php }?>
 
 							</div>
 						</div>			 
