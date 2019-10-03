@@ -945,9 +945,13 @@ header.page-header { position: relative;  z-index: 2; }
 	font-size:19px;
 	font-family: "BentonSans-Regular";
 }
-.banner-inner .form-group input::placeholder { color:#053052; }
-.banner-inner .form-group input:-ms-input-placeholder { color:#053052; }
-.banner-inner .form-group input::-ms-input-placeholder { color:#053052; }
+
+.banner-inner .form-group input::placeholder,
+.news-control-field input::placeholder { color:#053052; }
+.banner-inner .form-group input:-ms-input-placeholder,
+.news-control-field input:-ms-input-placeholder { color:#053052; }
+.banner-inner .form-group input::-ms-input-placeholder,
+.news-control-field input:-ms-input-placeholder { color:#053052; }
 .banner-inner .header-search button.search-btn {
     height: 52px;
     left: 0;
@@ -2710,13 +2714,20 @@ form#newsletter-validate-details {
 .form.subscribe .custom-control-label::after {  top: 4px; }
 
 .content.newsletter-popup .title {  display: none; }
-div#newsletter_pop_up {max-width: 720px;width: 100%;}
+div#newsletter_pop_up {
+	max-width: 720px;
+    width: 100%;
+    left: 0 !important;
+    right: 0 !important;
+    margin: -90px auto 0;
+}
 .content.newsletter-popup {
     background-repeat: no-repeat;
     background-position: center 0;
     padding-top: 270px;
     background-size: 100% auto;
 }
+.subscribe-bottom .custom-control-label::before {  border: #CC9C8D solid 1px; }
 
 
 /*===============-magento-common-classes-css-===============*/
