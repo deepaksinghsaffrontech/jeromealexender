@@ -204,12 +204,6 @@ $media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 
 
 
-<div id="popup-modal1" style="display:none;">
-   <div id="popup-image"></div>
-
-</div>
-
-
 
 
 
@@ -229,64 +223,4 @@ $media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 
 
 
-<script>
-    require(
-        [
-            'jquery',
-            'Magento_Ui/js/modal/modal'
-        ],
-        function(
-            $,
-            modal
-        ) {
-            var options = {
-                type: 'popup',
-                responsive: true,
-                innerScroll: true,
-				removalDelay: 7000 ,
-                //title: 'popup modal title',
-                buttons: [{
-                    text: $.mage.__('Continue'),        
-                    class: '',
-                    click: function () {
-                        this.closeModal();
-                    }
-                }]
-            };
 
-            var popup = modal(options, $('#popup-modal1'));
-            //function popupFunction(obj){ 
-			
-			//alert(var obj)
-			//$("#popup-modal1").modal("openModal");
-            //};
-
-        }
-    );
-</script>
- 
-
-
-  <script type="text/javascript">
-function popupFunction(obj)
-{
-jQuery(document).ready(function($){
-  //alert(obj);
-  var vediourl = $("#idvedio-"+obj).val();
-  
-  //alert(vediourl);
-  $.ajax({
-        url: "<?php echo $this->getBaseUrl()?>/shopall/index/Vediotitorial/",
-        type: "GET",
-        data:  {"id":obj,"vediourl":vediourl},
-        success: function(response){
-			//alert(response);
-			
-		   $('#popup-image').html(response);	
-			$("#popup-modal1").modal("openModal");
-        }
-	  });
-   
-});
-}
-</script>

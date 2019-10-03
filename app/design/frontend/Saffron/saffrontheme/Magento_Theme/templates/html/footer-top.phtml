@@ -1,4 +1,9 @@
 <!--footer-->
+<div id="popup-modal1" style="display:none;">
+   <div id="popup-image"></div>
+
+</div>
+
 <footer class="page-footer"  data-aos="fade" data-aos-offset="100"  data-aos-easing="ease-in-sine">
   <!--footer-top-->
   <div class="footer-top">
@@ -62,5 +67,71 @@ $(window).scroll(function() {
 
 });
 </script>	
+
+
+
+
+
+<script>
+    require(
+        [
+            'jquery',
+            'Magento_Ui/js/modal/modal'
+        ],
+        function(
+            $,
+            modal
+        ) {
+            var options = {
+                type: 'popup',
+                responsive: true,
+                innerScroll: true,
+				removalDelay: 7000 ,
+                //title: 'popup modal title',
+                buttons: [{
+                    text: $.mage.__('Continue'),        
+                    class: '',
+                    click: function () {
+                        this.closeModal();
+                    }
+                }]
+            };
+
+            var popup = modal(options, $('#popup-modal1'));
+            //function popupFunction(obj){ 
+			
+			//alert(var obj)
+			//$("#popup-modal1").modal("openModal");
+            //};
+
+        }
+    );
+</script>
+ 
+
+
+  <script type="text/javascript">
+function popupFunction(obj)
+{
+jQuery(document).ready(function($){
+  //alert(obj);
+  var vediourl = $("#idvedio-"+obj).val();
+  
+  //alert(vediourl);
+  $.ajax({
+        url: "<?php echo $this->getBaseUrl()?>/shopall/index/Vediotitorial/",
+        type: "GET",
+        data:  {"id":obj,"vediourl":vediourl},
+        success: function(response){
+			//alert(response);
+			
+		   $('#popup-image').html(response);	
+			$("#popup-modal1").modal("openModal");
+        }
+	  });
+   
+});
+}
+</script>
 
 	 
