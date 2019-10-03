@@ -2820,7 +2820,7 @@ div#ajax-goto + .product-info-main {  margin-top: 50px; }
     top: 0;
     left: 0;
     right: 0;
-    z-index: 9999999;
+    z-index:-1;
     height: 100%;
     overflow: hidden;
     background: rgba(233,195,171, 0.8);
@@ -2830,7 +2830,7 @@ div#ajax-goto + .product-info-main {  margin-top: 50px; }
     transition: all 0.5s ease;
 	opacity:0;
 }
-.showpopup{ opacity:1; }
+.showpopup{ opacity:1;  z-index:999; }
 .loader-inner .fa { color: #053052; }
 
 
