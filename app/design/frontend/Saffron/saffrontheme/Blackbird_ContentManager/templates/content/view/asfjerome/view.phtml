@@ -111,17 +111,17 @@ $media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 									<ul class="social-links">
 									<li class="beauty-li">SHARE BEAUTY</li>
 									<li class="facebook-link">
-										<a href="javascript:void(0);">
+										<a href="https://www.facebook.com/sharer/sharer.php?u=<?= $content->getLinkUrl(); ?>">
 											<img src="<?php echo  $media_url ; ?>themeimage/facebook-icon.png" alt="">
 										</a>
 									</li>
 									<li class="twitter-link">
-										<a href="javascript:void(0);">
+										<a href="http://twitter.com/home?status=<?= $content->getLinkUrl(); ?>">
 											<img src="<?php echo  $media_url ; ?>themeimage/twitter-icon.png" alt="">
 										</a>
 									</li>
 									<li class="pinterest-link">
-										<a href="javascript:void(0);">
+										<a href="http://pinterest.com/pin/create/button/?url=<?= $content->getLinkUrl(); ?>">
 											<img src="<?php echo  $media_url ; ?>themeimage/pinterest-icon.png" alt="">
 										</a>
 									</li>
