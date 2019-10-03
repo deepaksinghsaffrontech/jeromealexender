@@ -2757,6 +2757,19 @@ body.page-layout-1column.page-with-filter .column.main {  padding-top: 0; }
     transition: none;
 }
 .category-item:hover .bss-bt-quickview {  opacity: 1; }
+body .mfp-iframe-holder .mfp-content {  max-width: 1180px; }
+.page-title-wrapper.product.banner-title-notfront h1.page-title {  opacity: 1; }
+.mfp-iframe-holder .mfp-close {
+    top: 3px;
+    color: #E2AF9F;
+    z-index: 1;
+    width: auto;
+    background: none;
+    right: 6px;
+    opacity: 1;
+    font-size: 50px;
+}
+a.goto-product {  display: none; }
 
 
 /*===============-magento-common-classes-css-===============*/
