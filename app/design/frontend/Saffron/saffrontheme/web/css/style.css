@@ -2772,6 +2772,51 @@ body .mfp-iframe-holder .mfp-content {  max-width: 1180px; padding:30px 0; }
 a.goto-product {  display: none; }
 .product.info.detailed {  display: none; }
 .catalog-product-view .product.info.detailed {  display: none; }
+div#ajax-goto + .product-info-main {  margin-top: 50px; }
+
+.customer-account-forgotpassword .page-main { background: #F9F8F8;  padding: 70px 0; }
+.customer-account-forgotpassword .page-title-wrapper.banner-title-notfront {
+    max-width: 600px;
+    background: #fff;
+    margin: 0 auto;
+    width: 100%;
+    padding: 40px 50px 0;
+}
+.customer-account-forgotpassword .columns {
+    max-width: 600px;
+    width: 100%;
+    background: #fff;
+    padding: 0 50px 50px;
+}
+.customer-account-forgotpassword .page-title-wrapper.banner-title-notfront h1 {
+    float: left;
+    width: 100%;
+    margin: 0 0 10px;
+    line-height: normal;
+    font-size: 28px;
+    font-family: "BentonSans-Regular";
+}
+.customer-account-forgotpassword .field.note {  font-style: italic; }
+.customer-account-forgotpassword .actions-toolbar button.action.submit {
+    background-color: #053052;
+    border-color: #053052;
+    font-family: "BentonSans-Bold";
+    font-size: 18px;
+    padding: 14px 31px;
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+    outline: none;
+    color: #fff;
+}
+.customer-account-forgotpassword .actions-toolbar button.action.submit:hover {
+    background-color: #E2AF9F;
+    border-color: #E2AF9F;
+    color: #053052;
+    box-shadow: none;
+}
+.loader-wrapper{display: none;}
+.showpopup{display: block;}
 
 
 /*===============-magento-common-classes-css-===============*/
