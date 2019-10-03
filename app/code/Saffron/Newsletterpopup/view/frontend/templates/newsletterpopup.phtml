@@ -12,16 +12,17 @@ $timeout = $block->getConfig('cookie_timeout');
 $mediaUrl = $block->getMediaUrl();
 $background = $mediaUrl.'logo/'. $block->getConfig('background');
 ?>
-<div id="newsletter_pop_up" class="pt_newsletterpopup" style ='background:url(<?php echo $background;?>);' >
+<div id="newsletter_pop_up" class="pt_newsletterpopup"  >
 
-    <div class="title"><strong><?php echo $title; ?></strong></div>
-    <div class="content">
+    
+    <div class="content newsletter-popup" style ='background:url(<?php echo $background;?>);'>
         <form class="form subscribe"
             novalidate
             action="<?php /* @escapeNotVerified */ echo $block->getFormActionUrl() ?>"
             method="post"
             data-mage-init='{"validation": {"errorClass": "mage-error"}}'
             id="newsletter-validate-details">
+			<div class="title"><strong><?php echo $title; ?></strong></div>
 			<span class="b-close">
 				<img src="<?php echo $mediaUrl; ?>themeimage/close-icon.png">
 			</span>
@@ -47,7 +48,7 @@ $background = $mediaUrl.'logo/'. $block->getConfig('background');
 				<div class="custom-control custom-radio">
 				<input type="radio" class="custom-control-input" id="newsletter_popup_dont_show_again">
 
-				<label for="newsletter_popup_dont_show_again">By joining, I accept Jerome Alexander’s <a href="<?php echo $this->getUrl('terms-conditions/');?>">Terms & Conditions</a> and agree to receive Jerome Alexander’s marketing emails. You may unsubscribe at anytime.</label>
+				<label class="custom-control-label" for="newsletter_popup_dont_show_again">By joining, I accept Jerome Alexander’s <a href="<?php echo $this->getUrl('terms-conditions/');?>">Terms & Conditions</a> and agree to receive Jerome Alexander’s marketing emails. You may unsubscribe at anytime.</label>
 				</div>
 
 			</div>

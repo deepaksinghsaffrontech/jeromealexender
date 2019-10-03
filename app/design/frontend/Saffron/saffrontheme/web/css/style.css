@@ -1028,8 +1028,8 @@ textarea{ resize:none; }
 .filter-ul li.custom-control {   margin-bottom: 10px; }
 ul.filter-ul {  margin-bottom: 25px; }
 .custom-control-input:checked~.custom-control-label::before {
-    border-color: #053052;
-    background-color: #053052;
+    border-color: #E2AF9F;
+    background-color: #E2AF9F;
 }
 .clear-link {
     display: flex;
@@ -2635,16 +2635,6 @@ body.checkout-index-index .opc-wrapper.am-opc-wrapper .discount-code .payment-op
     font-size: 18px;
 }
 .checkout-index-index .authentication-wrapper button.action.action-auth-toggle:hover { text-decoration: none; }
-form#newsletter-validate-details {
-    background: #fff;
-    padding: 40px;
-    max-width: 700px;
-    margin: 0 auto;
-    float: none;
-    width: 100%;
-    display: table;
-    border-radius: 0 0 6px 6px;
-}
 form#newsletter-validate-details label.label {
     font-size: 45px;
     color: #E2AF9F;
@@ -2737,7 +2727,6 @@ form#newsletter-validate-details label.label span span {
 }
 .form.subscribe .subscribe-bottom {
     position: relative;
-    padding-left: 20px;
     float: left;
     width: 100%;
 }
@@ -2779,6 +2768,8 @@ form#newsletter-validate-details label.label span span {
     width: 26px;
     cursor: pointer;
 }
+.form.subscribe .custom-control-label::before,
+.form.subscribe .custom-control-label::after {  top: 4px; }
 
 
 /*===============-magento-common-classes-css-===============*/
