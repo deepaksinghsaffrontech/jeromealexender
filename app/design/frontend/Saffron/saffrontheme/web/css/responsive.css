@@ -53,7 +53,8 @@
 	.contentmanager-contentlist-1 .column-ask {  margin-left: 20.83333333%;  width: calc(100% - 20.83333333%);   float: left; }
 	.filter-tutorials-m { display:none; }
     .page-main { padding:0; }
-    .navigation .level0.active>.level-top, .navigation .level0.has-active>.level-top { display: block; }
+    .navigation .level0.active>.level-top, .navigation .level0.has-active>.level-top { 
+		display: block; color:#053052; }
 	.checkout-cart-index .column.main {  padding-bottom: 80px; }
 	.page-products .product-item-info,
 	.products-grid .product-item-info:hover,

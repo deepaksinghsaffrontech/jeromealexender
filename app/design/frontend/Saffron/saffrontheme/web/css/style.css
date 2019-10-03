@@ -2815,8 +2815,24 @@ div#ajax-goto + .product-info-main {  margin-top: 50px; }
     color: #053052;
     box-shadow: none;
 }
-.loader-wrapper{display: none;}
-.showpopup{display: block;}
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999999;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(233,195,171, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+	opacity:0;
+}
+.showpopup{ opacity:1; }
+.loader-inner .fa { color: #053052; }
+
 
 
 /*===============-magento-common-classes-css-===============*/
