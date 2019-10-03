@@ -902,7 +902,7 @@ header.page-header { position: relative;  z-index: 2; }
 .faq-panel h5 .fa {  float: right; }
 .breadcrumbs {
     padding: 20px 0;
-    margin: 0 0 25px;
+    margin:0;
     float: left;
     width: 100%;
     max-width:100%;
@@ -2832,6 +2832,7 @@ div#ajax-goto + .product-info-main {  margin-top: 50px; }
 }
 .showpopup{ opacity:1;  z-index:999; }
 .loader-inner .fa { color: #053052; }
+.category-image.shop-banner { margin-bottom: 30px; }
 
 
 
