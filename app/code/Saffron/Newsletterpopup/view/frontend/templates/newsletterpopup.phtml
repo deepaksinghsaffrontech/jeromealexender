@@ -22,25 +22,33 @@ $background = $mediaUrl.'logo/'. $block->getConfig('background');
             method="post"
             data-mage-init='{"validation": {"errorClass": "mage-error"}}'
             id="newsletter-validate-details">
+			<span class="b-close">
+				
+			</span>
             <div class="field newsletter">
                 <label class="label" for="newsletter"><span><?php echo $content; ?></span></label>
-                <div class="control">
-                    <input name="email" type="email" id="newsletters"
+				<div class="news-control-field">
+					<div class="control">
+							<input name="email" type="email" id="newsletters"
                                 placeholder="<?php /* @escapeNotVerified */ echo __('Enter your email address') ?>"
                                 data-validate="{required:true, 'validate-email':true}"/>
-                </div>
+					</div>
+					 <div class="actions">
+						<button class="action subscribe primary" title="<?php /* @escapeNotVerified */ echo __('Subscribe') ?>" type="submit">
+							<span><?php /* @escapeNotVerified */ echo __('Subscribe') ?></span>
+						</button>
+					</div>
+				
+				</div>
+                
             </div>
-            <div class="actions">
-                <button class="action subscribe primary" title="<?php /* @escapeNotVerified */ echo __('Subscribe') ?>" type="submit">
-                    <span><?php /* @escapeNotVerified */ echo __('Subscribe') ?></span>
-                </button>
-            </div>
+           
 			<div class="subscribe-bottom">
-				<input type="checkbox" id="newsletter_popup_dont_show_again">
-				<label for="newsletter_popup_dont_show_again"><?php echo __("Don't show this popup again")?></label>
+				<input type="radio" id="newsletter_popup_dont_show_again">
+				<label for="newsletter_popup_dont_show_again"><?php echo __("By joining, I accept Jerome Alexander’s Terms & Conditions and agree to receive Jerome Alexander’s marketing emails. You may unsubscribe at anytime.")?></label>
 			</div>
         </form>
-		<span class="b-close"><span>X</span></span>
+		
     </div>
 </div>
 <script type ="text/javascript">
