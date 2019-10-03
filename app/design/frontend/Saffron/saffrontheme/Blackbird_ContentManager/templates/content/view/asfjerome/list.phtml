@@ -157,7 +157,7 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 					
 					<img src="<?= $content->getImage('thimble_images')?>" class="img-fluid" />
 			       <div class="play-tutorial">
-					<a href="javascript:void(0);" class="icon click-me bt-action"  data="More Info"  data-type="<?php echo $content->getId();?>" id="video_titorial_<?php echo $content->getId(); ?>" >
+					<a href="javascript:void(0);" class="icon click-me bt-action"  data="More Info" onclick="popupFunction(<?php echo $content->getId();?>)" id="video_titorial_<?php echo $content->getId(); ?>" >
 					<i class="fa"><img src="<?php echo $base_url ;?>pub/media/themeimage/arrow-right-white.png"></i>
 					<span>Play Tutorial</span>
 					</a>
@@ -170,7 +170,9 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 					</div>
 					</div>
 					</div>
-					 <?php } ?>	
+ <input type="hidden"  id="idvedio-<?php echo $content->getId();?>" name="vedio" value="<?= $content->getData('asfjerome_video'); ?>" >
+									
+					<?php } ?>	
 	   <?php endforeach; ?>
 	   
 	    <?php foreach ($collection as $content) : ?>
@@ -185,10 +187,12 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 					
 					<img src="<?= $content->getImage('thimble_images')?>" class="img-fluid" />
 			       <div class="play-tutorial">
-					<a href="javascript:void(0);" class="icon click-me bt-action"  data="More Info"  data-type="<?php echo $content->getId();?>" id="video_titorial_<?php echo $content->getId(); ?>" >
+					<a href="javascript:void(0);" class="icon click-me bt-action"  data="More Info"  onclick="popupFunction(<?php echo $content->getId();?>)" id="video_titorial_<?php echo $content->getId(); ?>" >
 					<i class="fa"><img src="<?php echo $base_url ;?>pub/media/themeimage/arrow-right-white.png"></i>
 					<span>Play Tutorial</span>
 					</a>
+					
+					
 					</div>
 					</div>
 					<div class="info-col">
@@ -199,7 +203,7 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 					</div>
 					</div>
 					
-
+                     <input type="hidden"  id="idvedio-<?php echo $content->getId();?>" name="vedio" value="<?= $content->getData('asfjerome_video'); ?>" >
 					
 				 <?php } ?>	
 	   <?php endforeach; ?>
@@ -258,7 +262,10 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
           
 
 
-<a href="javascript:;"  class="bt-action" data="More Info"  >More Info</a>
+<div id="popup-modal1" style="display:none;">
+   <div id="popup-image"></div>
+
+</div>
 
 
 <script>
@@ -275,70 +282,53 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
                 type: 'popup',
                 responsive: true,
                 innerScroll: true,
-                title: 'popup modal title',
+				removalDelay: 7000 ,
+                //title: 'popup modal title',
                 buttons: [{
-                    text: $.mage.__('Continue'),
+                    text: $.mage.__('Continue'),        
                     class: '',
                     click: function () {
                         this.closeModal();
                     }
                 }]
             };
- 
-        
-		//var popup = modal(options, $('#popup-modal' ));
-            $("click-me").on('click',function(){ 
+
+            var popup = modal(options, $('#popup-modal1'));
+            //function popupFunction(obj){ 
 			
-			var link = $(this).attr("data-type");
-			var popup = modal(options, $('#popup-modal-'+link ));
-			$("#popup-modal-"+link).modal("openModal");
-			var url = $("#cartoonVideo-"+link).attr('src');
-            $("#cartoonVideo-"+link).attr('src', '');
-			$("#cartoonVideo-"+link).attr('src', url);
-    
-	
- 
-
- });
-
+			//alert(var obj)
+			//$("#popup-modal1").modal("openModal");
+            //};
 
         }
     );
-	
-	
-	
-	require(
-        [
-            'jquery',
-            'Magento_Ui/js/modal/modal'
-        ],
-        function(
-            $,
-            modal
-        ) {
-
-            var options = {
-                type: 'popup',
-                responsive: true,
-                innerScroll: false,
-                title: 'My Title',
-                buttons: []
-            };
-
-            $(".bt-action").click(function() {
-
-                $(".bt-action-file").modal(options).modal('openModal');
-
-            });
-
-        }
-    );
-</script>	 
-
+</script>
  
 
 
-
+  <script type="text/javascript">
+function popupFunction(obj)
+{
+jQuery(document).ready(function($){
+  //alert(obj);
+  var vediourl = $("#idvedio-"+obj).val();
+  
+  //alert(vediourl);
+  $.ajax({
+        url: "<?php echo $this->getBaseUrl()?>/shopall/index/Vediotitorial/",
+        type: "GET",
+        data:  {"id":obj,"vediourl":vediourl},
+        success: function(response){
+			//alert(response);
+			
+		   $('#popup-image').html(response);	
+			$("#popup-modal1").modal("openModal");
+        }
+	  });
+   
+});
+}
+</script>
   
 			
 			

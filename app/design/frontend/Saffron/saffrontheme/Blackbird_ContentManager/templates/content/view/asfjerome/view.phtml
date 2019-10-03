@@ -148,7 +148,7 @@ $media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 							<?php foreach($askjerome as $testimonial){?>
 						
 						<?php $testimonialValues = $testimonial->load($testimonial->getData('entity_id')); ?>	
-									<?php //echo"<pre>";print_r($testimonialValues);?>
+							<?php //echo"<pre>";print_r($testimonialValues);?>
 					
 								
 								<?php //echo $testimonialValues['thimble_images']; ?>
@@ -162,7 +162,7 @@ $media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 					
 					<img src="<?php echo $media_url ; ?>contentmanager/content/<?php echo $testimonialValues['thimble_images'] ;?>" class="img-fluid" />
 			       <div class="play-tutorial">
-					<a href="javascript:void(0);" class="icon click-me bt-action"  data="More Info"  data-type="<?php echo $testimonialValues['id'];?>" id="video_titorial_<?php echo $testimonialValues['id']; ?>" >
+					<a href="javascript:void(0);" class="icon click-me bt-action"  data="More Info"  onclick="popupFunction(<?php echo $testimonial->getData('entity_id') ;?>)" id="video_titorial_<?php echo $testimonial->getData('entity_id'); ?>" >
 					<i class="fa"><img src="<?php echo $media_url ;?>themeimage/arrow-right-white.png"></i>
 					<span>Play Tutorial</span>
 					</a>
@@ -180,7 +180,8 @@ $media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 					</div>
 					</div>
 								
-								
+					<input type="hidden"  id="idvedio-<?php echo $testimonial->getData('entity_id'); ?>" name="vedio" value="<?= $testimonialValues['asfjerome_video']; ?>" >
+							
 								
 							<?php }?>
 
@@ -203,7 +204,10 @@ $media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 
 
 
+<div id="popup-modal1" style="display:none;">
+   <div id="popup-image"></div>
 
+</div>
 
 
 
@@ -223,3 +227,66 @@ $media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
     })
 </script>
 
+
+
+<script>
+    require(
+        [
+            'jquery',
+            'Magento_Ui/js/modal/modal'
+        ],
+        function(
+            $,
+            modal
+        ) {
+            var options = {
+                type: 'popup',
+                responsive: true,
+                innerScroll: true,
+				removalDelay: 7000 ,
+                //title: 'popup modal title',
+                buttons: [{
+                    text: $.mage.__('Continue'),        
+                    class: '',
+                    click: function () {
+                        this.closeModal();
+                    }
+                }]
+            };
+
+            var popup = modal(options, $('#popup-modal1'));
+            //function popupFunction(obj){ 
+			
+			//alert(var obj)
+			//$("#popup-modal1").modal("openModal");
+            //};
+
+        }
+    );
+</script>
+ 
+
+
+  <script type="text/javascript">
+function popupFunction(obj)
+{
+jQuery(document).ready(function($){
+  //alert(obj);
+  var vediourl = $("#idvedio-"+obj).val();
+  
+  //alert(vediourl);
+  $.ajax({
+        url: "<?php echo $this->getBaseUrl()?>/shopall/index/Vediotitorial/",
+        type: "GET",
+        data:  {"id":obj,"vediourl":vediourl},
+        success: function(response){
+			//alert(response);
+			
+		   $('#popup-image').html(response);	
+			$("#popup-modal1").modal("openModal");
+        }
+	  });
+   
+});
+}
+</script>
