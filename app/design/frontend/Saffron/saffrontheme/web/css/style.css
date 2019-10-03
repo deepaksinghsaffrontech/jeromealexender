@@ -2652,7 +2652,6 @@ form#newsletter-validate-details label.label span span {
 .subscribe-bottom a {  text-decoration: underline;}
 .subscribe-bottom {
     position: relative;
-    padding-left: 20px;
     float: left;
     width: 100%;
 }
@@ -2690,86 +2689,34 @@ form#newsletter-validate-details label.label span span {
     margin: 0 0 15px;
 }
 .form.subscribe span.b-close {
-    float: right;
-    width: 26px;
+       width: 26px;
     cursor: pointer;
+    position: absolute;
+    top: -60px;
+    right: 0px;
 }
 form#newsletter-validate-details {
-    background: #fff;
-    padding: 40px;
-    max-width: 700px;
+    background-color: #fff;
+    padding: 0px 40px 60px;
+    max-width: 660px;
     margin: 0 auto;
     float: none;
     width: 100%;
     display: table;
-    border-radius: 0 0 6px 6px;
-}
-
-form#newsletter-validate-details label.label {
-    font-size: 45px;
-    color: #E2AF9F;
-    margin-bottom: 30px;
-}
-
-form#newsletter-validate-details label.label span span {
-    color: #053052;
-    font-family: "BentonSans-Bold";
-}
-
-.subscribe-bottom, .subscribe-bottom a {
-    color: #CC9C8D;
-    font-size: 14px;
-    line-height: 24px;
-}
-
-.form.subscribe .subscribe-bottom a {
-    text-decoration: underline;
-}
-.form.subscribe .subscribe-bottom {
+    border-radius: 0 0 8px 8px;
     position: relative;
-    float: left;
-    width: 100%;
-}
-.subscribe-bottom input[type="radio"] {
-    position: absolute;
-    left: 0;
-    top: 3px;
-}
-.news-control-field input {
-    border: 1px solid #E2AF9F;
-    height: 58px;
-    font-size: 14px;
-    padding: 0 20px;
-}
-.news-control-field button { background: #E2AF9F; }
-.news-control-field .action.primary {
-    background: #E2AF9F;
-    border: none;
-    border-radius: 0;
-    height: 58px;
-    font-size: 18px;
-    font-family: "BentonSans-Bold";
-    width: 100%;
-    cursor: pointer;
-}
-.news-control-field  .actions {  width: 160px;  float: left; }
-.news-control-field .control {
-    width: calc(100% - 170px);
-    float: left;
-    margin-right: 10px;
-}
-.news-control-field {
-    float: left;
-    width: 100%;
-    margin: 0 0 15px;
-}
-.form.subscribe span.b-close {
-    float: right;
-    width: 26px;
-    cursor: pointer;
 }
 .form.subscribe .custom-control-label::before,
 .form.subscribe .custom-control-label::after {  top: 4px; }
+
+.content.newsletter-popup .title {  display: none; }
+div#newsletter_pop_up {max-width: 720px;width: 100%;}
+.content.newsletter-popup {
+    background-repeat: no-repeat;
+    background-position: center 0;
+    padding-top: 270px;
+    background-size: 100% auto;
+}
 
 
 /*===============-magento-common-classes-css-===============*/

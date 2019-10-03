@@ -15,7 +15,7 @@ $background = $mediaUrl.'logo/'. $block->getConfig('background');
 <div id="newsletter_pop_up" class="pt_newsletterpopup"  >
 
     
-    <div class="content newsletter-popup" style ='background:url(<?php echo $background;?>);'>
+    <div class="content newsletter-popup" style ='background-image:url(<?php echo $background;?>);'>
         <form class="form subscribe"
             novalidate
             action="<?php /* @escapeNotVerified */ echo $block->getFormActionUrl() ?>"
