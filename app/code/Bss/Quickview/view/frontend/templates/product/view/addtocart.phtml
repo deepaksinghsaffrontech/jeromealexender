@@ -18,37 +18,48 @@
 ?>
 <?php $_product = $block->getProduct(); ?>
 <?php $buttonTitle = __('Add to Cart'); ?>
-<?php if ($_product->isSaleable()) : ?>
-    <div class="box-tocart">
-        <div class="fieldset">
-            <?php if ($block->shouldRenderQuantity()) : ?>
-                <div class="field qty">
-                    <label class="label" for="qty"><span><?php /* @escapeNotVerified */ echo __('Qty') ?></span></label>
-                    <div class="control">
-                        <input 
-                            type="number"
-                            name="qty"
-                            id="qty"
-                            maxlength="12"
-                            value="<?php /* @escapeNotVerified */ echo $block->getProductDefaultQty() * 1 ?>"
-                            title="<?php /* @escapeNotVerified */ echo __('Qty') ?>" class="input-text qty"
-                            data-validate="<?php echo $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>"
-                        />
-                    </div>
-                </div>
-            <?php endif; ?>
-            <div class="actions">
-                <button
-                    type="submit"
-                    title="<?php /* @escapeNotVerified */ echo $buttonTitle ?>"
+
+<?php if(!empty($_product['shipping_info'])){?>
+<div class="product attribute overview">
+                          <h5>Shipping</h5>
+                          <p><?php echo $_product['shipping_info']; ?>.</p>
+                        </div>
+						
+<?php } ?>						
+<?php $buttonTitle = __('Add to Bag'); ?>
+<?php if ($_product->isSaleable()): ?>
+<div class="box-tocart">
+    <div class="fieldset">
+        <?php if ($block->shouldRenderQuantity()): ?>
+        <div class="field qty qty-col">
+            <label class="label" for="qty"><span><?= /* @escapeNotVerified */ __('Select a Quantity') ?></span></label>
+            <div class="qty-container">
+              <div class="qty-input">
+			  <button type="button" class="btnMin">-</button>
+                <input type="number"
+                       name="qty"
+                       id="qty"
+                       value="<?= /* @escapeNotVerified */ $block->getProductDefaultQty() * 1 ?>"
+                       title="<?= /* @escapeNotVerified */ __('Qty') ?>"
+                       class="input-text qty"
+                       data-validate="<?= $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>"
+                       />
+				<button type="button" class="btnAdd">+</button>
+            </div>
+			 </div>
+        </div>
+        <?php endif; ?>
+        <div class="actions">
+            <button type="submit"
+                    title="<?= /* @escapeNotVerified */ $buttonTitle ?>"
                     class="action primary tocart"
                     id="product-addtocart-button">
-                    <span><?php /* @escapeNotVerified */ echo $buttonTitle ?></span>
-                </button>
-                <?php echo $block->getChildHtml('', true) ?>
-            </div>
+                <span><?= /* @escapeNotVerified */ $buttonTitle ?></span>
+            </button>
+            <?= $block->getChildHtml('', true) ?>
         </div>
     </div>
+</div>
 <?php endif; ?>
 <?php if ($block->isRedirectToCartEnabled()) : ?>
     <script type="text/x-magento-init">
@@ -70,3 +81,26 @@
     }
     </script>
 <?php endif; ?>
+
+<script type="text/javascript"> 
+require(["jquery"], function(jQuery){
+  jQuery(document).ready(function(){
+    jQuery('.btnAdd').click(function() {
+		//alert('+++')
+      var oldVal = jQuery(this).parent().find("input").val();
+      if ( parseFloat(oldVal) >= 1 ) {
+        var newVal = parseFloat(oldVal) + 1;
+        jQuery(this).parent().find("input").val(newVal);
+      }
+    });
+
+    jQuery('.btnMin').click(function() {
+      var oldVal = jQuery(this).parent().find("input").val();
+      if ( parseFloat(oldVal) >= 2 ) {
+        var newVal = parseFloat(oldVal) - 1;
+        jQuery(this).parent().find("input").val(newVal);
+      }
+    });
+  });
+  });
+</script>
