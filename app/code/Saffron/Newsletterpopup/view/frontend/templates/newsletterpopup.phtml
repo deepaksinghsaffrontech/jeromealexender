@@ -44,8 +44,12 @@ $background = $mediaUrl.'logo/'. $block->getConfig('background');
             </div>
            
 			<div class="subscribe-bottom">
-				<input type="radio" id="newsletter_popup_dont_show_again">
-				<label for="newsletter_popup_dont_show_again">By joining, I accept Jerome Alexander’s <a href="<?php echo $this->getUrl('terms-conditions/');?>">Terms & Conditions and agree to receive Jerome Alexander’s marketing emails. You may unsubscribe at anytime.</label>
+				<div class="custom-control custom-radio">
+				<input type="radio" class="custom-control-input" id="newsletter_popup_dont_show_again">
+
+				<label for="newsletter_popup_dont_show_again">By joining, I accept Jerome Alexander’s <a href="<?php echo $this->getUrl('terms-conditions/');?>">Terms & Conditions</a> and agree to receive Jerome Alexander’s marketing emails. You may unsubscribe at anytime.</label>
+				</div>
+
 			</div>
         </form>
 		
