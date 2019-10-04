@@ -589,7 +589,14 @@
     .btn-primary { padding:11px 20px; }
     .customer-reviews { padding:0 25px; }
     .nav-tabs .nav-link { min-width:inherit; }
-    .box-tocart .actions { float: left; width: 100%; margin-top: 10px;    }
+    .box-tocart .actions { float: left; width: 100%; margin:0px;    }
+	.box-tocart .field.qty { width:100%; padding:0;}
+	.product-info-main .product-info-stock-sku { float:left; width:100%; padding:0; }
+	.product-info-main .product-info-price .price-box { width: 100%; display: inherit; float: left; }
+	.product-info-main .product-info-price { margin-bottom:30px; }
+	.product.data.items {  margin: 20px 0 0; }
+	.product.data.items>.item.title>.switch:visited,
+	.product.data.items>.item.title>.switch	{ color:#053052; font-size:16px; }
     .catalog-product-view .box-tocart .action.tocart, .box-tocart .action.tocart { min-width:100%;}
     .product-tabs .nav-tabs .nav-item { width: auto; }
     .product-tabs .nav-tabs { top:-39px; }
