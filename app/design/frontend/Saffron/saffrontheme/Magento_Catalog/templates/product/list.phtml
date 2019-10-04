@@ -338,3 +338,28 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
 <?php endif; ?>
 <?php }?>
 
+
+
+  <script type="text/javascript">
+function popupSubcategory(obj)
+{
+jQuery(document).ready(function($){
+  alert(obj);
+  //var vediourl = $("#idvedio-"+obj).val();
+  $("#loderpop").addClass("showpopup");
+  //alert(vediourl);
+  /*$.ajax({
+        url: "<?php echo $this->getBaseUrl()?>/shopall/index/Vediotitorial/",
+        type: "GET",
+        data:  {"id":obj,"vediourl":vediourl},
+        success: function(response){
+			//alert(response);
+			
+		$('#popup-image').html(response);	
+		$("#popup-modal1").modal("openModal");
+        }
+	  });*/
+  $("#loderpop").removeClass("showpopup");
+});
+}
+</script>
