@@ -14,4 +14,15 @@ foreach ($orderItems as $item) {
    echo $currentproduct->getShortDescription();
    echo $currentproduct->getUrl();
 }
+
+
+
+$now = new \DateTime();
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$OrderFactory = $objectManager->create('Magento\Sales\Model\ResourceModel\Order\CollectionFactory');
+$orderCollection = $OrderFactory->create()->addFieldToSelect(array('*'));
+$orderCollection->addFieldToFilter('created_at', ['lteq' => $now->format('Y-m-d H:i:s')])->addFieldToFilter('created_at', ['gteq' => $now->format('2019-05-01 H:i:s')]);
+echo "<pre>"; print_r($orderCollection->getData());
+
+
 ?>
