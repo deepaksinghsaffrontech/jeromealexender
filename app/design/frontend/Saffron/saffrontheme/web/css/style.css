@@ -107,6 +107,7 @@ button:hover, button:focus {
 }
 /*--/btn-css--*/
 
+.navigation > ul { display:flex; }
 .navigation ul.ui-menu { display: flex; align-items: center; position: initial; }
 .navigation li.level0 { flex: 1; text-align: center; margin: 0;	position:initial;
 	display: flex;  justify-content: center; }
