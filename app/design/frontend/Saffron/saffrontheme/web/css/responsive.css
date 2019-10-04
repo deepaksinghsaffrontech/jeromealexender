@@ -19,7 +19,7 @@
     .nav-sections .satisfaction-carousel { display:none; }
 	.nav-sections { z-index:1;}
 	.navigation .level0 .submenu {  left: 0 !important; right: 0;  border: none;  background: #fff;
-	box-shadow: 0 3px 5px #a7a7a7; transition:all 0.3s ease; z-index:-1; }
+	box-shadow: 0 3px 5px #ddd; transition:all 0.3s ease; z-index:-1; }
 	.navigation .level0:hover .submenu { z-index:1; }
 	.page-products .columns { z-index:inherit; }
 	.menu-container { max-width: 1600px; display: flex; margin: 0 auto; width: 92%; padding:40px 0; }
@@ -338,6 +338,14 @@
 	
 
 }
+
+@media (max-width:1024px) {
+.navigation ul.ui-menu { align-items: inherit; display: inherit; }
+.navigation li.level0 { display: inherit; float: initial; justify-content: inherit; text-align: left; }
+.menu-best-seller {  display: none; }
+	
+}
+
 
 @media (max-width:991px) {
 
