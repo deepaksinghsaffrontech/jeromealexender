@@ -1,37 +1,26 @@
 <?php
-$objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
-$orderDatamodel = $objectManager->get('Magento\Sales\Model\Order')->getCollection()->getLastItem();
-$orderId   =   $orderDatamodel->getId();
-$order = $objectManager->create('\Magento\Sales\Model\Order')->load($orderId);
-$orderItems = $order->getAllItems();
-//echo $order->getCreatedAt();
-foreach ($orderItems as $item) {
-   //echo $product_name=   $item->getName();
-   $product_id =   $item->getId();
-   $objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
-   $currentproduct = $objectManager->create('Magento\Catalog\Model\Product')->load($item->getId());
-    //echo $currentproduct->getName();
-   //echo $currentproduct->getShortDescription();
-   //echo $currentproduct->getUrl();
-}
-
-
-
-/*$now = new \DateTime();
-$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-$OrderFactory = $objectManager->create('Magento\Sales\Model\ResourceModel\Order\CollectionFactory');
-$orderCollection = $OrderFactory->create()->addFieldToSelect(array('*'));
-$orderCollection->addFieldToFilter('created_at', ['lteq' => $now->format('Y-m-d H:i:s')])->addFieldToFilter('created_at', ['gteq' => $now->format('2019-05-01 H:i:s')]);
-echo "<pre>"; print_r($orderCollection->getData());
-
-*/
-
-$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-$cookieManager = $objectManager->get('Magento\Framework\Stdlib\CookieManagerInterface');
-
-// Set cookie
-$cookieManager->setPublicCookie('cookiename', '1');
-echo'<br>';
-echo $cookieManager->getCookie('cookiename');
-
+$randid =$this->getRandid();
+$products  = $this->getAllproducts($randid['increment_id']);
+//print_r($products);
 ?>
+
+<div class="advertise-bx">
+<button class="close-add"><i class="fa fa-times"></i></button>
+  <a href="<?php  echo $products['items'][0]['producturl']?>" > 
+   <div class="advertise-img">
+   <img src=" <?php  echo  $this->getMedia().'catalog/product'.$products['items'][0]['productImage']?>" alt="" class="img-fluid">  
+    </div>
+   <div class="advertise-info">
+   <p><?php  echo $products['order_name']?> from <?php  echo $products['region']?> has purchased a</p>
+   <h6><?php  echo $products['items'][0]['name']?></h6>
+   <?php 
+  
+ $date1 = date('m/d/Y h:i:s', time());
+ $date2 = $products['order_date'];
+$seconds = strtotime($date1) - strtotime($date2);
+$hours = $seconds / 60 /  60;
+  ?>
+   <span>about <?php echo round($hours) ;?> hours ago</span>
+   </div> 
+   </a>
+  </div>
