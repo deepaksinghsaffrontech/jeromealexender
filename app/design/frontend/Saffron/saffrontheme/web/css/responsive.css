@@ -333,6 +333,10 @@
     .side-btn .btn1 {  margin-bottom: 10px;    }
 	.clock1 .right-col h4 { font-size:34px; }
 	.magic-carousel{ padding:0 30px;}
+	.sidebar-ask { width:35.833333%;}
+	.ask-jerome-banner { width:64.166667%; }
+	.contentmanager-contentlist-1 .column-ask { margin:20px 0 0; width:100%; }
+	.caption-inner { bottom:-130px; }
 	
 	
 	
@@ -631,6 +635,12 @@
 	.news-control-field .control { width: calc(100% - 93px); }
 	.news-control-field input {  padding: 0 10px; }
 	.news-control-field .control { margin-right:7px; }
+	.ask-detail-banner figure img { min-height: 350px;  object-fit: cover; }
+	.jerome-description { padding-top:20px; }
+	.jerome-description .social-col { margin-top:40px; }
+	.other-tutorials {  padding-top: 50px; }
+	.jerome-description ul.social-links li.beauty-li { margin-bottom:10px; }
+	.jerome-description ul.social-links { text-align:center; padding:10px; }
 	
 
 }
