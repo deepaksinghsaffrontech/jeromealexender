@@ -25,7 +25,9 @@ $type = 'widget-new-grid';
 
                           <div class="seller-info">
                                 <div class="star-col">
-                          
+                            <?php if ($templateType): ?>
+			<?php echo $block->getReviewsSummaryHtml($_product, $templateType,true); ?>
+			<?php endif; ?>
 						  </div>
 						  
 						     <div class="seller-name-col">
@@ -45,7 +47,7 @@ $type = 'widget-new-grid';
                            ?>
 											
 						</p>
-						  
+						  <span class="price-span"><?php echo $block->getProductPrice($_product);?></span>
                           </div>
 				
 	              </div>
