@@ -7,8 +7,7 @@ use Magento\Customer\Model\Context;
 use Magento\Framework\App\ResourceConnection;
 
 class Shopcategries extends \Magento\Catalog\Block\Product\AbstractProduct {
-
-    	/**
+ 	/**
      * Default value for products count that will be shown
      */
     const DEFAULT_PRODUCTS_COUNT = 10;
@@ -74,9 +73,10 @@ class Shopcategries extends \Magento\Catalog\Block\Product\AbstractProduct {
 			return parent::_prepareLayout();
 		}
 	
+	
 	 protected function getCustomerGroupId()
 			{
-				$customerGroupId =   (int) $this->getRequest()->getParam('cid');
+				$customerGroupId =   (int) $this->getRequest()->getParam('id');
 				if ($customerGroupId == null) {
 					$customerGroupId = $this->httpContext->getValue(Context::CONTEXT_GROUP);
 				}
