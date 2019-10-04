@@ -1,1 +1,11 @@
-skincareactive
+
+<?php
+
+$_product = $block->getProduct();
+
+$myattribute = $_product->getResource()->getAttribute('skincareactive')->getFrontend()->getValue($_product);
+
+echo $myattribute;
+
+?>
+ffg
