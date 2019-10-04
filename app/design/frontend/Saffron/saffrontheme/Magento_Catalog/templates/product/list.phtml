@@ -375,4 +375,29 @@ jQuery(document).ready(function($){
   $("#loderpop").removeClass("showpopup");
 });
 }
+
+jQuery(document).ready(function($){
+  var  str = window.location.href ;
+  var n = str.includes("?");
+  var c = url.searchParams.get("id");
+	if((n == true)){
+		 alert(c); 
+	 $.ajax({
+        url: "<?php echo $this->getBaseUrl()?>/shopall/index/shopcategries/",
+        type: "GET",
+        data:  {"id":c},
+        success: function(response){
+			//alert(response);
+			
+		$('#shopallproduct').html(response);	
+		//$("#popup-modal1").modal("openModal");
+		
+		 //window.history.pushState({ path: newurl }, '', newurl);
+        }
+	  });
+	 
+	 }  
+	
+	
+	});
 </script>
