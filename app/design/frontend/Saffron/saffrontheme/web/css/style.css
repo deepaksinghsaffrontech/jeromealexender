@@ -2741,6 +2741,7 @@ div#newsletter_pop_up {
 .subscribe-bottom .custom-control-label::before {  border: #CC9C8D solid 1px; }
 .contentmanager-contentlist-2 .banner-inner p { display: none; }
 .catalog-category-view .page-title-wrapper h1 {  font-size: 30px; }
+.catalog-category-view.categorypath-shop-all .page-title-wrapper h1 {  font-size: 50px; }
 body.page-layout-1column.page-with-filter .column.main {  padding-top: 0; }
 .catalog-category-view .filter.block {  display: none; }
 .category-lissting {  margin: 0; }
@@ -2961,6 +2962,8 @@ ul.disc li {
 .cms-noroute-index .page-title-wrapper h1 {  text-transform: capitalize; }
 .contentmanager-contenttype-asfjerome .breadcrumbs {  text-align: center; }
 .navigation li.level0.active > a {  background: #ffdcd5; }
+.shop-banner-content { margin-top: 30px; }
+
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
