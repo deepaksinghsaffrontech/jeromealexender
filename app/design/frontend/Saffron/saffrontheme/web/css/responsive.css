@@ -267,7 +267,7 @@
 	.sidebar-ask,
 	.page-layout-2columns-left .sidebar-main	{ width: 24.83333333%; }
     .column-ask, .page-layout-2columns-left .column.main,
-	.ask-jerome-banner	{ width: 75.16666667%;  }
+	.ask-jerome-banner, .store-locator-module	{ width: 75.16666667%;  }
 	.contentmanager-contentlist-1 .column-ask { margin-left: 24.833333%;  width: calc(100% - 24.83333333%);	}
 	
 	.side-btn .btn { padding: 10px 5px;  font-size: 16px;	}
@@ -677,7 +677,7 @@
 	.singin-group p { font-size:15px; }
 	.customer-account-forgotpassword .page-main { padding-left:15px; padding-right:15px; }
 	body.customer-account-create .page-wrapper .page-main { padding:70px 0 40px; }
-	
+	.catalog-product-view .box-tocart .action.tocart, .box-tocart .action.tocart span {  font-size: 14px; }
 	
 	
 	
