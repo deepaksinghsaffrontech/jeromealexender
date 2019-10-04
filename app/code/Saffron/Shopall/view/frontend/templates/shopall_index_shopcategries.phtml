@@ -16,10 +16,8 @@ $type = 'widget-new-grid';
 <?php foreach($shopallproduct as $_product) {
 		$productImage = $block->getImage($_product, $image);
 		?>
-		 
-		 <figure><a href="<?php  echo $_product->getUrl(); ?>" ><?php echo $productImage->toHtml() ?></a></figure>
-                    
-		     <!--<div class="col-lg-4 col-md-6 col-12" >
+		 <?php  echo $_product->getUrl(); ?>
+		      <!--<div class="col-lg-4 col-md-6 col-12" >
                                   <div class="category-item">
                      <figure><a href="<?php  echo $_product->getUrl(); ?>" ><?php echo $productImage->toHtml() ?></a></figure>
                                
