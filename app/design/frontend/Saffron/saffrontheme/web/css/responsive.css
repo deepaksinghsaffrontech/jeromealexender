@@ -564,7 +564,7 @@
     .singin-dropdown { min-width:220px; top:100%; }
     .header-search .form-group { margin:0; }
     .minicart-wrapper .action.showcart.active {   display: flex;    }
-	.caption-inner { width: calc(100% - 30px);  margin: -20px 15px 0;  position: relative; padding:20px 15px; }
+	.caption-inner { width: calc(100% - 30px);  margin: -60px 15px 0;  position: relative; padding:20px 15px; }
     .ask-jerome-banner { margin-bottom: 30px; }
     .sign-feature { flex-wrap: wrap; margin:0;  }
     .sign-feature .quick-item { padding:0 0 20px; display: flex;     align-items: center;     }
@@ -597,15 +597,20 @@
 	.column-ask {  order: 3; margin-top:20px; }
 	.sidebar-filter {  display: none; padding:0 15px; }
 	.filter-tutorials-m {
-		display: flex;
 		background: #f8f8f8;
 		padding: 15px;
-		align-items: center;
-		justify-content: center;
 		margin-bottom: 20px;
 		font-size: 18px;
 		font-family: "BentonSans-Bold";
+		text-align: center;
 	}
+	.filter-tutorials-m img { width: 19px; height: auto;  margin-right: 1px; }
+	.filter-tutorials-m i { display: none; }
+	.popular-item { margin-bottom:25px; }
+	.contentmanager-contentlist-1 .page-main {  padding: 0; }
+	.contentmanager-contentlist-1 .sidebar-ask,
+	.contentmanager-contentlist-1 .column-ask	{ padding: 0 15px; }
+	
 	.column-ask .title-main.title2 { font-size: 26px;text-align: center;display: inherit;margin: 0 0 20px;	}
 	.column-ask .title-main.title2:before {  display: none; }
 	.sidebar-filter h5 { font-size:20px; }
@@ -624,5 +629,6 @@
 	.news-control-field .control { width: calc(100% - 93px); }
 	.news-control-field input {  padding: 0 10px; }
 	.news-control-field .control { margin-right:7px; }
+	
 
 }

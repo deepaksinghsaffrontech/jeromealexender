@@ -1542,7 +1542,7 @@ select:not([disabled]):focus {  box-shadow: none; }
 	text-transform:capitalize;
 }
 .read-more-link:hover{ text-decoration:none; }
-.ask-jerome-inner {  margin-bottom: 80px; }
+.ask-jerome-inner {  margin-bottom: 20px; }
 .title-main.title2 {  margin-left: 0;   margin-right: 0; }
 .banner-notfront{  position: relative; }
 .caption-inner {
