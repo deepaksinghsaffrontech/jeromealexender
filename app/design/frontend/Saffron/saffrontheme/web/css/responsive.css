@@ -658,6 +658,13 @@
 	.shipping-method-ul li { font-size: 14px; line-height: 24px; padding:10px 0; }
 	.gauranty-col h4 { font-size: 20px; line-height: 28px; }
 	body .navigation a, body .navigation a:hover { color: #053052; font-size: 14px; }
+	.customer-container p { font-size: 20px; line-height: 30px; }
+	.customer-bx li { flex: 1 1 100%;  padding-right: 0; }
+	.customer-container { padding-bottom:0; }
+	.cms-customer-services .columns,
+	.cms-shipping-returns .columns	{ padding-bottom: 50px; }
+	.cms-shipping-returns .columns .column.main,
+	.cms-customer-services .columns .column.main	{ padding-bottom:0;}
 	
 	
 
