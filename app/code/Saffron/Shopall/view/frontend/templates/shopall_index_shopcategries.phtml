@@ -8,7 +8,7 @@
                                   <div class="category-item">
 			 <figure><a href="<?php  echo $_product->getUrl(); ?>" ><?php //echo $productImage->toHtml() ?></a></figure>
 								  
-						<div id="quickview-<?php echo $_product->getId();?>" class="bss-bt-quickview">
+				<div id="quickview-<?php echo $_product->getId();?>" class="bss-bt-quickview">
 				<a class="bss-quickview" data-quickview-url="<?php echo $this->getUrl('');?>/bss_quickview/catalog_product/view/id/<?php echo $_product->getId();?>" href="javascript:void(0);"><span>Quick View </span></a>
 				</div>
 
@@ -16,6 +16,25 @@
                                 <div class="star-col">
                           
 						  </div>
+						  
+						     <div class="seller-name-col">
+                                 <a href="<?php  echo $_product->getUrl(); ?>" class="title-name"><?php  echo $_product->getName(); ?></a>
+                                 <p>
+
+											<?php //echo $_product->getShortDescription(); ?>
+						<?php 
+						$short_description = $_product->getShortDescription();
+	                    $short_description = preg_replace("/<img[^>]+\>/i", "", $short_description); 
+                         if (strlen($short_description) > 100){
+                        echo strip_tags(substr($short_description, 0, strpos($short_description,' ',100))).'...';
+                           } 
+                       else { 
+                       echo strip_tags($short_description); 
+                           }
+                           ?>
+											
+						</p>
+						  
                           </div>
 				
 	</div>
