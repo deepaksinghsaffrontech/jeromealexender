@@ -195,7 +195,7 @@ $childCategories = $subcategory->getChildrenCategories();
                     //{
                     $html .= '<ul class="category-body">';
 					$html .= '<li>';
-					$html .= '<a href="javascript:void(0)"     title="' . $subcategory->getUrl() . '"  onclick="popupSubcategory(2)"  > Shop All ' . $subcategory->getName() . '</a>';
+					$html .= '<a href="javascript:void(0)"     title="' . $subcategory->getUrl() . '"  onclick="popupSubcategory(' . $category->getId(). ')"  > Shop All ' . $subcategory->getName() . '</a>';
                     $html .= '</li>';
                     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();		
 					$productCollection = $objectManager->create('Magento\Catalog\Model\ResourceModel\Product\CollectionFactory');
