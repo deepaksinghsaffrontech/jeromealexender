@@ -2966,6 +2966,16 @@ ul.disc li {
 .navigation li.level0.active > a {  background: #ffdcd5; }
 .shop-banner-content { margin-top: 30px; }
 .category-view {  float: left;   width: 100%; }
+.checkout-payment-method .payment-method-title { padding-left:0; padding-right:0; }
+.checkout-payment-method .billing-address-same-as-shipping-block {
+    position: relative;
+    padding-left: 20px;
+}
+
+.checkout-payment-method .billing-address-same-as-shipping-block input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+}
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
