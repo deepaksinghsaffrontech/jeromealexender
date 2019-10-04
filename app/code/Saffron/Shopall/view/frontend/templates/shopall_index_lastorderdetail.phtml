@@ -4,25 +4,34 @@ $orderDatamodel = $objectManager->get('Magento\Sales\Model\Order')->getCollectio
 $orderId   =   $orderDatamodel->getId();
 $order = $objectManager->create('\Magento\Sales\Model\Order')->load($orderId);
 $orderItems = $order->getAllItems();
-echo $order->getCreatedAt();
+//echo $order->getCreatedAt();
 foreach ($orderItems as $item) {
-   echo $product_name=   $item->getName();
+   //echo $product_name=   $item->getName();
    $product_id =   $item->getId();
    $objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
    $currentproduct = $objectManager->create('Magento\Catalog\Model\Product')->load($item->getId());
-    echo $currentproduct->getName();
-   echo $currentproduct->getShortDescription();
-   echo $currentproduct->getUrl();
+    //echo $currentproduct->getName();
+   //echo $currentproduct->getShortDescription();
+   //echo $currentproduct->getUrl();
 }
 
 
 
-$now = new \DateTime();
+/*$now = new \DateTime();
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
 $OrderFactory = $objectManager->create('Magento\Sales\Model\ResourceModel\Order\CollectionFactory');
 $orderCollection = $OrderFactory->create()->addFieldToSelect(array('*'));
 $orderCollection->addFieldToFilter('created_at', ['lteq' => $now->format('Y-m-d H:i:s')])->addFieldToFilter('created_at', ['gteq' => $now->format('2019-05-01 H:i:s')]);
 echo "<pre>"; print_r($orderCollection->getData());
 
+*/
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$cookieManager = $objectManager->get('Magento\Framework\Stdlib\CookieManagerInterface');
+
+// Set cookie
+$cookieManager->setPublicCookie('cookiename', '1');
+echo'<br>';
+echo $cookieManager->getCookie('cookiename');
 
 ?>
