@@ -1,13 +1,12 @@
-<?php
-
-namespace Saffron\Shopall\Block\Index;
+<?php 
+namespace Saffron\Bestsellerproduct\Block;
 use Magento\Catalog\Model\Resource\Product\Collection;
 use Magento\Framework\View\Element\AbstractBlock;
 use Magento\Customer\Model\Context;
 use Magento\Framework\App\ResourceConnection;
-
-class Shopcategries extends \Magento\Catalog\Block\Product\AbstractProduct {
- 	/**
+class Shopcategries extends \Magento\Catalog\Block\Product\AbstractProduct 
+{
+		/**
      * Default value for products count that will be shown
      */
     const DEFAULT_PRODUCTS_COUNT = 10;
@@ -42,9 +41,14 @@ class Shopcategries extends \Magento\Catalog\Block\Product\AbstractProduct {
 	protected $connection;
 	protected $resource;
 	
-
-
-   public function __construct(
+    /**
+     * @param Context $context
+     * @param \Magento\Catalog\Model\Resource\Product\CollectionFactory $productCollectionFactory
+     * @param \Magento\Catalog\Model\Product\Visibility $catalogProductVisibility
+     * @param \Magento\Framework\App\Http\Context $httpContext
+     * @param array $data
+     */
+		public function __construct(
 			\Magento\Catalog\Block\Product\Context $context,
 			\Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $productCollectionFactory,
 			\Magento\Catalog\Model\Product\Visibility $catalogProductVisibility,
@@ -72,73 +76,66 @@ class Shopcategries extends \Magento\Catalog\Block\Product\AbstractProduct {
 
 			return parent::_prepareLayout();
 		}
-	
-	
-	 protected function getCustomerGroupId()
+		
+		public function getConfig($value=''){
+
+		   $config =  $this->_scopeConfig->getValue('bestsellerproduct/new_status/'.$value, \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+		   return $config; 
+		 
+		}
+		  protected function getCustomerGroupId()
 			{
-				$customerGroupId =   (int) $this->getRequest()->getParam('id');
+				$customerGroupId =   (int) $this->getRequest()->getParam('cid');
 				if ($customerGroupId == null) {
 					$customerGroupId = $this->httpContext->getValue(Context::CONTEXT_GROUP);
 				}
 				return $customerGroupId;
 			}
 
-	/*public function getShopall(){
-    $category_id= 2;
-	$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-    $subcategory = $objectManager->create('Magento\Catalog\Model\Category')->load($category_id);           
-    $childCategories = $subcategory->getChildrenCategories();
-
-	$categries = array();
-	$count = 1;
-	foreach($childCategories as $childCategory )
-        {
-	    $childCategorys = $objectManager->create('Magento\Catalog\Model\Category')->load($childCategory->getId());           
-   
-		$categries['categries_id'][$count] =$childCategorys;
 		
-	    
-		$count++; 
-		}		
-	
-	
-	return $categries ;
-	
-	}*/
-	
-	public function getShopaName(){
-    $categoryId  = $_GET['id'];
-	$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-    $subcategory = $objectManager->create('Magento\Catalog\Model\Category')->load($categoryId);           
-    //$childCategories = $subcategory->getChildrenCategories();
+ public function getShopallproduct()
+			{
+				
+			
+				
+			$objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
+			$categoryFactory = $objectManager->get('\Magento\Catalog\Model\CategoryFactory');
+			$categoryId = 	$_GET['id'];
+			$category = $categoryFactory->create()->load($categoryId);
+			$categoryProducts = $category->getProductCollection()->addAttributeToSelect('*');	 
+			$producIds = array(); 
+  			
+			
+			foreach ($categoryProducts as $row) {
+				$producIds[] = $row['entity_id'];
+			}
+			
+			//echo"<pre>";print_r($producIds);
+			$products = array();
+			foreach($producIds as $product_id) {
+			$product = $this->productFactory->create()->load($product_id);
+			if($product->getVisibility() == 2||$product->getVisibility() == 3||$product->getVisibility() == 4)
+				$products[] = $product;	
+					
+			}
+			
+			//echo count($products) ;
+			if(count($products)>=1)
+				return $products;
+				return array();
+			
+			}   
 
-	
-	return $subcategory->getName() ;
-	
-	}
-
-public function getShopallproduct(){
-
-$objectManager =  \Magento\Framework\App\ObjectManager::getInstance();        
-$categoryFactory = $objectManager->get('\Magento\Catalog\Model\CategoryFactory');
-$categoryHelper = $objectManager->get('\Magento\Catalog\Helper\Category');
-$categoryRepository = $objectManager->get('\Magento\Catalog\Model\CategoryRepository');
-$store = $objectManager->get('Magento\Store\Model\StoreManagerInterface')->getStore();
-$categoryId  = $_GET['id'];
-$category = $categoryFactory->create()->load($categoryId);
-
-$categoryProducts = $category->getProductCollection()
-                               //->setPageSize(3)
-							   ->addAttributeToSort('entity_id', 'desc')
-                             ->addAttributeToSelect('*');
-							 
-	
-
-return 	$categoryProducts ;
-
-		
-}
-
-  
+ public function getShopaName()
+			{
+            $objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
+			$categoryFactory = $objectManager->get('\Magento\Catalog\Model\CategoryFactory');
+			$categoryId = 	$_GET['id'];
+			$category = $categoryFactory->create()->load($categoryId);
+			 
+			 return $category->getUrl();
+			
+			
+			}			
 
 }
