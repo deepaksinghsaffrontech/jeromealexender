@@ -1,5 +1,5 @@
 <?php 
-namespace Saffron\Bestsellerproduct\Block;
+namespace Saffron\Shopall\Block\Index;
 use Magento\Catalog\Model\Resource\Product\Collection;
 use Magento\Framework\View\Element\AbstractBlock;
 use Magento\Customer\Model\Context;
