@@ -878,7 +878,7 @@ header.page-header { position: relative;  z-index: 2; }
     font-family: "BentonSans-Regular";
 }
 .create-account-page .col-12 {  margin: 0 auto; }
-.banner-inner { padding: 50px 0;  text-align: center; border-bottom:2px solid #FCDCD4; }
+.banner-inner { padding: 50px 0 60px;  text-align: center; border-bottom:2px solid #FCDCD4; }
 .contentmanager-contentlist-2 .banner-inner { background: #FCDCD4;  padding: 80px 0; border-bottom:none;}
 .faq-panel {
     float: left;
@@ -909,7 +909,7 @@ header.page-header { position: relative;  z-index: 2; }
 .faq-panel h5 .fa {  float: right; }
 .breadcrumbs {
     padding: 20px 0;
-    margin:0;
+    margin:0 0 30px;
     float: left;
     width: 100%;
     max-width:100%;
@@ -2960,6 +2960,7 @@ ul.disc li {
 .cms-noroute-index .column.main a { text-decoration: underline;  font-family: "BentonSans-Bold"; }
 .catalogsearch-result-index .search-results {  border-bottom: 1px solid #053052;  margin-bottom: 60px; }
 .catalogsearch-result-index .search-results + .front-best-seller .container {  padding: 0; }
+.cms-noroute-index .page-title-wrapper h1 {  text-transform: capitalize; }
 
 
 /*===============-magento-common-classes-css-===============*/
