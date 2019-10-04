@@ -99,8 +99,7 @@ button:hover, button:focus {
 .shopbest-col-btm .btn { color: #fff; }
 .btn-primary:hover,
 .btn2:hover,
-.create-bx .btn:hover,
-.subscribe-newsletter .signup-box .singup-btn:hover {
+.create-bx .btn:hover {
     background-color: #E2AF9F;
     border-color: #E2AF9F;
     color:#053052;
@@ -109,8 +108,9 @@ button:hover, button:focus {
 /*--/btn-css--*/
 
 .navigation ul.ui-menu { display: flex; align-items: center; position: initial; }
-.navigation li.level0 { flex: 1; text-align: center; margin: 0;	position:initial; }
-.navigation .level0 { display:}
+.navigation li.level0 { flex: 1; text-align: center; margin: 0;	position:initial;
+	display: flex;  justify-content: center; }
+.navigation .level0>.level-top { width:100%; }
 
 .header-navbar { float: left; background: #F9F9F8;  width: 100%; }
 .page-main, .front-banner { float: left; width: 100%; }
@@ -951,11 +951,17 @@ header.page-header { position: relative;  z-index: 2; }
 }
 
 .banner-inner .form-group input::placeholder,
-.news-control-field input::placeholder { color:#053052; }
+.news-control-field input::placeholder,
+.subscribe-newsletter .signup-box .form-group input::placeholder { color:#053052; }
+
 .banner-inner .form-group input:-ms-input-placeholder,
-.news-control-field input:-ms-input-placeholder { color:#053052; }
+.news-control-field input:-ms-input-placeholder,
+.subscribe-newsletter .signup-box .form-group input:-ms-input-placeholder { color:#053052; }
+
 .banner-inner .form-group input::-ms-input-placeholder,
-.news-control-field input:-ms-input-placeholder { color:#053052; }
+.news-control-field input:-ms-input-placeholder,
+.subscribe-newsletter .signup-box .form-group input:-ms-input-placeholder { color:#053052; }
+
 .banner-inner .header-search button.search-btn {
     height: 52px;
     left: 0;
@@ -2859,7 +2865,7 @@ div#ajax-goto + .product-info-main {  margin-top: 50px; }
 .newsletter-signup-bx .sign-feature {justify-content: center;}
 .newsletter-signup-bx .signup-box p, .newsletter-signup-bx .signup-box h4 {  display: none; }
 .subscribe-newsletter .signup-box .form-group input {
-    font-size: 14px;
+    font-size: 16px;
     border: 1px solid #A9AAAC;
     border-radius: 0;
     height: 44px;
@@ -2913,6 +2919,11 @@ div#ajax-goto + .product-info-main {  margin-top: 50px; }
 .customer-group { display: flex; }
 .customer-group .customer-connect {  margin-right: 30px; }
 .search-customer .customer-group {  margin: 30px 0; }
+.newsletter-signup-bx .subscribe-newsletter .signup-box .singup-btn:hover  {
+    background: #053052;
+    border-color: #053052;
+    color: #fff;
+}
 
 
 /*===============-magento-common-classes-css-===============*/
@@ -2924,7 +2935,7 @@ div#ajax-goto + .product-info-main {  margin-top: 50px; }
     width: 94%;
 	padding:0 15px;
 }
-.catalogsearch-result-index .banner-title-notfront { margin: 20px auto 0; }
+.catalogsearch-result-index .banner-title-notfront { margin: 20px auto 50px; }
 .navigation .level0.parent>.level-top>.ui-menu-icon:after{ display:none; }
 .form-create-account {
     min-width: 100%;
