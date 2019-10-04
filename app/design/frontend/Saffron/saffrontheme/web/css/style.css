@@ -1263,8 +1263,8 @@ ul.sidebar-category {
     color: #053052;
     font-size: 16px;
 }
-.form-group > label {  font-family: "BentonSans-Medium";   font-size:16px;  }
-.form-group > label span {  color: #E2AF9F; margin-bottom:7px;  }
+.form-group > label {  font-family: "BentonSans-Medium";   font-size:16px; margin-bottom:7px; }
+.form-group > label span {  color: #E2AF9F;   }
 .tab-pane-inner {  float: left;  width: 100%;   padding: 30px 0; }
 .pagination2 {  text-align: center;  margin: 30px 0 0; }
 .pagination2 a {

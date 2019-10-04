@@ -482,9 +482,8 @@
     .name-date-column { margin-bottom:10p;  }
     .contact-form, .callus-col {  margin-top: 40px; float: left;  width: 100%;}
     .sign-feature .quick-item { text-align: center; }
-    .quick-item p { font-size:13px; margin:0;   }
+    .quick-item p { font-size:16px; margin:0;   }
     .quick-item p br, .account-bx .text br { display:none; }
-    .account-bx h3 { font-size:22px;  }
     .title-main,
     .real-women-row .title-main,
     .magic-makeup-row .title-main { font-size:30px; margin-bottom:35px;  }
@@ -665,6 +664,16 @@
 	.cms-shipping-returns .columns	{ padding-bottom: 50px; }
 	.cms-shipping-returns .columns .column.main,
 	.cms-customer-services .columns .column.main	{ padding-bottom:0;}
+	.account-bx { padding:20px 20px 10px; margin-bottom:30px; }
+	.form-group > label .forgot-link { font-size:13px; }
+	.customer-account-forgotpassword .columns{ padding:0 20px 50px; display: table; margin: 0 auto;float: none;}
+	.customer-account-forgotpassword .page-title-wrapper.banner-title-notfront {  
+	padding: 20px 20px 0; display: table; }
+	.customer-account-forgotpassword .page-title-wrapper.banner-title-notfront h1,
+	.account-bx h3{ font-size:24px;}
+	.singin-group p { font-size:15px; }
+	
+	
 	
 	
 
