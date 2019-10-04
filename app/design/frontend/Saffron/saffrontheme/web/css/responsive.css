@@ -225,7 +225,6 @@
     .menu-child{ display:none; }   
     /* .header-navbar .navbar-nav > li{ width: auto; padding: 20px 23px;  } */
     .front-banner h1{ font-size:60px; }
-    .advertise-bx{ position:relative; top:inherit; left:inherit; right:inherit; float:none; margin:0 auto 12px;}
     .banner-subtitle h3 { font-size:36px; margin:0 0 6px; display:block;   }
     h1, h2, h3,	.catalog-category-view.categorypath-shop-all .page-title-wrapper h1,
 	.banner-inner h1 { font-size:40px;  }
@@ -337,13 +336,16 @@
 	.clock1 .right-col h4 { font-size:34px; }
 	.magic-carousel{ padding:0 30px;}
 	.sidebar-ask { width:35.833333%; padding-right:30px; }
-	.ask-jerome-banner, .column-ask { width:64.166667%; }
+	.ask-jerome-banner, .column-ask,
+	.store-locator-module	{ width:64.166667%; }
 	.contentmanager-contentlist-1 .column-ask { margin:20px 0 0; width:100%; }
 	.caption-inner { bottom:-130px; }
 	.contact-form, .callus-col {  float: left;  width: 100%; }
 	.callus-col { margin-top: 40px; }
 	.gauranty-col h4 { font-size: 24px;  line-height: 32px; }
-	
+	.store-locator-navigation { width:100%; padding:0;height:auto; }
+	.store-locator-results { height:auto; }
+	.store-locator-map { float: left;  width: 100%; }
 	
 	
 
@@ -673,6 +675,8 @@
 	.customer-account-forgotpassword .page-title-wrapper.banner-title-notfront h1,
 	.account-bx h3{ font-size:24px;}
 	.singin-group p { font-size:15px; }
+	.customer-account-forgotpassword .page-main { padding-left:15px; padding-right:15px; }
+	body.customer-account-create .page-wrapper .page-main { padding:70px 0 40px; }
 	
 	
 	
