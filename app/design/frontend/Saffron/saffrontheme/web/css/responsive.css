@@ -17,7 +17,7 @@
     .nav-sections-item-content>.navigation {  background: none; position: initial;  }
     .navigation { max-width: 1600px; width: 100%; }
     .nav-sections .satisfaction-carousel { display:none; }
-	.nav-sections { z-index:1;}
+	.nav-sections { z-index:2;}
 	.navigation .level0 .submenu {  left: 0 !important; right: 0;  border: none;  background: #fff;
 	box-shadow: 0 3px 5px #ddd; transition:all 0.3s ease; z-index:-1; }
 	.navigation .level0:hover .submenu { z-index:1; }
@@ -241,9 +241,7 @@
     margin-right: 15px;
     width: calc(100% - 30px);
      }
-     .real-women-row {
-        padding-bottom: 100px;
-    }
+    .real-women-row {  padding-bottom: 100px;     }
     .real-women-row .video-col { margin-bottom:0; }
     .magic-image-col { width:200px;  }
     .magic-carousel { width: calc(100% - 200px); margin-left: 200px; }
@@ -277,7 +275,7 @@
 	.palettes-gift-row { margin-top:40px;}
 	.banner-content-bx .text { margin-top: -55px;  max-width:90%; }
 	.front-banner .item img {  min-height: 400px;   object-fit: cover;   }
-
+	.menu-product-list img	{ height:110px; }
 
 
 }
