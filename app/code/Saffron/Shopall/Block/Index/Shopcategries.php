@@ -133,7 +133,7 @@ class Shopcategries extends \Magento\Catalog\Block\Product\AbstractProduct
 			$categoryId = 	$_GET['id'];
 			$category = $categoryFactory->create()->load($categoryId);
 			 
-			 return $category->getUrl();
+			 return $category->getName();
 			
 			
 			}			
