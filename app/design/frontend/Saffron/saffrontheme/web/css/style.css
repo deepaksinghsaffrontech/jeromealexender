@@ -108,8 +108,10 @@ button:hover, button:focus {
 /*--/btn-css--*/
 
 .navigation ul.ui-menu { display: flex; align-items: center; position: initial; }
-.navigation li.level0 { flex: 1; text-align: center; margin: 0;	position:initial; }
+.navigation li.level0 { flex: 1; text-align: center; margin: 0;	position:initial;
+	display: flex;  justify-content: center; }
 .navigation .level0 { display:}
+.navigation .level0>.level-top { width:100%; }
 
 .header-navbar { float: left; background: #F9F9F8;  width: 100%; }
 .page-main, .front-banner { float: left; width: 100%; }
@@ -2864,7 +2866,7 @@ div#ajax-goto + .product-info-main {  margin-top: 50px; }
 .newsletter-signup-bx .sign-feature {justify-content: center;}
 .newsletter-signup-bx .signup-box p, .newsletter-signup-bx .signup-box h4 {  display: none; }
 .subscribe-newsletter .signup-box .form-group input {
-    font-size: 14px;
+    font-size: 16px;
     border: 1px solid #A9AAAC;
     border-radius: 0;
     height: 44px;
