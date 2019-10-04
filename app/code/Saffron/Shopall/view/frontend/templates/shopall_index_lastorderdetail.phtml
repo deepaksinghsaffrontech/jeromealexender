@@ -8,7 +8,7 @@ $products  = $this->getAllproducts($randid['increment_id']);
 <button class="close-add"><i class="fa fa-times"></i></button>
   <a href="<?php  echo $products['items'][0]['producturl']?>" > 
    <div class="advertise-img">
-   <?php if(empty($products['items'][0]['productImage'])){ ?>
+   <?php if(!empty($products['items'][0]['productImage'])){ ?>
    <img src=" <?php  echo  $this->getMedia().'catalog/product'.$products['items'][0]['productImage']?>" alt="" class="img-fluid">  
    <?php }else{  ?>
    <img src=" <?php  echo  $this->getMedia().'themeimage/placehoder.jpg' ;?>" alt="" class="img-fluid">  
