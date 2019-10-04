@@ -17,7 +17,8 @@
     .nav-sections-item-content>.navigation {  background: none; position: initial;  }
     .navigation { max-width: 1600px; width: 100%; }
     .nav-sections .satisfaction-carousel { display:none; }
-	.nav-sections { z-index:2;}
+	.nav-sections { z-index:1;}
+	.nav-sections:hover { z-index:2;}
 	.navigation .level0 .submenu {  left: 0 !important; right: 0;  border: none;  background: #fff;
 	box-shadow: 0 3px 5px #ddd; transition:all 0.3s ease; z-index:-1; }
 	.navigation .level0:hover .submenu { z-index:1; }
@@ -577,7 +578,7 @@
     .minicart-wrapper .action.showcart.active {   display: flex;    }
 	.caption-inner { width: calc(100% - 30px);  margin: -60px 15px 0;  position: relative; padding:20px 15px; }
     .ask-jerome-banner { margin-bottom: 30px; }
-    .sign-feature { flex-wrap: wrap; margin:0;  }
+    .sign-feature { flex-wrap: wrap;  }
     .sign-feature .quick-item { padding:0 0 20px; display: flex;     align-items: center;     }
     .btn-primary { padding:11px 20px; }
     .customer-reviews { padding:0 25px; }
