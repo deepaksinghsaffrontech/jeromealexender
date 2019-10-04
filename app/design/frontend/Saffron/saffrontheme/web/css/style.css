@@ -1167,11 +1167,11 @@ ul.pagination-list {
     float: right;
     width: 25%;
     text-align: center;
+	display:none;
 }
 .review-descpt .review-txt {
     float: left;
     width: 100%;
-    padding-right: 20px;
 }
 .owl-theme .owl-dots .owl-dot{ outline: none; }
 .owl-theme .owl-dots .owl-dot span {  background: transparent; border: 1px solid #E2AF9F; }
@@ -2848,7 +2848,6 @@ div#ajax-goto + .product-info-main {  margin-top: 50px; }
 }
 .showpopup{ opacity:1;  z-index:999; }
 .loader-inner .fa { color: #053052; }
-.category-image.shop-banner { margin-bottom: 30px; }
 .cms-newsletters .page-main {  background: #F9F8F8;   padding: 6% 0 6%; }
 .cms-newsletters .breadcrumbs {
     display: none;
@@ -2961,7 +2960,7 @@ ul.disc li {
 .catalogsearch-result-index .search-results + .front-best-seller .container {  padding: 0; }
 .cms-noroute-index .page-title-wrapper h1 {  text-transform: capitalize; }
 .contentmanager-contenttype-asfjerome .breadcrumbs {  text-align: center; }
-
+.navigation li.level0.active > a {  background: #ffdcd5; }
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
