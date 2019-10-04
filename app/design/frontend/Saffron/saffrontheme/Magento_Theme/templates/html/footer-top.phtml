@@ -62,12 +62,14 @@ $(window).scroll(function() {
 		return false;
 	});
 
-   $(".sign-col .singin-link").on("click", function(){
+    $(".sign-col .singin-link").on("click", function(){
 		$(this).toggleClass('active');
 		$(".singin-dropdown").slideToggle('slow');
 
 	 });
-
+	$(".close-add").on("click", function(){
+		$(".advertise-bx").hide();
+	});
 	
  });	
 
