@@ -99,7 +99,8 @@ button:hover, button:focus {
 .shopbest-col-btm .btn { color: #fff; }
 .btn-primary:hover,
 .btn2:hover,
-.create-bx .btn:hover {
+.create-bx .btn:hover,
+.subscribe-newsletter .signup-box .singup-btn:hover {
     background-color: #E2AF9F;
     border-color: #E2AF9F;
     color:#053052;
@@ -2808,11 +2809,15 @@ div#ajax-goto + .product-info-main {  margin-top: 50px; }
     font-size: 18px;
     padding: 14px 31px;
     border: none;
-    border-radius: 2px;
+    border-radius: 4px;
     box-shadow: none;
     outline: none;
     color: #fff;
+	width:100%;
+	margin:0;
 }
+.customer-account-forgotpassword .actions-toolbar .primary {   width: 100%; }
+.customer-account-forgotpassword .column.main {  padding: 0; }
 .customer-account-forgotpassword .actions-toolbar button.action.submit:hover {
     background-color: #E2AF9F;
     border-color: #E2AF9F;
@@ -2837,17 +2842,89 @@ div#ajax-goto + .product-info-main {  margin-top: 50px; }
 .showpopup{ opacity:1;  z-index:999; }
 .loader-inner .fa { color: #053052; }
 .category-image.shop-banner { margin-bottom: 30px; }
-
+.cms-newsletters .page-main {  background: #F9F8F8;   padding: 6% 0 6%; }
+.cms-newsletters .breadcrumbs {
+    display: none;
+}
+.cms-newsletters .notfront-container .col-lg-7 {
+    margin: 0 auto;
+    flex: 0 0 65.333333%;
+    max-width: 65.333333%;
+}
+.newsletter-signup-bx h3 {
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+}
+.newsletter-signup-bx .sign-feature {justify-content: center;}
+.newsletter-signup-bx .signup-box p, .newsletter-signup-bx .signup-box h4 {  display: none; }
+.subscribe-newsletter .signup-box .form-group input {
+    font-size: 14px;
+    border: 1px solid #A9AAAC;
+    border-radius: 0;
+    height: 44px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.subscribe-newsletter .signup-box .singup-btn {
+    margin: 0;
+    border-radius: 4px;
+    width: 100%;
+}
+.catalogsearch-result-index .banner-title-notfront h1 {
+    margin-bottom: 10px;
+    font-family: "BentonSans-Regular";
+    font-size: 34px;
+    margin: 0;
+}
+.search-customer {
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.search-customer .header-search {
+    width: 100%;
+    display: inherit;
+    max-width: 800px;
+}
+.search-customer .header-search input {
+    background: #f9f9f8;
+    height: 46px;
+    line-height: normal;
+    padding: 0 10px 0 50px;
+    margin-top: 0;
+    color: #053052;
+}
+.search-customer .header-search .search-btn {
+    left: 0;
+    top: 0;
+    right: inherit;
+    height: auto;
+    line-height: normal;
+}
+.form-group.search-txt {  margin-top: 20px; }
+.customer-group a {
+    font-size: 18px;
+    display: flex;
+    line-height: normal;
+    align-items: center;
+}
+.customer-group a i { font-size: 30px;  margin-right: 10px; }
+.customer-group { display: flex; }
+.customer-group .customer-connect {  margin-right: 30px; }
+.search-customer .customer-group {  margin: 30px 0; }
 
 
 /*===============-magento-common-classes-css-===============*/
-.columns {
+.columns,
+.catalogsearch-result-index .banner-title-notfront {
     margin: 0 auto;
     float: none;
     max-width: 1600px;
     width: 94%;
 	padding:0 15px;
 }
+.catalogsearch-result-index .banner-title-notfront { margin: 20px auto 0; }
 .navigation .level0.parent>.level-top>.ui-menu-icon:after{ display:none; }
 .form-create-account {
     min-width: 100%;
