@@ -8,8 +8,10 @@ echo $order->getCreatedAt();
 foreach ($orderItems as $item) {
    echo $product_name=   $item->getName();
    $product_id =   $item->getId();
+    echo $item->getShortDescription();
    $objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
    $currentproduct = $objectManager->create('Magento\Catalog\Model\Product')->load($product_id);
+    echo $currentproduct->getName();
    echo $currentproduct->getShortDescription();
 }
 ?>
