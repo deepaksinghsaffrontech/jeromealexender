@@ -5,7 +5,13 @@
         <span class="base" data-ui-id="page-title-wrapper"><?php //echo $this->getShopaName();?></span>    
 	</h1>
 </div>
-
+<?php  
+//print_r($categrie);
+$templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::DEFAULT_VIEW;
+$imageBlock =  $block->getLayout()->createBlock('Magento\Catalog\Block\Product\Image');
+$image = 'new_products_content_widget_grid';
+$type = 'widget-new-grid';			
+?>
 
 <?php foreach($shopallproduct as $_product) {
 		$productImage = $block->getImage($_product, $image);
