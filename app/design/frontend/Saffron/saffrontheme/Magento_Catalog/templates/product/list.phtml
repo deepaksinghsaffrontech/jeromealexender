@@ -20,8 +20,9 @@ $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
 $category = $objectManager->get('Magento\Framework\Registry')->registry('current_category');//get current category
 if(!empty($category)){
 if($category->getId()=='3'){?>
-
-<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('shopall')->toHtml(); ?>				
+<span id="shopallproduct">
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('shopall')->toHtml(); ?>	
+</span>			
 <?php } else { ?>
 
 <?php
@@ -348,17 +349,17 @@ jQuery(document).ready(function($){
   //var vediourl = $("#idvedio-"+obj).val();
   $("#loderpop").addClass("showpopup");
   //alert(vediourl);
-  /*$.ajax({
-        url: "<?php echo $this->getBaseUrl()?>/shopall/index/Vediotitorial/",
+  $.ajax({
+        url: "<?php echo $this->getBaseUrl()?>/shopall/index/shopcategries/",
         type: "GET",
-        data:  {"id":obj,"vediourl":vediourl},
+        data:  {"id":obj},
         success: function(response){
 			//alert(response);
 			
-		$('#popup-image').html(response);	
-		$("#popup-modal1").modal("openModal");
+		$('#shopallproduct').html(response);	
+		//$("#popup-modal1").modal("openModal");
         }
-	  });*/
+	  });
   $("#loderpop").removeClass("showpopup");
 });
 }
