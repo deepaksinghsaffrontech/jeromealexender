@@ -9,12 +9,12 @@
 //print_r($categrie);
 $templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::DEFAULT_VIEW;
 $imageBlock =  $block->getLayout()->createBlock('Magento\Catalog\Block\Product\Image');
-$image = 'new_products_content_widget_grid';
-$type = 'widget-new-grid';			
+//$image = 'new_products_content_widget_grid';
+//$type = 'widget-new-grid';			
 ?>
 
 <?php foreach($shopallproduct as $_product) {
-		$productImage = $block->getImage($_product, $image);
+		//$productImage = $block->getImage($_product, $image);
 		?>
 		 <?php  echo $_product->getUrl(); ?>
 		      <!--<div class="col-lg-4 col-md-6 col-12" >
