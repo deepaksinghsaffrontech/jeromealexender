@@ -2427,7 +2427,7 @@ body.checkout-index-index .opc-wrapper.am-opc-wrapper .payment-option-content { 
 .ask-caption .tag-title { text-align: center; }
 .ask-jerome-detail-page .breadcrumbs {  text-align: center; }
 .jerome-description ul.social-links { border: 1px solid #E2AF9F;  display: inline-block;  padding: 10px 5px; }
-.jerome-description ul.social-links li {  padding: 0 12px; color:#E2AF9F; }
+.jerome-description ul.social-links li {  padding: 0 12px; color:#E2AF9F; margin:0; }
 .jerome-description ul.social-links li a {  color: #E2AF9F; }
 .jerome-description ul.social-links li.beauty-li { font-family:"BentonSans-Bold";}
 .jerome-description .social-col {  margin: 70px 0 0; }
@@ -2582,7 +2582,6 @@ body.checkout-index-index .additional-options { margin:0; }
     margin: 0 4px;
     display: inline-block;
 }
-.ask-jerome-detail-container .other-tutorials {   padding-bottom: 50px;  }
 .products-result {
     border-bottom: 1px solid #053052;
     margin-bottom: 60px;
@@ -2961,6 +2960,7 @@ ul.disc li {
 .catalogsearch-result-index .search-results {  border-bottom: 1px solid #053052;  margin-bottom: 60px; }
 .catalogsearch-result-index .search-results + .front-best-seller .container {  padding: 0; }
 .cms-noroute-index .page-title-wrapper h1 {  text-transform: capitalize; }
+.contentmanager-contenttype-asfjerome .breadcrumbs {  text-align: center; }
 
 
 /*===============-magento-common-classes-css-===============*/
