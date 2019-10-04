@@ -17,7 +17,7 @@ $type = 'widget-new-grid';
 <?php echo $_product->getName();?>
   <div class="col-lg-4 col-md-6 col-12" >
                                   <div class="category-item">
-			 <figure><a href="<?php  echo $_product->getUrl(); ?>" ><?php echo $productImage->toHtml() ?></a></figure>
+			 <figure><a href="<?php  echo $_product->getUrl(); ?>" ><?php //echo $productImage->toHtml() ?></a></figure>
 								  
 				<div id="quickview-<?php echo $_product->getId();?>" class="bss-bt-quickview">
 				<a class="bss-quickview" data-quickview-url="<?php echo $this->getUrl('');?>/bss_quickview/catalog_product/view/id/<?php echo $_product->getId();?>" href="javascript:void(0);"><span>Quick View </span></a>
