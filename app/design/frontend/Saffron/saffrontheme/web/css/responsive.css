@@ -264,8 +264,10 @@
     .owl-theme .owl-nav button.owl-next, .owl-theme .owl-nav button.owl-next:hover { right:-35px; }
 	.sidebar-ask,
 	.page-layout-2columns-left .sidebar-main	{ width: 24.83333333%; }
-    .column-ask,
-	.page-layout-2columns-left .column.main	{ width: 75.16666667%;  }
+    .column-ask, .page-layout-2columns-left .column.main,
+	.ask-jerome-banner	{ width: 75.16666667%;  }
+	.contentmanager-contentlist-1 .column-ask { margin-left: 24.833333%;  width: calc(100% - 24.83333333%);	}
+	
 	.side-btn .btn { padding: 10px 5px; width: 72px; font-size: 16px;	}
 	.sidebar-category li.shop-item .item-name {	
 		font-family: "BentonSans-Medium"; width: 78%;float: left; font-size: 15px;
