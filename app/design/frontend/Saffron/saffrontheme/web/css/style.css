@@ -2958,6 +2958,9 @@ ul.disc li {
 .cms-noroute-index ul.disc {  text-align: center; }
 .cms-noroute-index  dt {  font-size: 16px;}
 .cms-noroute-index .column.main a { text-decoration: underline;  font-family: "BentonSans-Bold"; }
+.catalogsearch-result-index .search-results {  border-bottom: 1px solid #053052;  margin-bottom: 60px; }
+.catalogsearch-result-index .search-results + .front-best-seller .container {  padding: 0; }
+
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
