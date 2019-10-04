@@ -1,10 +1,99 @@
 <?php $shopallproduct= $this->getShopallproduct();?>
 
+<div class="page-title-wrapper banner-title-notfront">
+    <h1 class="page-title" id="page-title-heading" aria-labelledby="page-title-heading toolbar-amount">
+        <span class="base" data-ui-id="page-title-wrapper"><?php //echo $this->getShopaName();?></span>    
+	</h1>
+</div>
+<?php  
+//print_r($categrie);
+$templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::DEFAULT_VIEW;
+$imageBlock =  $block->getLayout()->createBlock('Magento\Catalog\Block\Product\Image');
+$image = 'new_products_content_widget_grid';
+$type = 'widget-new-grid';			
+?>
 
-<?php foreach($shopallproduct as $_product) {?>
+<?php foreach($shopallproduct as $_product) {
+		//$productImage = $block->getImage($_product, $image);
+		?>
+		 <?php  echo $_product->getUrl(); ?>
+		      <!--<div class="col-lg-4 col-md-6 col-12" >
+                                  <div class="category-item">
+                     <figure><a href="<?php  echo $_product->getUrl(); ?>" ><?php echo $productImage->toHtml() ?></a></figure>
+                               
+				<div id="quickview-<?php echo $_product->getId();?>" class="bss-bt-quickview">
+				<a class="bss-quickview" data-quickview-url="<?php echo $this->getUrl('');?>/bss_quickview/catalog_product/view/id/<?php echo $_product->getId();?>" href="javascript:void(0);"><span>Quick View </span></a>
+				</div>		   
+							   <div class="seller-info">
+                                <div class="star-col">
+                                             
+              <?php if ($templateType): ?>
+			<?php echo $block->getReviewsSummaryHtml($_product, $templateType,true); ?>
+			<?php endif; ?>
+        
+                                          </div>
+                                 <div class="seller-name-col">
+                                 <a href="<?php  echo $_product->getUrl(); ?>" class="title-name"><?php  echo $_product->getName(); ?></a>
+                                 <p>
 
-<?php echo $_product->getName();?>
+											<?php //echo $_product->getShortDescription(); ?>
+						<?php 
+						$short_description = $_product->getShortDescription();
+	                    $short_description = preg_replace("/<img[^>]+\>/i", "", $short_description); 
+                         if (strlen($short_description) > 100){
+                        echo strip_tags(substr($short_description, 0, strpos($short_description,' ',100))).'...';
+                           } 
+                       else { 
+                       echo strip_tags($short_description); 
+                           }
+                           ?>
+											
+						</p>
+                       <span class="price-span"><?php echo $block->getProductPrice($_product);?></span>
+						<?php if ($_product->isSaleable()): ?>
+						<?php if ($_product->getTypeInstance()->hasRequiredOptions($_product)): ?>
+					
+						<?php else: ?>
+						<?php $postDataHelper = $this->helper('Magento\Framework\Data\Helper\PostHelper');
+							$postData = $postDataHelper->getPostData($block->getAddToCartUrl($_product), ['product' => $_product->getEntityId()])
+						?>
+											
+											<?php endif; ?>
+										<?php else: ?>
+											<?php if ($_product->getIsSalable()): ?>
+												<div class="stock available"><span><?php echo __('In stock') ?></span></div>
+											<?php else: ?>
+												<div class="stock unavailable"><span><?php echo __('Out of stock') ?></span></div>
+											<?php endif; ?>
+										<?php endif; ?>
+								
+											
+											
+											
+											
+											
+											
+                                            
+                                          </div>
+                                      </div>
+                                  </div>
+                                </div>-->
+								
+							 <?php } ?>
 
 
 <?php }?>
 
+
+
+<style>
+.banner-title-notfront {
+    display: none;
+}
+.category-image {
+    display: none;
+}
+.shop-banner-content{
+	display: none;
+}
+</style>
