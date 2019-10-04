@@ -128,10 +128,11 @@ class Shopcategries extends \Magento\Catalog\Block\Product\AbstractProduct
 
  public function getShopaName()
 			{
-            $objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
-			$categoryFactory = $objectManager->get('\Magento\Catalog\Model\CategoryFactory');
 			$categoryId = 	$_GET['id'];
-			$category = $categoryFactory->create()->load($categoryId);
+            $objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
+		   $subcategory = $objectManager->create('Magento\Catalog\Model\Category')->load($category_id);  
+			
+		
 			 
 			 return $category->getName();
 			
