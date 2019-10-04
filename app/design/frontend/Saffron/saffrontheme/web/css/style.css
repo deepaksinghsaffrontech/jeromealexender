@@ -437,17 +437,16 @@ header .header-search .form-control:focus {
 .down-arrow-col img { width: 60px; }
 .advertise-bx {
     background: #fff;
-    max-width: 280px;
+    max-width: 300px;
     width: 100%;
-    position: absolute;
-    top: -100px;
+    position: fixed;
+    bottom: 20px;
     left: 0;
     padding: 10px;
     z-index: 1;
     text-align: left;
     box-shadow: 0 0 10px #ccc;
     float: left;
-    display: none;
 }
 .advertise-bx .advertise-img { float: left;  width: 20%; }
 .advertise-bx .advertise-info { float: left; width: 80%;  padding: 0 12px 0 10px; }
@@ -477,6 +476,8 @@ header .header-search .form-control:focus {
     color: #fff;
     line-height: 18px;
     font-size: 14px;
+    padding: 0;
+    cursor: pointer;
 }
 .front-best-seller, 
 .real-women-row,

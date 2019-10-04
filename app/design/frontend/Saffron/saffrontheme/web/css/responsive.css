@@ -335,7 +335,7 @@
     .caption-inner p {  font-size: 22px; line-height: 28px; }
 	.clock1 .right-col h4 { font-size:34px; }
 	.magic-carousel{ padding:0 30px;}
-	.sidebar-ask { width:35.833333%;}
+	.sidebar-ask { width:35.833333%; padding-right:30px; }
 	.ask-jerome-banner, .column-ask { width:64.166667%; }
 	.contentmanager-contentlist-1 .column-ask { margin:20px 0 0; width:100%; }
 	.caption-inner { bottom:-130px; }
@@ -414,7 +414,6 @@
     .banner-caption .btn { margin: 10% 0 0; }
     .down-arrow-col{ right:15px;}
     .front-banner .owl-carousel .owl-item img {  min-height: 350px;  object-fit: cover; }
-    .advertise-bx { position: relative; top: inherit; left: inherit; right: inherit; float: none; margin: 0 auto 20px;  }
     .banner-subtitle h3 { font-size: 26px;  margin: 0 0 5px; }
     .banner-subtitle .inner-col span {display:block; font-size:15px;  }
     h2, h3 { margin: 0 0 20px;  }
@@ -654,6 +653,11 @@
 	.cms-no-route header.page-header,
 	.contact-index-index header.page-header	{ border-bottom: 1px solid #ddd; }
 	.contact-section { margin-bottom:0; }
+	.banner-inner{ margin-bottom:30px; }
+	.shipping-method-ul li.title { font-size:20px; }
+	.shipping-method-ul li { font-size: 14px; line-height: 24px; padding:10px 0; }
+	.gauranty-col h4 { font-size: 20px; line-height: 28px; }
+	body .navigation a, body .navigation a:hover { color: #053052; font-size: 14px; }
 	
 	
 
