@@ -10,7 +10,7 @@ foreach ($orderItems as $item) {
    $product_id =   $item->getId();
     echo $item->getShortDescription();
    $objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
-   $currentproduct = $objectManager->create('Magento\Catalog\Model\Product')->load($product_id);
+   $currentproduct = $objectManager->create('Magento\Catalog\Model\Product')->load($item->getId());
     echo $currentproduct->getName();
    echo $currentproduct->getShortDescription();
 }
