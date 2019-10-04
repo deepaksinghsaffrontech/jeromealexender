@@ -12,6 +12,10 @@ $imageBlock =  $block->getLayout()->createBlock('Magento\Catalog\Block\Product\I
 $image = 'new_products_content_widget_grid';
 $type = 'widget-new-grid';			
 ?>
+  <div class="category-row category-row-1" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+     
+                              <div class="row">
+
 <?php foreach($shopallproduct as $_product) {?>
 
 <?php echo $_product->getName();?>
@@ -55,7 +59,8 @@ $type = 'widget-new-grid';
  </div>	 
 
 <?php }?>
-
+ </div>	
+ </div>	
 
 <style>
 .banner-title-notfront {
