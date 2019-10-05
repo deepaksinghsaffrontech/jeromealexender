@@ -191,8 +191,8 @@ $childCategories = $subcategory->getChildrenCategories();
                         }
                     }*/
 
-                    //if ( $childCategory->hasChildren() )
-                    //{
+                    if ($category->getId()!="3" )
+                    {
                     $html .= '<ul class="category-body">';
 					$html .= '<li>';
 					$html .= '<a href="javascript:void(0)"     title="' . $subcategory->getUrl() . '"  onclick="popupSubcategory(' .$category->getId(). ')"  > Shop All ' . $subcategory->getName() . '</a>';
@@ -211,7 +211,7 @@ $childCategories = $subcategory->getChildrenCategories();
 					
 					 $html .= '</ul>';
 					
-					//}
+					}
 
                     //$html .= '</li>';
                 //}
