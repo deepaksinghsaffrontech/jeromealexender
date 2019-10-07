@@ -3059,6 +3059,117 @@ body .toolbar .pages { margin:0; }
     margin: 0;
     min-height: 300px;
 }
+.modal-popup .modal-title { width:100%; }
+.checkout-index-index .modal-popup:not(.agreements-modal):not(.popup-authentication) .modal-inner-wrap {
+	min-height:200px;
+	top: 50%;
+    transform: translate(0, -50%);
+    margin: 0 auto;
+}
+.about-banner {
+    float: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: url(../images/about-bg.jpg);
+    background-repeat: repeat-x;
+    height: 580px;
+    background-size: 100% 82%;
+    padding-bottom: 30px;
+}
+.about-content {
+    float: left;
+    width: 100%;
+    display: flex;
+}
+.about-caption figure { margin-bottom: -20px; }
+.about-section {
+    float: left;
+    width: 100%;
+}
+.about-section .info {
+    padding-right: 30px;
+}
+.about-section h2 {
+    color: #424343;
+    font-size: 50px;
+    margin: 40px 0 15px;
+}
+
+.about-section  h3 {
+    color: #222323;
+    font-size: 28px;
+    font-family: "GeorgiaRegular";
+    margin: 0 0 20px;
+}
+.about-section p {
+    color: #5A5A5A;
+    font-size: 18px;
+    line-height: 32px;
+}
+.about-gallery {
+    float: left;
+    width: 100%;
+}
+
+
+.quotes-info {
+    background: #424343;
+    float: left;
+    width: 100%;
+    padding: 60px 0;
+    margin-bottom: 20px;
+}
+.quotes-info .container {
+    display: flex;
+    justify-content: center;
+    
+}
+.quotes-inner {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+.quotes-inner h4 {
+    color: #fff;
+    font-size: 45px;
+    line-height: normal;
+    font-family: "GeorgiaRegular";
+    font-weight: normal;
+    margin: 0 0 20px;
+}
+.quotes-inner span {  color: #fff;  font-style: italic; font-size:18px; }
+.about-get-social {
+    background: #f9f9f8;
+    margin: 0;
+    padding: 70px 0 30px;
+}
+
+.about-caption img {   max-width: 200px; }
+.about-caption h1 {color: #424343;font-family: "GeorgiaRegular";font-size:27px; line-height: normal;margin: 0 0 10px;}
+.about-caption span {
+    color: #6B6B6B;
+    font-size: 18px;
+    font-style: italic;
+}
+.about-seller h2 {
+    color: #222323;
+}
+.morePlus { 
+    display: none;
+    color: #5A5A5A;
+    text-transform: uppercase;
+    font-family: "BentonSans-Bold";
+ }
+.morePlus:hover,
+.morePlus:visited{ color: #5A5A5A; }
+header.page-header {
+    float: left;
+    width:100%; 
+}
+
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
