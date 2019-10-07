@@ -170,28 +170,18 @@
     .menu-child li a { display: block; padding: 15px 10px; }
     .before-after-row .row { margin-right: -30px; margin-left: -30px;  }
     .before-after-row  .col-12 { padding-left: 35px;  padding-right: 35px;  }
-    .contact-form {
-        float: left;
-        width: 75%;
-        padding-right: 7%;
-    }
-    .contact-section .callus-col {
-        float: left;
-        width: 25%;
-    }
-    .watch-btn-mobile {  display: none;   }
+    .contact-form {float: left; width: 75%;  padding-right: 7%;  }
+    .contact-section .callus-col {  float: left;  width: 25%;  }
+    .watch-btn-mobile {  display: none;  }
 
 }
 
-@media (min-width: 1200px) {
+@media ( min-width: 1200px) {
     .container { max-width: 1600px;  width:94%; }
     .sidebar-list { padding-right: 30px; }
     .contact-form-col { padding-right: 80px; }
     /*--header-navigation-css--*/
-    .menu-child{ 
-        opacity: 0;
-        visibility: hidden;
-    }
+    .menu-child{ opacity: 0; visibility: hidden; }
     .navbar-nav .parent-child { position: relative; }
     .menu-child li a:hover {  background: #053052;  color:#fff; }
 	.navigation { padding: 0 7px; width:94%;   }
@@ -199,7 +189,7 @@
 
 }
 
-@media (min-width: 1400px) {
+@media ( min-width: 1400px) {
     .clock-item img { max-width: 58%; }
 	.rating-box {
         max-width: 380px;
