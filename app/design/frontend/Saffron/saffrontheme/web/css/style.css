@@ -2991,7 +2991,8 @@ ul.disc li {
 .block-content .box-actions {  margin-top: 15px; }
 .block-dashboard-addresses a.action.edit { text-decoration: underline; }
 .customer-account-index .main .block {  margin-bottom: 70px; }
-.customer-account-index .page-main { padding-top: 60px; }
+.account .page-main { padding-top: 60px; }
+.account h1.page-title { font-size:30px; }
 
 
 /*===============-magento-common-classes-css-===============*/
