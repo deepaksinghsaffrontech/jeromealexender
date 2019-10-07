@@ -18,9 +18,8 @@
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
-
 /** @var Mageplaza\InstagramFeed\Block\Widget $block */
-if ($block->isEnable()) :
+//if ($block->isEnable()) :
     $widgetId = uniqid();
     $options = $block->getAllOptions();
     $total = $options['total_number'];
@@ -28,46 +27,13 @@ if ($block->isEnable()) :
     $width = $block->getNumberRow($options["layout"]) != null ? $block->calcWidth() . '%' : $block->calcWidth() . 'px';
     $sizeIcon = ($block->calcWidth() < 6) ? '10px' : '20px';
     ?>
-	
-	<?php 
-	
-	$om = \Magento\Framework\App\ObjectManager::getInstance();
-    $storeManager = $om->get('\Magento\Store\Model\StoreManagerInterface');
-    $media_url = ($storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA));
-	?>
-   
-	<div class="mpinstagramfeed-container get-social-row" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
-        <div class="container">
-            <h3 class="title-main"><?= /** @noEscape */ __($block->getData('title')) ?></h3>
+    <div class="mpinstagramfeed-container">
+        <div class="mpinstagramfeed-header">
+            <h3><?= /** @noEscape */ __($block->getData('title')) ?></h3>
             <div><?= /** @noEscape */ __($block->getData('description')) ?></div>
-       
+        </div>
         <div id="mpinstagramfeed-photos-<?= /** @noEscape */ $widgetId ?>" class="row shuffle"></div>
-    
-	
-	<div class="owl-carousel owl-theme">
-                    <div class="item">
-                      <img src="<?php echo $media_url ;?>wysiwyg/social/social-img1.jpg" alt="">
-                    </div>
-                    <div class="item">
-                      <img src="<?php echo $media_url ;?>wysiwyg/social/social-img2.jpg" alt="">
-                    </div>
-                    <div class="item">
-                      <img src="<?php echo $media_url ;?>wysiwyg/social/social-img3.jpg" alt="">
-                    </div>
-                    <div class="item">
-                      <img src="<?php echo $media_url ;?>wysiwyg/social/social-img4.jpg" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $media_url ;?>wysiwyg/social/social-img5.jpg" alt="">
-                      </div>
-					  <div class="item">
-                        <img src="<?php echo $media_url ;?>wysiwyg/social/social-img6.jpg" alt="">
-                      </div>
-                  
-				  </div>
-	</div>
-	
-	</div>
+    </div>
     <style type="text/css">
         #mpinstagramfeed-photos-<?= /** @noEscape */ $widgetId?> .mpinstagramfeed-photo {
             width: calc(<?= /** @noEscape */ $width ?> - 4px);
@@ -108,43 +74,4 @@ if ($block->isEnable()) :
         }
     }
     </script>
-<?php endif; ?>
-
-
-
-
-<script type="text/javascript">
-	
-	require([
-	  "jquery",
-	  "owlcarousel/minjs"
-	 ], function($,owlCarousel){
-		$(document).ready(function(){
-		    $('.get-social-row .owl-carousel').owlCarousel({
-            loop: true,
-            margin: 50,
-            nav: true,
-            dots: false,
-            smartSpeed: 500,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                500: {
-                    items: 2
-                },
-                600: {
-                    items: 3
-                },
-                992: {
-                    items: 4
-                },
-                1199: {
-                    items: 4
-                }
-            }
-        });
-			
-		});
-	});
-</script>
+<?php //endif; ?>
