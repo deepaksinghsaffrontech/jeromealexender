@@ -2993,6 +2993,7 @@ ul.disc li {
 .customer-account-index .main .block {  margin-bottom: 70px; }
 .account .page-main { padding-top: 60px; }
 .account h1.page-title { font-size:30px; }
+.form-edit-account .fieldset>.field label span { margin-right: 3px; }
 
 
 /*===============-magento-common-classes-css-===============*/
