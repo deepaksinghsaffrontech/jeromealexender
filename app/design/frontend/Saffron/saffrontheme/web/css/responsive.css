@@ -204,7 +204,14 @@
     .navbar-nav > li a, .navigation .level0>.level-top{  font-size:15px; }
     .content-menu a { font-size:16px; padding: 0 10px; }
 }
-
+@media (min-width: 768px) and (max-width: 1399px) {
+	.rating-box { 
+    margin-top: -30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% - 30px);
+     }
+}
 
 @media (min-width: 768px) and (max-width: 1199px) {
     .columns, .breadcrumbs .items { width:98%;   }
@@ -227,12 +234,6 @@
     .clock-inner .infobx{ top:90%; transform: translate(-50%, -90%);  }
     .ask-jerome-info p { font-size: 15px;  line-height: 22px; }
     .real-info h3 {  margin-bottom: 12px;  }
-    .rating-box { 
-        margin-top: -30px;
-    margin-left: 15px;
-    margin-right: 15px;
-    width: calc(100% - 30px);
-     }
     .real-women-row {  padding-bottom: 100px;     }
     .real-women-row .video-col { margin-bottom:0; }
     .magic-image-col { width:200px;  }
