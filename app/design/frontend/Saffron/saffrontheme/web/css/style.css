@@ -164,12 +164,12 @@ footer.page-footer {
 }
 .owl-theme .owl-nav button.owl-prev,
 .owl-theme .owl-nav button.owl-prev:hover { 
-    left: -30px;
+    left: -40px;
     background: url(../images/left_arrow.png);
  }
  .owl-theme .owl-nav button.owl-next,
  .owl-theme .owl-nav button.owl-next:hover {
-     right:-30px;
+     right:-40px;
      background: url(../images/right_arrow.png);
 }
  .owl-theme .owl-nav button.owl-prev,
@@ -3165,10 +3165,10 @@ body .toolbar .pages { margin:0; }
  }
 .morePlus:hover,
 .morePlus:visited{ color: #5A5A5A; }
-header.page-header {
-    float: left;
-    width:100%; 
-}
+header.page-header { float: left;  width:100%;  }
+.cms-about-us .breadcrumbs {  display: none; }
+.cms-about-us .columns {  max-width: 100%;  width: 100%;  padding: 0; }
+
 
 
 /*===============-magento-common-classes-css-===============*/

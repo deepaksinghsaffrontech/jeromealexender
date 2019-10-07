@@ -146,14 +146,14 @@
     .web-col .img-m { display: none; }
     .about-content .left-col {
         float: left;
-        width: 400px;
+        width: 440px;
         position: absolute;
         top: 240px;
     }
     .about-content .right-col {
         float: left;
-        width: calc(100% - 400px);
-        margin-left: 400px;
+        width: calc(100% - 440px);
+        margin-left: 440px;
         margin-top: -105px;
         border-left: 1px solid #dfdfdf;
     }
