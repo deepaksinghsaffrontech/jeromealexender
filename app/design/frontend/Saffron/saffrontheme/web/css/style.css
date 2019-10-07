@@ -95,7 +95,7 @@ button:hover, button:focus {
 }
 .side-btn .btn1:hover {  border: 2px solid #E2AF9F; }
 .btn2:hover {  border: 2px solid #E2AF9F; }
-.side-btn .btn { padding: 12px; width: 110px; min-width:inherit; }
+.side-btn .btn { padding: 12px; width: 100px; min-width:inherit; }
 .btn-4 { border-radius: 4px; }
 .shopbest-col-btm .btn { color: #fff; }
 .btn-primary:hover,
