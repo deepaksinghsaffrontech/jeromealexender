@@ -2967,15 +2967,31 @@ ul.disc li {
 .shop-banner-content { margin-top: 30px; }
 .category-view {  float: left;   width: 100%; }
 .checkout-payment-method .payment-method-title { padding-left:0; padding-right:0; }
-.checkout-payment-method .billing-address-same-as-shipping-block {
-    position: relative;
-    padding-left: 20px;
-}
-
+.checkout-payment-method .billing-address-same-as-shipping-block { position: relative; padding-left: 20px;}
 .checkout-payment-method .billing-address-same-as-shipping-block input[type="checkbox"] {
-    position: absolute;
-    left: 0;
+    position: absolute; left: 0;
 }
+.form-create-account .mage-error {  margin-bottom: 10px; line-height: 16px; }
+.block-collapsible-nav .content { background: #F9F9F8; }
+.block-collapsible-nav .item.current a, .block-collapsible-nav .item.current>strong {
+    border-color: #053052;  font-weight: normal;
+}
+.block-collapsible-nav .content li.nav {
+    flex-direction: column;
+    display: flex;
+    flex: 1 1 100%;
+    color: #053052;
+}
+.block-collapsible-nav .content li.nav strong, .block-collapsible-nav .content li.nav a {
+	color: #053052; padding: 10px;
+}
+.block-collapsible-nav .item a:hover {  background: none; }
+.block-content .box strong { font-weight: normal;  font-family: "BentonSans-Bold"; }
+.block-content .box a {  text-decoration: underline; }
+.block-content .box-actions {  margin-top: 15px; }
+.block-dashboard-addresses a.action.edit { text-decoration: underline; }
+.customer-account-index .main .block {  margin-bottom: 70px; }
+
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
