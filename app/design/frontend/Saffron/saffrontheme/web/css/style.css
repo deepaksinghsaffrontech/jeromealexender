@@ -3054,7 +3054,7 @@ body .pages .action {  background: #f9f9f9; }
 body .pages .action:hover {  background: #f9f9f9; }
 body .toolbar .pages { margin:0; }
 .pager .toolbar-amount {  margin-right: 30px; }
-
+.bestseller-carousel .owl-carousel .owl-nav.disabled { display: block; }
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
