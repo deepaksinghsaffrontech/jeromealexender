@@ -208,15 +208,7 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 					
 				 <?php } ?>	
 	   <?php endforeach; ?>
-	   <div style="clear: both"></div>
-
-            <?php if ($block->hasPagerBottom()) : ?>
-                <div class="toolbar-bottom">
-                    <div class="toolbar bottom">
-                        <?= $block->getPagerHtml(); ?>
-                    </div>
-                </div>
-            <?php endif; ?>
+	   
 	   <?php else: ?>
             <div class="message info empty">
                 <span><?= __('We can\'t find contents matching the selection.') ?></span>
