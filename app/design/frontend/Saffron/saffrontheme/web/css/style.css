@@ -2994,6 +2994,8 @@ ul.disc li {
 .account .page-main { padding-top: 60px; }
 .account h1.page-title { font-size:30px; }
 .form-edit-account .fieldset>.field label span { margin-right: 3px; }
+.block-collapsible-nav .content li.nav strong { font-family: "BentonSans-Medium"; }
+.ask-container .popular-item .video-col> img { height: 230px; width: 100%; object-fit: cover; }
 
 
 /*===============-magento-common-classes-css-===============*/
