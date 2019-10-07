@@ -217,6 +217,7 @@
 		margin-right: 15px;
 		width: calc(100% - 30px);
      }
+	 .side-btn .btn { width:90px; }
 }
 
 
@@ -281,7 +282,6 @@
 	.menu-product-list img	{ height:110px; }
 	.category-image.shop-banner img {  width: 100%;  min-height: 400px;  object-fit: cover; }
 	.checkout-onepage-success .table-order-items .col { min-width:inherit;}
-	.side-btn .btn { width:90px; }
 
 }
 
