@@ -122,6 +122,41 @@
 	body .block.items-in-cart {  margin-bottom: 0; }
 	.checkout-payment-method .payment-methods .actions-toolbar .primary { min-width:200px; }
 	.pager { display: flex; align-items: center; justify-content: center; }
+	.about-banner .container {
+        display: flex;
+    }
+    .about-caption {
+        text-align: center;
+        width:calc(100% - 400px);
+        order: 1;
+        padding: 0 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 400px; 
+        margin-top:-5%; 
+    }
+    .banner-jerome-img {
+        width: 33.333333%;
+        margin-top:40px; 
+        padding-right:15px; 
+    }
+    .about-caption h1 { font-size: 70px; width:100%; max-width:820px;   }
+    .web-col .img-m { display: none; }
+    .about-content .left-col {
+        float: left;
+        width: 400px;
+        position: absolute;
+        top: 240px;
+    }
+    .about-content .right-col {
+        float: left;
+        width: calc(100% - 400px);
+        margin-left: 400px;
+        margin-top: -105px;
+        border-left: 1px solid #dfdfdf;
+    }
 	
 	
 /*==============magento-common-classes-css=================*/
