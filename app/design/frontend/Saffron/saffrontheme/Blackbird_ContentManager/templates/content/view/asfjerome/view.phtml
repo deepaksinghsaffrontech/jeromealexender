@@ -162,10 +162,18 @@ $media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 					
 					<img src="<?php echo $media_url ; ?>contentmanager/content/<?php echo $testimonialValues['thimble_images'] ;?>" class="img-fluid" />
 			       <div class="play-tutorial">
+					<?php if($testimonialValues['asfjerome_like_to']=='read' ){?>
 					<a href="javascript:void(0);" class="icon click-me bt-action"  data="More Info"  onclick="popupFunction(<?php echo $testimonial->getData('entity_id') ;?>)" id="video_titorial_<?php echo $testimonial->getData('entity_id'); ?>" >
 					<i class="fa"><img src="<?php echo $media_url ;?>themeimage/arrow-right-white.png"></i>
 					<span>Play Tutorial</span>
 					</a>
+					<?php } else {?>
+					
+					<a href="<?= $this->getBaseUrl() . $testimonialValues['url_key']; ?>" class="icon click-me bt-action"  data="More Info"  >
+					<i class="fa"><img src="<?php echo $media_url ;?>themeimage/arrow-right-white.png"></i>
+					<span>Read Tutorial</span>
+					</a>
+					<?php }?>
 					</div>
 					</div>
 					<div class="info-col">
