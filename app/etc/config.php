@@ -148,8 +148,6 @@ return [
         'Saffron_Testimonial' => 1,
         'Saffron_Theme' => 1,
         'Sebwite_Sidebar' => 1,
-        'Solwin_Core' => 1,
-        'Solwin_Instagram' => 1,
         'Temando_Shipping' => 1,
         'Vertex_Tax' => 1,
         'Yotpo_Yotpo' => 1
