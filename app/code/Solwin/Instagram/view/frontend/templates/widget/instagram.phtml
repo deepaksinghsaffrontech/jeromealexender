@@ -29,6 +29,8 @@ if ($enable) { ?>
       
         $instangramData = $instagramFeeds->data;
       
+	  echo"<pre>";print_r($instangramData);die;
+	  
         foreach ($instangramData as $instagramFeed) {
             $instagramImage = $instagramFeed->images->$imageResolution->url;
             $caption_text = 'Instagram';
