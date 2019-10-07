@@ -194,14 +194,6 @@
     }
     .navbar-nav .parent-child { position: relative; }
     .menu-child li a:hover {  background: #053052;  color:#fff; }
-    .rating-box {
-        max-width: 380px;
-        position: absolute;
-        left: -300px;
-        bottom: 60px;
-        z-index: 1;
-    }
-    .nav-tabs .nav-link { min-width:190px;}
 	.navigation { padding: 0 7px; width:94%;   }
 	.navigation > ul{ padding:0 8px; }
 
@@ -209,6 +201,13 @@
 
 @media (min-width: 1400px) {
     .clock-item img { max-width: 58%; }
+	.rating-box {
+        max-width: 380px;
+        position: absolute;
+        left: -300px;
+        bottom: 60px;
+        z-index: 1;
+    }
 }
 
 @media (max-width: 1370px) {
@@ -711,7 +710,7 @@
 }
 .account .table-order-items .product-item-name { font-size:16px; }
 .checkout-onepage-success #registration form { padding:0 12px;}
-	
+.pager .toolbar-amount {  text-align: center;  margin: 0 0 10px; }	
 	
 
 }
