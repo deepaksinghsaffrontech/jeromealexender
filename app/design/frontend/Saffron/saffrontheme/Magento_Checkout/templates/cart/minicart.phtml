@@ -24,8 +24,18 @@ $isLoggedIn = $customerSession->isLoggedIn() ;
 	<?php if($isLoggedIn): ?>
      <a href="javascript:void(0);" class="singin-link">
       <i class="fa"><img src="<?php echo $mediaUrl ;?>themeimage/user.png" alt=""></i>
-        <span class="">Sign Out</span>
+        <span class="">hi  <?php echo $customerSession->getCustomer()->getName();?>..</span>
        </a> 
+	   
+	 <div class="singin-dropdown">
+		<ul>
+		
+		<li><a href="<?php echo $this->getUrl('customer/account/create/');?>"><i class="fa"><img src="<?php echo $mediaUrl;?>themeimage/user2.png" alt=""></i >My Account</a></li>
+		<li><a href="<?php echo $this->getUrl('checkout/cart/');?>"><i class="fa"><img src="<?php echo $mediaUrl;?>themeimage/shopping_bag2.png" alt=""></i> Shopping Bag</a></li>
+		<li><a href="<?php echo $this->getUrl('customer-services/');?>"><i class="fa fa-headphones"></i> Customer Service</a></li>
+		<li><a href="<?php echo $this->getUrl('customer/account/signout/');?>">Sign Out</a></li>
+		</ul>
+	</div>  
 	<?php else :?>
 	<!--<a href="<?php echo $this->getUrl('customer/account/login/'); ?>" class="singin-link">
      <i class="fa"><img src="<?php echo $mediaUrl;?>themeimage/user.png" alt=""></i>

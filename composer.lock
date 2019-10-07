@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1d5a11d432289a3fa1016fb747d7e488",
+    "content-hash": "52b13267203a98451fbe95114d9ba277",
     "packages": [
         {
             "name": "amzn/amazon-pay-and-login-with-amazon-core-module",
@@ -724,6 +724,51 @@
                 }
             ],
             "description": "dotmailer integration for magento 2"
+        },
+        {
+            "name": "ebizmarts/mailchimp-lib",
+            "version": "3.0.30",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ebizmarts/mailchimp-lib.git",
+                "reference": "293960203ff1d834af5b2f2726f03063494a2265"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ebizmarts/mailchimp-lib/zipball/293960203ff1d834af5b2f2726f03063494a2265",
+                "reference": "293960203ff1d834af5b2f2726f03063494a2265",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mailchimp": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ebizmarts Corp.",
+                    "email": "info@ebizmarts.com",
+                    "homepage": "http://ebizmarts.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "API client library for the MailChimp",
+            "homepage": "https://github.com/ebizmarts/mailchimp-lib",
+            "keywords": [
+                "api",
+                "email",
+                "mailchimp"
+            ],
+            "time": "2019-03-07T19:47:51+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -6222,12 +6267,6 @@
         {
             "name": "magento/product-community-edition",
             "version": "2.2.6",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/product-community-edition/magento-product-community-edition-2.2.6.0.zip",
-                "reference": null,
-                "shasum": "2aacefd94b6be05d85e58a1269347b71bc4b2a71"
-            },
             "require": {
                 "amzn/amazon-pay-and-login-with-amazon-core-module": "2.1.0",
                 "amzn/amazon-pay-module": "2.1.0",
@@ -11132,6 +11171,7 @@
                 "mock",
                 "xunit"
             ],
+            "abandoned": true,
             "time": "2017-08-03T14:08:16+00:00"
         },
         {
