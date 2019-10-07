@@ -12,7 +12,7 @@
 	/* .navigation li.level0 { flex: 1; text-align: center; margin: 0;	position:initial; } */
 	/* .navigation .level0 { display:} */
 	.navigation > ul{ padding:0; }
-	.navigation .level0>.level-top { display: block; padding: 20px 10px; line-height:20px;  }
+	.nav-sections .navigation .level0>.level-top { display: block; padding: 20px 10px; line-height:20px;  }
 	.navigation li.level0:hover a { background: #ffdcd5;   }
     .nav-sections-item-content>.navigation {  background: none; position: initial;  }
     .navigation { max-width: 1600px; width: 100%; }
@@ -281,7 +281,7 @@
 	.menu-product-list img	{ height:110px; }
 	.category-image.shop-banner img {  width: 100%;  min-height: 400px;  object-fit: cover; }
 	.checkout-onepage-success .table-order-items .col { min-width:inherit;}
-
+	.side-btn .btn { width:90px; }
 
 }
 
