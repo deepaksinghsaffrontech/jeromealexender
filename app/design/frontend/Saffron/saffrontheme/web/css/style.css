@@ -2996,6 +2996,25 @@ ul.disc li {
 .form-edit-account .fieldset>.field label span { margin-right: 3px; }
 .block-collapsible-nav .content li.nav strong { font-family: "BentonSans-Medium"; }
 .ask-container .popular-item .video-col> img { height: 230px; width: 100%; object-fit: cover; }
+.modal-popup footer.modal-footer {  display: none; }
+.modal-custom button.action-close:before {  color: #053052;}
+.modal-custom .action-close:before,
+.modal-popup .action-close:before,
+.modal-slide .action-close:before {
+    color: #053052;
+    font-size: 24px;
+    padding: 0;
+    line-height: normal;
+    font-weight: bold;
+}
+.modal-header {  border: none; }
+.modal-content { border: none; }
+header.modal-header button.action-close { padding: 8px 10px;  height: auto; }
+.modal-custom .action-close:hover:before,
+.modal-popup .action-close:hover:before,
+.modal-slide .action-close:hover:before {
+    color: #053052;
+}
 
 
 /*===============-magento-common-classes-css-===============*/
