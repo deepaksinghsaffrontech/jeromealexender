@@ -121,6 +121,7 @@
 	body .cart-summary .block .fieldset .field { margin-bottom:20px; }
 	body .block.items-in-cart {  margin-bottom: 0; }
 	.checkout-payment-method .payment-methods .actions-toolbar .primary { min-width:200px; }
+	.pager { display: flex; align-items: center; justify-content: center; }
 	
 	
 /*==============magento-common-classes-css=================*/
@@ -217,7 +218,7 @@
 
 
 @media (min-width: 768px) and (max-width: 1199px) {
-    .columns, .breadcrumbs .items { width:98%; padding:0;  }
+    .columns, .breadcrumbs .items { width:98%;   }
     .bestseller-carousel,
     .shop-category-carousel {  padding: 0 20px;  }    
     .container { max-width:97%;  } 
@@ -633,7 +634,7 @@
 	}
 	.filter-tutorials-m img { width: 19px; height: auto;  margin-right: 1px; }
 	.filter-tutorials-m i { display: none; }
-	.popular-item { margin-bottom:25px; }
+	.popular-item { margin-bottom:35px; }
 	.contentmanager-contentlist-1 .page-main {  padding: 0; }
 	.contentmanager-contentlist-1 .sidebar-ask,
 	.contentmanager-contentlist-1 .column-ask	{ padding: 0 15px; }

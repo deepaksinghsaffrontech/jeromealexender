@@ -3027,6 +3027,7 @@ header.modal-header button.action-close { padding: 8px 10px;  height: auto; }
     border-radius: 0;
     box-shadow: none;
     margin: 0;
+    font-weight: normal;
 }
 .pages ul.items.pages-items li.item.current strong {
     background: #f9f9f9;
@@ -3037,6 +3038,20 @@ header.modal-header button.action-close { padding: 8px 10px;  height: auto; }
     height: 50px;
 }
 .pages ul.items.pages-items li.item { margin: 0; }
+
+body .pages .action.next:visited:before,
+.pages .action.next:before,
+body .pages .action.previous:visited:before,
+.pages .action.previous:before,
+.pages .action.next:hover:before,
+.pages .action.next:visited:before,
+.pages .action.previous:hover:before,
+.pages .action.previous:visited:before { color: #053052; }
+.pages strong.page { font-weight: normal; }
+body .pages .action {  background: #f9f9f9; }
+body .pages .action:hover {  background: #f9f9f9; }
+body .toolbar .pages { margin:0; }
+.pager .toolbar-amount {  margin-right: 30px; }
 
 
 /*===============-magento-common-classes-css-===============*/
