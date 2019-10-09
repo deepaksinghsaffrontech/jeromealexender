@@ -3006,7 +3006,6 @@ ul.disc li {
 .form-edit-account .fieldset>.field label span { margin-right: 3px; }
 .block-collapsible-nav .content li.nav strong { font-family: "BentonSans-Medium"; font-weight:normal; }
 .ask-container .popular-item .video-col> img { height: 230px; width: 100%; object-fit: cover; }
-.modal-popup footer.modal-footer {  display: none; }
 .modal-custom button.action-close:before {  color: #053052;}
 .modal-custom .action-close:before,
 .modal-popup .action-close:before,
@@ -3017,8 +3016,8 @@ ul.disc li {
     line-height: normal;
     font-weight: bold;
 }
-.modal-header {  border: none; }
-.modal-content { border: none; }
+.modal-content,
+.modal-popup.modal-slide .modal-footer { border: none; }
 header.modal-header button.action-close { padding: 8px 10px;  height: auto; }
 .modal-custom .action-close:hover:before,
 .modal-popup .action-close:hover:before,
@@ -3252,7 +3251,11 @@ header.page-header { float: left;  width:100%;  }
     border-radius: 4px;
     font-weight: normal;
 }
-
+.account .sidebar .actions-toolbar>.secondary .action {
+    min-width: inherit;
+    margin: 0;
+    padding: 14px 0;
+}
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
