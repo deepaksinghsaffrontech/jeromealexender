@@ -750,7 +750,22 @@
 .store-locator-module { width: 100%; }
 .store-locaters ul li { padding:0 10px; width: 50%; }
 .store-locaters {  margin-top: 20px; }
-.advertise-bx { left:0; max-width:300px; }
+.advertise-bx { left:0; max-width:300px; display:none; }
+.block-collapsible-nav { top:0; }
+.account .page-main { padding-top: 40px; }
+.owl-theme .owl-nav button.owl-next, .owl-theme .owl-nav button.owl-next:hover { right:-30px;}
+.owl-theme .owl-nav button.owl-prev, .owl-theme .owl-nav button.owl-prev:hover { left:-30px; }
+.checkout-index-index .header-content {
+    width: 100%;
+    padding: 0 10px;
+}
+.checkout-index-index .header-content > a {
+    max-width: 58%;
+    padding: 18px 0;
+}
+.checkout-index-index .container {  width: 42%; }
+.checkout-index-index  .modal-custom .modal-content { background: none; }
+.checkout-index-index .modal-custom header.modal-header {  border: none; }
 
 
 }

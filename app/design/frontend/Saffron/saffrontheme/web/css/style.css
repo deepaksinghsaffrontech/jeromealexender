@@ -3293,6 +3293,7 @@ footer.modal-footer .action-primary:hover {
     margin-bottom: 20px;
     display: flex;
 }
+.cart-summary .action.multicheckout{ display: none; }
 
 
 /*===============-magento-common-classes-css-===============*/
