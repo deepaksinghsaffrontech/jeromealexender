@@ -3257,7 +3257,12 @@ header.page-header { float: left;  width:100%;  }
     padding: 14px 0;
 }
 .header-content .compare.wrapper {  display: none; }
-
+.opc-wrapper .shipping-address-item.selected-item { border-color: #053052; }
+.opc-wrapper .shipping-address-item.selected-item:after { background:#053052; }
+.checkout-index-index .modal-footer button.action.secondary.action-hide-popup {  margin-left: 10px; }
+.checkout-index-index .modal-footer button.action.secondary.action-hide-popup:hover { color: #053052; }
+.checkout-index-index .modal-popup .form-shipping-address { padding-top:20px; }
+.checkout-index-index  .modal-popup .modal-title { border:none; }
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
