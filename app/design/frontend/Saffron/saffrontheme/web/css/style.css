@@ -3192,6 +3192,8 @@ header.page-header { float: left;  width:100%;  }
 .cms-subscribe-newsletter .signup-box .form.subscribe .control input { margin-bottom: 0; }
 .cms-subscribe-newsletter .signup-box .form.subscribe button.singup-btn{ margin: 20px 0 0 0; width: 100%; }
 .cms-subscribe-newsletter .signup-box .form.subscribe div.mage-error {  float: left;  width: 100%; }
+.signup-box .signup-box { margin: 0; }
+.signup-box .form-group .form-group { margin: 0; }
 
 
 /*===============-magento-common-classes-css-===============*/
