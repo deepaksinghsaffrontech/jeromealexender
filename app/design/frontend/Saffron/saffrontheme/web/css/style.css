@@ -3219,6 +3219,15 @@ header.page-header { float: left;  width:100%;  }
 .catalog-category-view .page-title-wrapper { text-align: center; }
 .customer-address-form .form-address-edit fieldset.fieldset { width: 100%; }
 .customer-address-form .form-address-edit fieldset.fieldset .field{float: left;width: 100%;max-width: 600px;}
+.table-order-items .col {  width: auto; padding: 15px 10px; }
+.table>tbody>tr>th, .table>tbody>tr>td {  border-top: 1px solid #dee2e6; }
+.account .table-wrapper {  margin-bottom: 50px;  }
+.toolbar select {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: #f8f8f8;
+}
 
 
 /*===============-magento-common-classes-css-===============*/
