@@ -3177,7 +3177,14 @@ body .toolbar .pages { margin:0; }
 header.page-header { float: left;  width:100%;  }
 .cms-about-us .breadcrumbs {  display: none; }
 .cms-about-us .columns {  max-width: 100%;  width: 100%;  padding: 0; }
-
+.customer-account-logoutsuccess .page-title-wrapper {
+    max-width: 1600px;
+    width: 94%;
+    margin: 100px auto 0;
+    padding: 0 15px;
+    text-align: center;
+}
+.customer-account-logoutsuccess .columns {   text-align: center; }
 
 
 /*===============-magento-common-classes-css-===============*/

@@ -744,7 +744,8 @@
 }
 .account .table-order-items .product-item-name { font-size:16px; }
 .checkout-onepage-success #registration form { padding:0 12px;}
-.pager .toolbar-amount {  text-align: center;  margin: 0 0 10px; }	
+.pager .toolbar-amount {  text-align: center;  margin: 0 0 10px; }
+.banner-inner .header-search { position: inherit; left: inherit; right: inherit; top: inherit; }	
 	
 
 }
