@@ -3256,6 +3256,8 @@ header.page-header { float: left;  width:100%;  }
     margin: 0;
     padding: 14px 0;
 }
+.header-content .compare.wrapper {  display: none; }
+
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
