@@ -3228,6 +3228,13 @@ header.page-header { float: left;  width:100%;  }
     box-shadow: none;
     background-color: #f8f8f8;
 }
+.wishlist-index-index .products-grid.wishlist .product-item-info:hover .product-item-inner {
+    display: none;
+}
+.wishlist-index-index .actions-toolbar button.action.update,
+.wishlist-index-index .actions-toolbar button.action.tocart {  display: none; }
+.wishlist-index-index .products-grid .product-item-info:hover,
+.wishlist-index-index .products-grid .product-item-info.active { padding:0; }
 
 
 /*===============-magento-common-classes-css-===============*/
