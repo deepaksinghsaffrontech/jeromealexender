@@ -65,8 +65,9 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
         $method->setMethodTitle($this->getConfigData('name'));
  
         /*you can fetch shipping price from different sources over some APIs, we used price from config.xml - xml node price*/
-        $amount = $this->getConfigData('price');
- 
+        //$amount = $this->getConfigData('price');
+        $amount = $this->Shippingrangeprice();
+        $method->setPrice($amount);
         $method->setPrice($amount);
         $method->setCost($amount);
  
@@ -74,4 +75,49 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
  
         return $result;
     }
+	
+	
+	public function Shippingrangeprice(){
+	$objectManager = \Magento\Framework\App\ObjectManager::getInstance(); 
+	$quoteId = $objectManager->create('Magento\Checkout\Model\Session')->getQuoteId(); 
+	$cart = $objectManager->get('\Magento\Checkout\Model\Cart'); 
+	$itemsCollection = $cart->getQuote()->getItemsCollection();
+	$itemsVisible = $cart->getQuote()->getAllVisibleItems();
+	$items = $cart->getQuote()->getAllItems();
+	$subTotal = $cart->getQuote()->getSubtotal();
+	if(('0.00' < $subTotal)&&($subTotal <= '20.00') ){
+		$pricerang = '4.95';
+	}else if(('21.00' <= $subTotal)&& ($subTotal <= '39.99')){
+		$pricerang ='7.95';
+	}else if(('40.00' <= $subTotal)&& ($subTotal <= '48.99')){
+		$pricerang = '9.95';
+	}else{
+	$pricerang = '0.00';	
+	}
+	/*$reposnse = array();
+	$count =  0 ;
+	foreach($items as $item) {
+		$productid = $item->getProductId();
+		$product = $objectManager->create('Magento\Catalog\Model\Product')->load($productid);
+		$categoriesIds = $product->getCategoryIds(); 
+		foreach($categoriesIds as $categoryId){
+		$cat = $objectManager->create('Magento\Catalog\Model\Category')->load($categoryId);
+		$pricepresent = $objectManager->create('Saffron\Shippingprice\Model\ResourceModel\Shippingprice\Collection')
+		->addFieldToFilter('status', array('eq' => '0'))
+		->addFieldToFilter('categries_id', array('eq' => $cat->getId()));
+		foreach($pricepresent as $item){
+			$reposnse['priceprent'][$count]	= $item[$pricerang];
+		
+		$count++ ;
+		}
+		}
+		}
+	 $allrypriceprent = max($reposnse['priceprent']);
+
+	 $shippingrangeprice = (($subTotal/100)*$allrypriceprent) ;*/
+	 
+	 return  $pricerang;
+			
+		
+	}
 }
