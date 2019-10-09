@@ -3196,8 +3196,8 @@ header.page-header { float: left;  width:100%;  }
 .signup-box .form-group .form-group { margin: 0; }
 .sidebar-shop-category { display: none; }
 .catalog-category-view .sidebar-shop-category { display: block; }
-.account .form .field-name-firstname label span,
-.account .form .field-name-lastname label span { display: none; }
+.account form .field-name-firstname label span,
+.account form .field-name-lastname label span { display: none; }
 .account form .city label span,
 .account form .country label span { margin-right: 4px; }
 .account form input[type="checkbox"] { float: left; margin: 3px 7px 0 0; }
