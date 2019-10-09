@@ -782,15 +782,24 @@ header .header-search .form-control:focus {
     line-height: 26px;
 	margin-bottom:25px;
 }
+.signup-box .form.subscribe {
+    float: left;
+    width: 100%;
+}
+.signup-box .form.subscribe .control {
+    float: left;
+    width: calc(100% - 170px);
+}
 .signup-box .form-group input {
     border: none;
     border-radius: 0;
     box-shadow: none;
-    height:51px;
+    height: 51px;
     font-size: 14px;
     color: #6B6B6B;
-    width: calc(100% - 170px);
     float: left;
+    width: 100%;
+    margin-bottom: 8px;
 }
 .signup-box .form-group .singup-btn {
     width: 160px;

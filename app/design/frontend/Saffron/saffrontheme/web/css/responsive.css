@@ -498,7 +498,7 @@
     .gift-inner h4 { font-size: 24px; margin-bottom:10px; }
     .footer-top .left-col, .footer-top .right-col { text-align:center; border:none; }
     .signup-box h4 { font-size: 30px; margin: 0 0 10px; }
-    .signup-box .form-group input {  width: calc(100% - 110px);  margin: 0;     }
+    .signup-box .form.subscribe .control { width: calc(100% - 110px); }
     .signup-box .form-group .singup-btn {  margin: 0; float: left;  width: 100px;  margin-left: 10px;     }
     .signup-box { margin: 0 0 30px; }
     .footer-bottom h5, .footer-links li{ margin: 0 0 15px; }
