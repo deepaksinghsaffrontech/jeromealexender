@@ -724,7 +724,7 @@
 	.singin-group p { font-size:15px; }
 	.customer-account-forgotpassword .page-main { padding-left:15px; padding-right:15px; }
 	body.customer-account-create .page-wrapper .page-main { padding:70px 0 40px; }
-	.page-layout-1column header.page-header {  border-bottom: 1px solid #ddd; }
+	.page-layout-1column header.page-header {  border-bottom: 1px solid #eee; }
 	.page.messages { width:100%; padding:0; }	
 	.cart-summary { margin-bottom:40px; }
 	.checkout-index-index .checkout-block { padding: 30px; width: 90%; margin: 0 auto 30px; box-shadow: none; }	
