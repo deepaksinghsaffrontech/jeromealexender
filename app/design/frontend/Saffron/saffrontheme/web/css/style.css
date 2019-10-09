@@ -3185,6 +3185,13 @@ header.page-header { float: left;  width:100%;  }
     text-align: center;
 }
 .customer-account-logoutsuccess .columns {   text-align: center; }
+.cms-subscribe-newsletter .page-main { background: #F9F8F8;  padding: 6% 0 8%; }
+.cms-subscribe-newsletter .breadcrumbs { display: none; }
+.cms-subscribe-newsletter .col-lg-7.col-md-9.col-12 {  margin: 0 auto; }
+.cms-subscribe-newsletter .signup-box .form.subscribe .control {  width: 100%; }
+.cms-subscribe-newsletter .signup-box .form.subscribe .control input { margin-bottom: 0; }
+.cms-subscribe-newsletter .signup-box .form.subscribe button.singup-btn{ margin: 20px 0 0 0; width: 100%; }
+.cms-subscribe-newsletter .signup-box .form.subscribe div.mage-error {  float: left;  width: 100%; }
 
 
 /*===============-magento-common-classes-css-===============*/
