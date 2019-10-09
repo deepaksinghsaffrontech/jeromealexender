@@ -8,9 +8,8 @@
   <!--footer-top-->
   <div class="footer-top">
 	<div class="container">
-			<p>No Risk. Jerome Alexander <span>100% Satisfaction Guarantee</span>.</p>
-			<p>Free Shipping on Orders over $50</p>
-	</div>
+	<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-top')->toHtml(); ?>
+ </div>
   </div>    
 <div class="footer-bottom">
 <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_bottom')->toHtml(); ?>	
