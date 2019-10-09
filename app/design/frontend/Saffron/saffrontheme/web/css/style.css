@@ -440,7 +440,7 @@ header .header-search .form-control:focus {
     max-width: 300px;
     width: 100%;
     position: fixed;
-    bottom: 20px;
+    bottom: 0px;
     left: 0;
     padding: 10px;
     z-index: 1;
@@ -3204,6 +3204,34 @@ header.page-header { float: left;  width:100%;  }
 .account form .choice label.label span { font-family: "BentonSans-Regular"; }
 .product.data.items {  display: none; }
 .catalog-product-view .product.data.items { display: block; }
+.account form .action.primary {
+    min-width: 120px;
+    text-align: center;
+    padding: 14px 20px;
+    border-radius: 4px;
+}
+.account form  .action.primary {
+    min-width: 120px;
+    text-align: center;
+    padding: 14px 20px;
+    border-radius: 4px;
+}
+.sidebar .product-items-names .product-item { padding-left: relative; }
+.sidebar .product-items-names .product-item div.field { width: 24px; float: left; }
+.sidebar .product-items-names .product-item-name {
+    float: left;
+    width: calc(100% - 24px);
+}
+.sidebar .product-items-names .product-item-name a {color: #053052;line-height: 22px;}
+.sidebar .block-title strong {
+    font-size: 22px;
+    font-family: "BentonSans-Medium";
+}
+.block-reorder .actions-toolbar a.action.view {
+    margin-top: 16px;
+    text-decoration: underline;
+}
+.catalog-category-view .page-title-wrapper { text-align: center; }
 
 
 /*===============-magento-common-classes-css-===============*/
