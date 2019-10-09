@@ -83,7 +83,8 @@ define([
                 tLoading: '',
                 callbacks: {
                     open: function() {
-                      $('.mfp-preloader').css('display', 'block');
+                      //$('.mfp-preloader').css('display', 'block');
+					   $("#loderpop").addClass("showpopup");
                       $("iframe.mfp-iframe").contents().find("html").addClass("bss_loader");
                     },
                     beforeClose: function() {
@@ -94,7 +95,9 @@ define([
                         });
                     },
                     close: function() {
-                      $('.mfp-preloader').css('display', 'none');
+						 
+                      $("#loderpop").removeClass("showpopup");
+                      //$('.mfp-preloader').css('display', 'none');
                     }
                 }
             });

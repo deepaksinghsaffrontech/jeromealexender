@@ -15,7 +15,8 @@ define([
                 var lastHeight = 0, curHeight = 0;
 
                 var parentBody = window.parent.document.body;
-                $('.mfp-preloader', parentBody).css('display', 'none');
+                //$('.mfp-preloader', parentBody).css('display', 'none');
+				 $("#loderpop").addClass("showpopup");
                 $('.mfp-iframe-holder .mfp-content', parentBody).css('width', '100%');
 
                 $('.mfp-iframe-scaler iframe', parentBody).animate({'opacity': 1}, 2000);
