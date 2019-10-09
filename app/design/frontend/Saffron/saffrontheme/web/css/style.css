@@ -3207,7 +3207,7 @@ header.page-header { float: left;  width:100%;  }
 .account form .action.primary {
     min-width: 120px; text-align: center; padding: 14px 20px; border-radius: 4px;
 }
-.account form  .action.primary {
+.account form  .action.primary, .account .action.primary {
     min-width: 120px; text-align: center;  padding: 14px 20px;  border-radius: 4px;
 }
 .sidebar .product-items-names .product-item { padding-left: relative; }
@@ -3217,7 +3217,8 @@ header.page-header { float: left;  width:100%;  }
 .sidebar .block-title strong { font-size: 22px; font-family: "BentonSans-Medium"; }
 .block-reorder .actions-toolbar a.action.view { margin-top: 16px; text-decoration: underline; }
 .catalog-category-view .page-title-wrapper { text-align: center; }
-
+.customer-address-form .form-address-edit fieldset.fieldset { width: 100%; }
+.customer-address-form .form-address-edit fieldset.fieldset .field{float: left;width: 100%;max-width: 600px;}
 
 
 /*===============-magento-common-classes-css-===============*/
