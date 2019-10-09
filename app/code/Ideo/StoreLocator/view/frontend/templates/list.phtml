@@ -38,7 +38,10 @@ $googleApiKey = $block->getGoogleApiKey();
 
 
 <div class="store-locator-module"  data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
-    <div ng-app="ideoMapsApp">
+ <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('store-locator')->toHtml(); ?>	
+
+
+ <!--<div ng-app="ideoMapsApp">
         <div ng-controller="mapController" ng-init="init()">
             <div class="store-locator-navigation">
                 <input type="text" ng-model="search" placeholder="<?php echo __('Search'); ?>" ng-keypress="searchKeyPress($event)" ng-change="searchChange()">
@@ -117,7 +120,7 @@ $googleApiKey = $block->getGoogleApiKey();
             </div>
             <div id="map-container" class="store-locator-map"></div>
         </div>
-    </div>
+    </div>-->
 </div>
 
 
