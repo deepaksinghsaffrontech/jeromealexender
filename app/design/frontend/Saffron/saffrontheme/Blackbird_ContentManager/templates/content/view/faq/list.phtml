@@ -59,16 +59,18 @@ $link = $block->getLink();
         
 		
 		
+		<?php $i = 1 ;?>
+		
 		<?php if ($collection->count()) : ?>
            <div class="faq-row row-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
             <?php foreach ($collection as $content) : ?>
-			<div class="faq-panel in">
+			<div class="faq-panel <?php if($i==1){echo 'in';}?>">
             <h5><?= $content->getData('faq_faq_question'); ?><i class="fa fa-angle-down"></i></h5>
             <div class="faq-body">
               <p> <?= $content->getData('faq_answer'); ?></p>
              </div>
             </div>
-			<?php endforeach; ?>
+			<?php $i++; endforeach; ?>
           </div>
 
            
