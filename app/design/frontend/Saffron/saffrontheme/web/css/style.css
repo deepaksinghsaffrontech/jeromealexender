@@ -3263,6 +3263,15 @@ header.page-header { float: left;  width:100%;  }
 .checkout-index-index .modal-footer button.action.secondary.action-hide-popup:hover { color: #053052; }
 .checkout-index-index .modal-popup .form-shipping-address { padding-top:20px; }
 .checkout-index-index  .modal-popup .modal-title { border:none; }
+.account .sidebar-additional {  margin-top: 0; }
+.block.block-reviews-dashboard .rating-summary {
+    float: left;
+    width: 100%;
+    margin: 7px 0 0;
+}
+.account .data.table .col { width: auto; }
+.account .data.table th, .account .data.table td { padding: 15px 10px; }
+
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
