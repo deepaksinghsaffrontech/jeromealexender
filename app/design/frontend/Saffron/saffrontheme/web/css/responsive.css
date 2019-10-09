@@ -747,5 +747,9 @@
 .pager .toolbar-amount {  text-align: center;  margin: 0 0 10px; }
 .banner-inner .header-search { position: inherit; left: inherit; right: inherit; top: inherit; }	
 .cms-subscribe-newsletter .account-bx h3 { font-size: 22px; }	
+.store-locator-module { width: 100%; }
+.store-locaters ul li { padding:20px 10px; }
+.store-locaters {  margin-top: 20px; }
+
 
 }

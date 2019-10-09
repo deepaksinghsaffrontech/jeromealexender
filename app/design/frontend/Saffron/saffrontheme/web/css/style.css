@@ -436,17 +436,18 @@ header .header-search .form-control:focus {
 }
 .down-arrow-col img { width: 60px; }
 .advertise-bx {
-    background: #fff;
-    max-width: 300px;
+   background: #fff;
+    max-width: 350px;
     width: 100%;
     position: fixed;
-    bottom: 0px;
-    left: 0;
+    bottom: 20px;
+    left: 20px;
     padding: 10px;
     z-index: 1;
     text-align: left;
     box-shadow: 0 0 10px #ccc;
     float: left;
+	transition:all 0.5s ease;
 }
 .advertise-bx .advertise-img { float: left;  width: 20%; }
 .advertise-bx .advertise-info { float: left; width: 80%;  padding: 0 12px 0 10px; }
@@ -3199,7 +3200,8 @@ header.page-header { float: left;  width:100%;  }
 .account form .field-name-firstname label span,
 .account form .field-name-lastname label span { display: none; }
 .account form .city label span,
-.account form .country label span { margin-right: 4px; }
+.account form .country label span,
+.form.wishlist.share .field.emails label.label span { margin-right: 4px; }
 .account form input[type="checkbox"] { float: left; margin: 3px 7px 0 0; }
 .account form .choice label.label span { font-family: "BentonSans-Regular"; }
 .product.data.items {  display: none; }
@@ -3279,6 +3281,18 @@ footer.modal-footer .action-primary:hover {
     border: none;
     background: #053052;
 }
+.product-addto-links .action.tocompare { display: none; }
+.store-locaters ul li {
+    padding: 20px;
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.store-locaters ul {
+    display: flex;
+}
+
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
