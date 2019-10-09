@@ -3282,14 +3282,15 @@ footer.modal-footer .action-primary:hover {
     background: #053052;
 }
 .product-addto-links .action.tocompare { display: none; }
-.store-locaters ul li {
-    padding: 20px;
-    flex: 1;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-}
 .store-locaters ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.store-locaters ul li {
+    padding: 0 20px;
+    width: 25%;
+    float: left;
+    margin-bottom: 20px;
     display: flex;
 }
 
