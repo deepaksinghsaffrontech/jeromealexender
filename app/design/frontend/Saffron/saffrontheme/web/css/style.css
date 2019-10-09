@@ -3271,7 +3271,14 @@ header.page-header { float: left;  width:100%;  }
 }
 .account .data.table .col { width: auto; }
 .account .data.table th, .account .data.table td { padding: 15px 10px; }
-
+.modal-popup .modal-footer { border: none; }
+.modal-popup .modal-header { border: none; }
+.confirm .modal-content { text-align: center; padding: 30px 15px; }
+footer.modal-footer .action-primary,
+footer.modal-footer .action-primary:hover {
+    border: none;
+    background: #053052;
+}
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
