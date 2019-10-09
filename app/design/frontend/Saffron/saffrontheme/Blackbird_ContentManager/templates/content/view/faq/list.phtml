@@ -35,7 +35,7 @@ $link = $block->getLink();
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="What are you looking for today?">
                         <button class="search-btn">
-                          <img src="images/search-icon.png" alt="">
+                          <img src="<?= $this->getUrl('pub/media') . 'themeimage/search-icon.png'; ?>'" alt="Search">
                         </button>
                     </div>
                   </div>
@@ -97,30 +97,24 @@ $link = $block->getLink();
             // move the bottom outside main wrapper as well as it needs to have full width
             //$('.job-posting').detach().insertAfter('#maincontent');
         
+	//faq js
 	$(".faq-panel.in .faq-body").slideDown();
 	$(".faq-panel h5").on("click", function(){
 		$(this).next().slideToggle();
 		$(this).parent().siblings().children().next().slideUp();
 		$(this).parent().toggleClass("in").siblings().removeClass("in");
-		
 		$(".faq-panel h5 .fa").removeClass("fa-angle-up").addClass("fa-angle-down");
-		
 		if( $(this).parent().hasClass("in")  ){
 			$(this).children().addClass("fa-angle-up").removeClass("fa-angle-down");
 		}
 	});
-	//end faq js
-
-	//faq js
 	$(".question-panel.in .question-body").slideDown();
 	$(".question-click h5").on("click", function(){
 		$(this).parent().next().slideToggle();
 		$(this).parent().parent().siblings().children().next().slideUp();
 		$(this).parent().toggleClass("in").siblings().removeClass("in");
-		
-				
-		
 	});
+	//end faq js
 		
 		})
     })

@@ -41,7 +41,7 @@
 	.menu-title-product span { margin-left: 4px; }
 	.navigation li.level0.nav-2 .menu-title-product span { display: none; }
 	.navigation .level0.parent>.level-top:after { content: "\f107"; font-family: fontawesome; padding-left: 6px;
-		font-size: 20px; position: relative; top: 2px; }
+		font-size: 20px; position: relative; top: 2px; font-weight:600; }
 	.navigation li.level0:last-child {  flex: 1.3; }
 	.navigation .level0.parent>.level-top:hover{ color:#053052; }
 	.navigation .level0.nav-1>.level-top {  top: 1px; }
