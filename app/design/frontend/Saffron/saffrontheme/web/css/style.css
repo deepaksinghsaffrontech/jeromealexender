@@ -343,7 +343,7 @@ header .header-right { display: flex; }
     padding-left: 7px;
     padding-right: 40px;
     font-family: "GeorgiaRegular";
-    padding:0 40px 3px 7px; 
+    padding:0 40px 5px 7px; 
     height:auto;
 }
 header .header-search input { border-bottom: 1px solid #A9AAAC; }
@@ -3327,6 +3327,8 @@ form.form.shared.wishlist .action.primary {  padding: 14px 15px; }
 .write-review-form .done-btn { background: #053052;  color: #fff; }
 .sidebar-list { margin-bottom: 40px; }
 .sidebar .action.tocart { border-radius: 4px; padding: 14px 10px; }
+.customer-account-login .notfront-container .container,
+.customer-account-create .notfront-container .container { max-width: 100%; width: 100%; }
 
 
 /*===============-magento-common-classes-css-===============*/
