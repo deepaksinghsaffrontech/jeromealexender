@@ -815,6 +815,7 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .modal-popup.modal-slide { left:0; }
 #discount-coupon-form button.action.apply.primary span {  font-size: 14px; }
 #discount-coupon-form button.action.apply.primary { padding: 0 7px; }
+.cms-write-review .columns .column.main {  padding-top: 40px; }
 
 
 }
