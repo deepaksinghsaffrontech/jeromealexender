@@ -3321,6 +3321,11 @@ form.form.shared.wishlist .action.primary {  padding: 14px 15px; }
 }
 .customer-review .review-details .review-date {  color: #053052; }
 .cart-discount .block {  width: 100%;  max-width: 400px; }
+.write-review-form .title-col h4 { font-size: 30px; font-family: "BentonSans-Bold"; }
+.write-review-form .custom-control { margin-bottom: 15px; float: left; width: 100%; }
+.skin-radio-col .form-group > label, .age-radio-col .form-group > label { margin-bottom: 15px; }
+.write-review-form .done-btn { background: #053052;  color: #fff; }
+
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
