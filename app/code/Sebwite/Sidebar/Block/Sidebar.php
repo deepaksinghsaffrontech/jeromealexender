@@ -204,8 +204,9 @@ $childCategories = $subcategory->getChildrenCategories();
 							->addCategoryFilter($subcategory)->load();
                      //$html .= $this->getChildCategoryView($childCategory, '', ($level + 1));
                     foreach ($collection as $product){
+					$product_url = $this->getBaseUrl().$product['url_key'];	
 					$html .= '<li>';
-                    $html .= '<a href="' . $product->getProductUrl() . '"     title="' . $product->getName() . '">' . $product->getName() . '</a>';
+                    $html .= '<a href="' . $product_url . '"     title="' . $product->getName() . '">' . $product->getName() . '</a>';
                     $html .= '</li>';
 					}
 					
