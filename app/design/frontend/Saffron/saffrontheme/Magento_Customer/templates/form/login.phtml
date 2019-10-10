@@ -41,7 +41,7 @@
 					 <a href="<?= $block->escapeUrl($block->getForgotPasswordUrl()) ?>" class="forgot-link"><?= $block->escapeHtml(__('Forgot Your Password?')) ?></a>
                        
 					</label>
-                    <input name="login[password]" type="password" <?php if ($block->isAutocompleteDisabled()): ?> autocomplete="off"<?php endif; ?> class="input-text form-control" id="pass" title="<?= $block->escapeHtmlAttr(__('Password')) ?>" data-validate="{required:true}">
+                    <input  id="password" name="login[password]" type="password" <?php if ($block->isAutocompleteDisabled()): ?> autocomplete="off"<?php endif; ?> class="input-text form-control" id="pass" title="<?= $block->escapeHtmlAttr(__('Password')) ?>" data-validate="{required:true}">
                     <a href="javascript:void(0);" id ="check-eye" class="view-password-link">
                     <i class="fa fa-eye-slash"></i>
                     </a>
@@ -51,6 +51,9 @@
 				<div class="form-group remember-group">
                           <div class="remember-col custom-control custom-radio">
                              <?= $block->getChildHtml('form_additional_info') ?>
+					     <input type="radio" class="custom-control-input" name="radio" id="radioRemember">
+						<label class="custom-control-label" for="radioRemember">Remember Me</label>
+                          
 						   </div>
                         </div>
 				
@@ -79,7 +82,7 @@ require([ 'jquery'], function($){
 $(document).ready(function(){
 	
 $('#check-eye').click(function(){
-           
+       //alert('++')    
   if('password' == $('#password').attr('type')){
          $('#password').prop('type', 'text');
     }else{
