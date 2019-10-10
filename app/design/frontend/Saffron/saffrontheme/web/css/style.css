@@ -1772,6 +1772,7 @@ select:not([disabled]):focus {  box-shadow: none; }
     border: none;
     max-height: 290px;
     overflow: auto;
+	margin:0;
 }
 .minicart-items .product-item-name, .minicart-items .product-item-name a {
     text-align: left;
