@@ -8,9 +8,6 @@
 	
 	/*--magento-navigation-css--*/
 	.navigation { z-index: 1; }
-	/* .navigation ul.ui-menu { display: flex; align-items: center; position: initial; } */
-	/* .navigation li.level0 { flex: 1; text-align: center; margin: 0;	position:initial; } */
-	/* .navigation .level0 { display:} */
 	.navigation > ul{ padding:0; }
 	.nav-sections .navigation .level0>.level-top { display: block; padding: 20px 10px; line-height:20px;  }
 	.navigation li.level0:hover a { background: #ffdcd5;   }
@@ -727,7 +724,7 @@
 	.page-layout-1column header.page-header {  border-bottom: 1px solid #eee; }
 	.page.messages { width:100%; padding:0; }	
 	.cart-summary { margin-bottom:40px; }
-	.checkout-index-index .checkout-block { padding: 30px; width: 90%; margin: 0 auto 30px; box-shadow: none; }	
+	.checkout-index-index .checkout-block { padding: 20px 15px; width: 90%; margin: 0 auto 30px; box-shadow: none; }	
 	.opc-wrapper .form-login, .opc-wrapper .form-login+.form-shipping-address,
 	.opc-wrapper .methods-shipping	{ background:none;}
 	.checkout-index-index .authentication-wrapper {  float: left;  width: 100%; max-width: 100%;
@@ -755,17 +752,32 @@
 .account .page-main { padding-top: 40px; }
 .owl-theme .owl-nav button.owl-next, .owl-theme .owl-nav button.owl-next:hover { right:-30px;}
 .owl-theme .owl-nav button.owl-prev, .owl-theme .owl-nav button.owl-prev:hover { left:-30px; }
-.checkout-index-index .header-content {
-    width: 100%;
-    padding: 0 10px;
-}
-.checkout-index-index .header-content > a {
-    max-width: 58%;
-    padding: 18px 0;
-}
-.checkout-index-index .container {  width: 42%; }
+.checkout-index-index .header-content { width: 100%; padding: 0 10px; }
+.checkout-index-index .header-content,
+.checkout-index-index .header-bag,
+.checkout-index-index .header-search,
+.checkout-index-index header .header-right { height:64px; }
+.checkout-index-index .header-content > a {  max-width: 58%;  padding: 18px 0; }
+.checkout-index-index header .container {  width: 42%; padding-right:5px; }
 .checkout-index-index  .modal-custom .modal-content { background: none; }
 .checkout-index-index .modal-custom header.modal-header {  border: none; }
-
+.checkout-payment-method .payment-methods { margin:0; }
+.form.payments .payment-method input[type="radio"] { position: absolute; top: 16px;  left: 0; }
+.form.payments .payment-method .payment-method-title { position: relative; padding-left: 20px; }
+.checkout-payment-method .step-title { padding:0; }
+.checkout-index-index #opc-shipping_method #checkout-shipping-method-load .table-checkout-shipping-method {
+	text-align:center;
+}
+.checkout-payment-method .payment-option { margin:0; }
+.checkout-index-index .opc-block-summary,
+.opc-wrapper .methods-shipping { padding-bottom:0; padding-top:0; }
+body.checkout-index-index .opc-wrapper.am-opc-wrapper .discount-code .payment-option-title { margin-bottom:10px; }
+.checkout-index-index .page-main .minicart-wrapper .action.showcart .counter.qty { right: 0; }
+.opc-wrapper .form-login, .opc-wrapper .form-shipping-address, .opc-wrapper .methods-shipping {
+	margin-left:0; margin-right:0; 
+	padding-left:0; padding-right:0;
+}
 
 }
+
+
