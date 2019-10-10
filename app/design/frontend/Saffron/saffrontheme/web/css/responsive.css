@@ -254,7 +254,8 @@
 
 
 @media (min-width: 768px) and (max-width: 1199px) {
-    .columns, .breadcrumbs .items { width:98%;   }
+    .columns, .breadcrumbs .items { width:100%;   }
+	.checkout-cart-index .page-main { padding:0;}
     .bestseller-carousel,
     .shop-category-carousel {  padding: 0 20px;  }    
     .container { max-width:97%;  } 
@@ -314,6 +315,7 @@
 	.menu-product-list img	{ height:110px; }
 	.category-image.shop-banner img {  width: 100%;  min-height: 400px;  object-fit: cover; }
 	.checkout-onepage-success .table-order-items .col { min-width:inherit;}
+	.cart-summary .checkout-methods-items .action.primary.checkout { padding:14px 10px; }
 
 }
 
@@ -811,6 +813,9 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
     min-height: 220px;
 }
 .modal-popup.modal-slide { left:0; }
+#discount-coupon-form button.action.apply.primary span {  font-size: 14px; }
+#discount-coupon-form button.action.apply.primary { padding: 0 7px; }
+
 
 }
 

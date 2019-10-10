@@ -1409,7 +1409,7 @@ ul.pagination2 li {   font-size: 16px;  font-family: "BentonSans-Medium"; }
 }
 .form-group > label .forgot-link {   font-family: "BentonSans-Regular"; }
 .remember-col label {  color: #6B6B6B; }
-.remember-group {  margin-bottom: 10px; }
+.remember-group {  margin-bottom: 15px; }
 .create-bx .btn {
     background: none;
     color: #053052;
@@ -3319,9 +3319,8 @@ form.form.shared.wishlist .action.primary {  padding: 14px 15px; }
     float: left;
     width: 100%;
 }
-.customer-review .review-details .review-date {
-    color: #053052;
-}
+.customer-review .review-details .review-date {  color: #053052; }
+.cart-discount .block {  width: 100%;  max-width: 400px; }
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
