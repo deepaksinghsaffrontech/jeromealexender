@@ -6,7 +6,14 @@
         $_imgHtml = '<div class="category-image shop-banner row-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
 		<figure ><img src="' . $_imgUrl . '" alt="' . $block->escapeHtml($_category->getName()) . '" title="' . $block->escapeHtml($_category->getName()) . '" class="image img-fluid" /></figure></div>';
         $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
-        /* @escapeNotVerified */ echo $_imgHtml;
+        
+		 if(!empty($_category->getData('bannerlink'))){
+			 echo '<a href="'.$_category->getData('bannerlink').'">'.$_imgHtml.' </a>';
+		 }else{
+			/* @escapeNotVerified */ echo $_imgHtml; 
+		 }
+		
+		
     }
 ?>
 <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($_category->getName())->toHtml(); ?>	

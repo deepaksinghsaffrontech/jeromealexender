@@ -136,6 +136,7 @@ return [
         'Mageplaza_Core' => 1,
         'Mageplaza_InstagramFeed' => 1,
         'Saffron_Aoslib' => 1,
+        'Saffron_Bannerlink' => 1,
         'Saffron_Bannerslider' => 1,
         'Saffron_Bestsellerproduct' => 1,
         'Saffron_Blog' => 1,
