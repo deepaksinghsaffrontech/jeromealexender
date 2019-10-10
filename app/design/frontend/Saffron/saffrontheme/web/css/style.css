@@ -3314,6 +3314,14 @@ table#wishlist-table { table-layout: fixed; }
 .table.data th.col { font-family: "BentonSans-Bold";  font-weight: normal; }
 form.form.shared.wishlist .action.primary {  padding: 14px 15px; }
 .ask-detail-banner figure img { width: 100%; }
+.account h2.product-name {
+    font-size: 18px;
+    float: left;
+    width: 100%;
+}
+.customer-review .review-details .review-date {
+    color: #053052;
+}
 
 /*===============-magento-common-classes-css-===============*/
 .columns,

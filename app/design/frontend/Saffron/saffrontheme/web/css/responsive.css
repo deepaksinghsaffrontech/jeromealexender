@@ -321,6 +321,9 @@
     .product-tabs .nav-tabs { top:-55px; } 
 	.clock-inner .infobx{ background: rgba(255,255,255,0.8); }
 	.modal-inner-wrap iframe { width: 100% !important; }
+	.account.page-layout-2columns-left .sidebar-main,
+	.account.page-layout-2columns-left .sidebar-additional { width:24.3%; }
+	.account.page-layout-2columns-left .column.main { width:75.7%; }
 
 }
 
@@ -390,7 +393,7 @@
 }
 
 @media (max-width:1024px) {
-
+	.account .columns { width: 100%; }
 	
 }
 
