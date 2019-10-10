@@ -799,6 +799,7 @@ body.checkout-index-index .opc-wrapper.am-opc-wrapper .discount-code .payment-op
 .nav-sections .header.links li.link.wishlist span {  display: inline-block; }
 .table.data.wishlist button.action.tocart { display: flex;  margin: 10px 0 0; }
 form.form.shared.wishlist button.action.tocart.primary { justify-content: center; }
+body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 
 }
 

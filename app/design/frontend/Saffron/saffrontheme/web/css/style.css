@@ -3311,6 +3311,8 @@ footer.modal-footer .action-primary:hover {
 table#wishlist-table { table-layout: fixed; }
 .table.data.wishlist a.action.towishlist {  margin-left: 15px; }
 .sidebar-category li.shop-item:nth-of-type(1) .fa {  display: none; }
+.table.data th.col { font-family: "BentonSans-Bold";  font-weight: normal; }
+form.form.shared.wishlist .action.primary {  padding: 14px 15px; }
 
 
 /*===============-magento-common-classes-css-===============*/
