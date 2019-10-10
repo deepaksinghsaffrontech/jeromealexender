@@ -75,7 +75,7 @@ button:hover, button:focus {
     font-size: 18px;
     padding: 14px 31px;
     border: none;
-    border-radius: 2px;
+    border-radius: 4px;
     box-shadow: none;
     outline: none;
 	color:#fff;
@@ -3325,6 +3325,8 @@ form.form.shared.wishlist .action.primary {  padding: 14px 15px; }
 .write-review-form .custom-control { margin-bottom: 15px; float: left; width: 100%; }
 .skin-radio-col .form-group > label, .age-radio-col .form-group > label { margin-bottom: 15px; }
 .write-review-form .done-btn { background: #053052;  color: #fff; }
+.sidebar-list { margin-bottom: 40px; }
+.sidebar .action.tocart { border-radius: 4px; padding: 14px 10px; }
 
 
 /*===============-magento-common-classes-css-===============*/
