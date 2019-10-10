@@ -3294,7 +3294,26 @@ footer.modal-footer .action-primary:hover {
     display: flex;
 }
 .cart-summary .action.multicheckout{ display: none; }
-
+.wishlist-shared-index .page-title-wrapper {
+    margin: 70px auto 10px;
+    max-width: 1600px;
+    width: 94%;
+    padding: 0 15px;
+}
+.table.data .col {
+    width: auto;
+    padding: 15px 10px;
+}
+.table.data.wishlist td.col.product .name {
+    display: flex;
+    margin-bottom: 10px;
+}
+table#wishlist-table {
+    table-layout: fixed;
+}
+.table.data.wishlist a.action.towishlist {
+    margin-left: 15px;
+}
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
