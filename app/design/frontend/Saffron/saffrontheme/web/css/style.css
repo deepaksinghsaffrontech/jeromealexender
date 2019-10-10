@@ -440,8 +440,8 @@ header .header-search .form-control:focus {
     max-width: 350px;
     width: 100%;
     position: fixed;
-    bottom: 20px;
-    left: 20px;
+    bottom: 10px;
+    left: 10px;
     padding: 10px;
     z-index: 1;
     text-align: left;
@@ -2014,12 +2014,12 @@ td.col.item img.product-image-photo { width: 90px; height: auto; }
 #discount-coupon-form input#coupon_code { height: 40px;  border-right: none; }
 #discount-coupon-form button.action.apply.primary {  height: 40px; }
 .cart-summary { background: #F9F9F8; }
-.cart-totals tbody .mark, .cart-totals tfoot .mark { background: none; font-size: 13px; }
+.cart-totals tbody .mark, .cart-totals tfoot .mark { background: none; font-size: 14px; }
 
 .abs-cart-block>.title, .minicart-items .product .toggle, .abs-discount-block .block>.title, .cart-summary .block>.title, .paypal-review-discount .block>.title, .cart-totals, .opc-block-summary .table-totals, .cart-totals .grand .amount, .opc-block-summary .table-totals .grand .amount, .cart-totals .grand .mark, .opc-block-summary .table-totals .grand .mark {
     border-top: 1px solid #DDE6EC;
 }
-.cart-summary .block .title strong {  font-weight: normal; font-size: 13px; }
+.cart-summary .block .title strong {  font-weight: normal; font-size: 14px; }
 .cart-totals tbody .amount, .cart-totals tfoot .amount,
 .opc-block-summary .table-totals tbody .amount,
 .opc-block-summary .table-totals tfoot .amount { font-size: 13px; font-family: "BentonSans-Medium"; }
@@ -2312,7 +2312,6 @@ tr.totals .mark {  background: none; }
 	color:#053052;
 }
 .checkout-payment-method .payment-option-title .action-toggle { color:#053052; }
-.cart-totals tbody .mark, .cart-totals tfoot .mark, .opc-block-summary .table-totals tbody .mark, .opc-block-summary .table-totals tfoot .mark { padding:15px 0; }
 .minicart-items .product .toggle { padding-top:10px; padding-bottom:10px; }
 .sign-container .right-col, .sign-container .left-col { display: flex; }
 .password-strength-meter { font-size:13px; }
@@ -3329,7 +3328,8 @@ form.form.shared.wishlist .action.primary {  padding: 14px 15px; }
 .sidebar .action.tocart { border-radius: 4px; padding: 14px 10px; }
 .customer-account-login .notfront-container .container,
 .customer-account-create .notfront-container .container { max-width: 100%; width: 100%; }
-
+.cart-summary .block .content {  padding-bottom: 0; }
+#shipping-zip-form fieldset.fieldset.estimate {  margin-bottom: 10px; }
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
