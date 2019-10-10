@@ -764,7 +764,7 @@
 .checkout-payment-method .payment-methods { margin:0; }
 .form.payments .payment-method input[type="radio"] { position: absolute; top: 16px;  left: 0; }
 .form.payments .payment-method .payment-method-title { position: relative; padding-left: 20px; }
-.checkout-payment-method .step-title { padding:0; }
+.checkout-payment-method .step-title { padding-left:0; padding-right:0; }
 .checkout-index-index #opc-shipping_method #checkout-shipping-method-load .table-checkout-shipping-method {
 	text-align:center;
 }
@@ -778,6 +778,23 @@ body.checkout-index-index .opc-wrapper.am-opc-wrapper .discount-code .payment-op
 	padding-left:0; padding-right:0;
 }
 .product-info-main .product-options-bottom .box-tocart .fieldset .actions { width:90%; }
+.swatch-option { width:32px; height:32px; }
+.table-checkout-shipping-method tbody td:first-child { padding-left: 5px; padding-right: 5px; }
+.table-checkout-shipping-method tbody tr td { padding-left:8px; padding-right:8px; }
+.checkout-index-index .page-main { padding:30px 0;}
+.checkout-index-index .checkout-header { padding:0 15px; }
+.checkout-index-index fieldset#customer-email-fieldset { margin-bottom: 20px; }
+.checkout-index-index fieldset#customer-email-fieldset fieldset.fieldset.hidden-fields { margin-top: 20px; }
+.checkout-index-index .modal-popup:not(.agreements-modal):not(.popup-authentication) .modal-inner-wrap {
+	width:90%;
+}
+.modal-popup .modal-title { font-size:18px; }
+.confirm .modal-content { padding: 15px; }
+.nav-sections .header.links li.customer-welcome li.authorization-link,
+.nav-sections .header.links li.customer-welcome span.customer-name {
+    display: none;
+}
+.nav-sections .header.links li.link.wishlist span {  display: inline-block; }
 
 }
 
