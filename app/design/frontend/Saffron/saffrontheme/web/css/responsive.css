@@ -320,6 +320,7 @@
 @media (min-width:768px) and (max-width:1024px) {
     .product-tabs .nav-tabs { top:-55px; } 
 	.clock-inner .infobx{ background: rgba(255,255,255,0.8); }
+	.modal-inner-wrap iframe { width: 100% !important; }
 
 }
 
@@ -800,6 +801,13 @@ body.checkout-index-index .opc-wrapper.am-opc-wrapper .discount-code .payment-op
 .table.data.wishlist button.action.tocart { display: flex;  margin: 10px 0 0; }
 form.form.shared.wishlist button.action.tocart.primary { justify-content: center; }
 body .modal-popup.confirm .modal-inner-wrap { width:90%; }
+.modal-inner-wrap iframe {
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 20px;
+    min-height: 220px;
+}
+.modal-popup.modal-slide { left:0; }
 
 }
 

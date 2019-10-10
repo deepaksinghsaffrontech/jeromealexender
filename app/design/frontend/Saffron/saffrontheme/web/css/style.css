@@ -3313,7 +3313,7 @@ table#wishlist-table { table-layout: fixed; }
 .sidebar-category li.shop-item:nth-of-type(1) .fa {  display: none; }
 .table.data th.col { font-family: "BentonSans-Bold";  font-weight: normal; }
 form.form.shared.wishlist .action.primary {  padding: 14px 15px; }
-
+.ask-detail-banner figure img { width: 100%; }
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
