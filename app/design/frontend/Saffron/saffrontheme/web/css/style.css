@@ -2800,7 +2800,13 @@ a.goto-product {  display: none; }
 .catalog-product-view .product.info.detailed {  display: block; }
 div#ajax-goto + .product-info-main {  margin-top: 50px; }
 
-.customer-account-forgotpassword .page-main { background: #F9F8F8;  padding: 70px 0; }
+.customer-account-forgotpassword .page-main { background: #F9F8F8;  padding: 70px 0; position:relative; }
+.customer-account-forgotpassword .page.messages {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+}
 .customer-account-forgotpassword .page-title-wrapper.banner-title-notfront {
     max-width: 600px;
     background: #fff;
@@ -3300,20 +3306,12 @@ footer.modal-footer .action-primary:hover {
     width: 94%;
     padding: 0 15px;
 }
-.table.data .col {
-    width: auto;
-    padding: 15px 10px;
-}
-.table.data.wishlist td.col.product .name {
-    display: flex;
-    margin-bottom: 10px;
-}
-table#wishlist-table {
-    table-layout: fixed;
-}
-.table.data.wishlist a.action.towishlist {
-    margin-left: 15px;
-}
+.table.data .col { width: auto;  padding: 15px 10px; }
+.table.data.wishlist td.col.product .name { display: flex; margin-bottom: 10px; }
+table#wishlist-table { table-layout: fixed; }
+.table.data.wishlist a.action.towishlist {  margin-left: 15px; }
+.sidebar-category li.shop-item:nth-of-type(1) .fa {  display: none; }
+
 
 /*===============-magento-common-classes-css-===============*/
 .columns,

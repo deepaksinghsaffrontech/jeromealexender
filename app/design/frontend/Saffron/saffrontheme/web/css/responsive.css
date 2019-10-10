@@ -423,6 +423,8 @@
     .bg-light{ background:none !important; }
     /*--/navigation-and-search-css--*/
 	.ask-jerome .inner .title-main { display: none; }
+	.table.data.wishlist a.action.towishlist {  margin: 20px 0 0;  display: flex; }
+	
 
 }
 
@@ -795,6 +797,8 @@ body.checkout-index-index .opc-wrapper.am-opc-wrapper .discount-code .payment-op
     display: none;
 }
 .nav-sections .header.links li.link.wishlist span {  display: inline-block; }
+.table.data.wishlist button.action.tocart { display: flex;  margin: 10px 0 0; }
+form.form.shared.wishlist button.action.tocart.primary { justify-content: center; }
 
 }
 
