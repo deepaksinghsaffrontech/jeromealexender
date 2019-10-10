@@ -50,6 +50,7 @@ class Shopcategries extends \Magento\Catalog\Block\Product\AbstractProduct
      */
 		public function __construct(
 			\Magento\Catalog\Block\Product\Context $context,
+			
 			\Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $productCollectionFactory,
 			\Magento\Catalog\Model\Product\Visibility $catalogProductVisibility,
 			\Magento\Framework\App\Http\Context $httpContext,
