@@ -3330,6 +3330,7 @@ form.form.shared.wishlist .action.primary {  padding: 14px 15px; }
 .customer-account-create .notfront-container .container { max-width: 100%; width: 100%; }
 .cart-summary .block .content {  padding-bottom: 0; }
 #shipping-zip-form fieldset.fieldset.estimate {  margin-bottom: 10px; }
+.cart-summary .checkout-methods-items li.item {  margin-bottom: 0; }
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
