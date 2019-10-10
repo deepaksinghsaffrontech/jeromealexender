@@ -41,40 +41,7 @@
 </script>
 
 
-<script type="text/javascript">
-require([ 'jquery'], function($){
 
-$(document).ready(function(){			
-		
-$(window).scroll(function() {
-		if ($(this).scrollTop() > 500) {
-			$('#goTop').fadeIn();
-		} else {
-			$('#goTop').fadeOut();
-		}
-	});
-	// scroll body to 0px on click
-	$('#goTop').click(function() {
-		$('body,html').animate({
-			scrollTop: 0
-		}, 800);
-		return false;
-	});
-
-    $(".sign-col .singin-link").on("click", function(){
-		$(this).toggleClass('active');
-		$(".singin-dropdown").slideToggle('slow');
-
-	 });
-	$(".close-add").on("click", function(){
-		$(".advertise-bx").hide();
-	});
-	
- });	
-
-
-});
-</script>	
 
 
 
@@ -142,5 +109,46 @@ jQuery(document).ready(function($){
 });
 }
 </script>
+
+<script type="text/javascript">
+require([ 'jquery'], function($){
+
+$(document).ready(function(){			
+		
+$(window).scroll(function() {
+		if ($(this).scrollTop() > 500) {
+			$('#goTop').fadeIn();
+		} else {
+			$('#goTop').fadeOut();
+		}
+	});
+	// scroll body to 0px on click
+	$('#goTop').click(function() {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 800);
+		return false;
+	});
+
+    $(".sign-col .singin-link").on("click", function(){
+		$(this).toggleClass('active');
+		$(".singin-dropdown").slideToggle('slow');
+
+	 });
+	$(".close-add").on("click", function(){
+		$(".advertise-bx").hide();
+	});
+	
+	
+	jQuery('body').on('click','.action-close',function() {
+		$('#popup-image').html('');
+		//alert('++');
+	});
+	
+ });	
+
+
+});
+</script>	
 
 	 
