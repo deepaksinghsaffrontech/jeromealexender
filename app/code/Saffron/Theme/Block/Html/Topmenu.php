@@ -320,7 +320,7 @@ foreach ($categoryProducts as $product)
             }
 
             $html .= '<li ' . $this->_getRenderedMenuItemAttributes($child) . '>';
-            $html .= '<a href="' . $child->getUrl() . '" ' . $outermostClassCode . '><span>' . $this->escapeHtml(
+            $html .= '<a href="#" ' . $outermostClassCode . '><span>' . $this->escapeHtml(
                 $child->getName()
             ) . '</span></a>' . $this->_addSubMenu(
                 $child,
