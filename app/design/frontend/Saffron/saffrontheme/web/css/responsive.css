@@ -457,7 +457,7 @@
     .logo-col img{ max-width:inherit; width:140px; } 
     .satisfaction-carousel p { font-size:14px;  }
     p {line-height: 24px;  font-size: 15px;  }
-    .satisfaction-carousel { width:100%; padding:0 30px;  }   
+    .satisfaction-carousel { width:90%; padding:0 25px;  }   
     .bestseller-carousel  {  padding: 0 20px;   }    
     .front-banner h1 { font-size:48px; line-height: normal; }
     .banner-caption .btn { margin: 10% 0 0; }
@@ -560,8 +560,6 @@
     .copyright-col {  text-align: center;   }
     .navbar-light .navbar-toggler-icon {  margin-top:6px;     }
     .down-arrow-col img {  width: 40px;  }
-    .satisfaction-carousel .owl-theme .owl-nav button.owl-prev {  left: -20px;  }
-    .satisfaction-carousel .owl-theme .owl-nav button.owl-next {  right: -20px;    }
     .sections.nav-sections,
     .navigation ul,
     .nav-sections-item-content {  background: #ffded8;    }
