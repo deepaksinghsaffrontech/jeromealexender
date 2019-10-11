@@ -603,7 +603,8 @@
     .nav-sections-item-title { height: auto; padding: 0; background: #fff; border: none; padding: 14px 10px; width: 50%; font-family: "BentonSans-Medium";    }
     .nav-sections .header.links li { padding: 0; display: block; border-top: 1px solid #ffeeea;    }
     .nav-sections .header.links li.greet.welcome { padding: 0; border-top: 1px solid #ffeeea;    }
-    .nav-sections .header.links li a, .nav-sections .header.links li span { border: none; padding: 14px 15px; color: #053052; display: block; font-weight: 400;font-family: "BentonSans-Medium"; font-size: 14px;
+    .nav-sections .header.links li a, .nav-sections .header.links li span,
+	.nav-sections .header.links a, .nav-sections .header.links a:hover	{ border: none; padding: 14px 15px; color: #053052; display: block; font-weight: 400;font-family: "BentonSans-Medium"; font-size: 14px;
     }
     .nav-sections .header.links { border-bottom: 1px solid #ffeeea;     }
     .customer-service-mobile li {margin: 0;display: block;}
@@ -785,7 +786,6 @@ body.checkout-index-index .opc-wrapper.am-opc-wrapper .discount-code .payment-op
 	margin-left:0; margin-right:0; 
 	padding-left:0; padding-right:0;
 }
-.product-info-main .product-options-bottom .box-tocart .fieldset .actions { width:90%; }
 .swatch-option { width:32px; height:32px; }
 .table-checkout-shipping-method tbody td:first-child { padding-left: 5px; padding-right: 5px; }
 .table-checkout-shipping-method tbody tr td { padding-left:8px; padding-right:8px; }
@@ -824,7 +824,8 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .product.media .product.media .fotorama__stage { width: 300px !important; height: 300px !important; }
 .product.media .fotorama__active .fotorama__dot { background-color: #053052; border-color: #053052; }
 .product.media .fotorama__dot { width:6px; height:6px; }
-
+.block-title a.action.edit { font-size: 14px; }
+.account .column.main .block:not(.widget) .block-content .box { margin-bottom:40px; }
 
 }
 
