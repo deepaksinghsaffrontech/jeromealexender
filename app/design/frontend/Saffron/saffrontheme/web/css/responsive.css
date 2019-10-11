@@ -820,13 +820,10 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .sitemap-index-index .page-title-wrapper { width:100%; padding:0; margin: 40px auto 0; }
 .sitemap-index-index h2 { font-size:20px; }
 .sitemap-index-index .col-bss-2, .sitemap-index-index .grid {  margin-bottom: 50px; }
-.product.media .fotorama__stage__shaft.fotorama__grab {
-    width: 300px !important;
-}
-.product.media .fotorama__stage {
-    width: 300px !important;
-    height: 300px !important;
-}
+.product.media .fotorama__stage__shaft.fotorama__grab { width: 300px !important; }
+.product.media .product.media .fotorama__stage { width: 300px !important; height: 300px !important; }
+.product.media .fotorama__active .fotorama__dot { background-color: #053052; border-color: #053052; }
+.product.media .fotorama__dot { width:6px; height:6px; }
 
 
 }
