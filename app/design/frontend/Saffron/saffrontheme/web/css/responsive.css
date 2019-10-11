@@ -703,7 +703,7 @@
 	.jerome-description ul.social-links li.beauty-li { margin-bottom:10px; display:block; }
 	.jerome-description ul.social-links { text-align:center; padding:10px; }
 	body.page-products .columns { padding-top:10px; }
-	.category-view .category-image img {  min-height: 400px; height: auto; object-fit: cover; }
+	.category-view .category-image img {  min-height: 180px; height: auto; object-fit: cover; }
 	.category-view {  margin-bottom: 40px; }
 	.cms-no-route header.page-header,
 	.contact-index-index header.page-header	{ border-bottom: 1px solid #ddd; }
@@ -834,6 +834,9 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .navigation li.level0.nav-5 .submenu .all-category,
 .navigation li.level0.nav-6 .submenu .all-category,
 .navigation li.level0.nav-7 .submenu .all-category { display: none; }
+.catalog-category-view .page-main { padding: 0; }
+.catalog-category-view .page-main .columns { padding-left: 15px; padding-right: 15px; }
+.catalog-category-view .page-title-wrapper.banner-title-notfront { float:left; width:100%; }
 
 }
 
