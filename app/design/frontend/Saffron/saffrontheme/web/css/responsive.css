@@ -644,7 +644,7 @@
     .product-tabs .video-container {  margin-top: 30px;   }
     .catalog-product-view .product-info-main .page-title-wrapper h1, 
 	.product-info-main .page-title-wrapper h1.page-title { font-size:26px; line-height: normal; }
-    .product.media { margin-bottom: 30px; }
+    .product.media { margin:30px 0; }
     .review-bx .name-section { padding-bottom: 0; }
 	.page-layout-2columns-left header .header-content {  border-bottom: 1px solid #DDE6EC; }
 	.shop-banner-content { margin-bottom:30px; }
