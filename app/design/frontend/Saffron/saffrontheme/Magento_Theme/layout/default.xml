@@ -144,6 +144,13 @@
  <argument name="label" xsi:type="string">Customer Services</argument>
  <argument name="path" xsi:type="string">customer-services</argument>
  </arguments>
+ 
+  <block class="Magento\Customer\Block\Account\RegisterLink" name="register-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Create an</argument>
+                </arguments>
+    </block>
+ 
  </block>
  </referenceBlock>
         <referenceContainer name="columns.top">
