@@ -199,8 +199,9 @@ foreach ($categoryProducts as $product) {
 //if(($i%5==0)OR($i==0)){
 	//$reponse .='<div class="menu-product-list">';
 //}
+$product_url = $this->getBaseUrl().$product['url_key'];
 $reponse .='<li>
-             <a href="'.$product->getProductUrl().'">
+             <a href="'.$product_url.'">
                     <span class="menu-name">'.$product->getName().'</span>
 					 
              </a>
@@ -237,10 +238,10 @@ $reponse .='<div class="menu-product-list">';
 foreach ($categoryProducts as $product) 
 {
     $imageUrl = $store->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) . 'catalog/product' . $product->getImage();
-   
+   $product_url = $this->getBaseUrl().$product['url_key'];
 
               $reponse .='<div class="product-container">
-                  <a href="'.$product->getProductUrl().'">
+                  <a href="'.$product_url.'">
 
                      <div class="new-arrivals-image">
 					 <img src="'.$imageUrl.'">
@@ -320,7 +321,7 @@ foreach ($categoryProducts as $product)
             }
 
             $html .= '<li ' . $this->_getRenderedMenuItemAttributes($child) . '>';
-            $html .= '<a href="#" ' . $outermostClassCode . '><span>' . $this->escapeHtml(
+            $html .= '<a href="javascript:void(0)" ' . $outermostClassCode . '><span>' . $this->escapeHtml(
                 $child->getName()
             ) . '</span></a>' . $this->_addSubMenu(
                 $child,
