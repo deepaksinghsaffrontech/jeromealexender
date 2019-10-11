@@ -828,6 +828,7 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .account .column.main .block:not(.widget) .block-content .box { margin-bottom:40px; }
 .navigation li { display:block; }
 .fotorama__stage__frame .fotorama__img { max-width:240px; width:100%; top:40%; }
+.navigation li.level0.nav-3 .submenu .all-category { display: none; }
 
 }
 
