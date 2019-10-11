@@ -837,6 +837,7 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .catalog-category-view .page-main { padding: 0; }
 .catalog-category-view .page-main .columns { padding-left: 15px; padding-right: 15px; }
 .catalog-category-view .page-title-wrapper.banner-title-notfront { float:left; width:100%; }
+.description h3 {  font-size: 24px; }
 
 }
 
