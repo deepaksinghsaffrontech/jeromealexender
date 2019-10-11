@@ -317,6 +317,7 @@
 	.category-image.shop-banner img {  width: 100%;  min-height: 400px;  object-fit: cover; }
 	.checkout-onepage-success .table-order-items .col { min-width:inherit;}
 	.cart-summary .checkout-methods-items .action.primary.checkout { padding:14px 10px; }
+	.sitemap-index-index .page-title-wrapper { width:100%; }
 
 }
 
@@ -610,7 +611,7 @@
     .navigation li.level0:last-child {  border-bottom: none;   }
     .customer-service-mobile li a { padding: 9px 15px; display: block; color: #6B6B6B;
 		font-family: "GeorgiaRegular"; font-weight: normal;    }
-    .sections.nav-sections .satisfaction-carousel { margin-top: 10px; padding: 0 26px;     }
+    .sections.nav-sections .satisfaction-carousel { margin-top: 10px; padding: 0 26px; display:none; }
     .navigation .level0>.level-top:hover {  color: #053052;  }
     .navigation .submenu>li { display: block;  }
     .navigation .submenu:not(:first-child)>li>a { color: #053052; font-weight: normal; font-size: 14px;   }
@@ -816,6 +817,9 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 #discount-coupon-form button.action.apply.primary { padding: 0 7px; }
 .cms-write-review .columns .column.main {  padding-top: 40px; }
 .get-social-row .shuffle {  padding: 0 15px; }
+.sitemap-index-index .page-title-wrapper { width:100%; padding:0; }
+.sitemap-index-index h2 { font-size:20px; }
+.sitemap-index-index .col-bss-2, .sitemap-index-index .grid {  margin-bottom: 50px; }
 
 
 }
