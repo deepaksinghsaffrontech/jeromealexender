@@ -826,6 +826,7 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .product.media .fotorama__dot { width:6px; height:6px; }
 .block-title a.action.edit { font-size: 14px; }
 .account .column.main .block:not(.widget) .block-content .box { margin-bottom:40px; }
+.navigation li { display:block; }
 
 }
 
