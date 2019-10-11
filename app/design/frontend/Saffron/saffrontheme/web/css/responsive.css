@@ -154,6 +154,7 @@
         margin-top: -105px;
         border-left: 1px solid #dfdfdf;
     }
+	.get-social-row .mpinstagramfeed-photo { width: calc(16.666666666667% - 8px) !important; }
 	
 	
 /*==============magento-common-classes-css=================*/
