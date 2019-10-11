@@ -24,7 +24,7 @@ $isLoggedIn = $customerSession->isLoggedIn() ;
 	<?php if($isLoggedIn): ?>
      <a href="javascript:void(0);" class="singin-link">
       <i class="fa"><img src="<?php echo $mediaUrl ;?>themeimage/user.png" alt=""></i>
-        <span class="">hi  <?php echo   $customerSession->getCustomerData()->getFirstname(); ?>..</span>
+        <span class=""><?php echo   $customerSession->getCustomerData()->getFirstname(); ?>..</span>
        </a> 
 	   
 	 <div class="singin-dropdown">
