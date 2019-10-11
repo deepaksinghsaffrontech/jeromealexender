@@ -50,7 +50,14 @@
         </referenceContainer>
 		<referenceBlock name="skip_to_content" remove="true"/>
 		<!--<referenceBlock name="register-link" remove="true"/>-->	
-		
+		 <referenceBlock name="header.links">
+ <block class="Magento\Framework\View\Element\Html\Link\Current" name="faq">
+ <arguments>
+ <argument name="label" xsi:type="string">FAQ</argument>
+ <argument name="path" xsi:type="string">faq</argument>
+ </arguments>
+ </block>
+ </referenceBlock>
         <referenceContainer name="header-wrapper" htmlClass="header-content" after="-">
 			
 			
