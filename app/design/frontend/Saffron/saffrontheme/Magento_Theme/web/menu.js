@@ -96,7 +96,7 @@ define([
              * @param {*} ev
              */
             fireNavEvent: function (elm, ev) {
-                /*if (ev) {
+                if (ev) {
                     elm.addClassName('over');
                     elm.down('a').addClassName('over');
 
@@ -110,7 +110,7 @@ define([
                     if (elm.childElements()[1]) {
                         main.hide(elm.childElements()[1]);
                     }
-                }*/
+                }
             },
 
             /**
