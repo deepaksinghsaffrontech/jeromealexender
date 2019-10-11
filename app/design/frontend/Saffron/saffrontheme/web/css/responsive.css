@@ -555,7 +555,7 @@
     .footer-top .container {  display: inherit;  text-align: center;     }
     .footer-top { padding:20px 0; }
     .footer-bottom { padding-top:50px; padding-bottom:15px;  }
-    .scroll-top { right:10px; bottom:140px;  }
+    .scroll-top { right:10px; bottom:10px;  }
     .social-links li {    padding-right: 14%;    }
     .social-links li:last-child {  padding-right: 0;    }
     .copyright-col {  text-align: center;   }
@@ -827,6 +827,7 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .block-title a.action.edit { font-size: 14px; }
 .account .column.main .block:not(.widget) .block-content .box { margin-bottom:40px; }
 .navigation li { display:block; }
+.fotorama__stage__frame .fotorama__img { max-width:240px; width:100%; top:40%; }
 
 }
 
