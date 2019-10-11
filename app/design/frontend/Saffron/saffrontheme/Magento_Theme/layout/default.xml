@@ -49,7 +49,7 @@
 			</container>
         </referenceContainer>
 		<referenceBlock name="skip_to_content" remove="true"/>
-		<referenceBlock name="register-link" remove="true"/>	
+		<!--<referenceBlock name="register-link" remove="true"/>-->	
 		
         <referenceContainer name="header-wrapper" htmlClass="header-content" after="-">
 			
