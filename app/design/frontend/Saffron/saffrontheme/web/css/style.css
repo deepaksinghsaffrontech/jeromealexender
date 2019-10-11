@@ -2088,8 +2088,7 @@ dt {
 .swatch-option.image:not(.disabled):hover,
 .swatch-option.color:not(.disabled):hover { outline: none; border: none; }
 .product-info-main .product-options-bottom .box-tocart {  margin-top: 0; }
-.product-info-main .product-options-bottom .box-tocart .fieldset { display: flex; }
-.product-info-main .product-options-bottom .box-tocart .fieldset .actions { width: 100%; }
+
 .product-social-links .product-addto-links .action:before,
 .product-social-links .action.mailto.friend:before { display: none; }
 .product-info-main .stock.available {  color: green; }

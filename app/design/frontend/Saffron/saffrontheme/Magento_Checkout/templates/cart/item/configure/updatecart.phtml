@@ -21,10 +21,10 @@
 <?php if ($_product->isSaleable()): ?>
 <div class="box-tocart">
     <div class="fieldset">
-    <div class="box-tocart update qty qty-col">
+    <div class="box-tocart update ">
         <fieldset class="fieldset">
             <?php if ($block->shouldRenderQuantity()): ?>
-            <div class="field qty">
+            <div class="field qty qty-col">
                 <label class="label" for="qty"><span><?= /* @escapeNotVerified */ __('Select a Quantity') ?></span></label>
                 <!--<div class="control">
                     <input type="number"
