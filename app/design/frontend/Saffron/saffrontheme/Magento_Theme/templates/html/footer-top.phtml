@@ -129,8 +129,13 @@ $(window).scroll(function() {
 		}, 800);
 		return false;
 	});
-
-    $(".sign-col .singin-link").on("click", function(){
+	
+	$(document).click( function(){
+		$(".singin-dropdown").fadeOut();
+		$(".sign-col .singin-link").removeClass("active");
+	})
+    $(".sign-col .singin-link").on("click", function(e){
+		e.stopPropagation();
 		$(this).toggleClass('active');
 		$(".singin-dropdown").slideToggle('slow');
 
