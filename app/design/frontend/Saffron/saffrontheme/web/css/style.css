@@ -3333,6 +3333,15 @@ form.form.shared.wishlist .action.primary {  padding: 14px 15px; }
 .cart-summary .checkout-methods-items li.item {  margin-bottom: 0; }
 .get-social-row .shuffle {  justify-content: center; }
 .mpinstagramfeed-container .mpinstagramfeed-photo { margin:4px; }
+.sitemap-index-index .page-title-wrapper {
+    max-width: 1600px;
+    width: 94%;
+    margin: 70px auto 30px;
+    padding: 0 15px;
+}
+.sitemap-index-index h2 { font-size: 30px; border-bottom: 1px solid; }
+.sitemap-index-index .bss_product_list { font-family: "BentonSans-Regular"; margin: 0 0 12px; }
+.sitemap-index-index .grid { margin-bottom: 70px; }
 
 
 
