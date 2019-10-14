@@ -822,7 +822,8 @@ header .header-search .form-control:focus {
 .social-links {  padding: 30px 0; }
 .social-links li {  padding: 0 25px 0 0; }
 .social-links li a{  font-size: 22px; outline:none; }
-.social-links li a:hover, .social-links li a:focus {
+.social-links li a:hover, .social-links li a:focus,
+.social-links li a:active {
     color: #053052;
 }
 ul.social-links li { outline:none; }
