@@ -3346,7 +3346,7 @@ form.form.shared.wishlist .action.primary {  padding: 14px 15px; }
 .sitemap-index-index h2 { font-size: 30px; border-bottom: 1px solid; }
 .sitemap-index-index .bss_product_list { font-family: "BentonSans-Regular"; margin: 0 0 12px; }
 .sitemap-index-index .grid { margin-bottom: 70px; }
-
+.cms-about-us .column.main input[type="hidden"] + p { margin: 0; }
 
 
 /*===============-magento-common-classes-css-===============*/
