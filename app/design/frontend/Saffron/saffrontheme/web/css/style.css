@@ -3104,7 +3104,7 @@ body .toolbar .pages { margin:0; }
 .about-caption figure { margin-bottom: -20px; }
 .about-section {
     float: left;
-    width: 100%;
+    width: 100%; position:relative;
 }
 .about-section .info {
     padding-right: 30px;
