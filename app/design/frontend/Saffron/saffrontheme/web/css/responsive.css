@@ -124,14 +124,13 @@
     }
     .about-caption {
         text-align: center;
-        width:calc(100% - 400px);
+        width:calc(100% - 40%);
         order: 1;
-        padding: 0 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-left: 400px; 
+        margin-left: 40%; 
         margin-top:-5%; 
     }
     .banner-jerome-img {
@@ -143,16 +142,16 @@
     .web-col .img-m { display: none; }
     .about-content .left-col {
         float: left;
-        width: 440px;
+        width: 33%;
         position: absolute;
         top: 240px;
     }
     .about-content .right-col {
         float: left;
-        width: calc(100% - 440px);
-        margin-left: 440px;
-        margin-top: -105px;
-        border-left: 1px solid #dfdfdf;
+		width: calc(100% - 40%);
+		margin-left: 40%;
+		margin-top: -105px;
+		border-left: 1px solid #dfdfdf;
     }
 	.get-social-row .mpinstagramfeed-photo { width: calc(16.666666666667% - 8px) !important; }
 	
