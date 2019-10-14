@@ -92,22 +92,7 @@ $media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
               </div>
            </div>
 		   
-		   <script>
-				var characterCount = function(){
-					jQuery(".morePlus").click( function(){
-						jQuery(this).toggleClass("open");
-						if( jQuery(this).hasClass("open") ){
-							jQuery(this).children().removeClass("fa-plus").addClass("fa-minus");
-							jQuery(".about-section .showText").show();
-						}
-						else{
-							jQuery(this).children().addClass("fa-plus").removeClass("fa-minus");
-							jQuery(".about-section .showText").hide();
-						}
-					})
-				}
-				characterCount();
-		   </script>
+		  
 		   
 		   
 <?php echo $block->getLayout()->createBlock('Saffron\Bestsellerproduct\Block\Bestsellerproduct')->setTemplate('bestsellerproduct.phtml')->toHtml();?> 		   
