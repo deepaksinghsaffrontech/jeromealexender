@@ -1,8 +1,7 @@
 <?php 
 $om = \Magento\Framework\App\ObjectManager::getInstance();
 $storeManager = $om->get('\Magento\Store\Model\StoreManagerInterface');
-$media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
-?>
+$media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);?>
 <div class="about-banner" data-aos="fade" data-aos-offset="150"  data-aos-easing="ease-in-sine">
               <div class="container">
                   <div class="about-caption">
@@ -92,6 +91,23 @@ $media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
                 
               </div>
            </div>
+		   
+		   <script>
+				var characterCount = function(){
+					$(".morePlus").click( function(){
+						$(this).toggleClass("open");
+						if( $(this).hasClass("open") ){
+							$(this).children().removeClass("fa-plus").addClass("fa-minus");
+							$(".about-section .showText").show();
+						}
+						else{
+							$(this).children().addClass("fa-plus").removeClass("fa-minus");
+							$(".about-section .showText").hide();
+						}
+					})
+				}
+				characterCount();
+		   </script>
 		   
 		   
 <?php echo $block->getLayout()->createBlock('Saffron\Bestsellerproduct\Block\Bestsellerproduct')->setTemplate('bestsellerproduct.phtml')->toHtml();?> 		   

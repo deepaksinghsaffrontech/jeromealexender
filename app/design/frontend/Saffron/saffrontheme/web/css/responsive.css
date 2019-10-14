@@ -849,6 +849,9 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .about-caption h1 {  color: #053052; }
 .about-section h2:before {content: "";width: 100%;height: 19px;background: #dce6ec;position: absolute;left: 0;right: 0;bottom: 0;z-index: -1;}
 .about-section h3 {  font-size: 22px;  margin: 0 0 10px; }
+.showText {  display: none; }
+.morePlus { display: inline-block; }
+
 
 }
 
