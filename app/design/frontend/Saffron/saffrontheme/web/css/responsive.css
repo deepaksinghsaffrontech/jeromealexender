@@ -394,9 +394,10 @@
 	.quotes-inner h4 { font-size: 30px; }
 	.about-section h2 { font-size: 36px; }
 	.about-caption h1 { font-size: 30px; }
-	.about-content .left-col {  width: 300px; }
-	.about-banner { height: 500px; }
+	.about-banner { height: 450px; }
 	.about-banner .container { width:100%; }
+	.about-section .info { padding-right:0; }
+	.about-content .right-col { margin-top:-90px; }
 	
 	
 	
