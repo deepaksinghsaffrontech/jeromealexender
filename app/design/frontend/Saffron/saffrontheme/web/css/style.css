@@ -824,7 +824,7 @@ header .header-search .form-control:focus {
 .social-links li a{  font-size: 22px; outline:none; }
 .social-links li a:hover, .social-links li a:focus,
 .social-links li a:active {
-    color:red;
+    color: #053052;
 }
 ul.social-links li { outline:none; }
 .copyright-col span, .copyright-col a{  font-size: 12px; }
