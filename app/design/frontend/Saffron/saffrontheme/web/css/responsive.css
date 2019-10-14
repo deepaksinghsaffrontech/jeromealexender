@@ -148,8 +148,9 @@
     }
     .about-content .right-col {
         width: calc(100% - 33%);
-		margin-left: 33%;
+		float: left;
     }
+	.about-content .container { display:flex; }
 	.get-social-row .mpinstagramfeed-photo { width: calc(16.666666666667% - 8px) !important; }
 	
 	
@@ -394,7 +395,9 @@
 	.about-banner { height: 450px; }
 	.about-banner .container { width:100%; }
 	.about-section .info { padding-right:0; }
-	.about-content .right-col { margin-top:-90px; }
+	.about-content .left-col { width:40%;  margin-top: -390px; }
+	.about-content .right-col {  width: calc(100% - 40%); }
+	
 	
 	
 	
