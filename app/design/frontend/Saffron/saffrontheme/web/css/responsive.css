@@ -315,6 +315,8 @@
 	.checkout-onepage-success .table-order-items .col { min-width:inherit;}
 	.cart-summary .checkout-methods-items .action.primary.checkout { padding:14px 10px; }
 	.sitemap-index-index .page-title-wrapper { width:100%; }
+	.about-content .container { max-width:100%; }
+	.about-section .info {  padding-right: 15px; }
 
 }
 
@@ -397,7 +399,6 @@
 	.about-caption h1 { font-size: 30px; }
 	.about-banner { height: 450px; }
 	.about-banner .container { width:100%; }
-	.about-section .info { padding-right:0; }
 	.about-content .left-col { width:40%;  margin-top: -390px; }
 	.about-content .right-col {  width: calc(100% - 40%); }
 	
