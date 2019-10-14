@@ -395,6 +395,7 @@
 	.about-caption h1 { font-size: 30px; }
 	.about-content .left-col {  width: 300px; }
 	.about-banner { height: 500px; }
+	.about-banner .container { width:100%; }
 	
 	
 	
