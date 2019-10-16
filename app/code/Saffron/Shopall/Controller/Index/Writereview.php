@@ -50,7 +50,7 @@ public function execute()
             $sentToEmail = $this->_scopeConfig ->getValue('trans_email/ident_general/email',\Magento\Store\Model\ScopeInterface::SCOPE_STORE);
             $sentToName = $this->_scopeConfig ->getValue('trans_email/ident_general/name',\Magento\Store\Model\ScopeInterface::SCOPE_STORE);
             $transport = $this->_transportBuilder
-            ->setTemplateIdentifier(7)
+            ->setTemplateIdentifier(1)
             ->setTemplateOptions(
                 [
                     'area' => \Magento\Framework\App\Area::AREA_FRONTEND,
