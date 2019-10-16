@@ -871,6 +871,7 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .cms-shipping-returns .columns .sidebar-additional { order: 1; }
 .sidebar-list li:first-child { border-top:none; }
 .sidebar-list { margin-bottom: 50px; }
+.gauranty-col { margin-bottom:0; }
 
 }
 

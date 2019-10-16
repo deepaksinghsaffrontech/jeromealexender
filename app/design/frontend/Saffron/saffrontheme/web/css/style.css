@@ -1212,7 +1212,7 @@ ul.pagination-list {
     cursor: pointer;
     font-size: 22px;
 }
-.category-body li { padding: 8px 0;  margin:0; }
+.category-body li { padding: 8px 0;  margin:0; display:block; }
 .category-body li a {  line-height: 22px;  font-size: 15px; }
 .sidebar-category li.shop-item .item-name {  font-family: "BentonSans-bold"; }
 ul.sidebar-category {
