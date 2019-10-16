@@ -49,7 +49,8 @@ public function execute()
             $sender = [ 'email' => $data['email'],'name' => $data['user_name']];
             $sentToEmail = 'deepak.singh13008@gmail.com'//$this->_scopeConfig ->getValue('trans_email/ident_general/email',\Magento\Store\Model\ScopeInterface::SCOPE_STORE);
             $sentToName = 'deepak'//$this->_scopeConfig ->getValue('trans_email/ident_general/name',\Magento\Store\Model\ScopeInterface::SCOPE_STORE);
-            $transport = $this->_transportBuilder
+            echo"<pre>";print_r($data);die;
+			$transport = $this->_transportBuilder
             ->setTemplateIdentifier(1)
             ->setTemplateOptions(
                 [
@@ -68,7 +69,7 @@ public function execute()
                 ->setFrom($sender)
                 ->addTo($sentToEmail,$sentToName)
                 ->getTransport();
-				echo"<pre>";print_r($data);die;
+				
                 $transport->sendMessage();
                 $this->_inlineTranslation->resume();
                 $this->messageManager->addSuccess('Email sent successfully');
