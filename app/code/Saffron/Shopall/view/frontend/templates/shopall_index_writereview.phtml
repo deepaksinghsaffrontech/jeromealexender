@@ -5,27 +5,40 @@
 <h4>Write a Review</h4>
 </div>
 </div>
-<form class="form" action="<?php echo $this->getUrl('shopall/index/writereview');?>" id="writereview-form" method="post"  data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>"
-      data-mage-init='{"validation":{}}'>
+
+<form class="form contact" id="writereview-form" action="<?php echo $this->getUrl('shopall/index/writereview');?>" id="contact-form" method="post" data-hasrequired="* Required Fields" novalidate="novalidate">
 <div class="col-12 store-col">
-
-
-
 <div class="form-group"><label for="">Store <span>*</span></label>
-<div class="rating-star"><i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></div>
-</div>
+
+<div class="skin-radio-col rating-star">
+
+<div class="custom-control custom-radio"><input id="customRadio13" name ="star" value="1" class="custom-control-input  required-entry" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio13"><i class="fa fa-star-o"></i></label></div>
+<div class="custom-control custom-radio"><input id="customRadio14" name ="star" value="2" class="custom-control-input  required-entry" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio14"><i class="fa fa-star-o"></i></label></div>
+<div class="custom-control custom-radio"><input id="customRadio15" name ="star" value="3" class="custom-control-input  required-entry" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio15"><i class="fa fa-star-o"></i></label></div>
+<div class="custom-control custom-radio"><input id="customRadio16" name ="star" value="4" class="custom-control-input  required-entry" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio16"><i class="fa fa-star-o"></i></label></div>
+<div class="custom-control custom-radio"><input id="customRadio17" name ="star" value="5" class="custom-control-input  required-entry" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio17"><i class="fa fa-star-o"></i></label></div>
 </div>
 
+</div>
+</div>
 
 
 <div class="col-md-6 col-12 name-col">
-<div class="form-group"><label for="">First Name <span>*</span></label> 
-<input class="form-control" type="text" name="first_name"  value="" data-validate="{required:true}"/>
+<div class="form-group"><label for="">User Name <span>*</span></label> 
+<input class="form-control" type="text" name="user_name"  value="" data-validate="{required:true}"/>
 </div>
 </div>
+
+<div class="col-md-6 col-12 name-col">
+<div class="form-group"><label for="">Email <span>*</span></label> 
+<input class="form-control" type="text" name="email"  value="" data-validate="{required:true, 'validate-email':true}"/>
+</div>
+</div>
+
 <div class="col-12 review-comment-col">
 <div class="form-group"><label for="">Review <span>*</span></label> <textarea id="" class="form-control" name="review" value="" rows="10" data-validate="{required:true}"></textarea></div>
 </div>
+       
 <div class="col-12 age-radio-col">
 <div class="form-group"><label for="">Age</label>
 <div class="custom-control custom-radio"><input id="customRadio1" name="age" value="65+" class="custom-control-input  required-entry" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio1">65+</label></div>
@@ -45,14 +58,20 @@
 <div class="custom-control custom-radio"><input id="customRadio11" name ="skin" value="Lines" class="custom-control-input  required-entry" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio11">Lines</label></div>
 <div class="custom-control custom-radio"><input id="customRadio12" name ="skin" value="Acne Prone" class="custom-control-input  required-entry" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio12">Acne Prone</label></div>
 </div>
+</div>	   
+	   
+	   
+<div class="form-group">
+ <button class="action submit btn btn-primary done-btn" title="Submit">Done</button>
 </div>
-<div class="col-12 btn-col">
-<div class="form-group"><button class="btn btn-primary done-btn" type="button">Done</button></div>
-</div>
+  
+   
 </form>
+</div>
+</div>
 
-</div>
-</div>
+
+
 
 <script type="text/x-magento-init">
     {
