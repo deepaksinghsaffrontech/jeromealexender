@@ -542,7 +542,8 @@
     .customer-tab .nav-tabs { text-align:center; }
     .question-click h5 { font-size:16px; line-height:24px;  }
     .name-date-column { margin-bottom:10p;  }
-    .contact-form, .callus-col {  margin-top: 40px; float: left;  width: 100%;}
+    .contact-form, .callus-col {  margin-top: 0px; float: left;  width: 100%;}
+	.callus-col { margin-top:40px; }
     .sign-feature .quick-item { text-align: center; }
     .quick-item p { font-size:16px; margin:0;   }
     .quick-item p br, .account-bx .text br { display:none; }
@@ -868,6 +869,8 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .cms-about-us .front-best-seller h2:before { display: none; }
 .cms-shipping-returns .columns .column.main { order: 2; }
 .cms-shipping-returns .columns .sidebar-additional { order: 1; }
+.sidebar-list li:first-child { border-top:none; }
+.sidebar-list { margin-bottom: 50px; }
 
 }
 
