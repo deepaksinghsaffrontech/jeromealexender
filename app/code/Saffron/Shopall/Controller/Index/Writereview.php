@@ -68,6 +68,7 @@ public function execute()
                 ->setFrom($sender)
                 ->addTo($sentToEmail,$sentToName)
                 ->getTransport();
+				echo"<pre>";print_r($data);die;
                 $transport->sendMessage();
                 $this->_inlineTranslation->resume();
                 $this->messageManager->addSuccess('Email sent successfully');
