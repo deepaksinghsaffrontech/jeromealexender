@@ -59,9 +59,9 @@ public function execute()
                 ]
                 )
                 ->setTemplateVars([
-                'Star Rating' => $data['star'],
                 'user_name' => $data['user_name'],
 				'email' => $data['email'],
+				'Star Rating' => $data['star'],
 				'review' => $data['review'],
                 'age' => $data['age'],
                 'skin' => $data['skin']
