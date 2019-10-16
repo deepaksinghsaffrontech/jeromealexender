@@ -3355,8 +3355,8 @@ form.form.shared.wishlist .action.primary {  padding: 14px 15px; }
     padding-left: 0; width: auto;  margin-right: 10px; margin-bottom:0;
 }
 form#writereview-form { float: left;  width: 100%; }
-.write-review-form .form-group {  margin-bottom: 40px; }
-/* form#writereview-form > div, .write-review-form .title-col { padding: 0; } */
+form#writereview-form .form-group {  margin-bottom: 40px; }
+
 
 
 /*===============-magento-common-classes-css-===============*/
