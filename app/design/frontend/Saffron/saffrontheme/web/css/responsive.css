@@ -830,7 +830,6 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .modal-popup.modal-slide { left:0; }
 #discount-coupon-form button.action.apply.primary span {  font-size: 14px; }
 #discount-coupon-form button.action.apply.primary { padding: 0 7px; }
-.cms-write-review .columns .column.main {  padding-top: 40px; }
 .get-social-row .shuffle {  padding: 0 15px; }
 .sitemap-index-index .page-title-wrapper { width:100%; padding:0; margin: 40px auto 0; }
 .sitemap-index-index h2 { font-size:20px; }
@@ -870,12 +869,18 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .quotes-inner h4 { font-size: 22px; line-height: 30px; margin-bottom: 15px; }
 .cms-about-us .front-best-seller h2:before { display: none; }
 .cms-shipping-returns .columns .column.main,
-.cms-write-review .columns .column.main { order: 2; }
+.cms-write-review .columns .column.main,
+.cms-customer-services .columns .column.main { order: 2; }
 .cms-shipping-returns .columns .sidebar-additional,
-.cms-write-review .columns .sidebar-additional { order: 1; }
+.cms-write-review .columns .sidebar-additional,
+.cms-customer-services .columns .sidebar-additional { order: 1; }
+
 .sidebar-list li:first-child { border-top:none; }
 .sidebar-list { margin-bottom: 50px; }
 .gauranty-col { margin-bottom:0; }
+.banner-inner .form-group input { font-size:15px; }
+.contentmanager-contentlist-2 .banner-inner { padding:50px 0; }
+.faq-panel p { font-size:16px; }
 
 }
 
