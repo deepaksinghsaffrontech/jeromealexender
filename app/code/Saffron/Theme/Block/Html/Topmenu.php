@@ -320,17 +320,26 @@ foreach ($categoryProducts as $product)
                 $html .= '</ul></li><li class="column"><ul>';
             }
 
-            $html .= '<li ' . $this->_getRenderedMenuItemAttributes($child) . '>';
-            $html .= '<a class="desktop_menu" href="' . $child->getUrl() . '" ' . $outermostClassCode . '><span>' . $this->escapeHtml(
-            $html .= '<a class="mobile_menu" href="javascript:void(0)" ' . $outermostClassCode . '><span>' . $this->escapeHtml(
-                
-				$child->getName()
+            $html .= '<li class="mobile-menu" ' . $this->_getRenderedMenuItemAttributes($child) . '>';
+            $html .= '<a  href="javascript:void(0)" ' . $outermostClassCode . '><span>' . $this->escapeHtml(
+                $child->getName()
             ) . '</span></a>' . $this->_addSubMenu(
                 $child,
                 $childLevel,
                 $childrenWrapClass,
                 $limit
             ) . '</li>';
+			
+			$html .= '<li  class="desktop-menu"' . $this->_getRenderedMenuItemAttributes($child) . '>';
+           
+		   $html .= '<a   href="' . $child->getUrl() . '" ' . $outermostClassCode . '><span>' . $this->escapeHtml(
+                $child->getName()
+            ) . '</span></a>' . $this->_addSubMenu(
+                $child,
+                $childLevel,
+                $childrenWrapClass,
+                $limit
+            ) . '</li>';	
             $itemPosition++;
             $counter++;
         }
