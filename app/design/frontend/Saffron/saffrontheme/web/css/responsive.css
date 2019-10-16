@@ -152,6 +152,8 @@
     }
 	.about-content .container { display:flex; }
 	.get-social-row .mpinstagramfeed-photo { width: calc(16.666666666667% - 8px) !important; }
+	form#writereview-form .name-col input,
+	form#writereview-form	.email-col input { max-width: 600px; }
 	
 	
 /*==============magento-common-classes-css=================*/
