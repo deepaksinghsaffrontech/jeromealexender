@@ -47,8 +47,8 @@ public function execute()
             $this->_inlineTranslation->suspend();
             $storeScope = \Magento\Store\Model\ScopeInterface::SCOPE_STORE;
             $sender = [ 'email' => $data['email'],'name' => $data['user_name']];
-            $sentToEmail = $this->_scopeConfig ->getValue('trans_email/ident_general/email',\Magento\Store\Model\ScopeInterface::SCOPE_STORE);
-            $sentToName = $this->_scopeConfig ->getValue('trans_email/ident_general/name',\Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+            $sentToEmail = 'deepak.singh13008@gmail.com'//$this->_scopeConfig ->getValue('trans_email/ident_general/email',\Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+            $sentToName = 'deepak'//$this->_scopeConfig ->getValue('trans_email/ident_general/name',\Magento\Store\Model\ScopeInterface::SCOPE_STORE);
             $transport = $this->_transportBuilder
             ->setTemplateIdentifier(1)
             ->setTemplateOptions(
