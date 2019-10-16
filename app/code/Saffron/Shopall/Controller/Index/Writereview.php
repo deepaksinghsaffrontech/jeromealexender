@@ -72,7 +72,7 @@ public function execute()
 				
                 $transport->sendMessage();
                 $this->_inlineTranslation->resume();
-                $this->messageManager->addSuccess('Email sent successfully');
+                $this->messageManager->addSuccess('Review has been Submitted successfully');
 				//return $resultRedirect->setPath('thank-you/');
                 $this->_redirect('thank-you/');
         } catch(\Exception $e){
