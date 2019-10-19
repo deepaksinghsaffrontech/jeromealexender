@@ -25,7 +25,15 @@ public function getAllproducts($lastorderId)
     foreach ($orderItems as $item) {
     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
     $product = $objectManager->create('Magento\Catalog\Model\Product')->load($item->getId());
-    $itemQty['items'][]=array('quantity'=>$item->getQtyOrdered(),'description'=>$product->getShortDescription(),'name'=>$item->getName(),'productImage'=>$product->getImage(),'producturl'=>$product->getProductUrl(),'price'=>$item->getPrice(),'product_id'=>$item->getId());
+    $itemQty['items']['quantity']=$item->getQtyOrdered() ;
+	$itemQty['items']['description']= $product->getShortDescription() ;
+	$itemQty['items']['name']= $item->getName() ;
+	$itemQty['items']['productImage']= $product->getImage() ;
+	$itemQty['items']['producturl']= $product->getProductUrl() ;
+	$itemQty['items']['product_id']= $item->getId() ;
+	
+	
+	//$itemQty['items'][]=array('quantity'=>$item->getQtyOrdered(),'description'=>$product->getShortDescription(),'name'=>$item->getName(),'productImage'=>$product->getImage(),'producturl'=>$product->getProductUrl(),'price'=>$item->getPrice(),'product_id'=>$item->getId());
 
     }
 	}else{
