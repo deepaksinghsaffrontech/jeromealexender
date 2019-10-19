@@ -22,19 +22,20 @@ public function getAllproducts($lastorderId)
 	$itemQty['order_date']= $order->getCreatedAt() ;
 	$itemQty['order_name']= $customerName ;
 	$itemQty['region']= $billingstate ;
+	$i=0;
     foreach ($orderItems as $item) {
     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
     $product = $objectManager->create('Magento\Catalog\Model\Product')->load($item->getId());
-    $itemQty['items']['quantity']=$item->getQtyOrdered() ;
-	$itemQty['items']['description']= $product->getShortDescription() ;
-	$itemQty['items']['name']= $item->getName() ;
-	$itemQty['items']['productImage']= $product->getImage() ;
-	$itemQty['items']['producturl']= $product->getProductUrl() ;
-	$itemQty['items']['product_id']= $item->getId() ;
+    $itemQty['items'][$i]['quantity']=$item->getQtyOrdered() ;
+	$itemQty['items'][$i]['description']= $product->getShortDescription() ;
+	$itemQty['items'][$i]['name']= $item->getName() ;
+	$itemQty['items'][$i]['productImage']= $product->getImage() ;
+	$itemQty['items'][$i]['producturl']= $product->getProductUrl() ;
+	$itemQty['items'][$i]['product_id']= $item->getId() ;
 	
 	
 	//$itemQty['items'][]=array('quantity'=>$item->getQtyOrdered(),'description'=>$product->getShortDescription(),'name'=>$item->getName(),'productImage'=>$product->getImage(),'producturl'=>$product->getProductUrl(),'price'=>$item->getPrice(),'product_id'=>$item->getId());
-
+$i++;
     }
 	}else{
 	$itemQty['No_order'];		
