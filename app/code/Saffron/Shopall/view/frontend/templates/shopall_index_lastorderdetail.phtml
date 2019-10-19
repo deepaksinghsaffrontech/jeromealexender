@@ -4,7 +4,7 @@ $products  = $this->getAllproducts($randid['increment_id']);
 //echo"<pre>";print_r($products);die;
 ?>
 
-<?php echo $products['items'][0]['product_id'] ;?>
+<?php if( !empty($products['items'][0]['product_id']) ){?>
 
 <div class="advertise-bx">
 <button class="close-add"><i class="fa fa-times"></i></button>
@@ -32,3 +32,5 @@ $hours = $seconds / 60 /  60;
    </div> 
    </a>
   </div>
+  
+<?php }?> 
