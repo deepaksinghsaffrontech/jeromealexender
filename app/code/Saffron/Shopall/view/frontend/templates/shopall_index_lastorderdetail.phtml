@@ -1,7 +1,7 @@
 <?php
 $randid =$this->getRandid();
 $products  = $this->getAllproducts($randid['increment_id']);
-echo"<pre>";print_r($products);die;
+//echo"<pre>";print_r($products);die;
 ?>
 
 <?php echo $products['items'][0]['product_id'] ;?>

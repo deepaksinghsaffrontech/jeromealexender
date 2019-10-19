@@ -33,7 +33,6 @@ public function getAllproducts($lastorderId)
 	$itemQty['items'][$i]['producturl']= $product->getProductUrl() ;
 	$itemQty['items'][$i]['product_id']= $item->getId() ;
 	
-	
 	//$itemQty['items'][]=array('quantity'=>$item->getQtyOrdered(),'description'=>$product->getShortDescription(),'name'=>$item->getName(),'productImage'=>$product->getImage(),'producturl'=>$product->getProductUrl(),'price'=>$item->getPrice(),'product_id'=>$item->getId());
 $i++;
     }
