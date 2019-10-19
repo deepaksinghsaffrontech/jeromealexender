@@ -28,7 +28,7 @@ public function getAllproducts($lastorderId)
     $product = $objectManager->create('Magento\Catalog\Model\Product')->load($item->getId());
     $itemQty['items'][$i]['quantity']=$item->getQtyOrdered() ;
 	$itemQty['items'][$i]['description']= $product->getShortDescription() ;
-	$itemQty['items'][$i]['name']= $item->getName() ;
+	$itemQty['items'][$i]['name']= $product->getName() ;
 	$itemQty['items'][$i]['productImage']= $product->getImage() ;
 	$itemQty['items'][$i]['producturl']= $product->getProductUrl() ;
 	$itemQty['items'][$i]['product_id']= $item->getId() ;
@@ -43,6 +43,11 @@ $i++;
     return $itemQty;
 }
 
+
+public function getAlldetailpage(){
+	
+	
+}
 
 
 public function getMedia(){
