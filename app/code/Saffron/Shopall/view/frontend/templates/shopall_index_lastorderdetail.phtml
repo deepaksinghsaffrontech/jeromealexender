@@ -4,10 +4,10 @@ $products  = $this->getAllproducts($randid['increment_id']);
 //echo"<pre>";print_r($products);die;
 
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-    $product = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($products['items'][0]['product_id']);
-     if(isset($product[0])){
+    $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($products['items'][0]['product_id']);
+     if(isset($product1[0])){
          //this is parent product id..
-         echo $product[0];
+         echo $product1[0];
     }
 
 //echo $products['items'][0]['product_id'] ;
