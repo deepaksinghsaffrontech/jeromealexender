@@ -3,6 +3,8 @@ $randid =$this->getRandid();
 $products  = $this->getAllproducts($randid['increment_id']);
 
 if(!empty($randid)){
+if(!empty($products)){	
+	
 ?>
 
 <?php if( !empty($products['items'][0]['name']) ){?>
@@ -34,4 +36,4 @@ $hours = $seconds / 60 /  60;
    </a>
   </div>
   
-<?php }}?> 
+<?php }}}?> 
