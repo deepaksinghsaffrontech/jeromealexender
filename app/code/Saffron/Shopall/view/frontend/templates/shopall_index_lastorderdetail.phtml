@@ -1,14 +1,8 @@
 <?php
 $randid =$this->getRandid();
 $products  = $this->getAllproducts($randid['increment_id']);
-//echo"<pre>";print_r($products);die;
-//$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-  //$product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($products['items'][0]['product_id']);
-   //if(isset($product1[0])){
-            
-	  //echo  $product1[0];
-	//}
-//echo $products['items'][0]['product_id'] ;
+
+if(!empty($randid)){
 ?>
 
 <?php if( !empty($products['items'][0]['name']) ){?>
@@ -40,4 +34,4 @@ $hours = $seconds / 60 /  60;
    </a>
   </div>
   
-<?php }?> 
+<?php }}?> 
