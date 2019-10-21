@@ -8,7 +8,7 @@ $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
      if(isset($product[0])){
          //this is parent product id..
          echo $product[0];
-		  echo "<pre>";print_r($product);
+		  echo "<pre>";print_r($product->getData());
     }
 
 //echo $products['items'][0]['product_id'] ;
