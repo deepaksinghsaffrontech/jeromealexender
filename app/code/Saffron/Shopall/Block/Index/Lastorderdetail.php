@@ -62,7 +62,7 @@ public function getMedia(){
 	$_objectManager = \Magento\Framework\App\ObjectManager::getInstance();
 	$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
 	$currentStore = $storeManager->getStore();
-	$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+	$mediaUrl = $currentStore->getBaseUrl();
      
 	  return $mediaUrl ;
 } 

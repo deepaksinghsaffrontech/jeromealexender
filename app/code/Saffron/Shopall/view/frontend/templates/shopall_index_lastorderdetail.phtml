@@ -18,9 +18,9 @@ $products  = $this->getAllproducts($randid['increment_id']);
   <a href="<?php  echo $products['items'][0]['producturl']?>" > 
    <div class="advertise-img">
    <?php if(!empty($products['items'][0]['productImage'])){ ?>
-   <img src=" <?php  echo  $this->getMedia().'catalog/product'.$products['items'][0]['productImage']?>" alt="" class="img-fluid">  
+   <img src=" <?php  echo  $this->getMedia().'pub/media/catalog/product'.$products['items'][0]['productImage']?>" alt="" class="img-fluid">  
    <?php }else{  ?>
-   <img src=" <?php  echo  $this->getMedia().'themeimage/placehoder.jpg' ;?>" alt="" class="img-fluid">  
+   <img src=" <?php  echo  $this->getMedia().'pub/media/themeimage/placehoder.jpg' ;?>" alt="" class="img-fluid">  
   
    <?php } ?>
 
