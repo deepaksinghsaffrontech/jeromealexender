@@ -3,17 +3,6 @@ $randid =$this->getRandid();
 $products  = $this->getAllproducts($randid['increment_id']);
 //echo"<pre>";print_r($products);die;
 
-$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-    $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($products['items'][0]['product_id']);
-     if(isset($product[0])){
-         //this is parent product id..
-         echo $product1[0];
-		  //echo "<pre>";print_r($product->getData());
-    }
-
-if(!empty($product1[0])){
-echo $product1[0];die;
-}	
 //echo $products['items'][0]['product_id'] ;
 ?>
 
