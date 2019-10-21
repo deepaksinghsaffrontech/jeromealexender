@@ -12,12 +12,7 @@ $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
     }
 
 if(!empty($product1[0])){
-$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-$prdoduct = $objectManager->get('Magento\Catalog\Model\Product')->load($product1[0]);
-$store = $objectManager->get('Magento\Store\Model\StoreManagerInterface')->getStore();
- 
-//$productImageUrl = $store->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) . 'catalog/product' . $prdoduct->getImage();
-echo $productUrl  = $product->getProductUrl();
+echo $product1[0];die;
 }	
 //echo $products['items'][0]['product_id'] ;
 ?>
