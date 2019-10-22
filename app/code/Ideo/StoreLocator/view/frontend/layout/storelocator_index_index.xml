@@ -11,6 +11,8 @@
         <link src="Ideo_StoreLocator::js/markerclusterer.js" />
     </head>
     <body>
+	
+	 <referenceBlock name="page.main.title" remove="true" />
         <referenceBlock name="ideo-storelocator-link">
             <arguments>
                 <argument name="current" xsi:type="boolean">true</argument>
