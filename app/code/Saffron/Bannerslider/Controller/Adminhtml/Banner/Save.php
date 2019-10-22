@@ -64,7 +64,44 @@ class Save extends \Saffron\Bannerslider\Controller\Adminhtml\Banner {
 					}
 				}
 			}
+            
+			
+			try {
+				$uploader = $this->_objectManager->create(
+					'Magento\MediaStorage\Model\File\Uploader',
+					['fileId' => 'title2']
+				);
+				$uploader->setAllowedExtensions(['jpg', 'jpeg', 'gif', 'png']);
 
+				/** @var \Magento\Framework\Image\Adapter\AdapterInterface $imageAdapter */
+				$imageAdapter = $this->_objectManager->get('Magento\Framework\Image\AdapterFactory')->create();
+
+				$uploader->addValidateCallback('banner_image', $imageAdapter, 'validateUploadFile');
+				$uploader->setAllowRenameFiles(true);
+				$uploader->setFilesDispersion(true);
+
+				/** @var \Magento\Framework\Filesystem\Directory\Read $mediaDirectory */
+				$mediaDirectory = $this->_objectManager->get('Magento\Framework\Filesystem')
+				                       ->getDirectoryRead(DirectoryList::MEDIA);
+				$result = $uploader->save($mediaDirectory->getAbsolutePath(\Saffron\Bannerslider\Model\Banner::BASE_MEDIA_PATH));
+				$data['title2'] = \Saffron\Bannerslider\Model\Banner::BASE_MEDIA_PATH . $result['file'];
+			} catch (\Exception $e) {
+				if ($e->getCode() == 0) {
+					$this->messageManager->addError($e->getMessage());
+				}
+				if (isset($data['title2']) && isset($data['title2']['value'])) {
+					if (isset($data['title2']['delete'])) {
+						$data['title2'] = null;
+						$data['delete_image'] = true;
+					} else if (isset($data['title2']['value'])) {
+						$data['title2'] = $data['title2']['value'];
+					} else {
+						$data['title2'] = null;
+					}
+				}
+			}
+
+			
 			$model->setData($data)
 			      ->setStoreViewId($storeViewId);
 

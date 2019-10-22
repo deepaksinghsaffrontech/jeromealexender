@@ -130,11 +130,16 @@ class Banner extends \Magento\Backend\Block\Widget\Form\Generic
 		
 		$elements['title2'] = $fieldset->addField(
 			'title2',
-			'text',
+			'image',
 			[
-				'name' => 'title2',
+				/*'name' => 'title2',
 				'label' => __('Title 2'),
-				'title' => __('Title 2'),
+				'title' => __('Title 2'),*/
+				'title' => __('Mobile Banner Image'),
+				'label' => __('Mobile Banner Image'),
+				'name' => 'title2',
+				'note' => 'Allow image type: jpg, jpeg, gif, png',
+				
 			]
 		);
 		
