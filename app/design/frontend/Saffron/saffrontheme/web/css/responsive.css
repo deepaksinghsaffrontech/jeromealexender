@@ -313,7 +313,7 @@
 	.banner-content-bx .text { margin-top: -55px;  max-width:90%; }
 	.front-banner .item img {  min-height: 400px;   object-fit: cover;   }
 	.menu-product-list img	{ height:110px; }
-	.category-image.shop-banner img {  width: 100%;  min-height: 400px;  object-fit: cover; }
+	.category-image.shop-banner img {  width: 100%;  }
 	.checkout-onepage-success .table-order-items .col { min-width:inherit;}
 	.cart-summary .checkout-methods-items .action.primary.checkout { padding:14px 10px; }
 	.sitemap-index-index .page-title-wrapper { width:100%; }
