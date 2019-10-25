@@ -3356,7 +3356,11 @@ form.form.shared.wishlist .action.primary {  padding: 14px 15px; }
 }
 form#writereview-form { float: left;  width: 100%; }
 form#writereview-form .form-group {  margin-bottom: 40px; }
-
+.jerome-description h4 {
+    font-size: 18px;
+    font-family: "BentonSans-Medium";
+    margin: 30px 0 10px;
+}
 
 
 /*===============-magento-common-classes-css-===============*/
