@@ -50,8 +50,8 @@
 				
 				<div class="form-group remember-group">
                           <div class="remember-col custom-control custom-radio">
-                             <?= $block->getChildHtml('form_additional_info') ?>
-					     <input type="radio" class="custom-control-input" name="radio" id="radioRemember">
+                             <?php echo $block->getChildHtml('form_additional_info'); ?>
+					     <input type="checkbox" class="custom-control-input" name="radio" id="radioRemember">
 						<label class="custom-control-label" for="radioRemember">Remember Me</label>
                           
 						   </div>
