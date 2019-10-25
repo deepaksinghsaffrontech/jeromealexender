@@ -53,7 +53,7 @@
         </div>
         <div class="field form-group telephone">
             <label class="label" for="telephone"><?= $block->escapeHtml(__('Phone Number')) ?> <span>*</span></label>
-            <input name="telephone" id="telephone" title="<?= $block->escapeHtmlAttr(__('Phone Number')) ?>" value="<?= $block->escapeHtmlAttr($this->helper('Magento\Contact\Helper\Data')->getPostValue('telephone')) ?>" class="input-text" type="text"  data-validate="{required:true}"/>
+            <input name="telephone" id="telephone" title="<?= $block->escapeHtmlAttr(__('Phone Number')) ?>" value="<?= $block->escapeHtmlAttr($this->helper('Magento\Contact\Helper\Data')->getPostValue('telephone')) ?>" class="input-text" type="text"  data-validate="{required:true ,'validate-number':true"}"/>
           
         </div>
         <div class="field form-group comment required">
