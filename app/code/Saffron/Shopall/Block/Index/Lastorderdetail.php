@@ -82,6 +82,7 @@ $orderCollection = $OrderFactory->create()->addFieldToSelect(array('*'));
  $orderCollection->addFieldToFilter('created_at', ['lteq' => $now->format('Y-m-d H:i:s')])->addFieldToFilter('created_at', ['gteq' => $now->format($prev_date)]);
 $alloder = $orderCollection->getData();
 $i=0;
+if(count($alloder)>0){
  foreach($alloder as $items){
   $orders[$i]['increment_id']	= $items['increment_id']; 
  $i++; } 
@@ -91,6 +92,9 @@ $randIndex = array_rand($arrX);
 return $arrX[$randIndex];
 
 	
+}else{
+	
+	$arrX[];
 }
 
 
