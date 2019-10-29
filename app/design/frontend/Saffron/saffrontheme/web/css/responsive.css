@@ -910,6 +910,7 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
     background-size: auto 18px;
     padding-left: 26px;
 }
+.nav-sections .header.links li.greet.welcome span {  padding-left: 0; }
 
 
 }
