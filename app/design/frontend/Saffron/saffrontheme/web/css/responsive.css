@@ -616,12 +616,12 @@
     .navigation .parent .level-top:after{ top: 15px; font-size: 14px;     }
     .nav-sections-item-content { padding: 0; margin-top: 46px;     }
     .nav-sections-item-title { height: auto; padding: 0; background: #fff; border: none; padding: 14px 10px; width: 50%; font-family: "BentonSans-Medium";    }
-    .nav-sections .header.links li { padding: 0; display: block; border-top: 1px solid #ffeeea;    }
-    .nav-sections .header.links li.greet.welcome { padding: 0; border-top: 1px solid #ffeeea;    }
+    .nav-sections .header.links li { padding:5px 0; display: block; border-top:none;    }
+    .nav-sections .header.links li.greet.welcome { padding:22px 0 5px; border-top: 1px solid #ffeeea;    }
     .nav-sections .header.links li a, .nav-sections .header.links li span,
 	.nav-sections .header.links a, .nav-sections .header.links a:hover	{ border: none; padding: 14px 15px; color: #053052; display: block; font-weight: 400;font-family: "BentonSans-Medium"; font-size: 14px;
     }
-    .nav-sections .header.links { border-bottom: 1px solid #ffeeea;     }
+    .nav-sections .header.links { border-bottom: none;  padding-left: 40px;     }
     .customer-service-mobile li {margin: 0;display: block;}
     .customer-service-mobile { background: #fcfcfc; padding: 6px 0;  }
     .navigation li.level0:last-child {  border-bottom: none;   }
