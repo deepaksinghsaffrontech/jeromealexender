@@ -881,6 +881,9 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .banner-inner .form-group input { font-size:15px; }
 .contentmanager-contentlist-2 .banner-inner { padding:50px 0; }
 .faq-panel p { font-size:16px; }
+.cart.table-wrapper .col.qty, .cart.table-wrapper .col.price, .cart.table-wrapper .col.subtotal, .cart.table-wrapper .col.msrp { text-align:left; }
+.cart.table-wrapper .product-item-name+.item-options {  margin-top: 8px; }
+.cart.table-wrapper .item-options dt, .block-giftregistry-shared-items .product .item-options dt, .multicheckout .item-options dt { line-height:18px; }
 
 }
 
