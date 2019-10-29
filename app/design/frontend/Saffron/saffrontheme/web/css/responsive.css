@@ -883,7 +883,12 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .faq-panel p { font-size:16px; }
 .cart.table-wrapper .col.qty, .cart.table-wrapper .col.price, .cart.table-wrapper .col.subtotal, .cart.table-wrapper .col.msrp { text-align:left; }
 .cart.table-wrapper .product-item-name+.item-options {  margin-top: 8px; }
-.cart.table-wrapper .item-options dt, .block-giftregistry-shared-items .product .item-options dt, .multicheckout .item-options dt { line-height:18px; }
+.cart.table-wrapper .item-options dt, .block-giftregistry-shared-items .product .item-options dt, .multicheckout
+ .item-options dt { line-height:18px; }
+.search-customer .header-search { position: inherit; left: inherit; top: inherit; right: inherit; }
+.catalogsearch-result-index .banner-title-notfront { padding: 0; width: 100%; }
+.catalogsearch-result-index .banner-title-notfront h1 { font-size:28px; }
+.catalogsearch-result-index .banner-title-notfront { margin-bottom:20px; }
 
 }
 

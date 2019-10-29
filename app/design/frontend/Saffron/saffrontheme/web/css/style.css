@@ -3020,7 +3020,7 @@ ul.disc li {
 .modal-custom .action-close:before,
 .modal-popup .action-close:before,
 .modal-slide .action-close:before {
-    color: #053052;
+    color: #e6afa1;
     font-size: 24px;
     padding: 0;
     line-height: normal;
@@ -3031,7 +3031,14 @@ ul.disc li {
 header.modal-header button.action-close { padding: 8px 10px;  height: auto; }
 .modal-custom .action-close:hover:before,
 .modal-popup .action-close:hover:before,
-.modal-slide .action-close:hover:before { color: #053052; }
+.modal-slide .action-close:hover:before { color: #e6afa1; }
+.modal-popup .modal-footer {   justify-content: center; }
+.modal-popup .modal-footer button.action-primary.action-accept {  margin-left: 8px; }
+.modal-popup .modal-footer button { min-width: 120px; }
+.modal-popup.confirm .modal-inner-wrap {
+    top: 50%;
+    transform: translate(0, -50%) !important;
+}
 .pages ul.items.pages-items a {
     padding: 9px 16px;
     width: 50px;
