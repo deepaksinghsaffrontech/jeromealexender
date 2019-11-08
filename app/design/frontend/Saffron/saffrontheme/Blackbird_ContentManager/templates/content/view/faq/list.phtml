@@ -25,11 +25,6 @@ $collection = $block->getCollection();
 /** @var \Blackbird\ContentManager\Model\ContentList $contentList */
 $contentList = $block->getContentList();
 $link = $block->getLink();
-
-echo"<pre>";print_r($collection->getData());
-echo"<pre>";print_r($contentList->getData());
-
-echo 'sdffdfdffd';
 ?>
 
 
@@ -60,10 +55,12 @@ echo 'sdffdfdffd';
   
    
    
-      <div class="faq-discription"> <div class="text-before"><?= $block->getTextBefore() ?></div> </div>
+      <div class="faq-discription"> <div class="text-before"><?= $block->getTextBefore() ?></div> <>
         
-		
-		
+	
+
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('faq-block')->toHtml(); ?>	
+	    <!--	
 		<?php $i = 1 ;?>
 		
 		<?php if ($collection->count()) : ?>
@@ -86,6 +83,7 @@ echo 'sdffdfdffd';
                 <span><?= __('We can\'t find contents matching the selection.') ?></span>
             </div>
         <?php endif; ?>
+		-->
 
 <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('faq_info')->toHtml(); ?>		
 		
