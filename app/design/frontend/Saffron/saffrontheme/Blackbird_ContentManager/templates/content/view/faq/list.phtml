@@ -25,6 +25,9 @@ $collection = $block->getCollection();
 /** @var \Blackbird\ContentManager\Model\ContentList $contentList */
 $contentList = $block->getContentList();
 $link = $block->getLink();
+
+echo"<pre>";print_r($collection->getData());
+echo"<pre>";print_r($contentList->getData());
 ?>
 
 
@@ -56,11 +59,7 @@ $link = $block->getLink();
    
    
       <div class="faq-discription"> <div class="text-before"><?= $block->getTextBefore() ?></div> </div>
-        <?php $fiterrr = $block->getFilters(); 
-		   $fii = $fiterrr->getData();
-		
-		echo"<pre>";print_r($fii);
-		?>
+        
 		
 		
 		<?php $i = 1 ;?>
