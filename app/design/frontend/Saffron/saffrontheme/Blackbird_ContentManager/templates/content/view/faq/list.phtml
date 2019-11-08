@@ -56,17 +56,12 @@ $link = $block->getLink();
    
    
       <div class="faq-discription"> <div class="text-before"><?= $block->getTextBefore() ?></div> </div>
-        
-		<?php foreach ($block->getFilters() as $filter): ?>
-		<?php echo"<pre>";print_r($filter->getData()); ?>
-		<?php foreach ($filter->getAllOptions() as $option): ?>
-	     <?php echo	$option['value'] ; ?>
+        <?php $fiterrr = $block->getFilters(); 
+		   $fii = $fiterrr->getData();
 		
-		<?php endforeach; ?>
+		echo"<pre>";print_r($fii);
+		?>
 		
-		
-		
-		 <?php endforeach; ?>
 		
 		<?php $i = 1 ;?>
 		
