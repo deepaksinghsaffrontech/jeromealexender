@@ -58,7 +58,7 @@ $link = $block->getLink();
       <div class="faq-discription"> <div class="text-before"><?= $block->getTextBefore() ?></div> </div>
         
 		<?php foreach ($block->getFilters() as $filter): ?>
-		<?php echo $filter->getData(); ?>
+		<?php echo"<pre>";print_r($filter->getData()); ?>
 		<?php foreach ($filter->getAllOptions() as $option): ?>
 	     <?php echo	$option['value'] ; ?>
 		
