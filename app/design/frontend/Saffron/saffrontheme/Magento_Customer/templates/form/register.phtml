@@ -201,7 +201,7 @@ $mediaurl = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
                 <input type="password" name="password_confirmation" title="<?= $block->escapeHtmlAttr(__('Confirm Password')) ?>" id="password-confirmation" class="input-text form-control" data-validate="{required:true, equalTo:'#password'}" autocomplete="off">
            
         </div>
-        <?= $block->getChildHtml('form_additional_info') ?>
+        <?php //$block->getChildHtml('form_additional_info'); ?>
 
 		
 	<div class="form-group tm-col">
