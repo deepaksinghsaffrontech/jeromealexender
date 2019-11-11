@@ -2802,6 +2802,8 @@ body.page-layout-1column.page-with-filter .column.main {  padding-top: 0; }
     border: none;
     line-height: normal;
     transition: none;
+	left:10px;
+	right:10px;
 }
 .category-item:hover .bss-bt-quickview {  opacity: 1; }
 body .mfp-iframe-holder .mfp-content {  max-width: 1180px; padding:30px 0; }
@@ -3429,7 +3431,7 @@ form#writereview-form .form-group {  margin-bottom: 40px; }
 }
 .fotorama__stage__frame .fotorama__img { max-height:400px; }
 .fotorama__nav-wrap.fotorama__nav-wrap--horizontal {  margin-top: 30px; }
-
+.item:hover .bss-bt-quickview {  opacity: 1; }
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
