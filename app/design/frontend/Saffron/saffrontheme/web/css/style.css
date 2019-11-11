@@ -3355,7 +3355,7 @@ form.form.shared.wishlist .action.primary {  padding: 14px 15px; }
 .sitemap-index-index .grid { margin-bottom: 70px; }
 .cms-about-us .column.main input[type="hidden"] + p { margin: 0; }
 #writereview-form .store-col .custom-radio input { display: none; }
-#writereview-form .store-col .custom-radio label {  padding-left: 0; }
+#writereview-form .store-col .custom-radio label {  padding-left: 0; cursor:pointer; }
 #writereview-form .store-col .custom-radio label:before,
 #writereview-form .store-col .custom-radio label:after { display: none; }
 #writereview-form .store-col .custom-radio {
