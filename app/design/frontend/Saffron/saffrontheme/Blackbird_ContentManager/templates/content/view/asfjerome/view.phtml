@@ -73,7 +73,12 @@ $media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 				<figure>
 					<img src="<?php echo $media_url ; ?>contentmanager/content/<?php echo $content->getData('asfjerome_banner'); ?>" alt="<?php echo $content->getData('asfjerome_title'); ?>" class="img-fluid">
 				</figure>
-			<?php }?>	
+			<?php }else{ ?>	
+			
+			<figure>
+					<img src="<?php echo $media_url ; ?>contentmanager/content/42160348_s_1.jpg" alt="<?php echo $content->getData('asfjerome_title'); ?>" class="img-fluid">
+				</figure>
+			<?php }?>
 				<div class="ask-caption">
 					<div class="tag-title">
 						<?php $interested= (explode(",",$content->getData('asfjerome_interested'))); ?>
