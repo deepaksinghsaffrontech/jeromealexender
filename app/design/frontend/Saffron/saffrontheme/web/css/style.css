@@ -717,7 +717,7 @@ header .header-search .form-control:focus {
 }
 .gift-inner .btn2 {  margin: 20px 0 0; }
 .gift-inner figure { padding:0 40px 0 0; }
-.get-social-row { margin: 70px 0 60px; }
+.get-social-row { margin: 70px 0 30px; }
 .get-social-row .owl-theme .owl-nav button.owl-prev,
 .get-social-row .owl-theme .owl-nav button.owl-next {
     position: initial;
@@ -3404,6 +3404,22 @@ form#writereview-form .form-group {  margin-bottom: 40px; }
 #writereview-form .store-col .custom-radio label.active .fa:before {  content: "\f005"; }
 #writereview-form .store-col .custom-radio label.active .fa {  color: #053052; }
 .checkout-cart-index div#block-shipping {  display: none; }
+.insta-icon-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 100%;
+    margin-bottom: 8%;
+}
+.insta-icon-col a {
+    display: inline-block;
+    float: none;
+}
+.insta-icon-col a img {
+    width: 30px;
+    height: auto;
+}
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
