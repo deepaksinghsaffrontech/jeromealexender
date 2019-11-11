@@ -913,7 +913,7 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .nav-sections .header.links li.greet.welcome span {  padding-left: 0; }
 .faq-row {  margin-top: 40px; }
 .faq-row h3 { font-size:20px; }
-.faq-panel h5 { font-size:17px; padding-left:0px; padding-right:20px;}
+.faq-panel h5 { font-size:16px; padding-left:0px; padding-right:20px;}
 .faq-panel h5 .fa { right:0; }
 .cms-subscribe-newsletter .account-bx,
 .cms-subscribe-newsletter .signup-box { margin-bottom: 0; }
