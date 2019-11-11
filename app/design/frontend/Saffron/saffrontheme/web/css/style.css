@@ -456,6 +456,7 @@ header .header-search .form-control:focus {
     font-size: 13px;
     line-height: normal;
     color: #000;
+	padding-right:8px;
 }
 .advertise-info h6 {
     font-size: 14px;
@@ -916,14 +917,30 @@ header.page-header { position: relative;  z-index: 2; }
 	line-height:28px;
 }
 .faq-panel h5 {
-   padding: 25px 20px;
+   padding:20px 40px 20px 20px;
     margin: 0;
     cursor: pointer;
     color: #6B6B6B;
-    font-size: 24px;
+    font-size: 20px;
+	position:relative;
 }
-.faq-panel .faq-body {  padding: 0 20px;  display: none; }
-.faq-panel h5 .fa {  float: right; }
+.faq-row h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    float: left;
+    width: 100%;
+}
+.faq-row {
+    margin-top: 60px;
+}
+.faq-panel .faq-body {  padding: 0 20px 15px;  display: none; }
+.faq-panel h5 .fa { 
+	float: right;
+    position: absolute;
+    right: 20px;
+	top: 50%;
+    transform: translateY(-50%);
+}
 .breadcrumbs {
     padding: 20px 0;
     margin:0 0 30px;
@@ -3386,7 +3403,7 @@ form#writereview-form .form-group {  margin-bottom: 40px; }
 .sign-col .singin-dropdown li:nth-of-type(4) i:before { display: none; }
 #writereview-form .store-col .custom-radio label.active .fa:before {  content: "\f005"; }
 #writereview-form .store-col .custom-radio label.active .fa {  color: #053052; }
-
+.checkout-cart-index div#block-shipping {  display: none; }
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
