@@ -915,6 +915,8 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .faq-row h3 { font-size:20px; }
 .faq-panel h5 { font-size:17px; padding-left:0px; padding-right:20px;}
 .faq-panel h5 .fa { right:0; }
+.cms-subscribe-newsletter .account-bx { margin-bottom: 0; }
+.cms-subscribe-newsletter .columns .column.main {padding-bottom: 0;}
 
 
 }
