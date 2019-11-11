@@ -447,7 +447,7 @@ header .header-search .form-control:focus {
     text-align: left;
     box-shadow: 0 0 10px #ccc;
     float: left;
-	transition:all 0.5s ease;
+	transition:all 1s ease;
 }
 .advertise-bx .advertise-img { float: left;  width: 20%; }
 .advertise-bx .advertise-info { float: left; width: 80%;  padding: 0 12px 0 10px; }
@@ -3421,10 +3421,7 @@ form#writereview-form .form-group {  margin-bottom: 40px; }
     height: auto;
 }
 .fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--next:not(:focus),
-.fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--prev:not(:focus) { transform:none; }
-.fotorama__wrap--css3 .fotorama__arr:not(:focus), .fotorama__wrap--css3 .fotorama__fullscreen-icon:not(:focus), .fotorama__wrap--css3 .fotorama__video-play:not(:focus), .fotorama__wrap--css3 .fotorama__video-close:not(:focus) {
-	display:block !important;
-}
+.fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--prev:not(:focus) { transform:none; display:block !important; }
 .fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr, .fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon { opacity:1; }
 
 
