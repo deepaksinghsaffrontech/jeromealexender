@@ -896,7 +896,7 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
     background-size: auto 18px;
     padding-left: 26px;
 }
-.nav-sections .header.links li a[href="https://jeromealexender.projectdevelopment.co/customer-services/"],
+.nav-sections .header.links li a[href="http://jeromealexender.projectdevelopment.co/customer-services/"],
 .nav-sections .header.links li a[href="https://new.jeromealexander.com/customer-services/"],
 .nav-sections .header.links li a[href="https://jeromealexander.com/customer-services/"] {
     background: url(/pub/media/themeimage/np_customer-service.png);
@@ -905,9 +905,9 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
     background-size: auto 18px;
     padding-left: 26px;
 }
-.nav-sections .header.links li a[href="http://jeromealexender.projectdevelopment.co/customer/account/"],
+.nav-sections .header.links li a[href="http://jeromealexender.projectdevelopment.co/customer/account/create/"],
 .nav-sections .header.links li a[href="https://new.jeromealexander.com/customer/account/create/"],
-.nav-sections .header.links li a[href="https://jeromealexander.com/customer/account/create/"], {
+.nav-sections .header.links li a[href="https://jeromealexander.com/customer/account/create/"] {
     background: url(/pub/media/themeimage/user2.png);
     background-repeat: no-repeat;
     background-position: left center;
