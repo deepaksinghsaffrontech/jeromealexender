@@ -152,7 +152,7 @@
  <arguments>
  <argument name="label" xsi:type="string">Customer Services</argument>
  <argument name="path" xsi:type="string">customer-services</argument>
- <argument name="css_class" xsi:type="string">customer-services</argument>
+ <argument name="class" xsi:type="string">customer-services</argument>
  </arguments>
  </block>
  </referenceBlock>
