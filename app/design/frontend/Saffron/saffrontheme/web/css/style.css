@@ -675,17 +675,17 @@ header .header-search .form-control:focus {
 }
 .clock-inner .infobx {
     background: #fff;
-    padding: 20px;
+    padding: 13px 15px 15px;
     position: absolute;
-    top: 80%;
+    top: 57%;
     left: 50%;
     transform: translate(-50%, -80%);
-    max-width: 500px;
+    max-width: 700px;
     width: 90%;
 }
 .clock-inner .infobx h5, 
 .ask-info-inner h5 {  font-size: 28px; }
-.clock-inner .infobx p{  margin:0;  }
+.clock-inner .infobx p{  margin:0;  line-height:22px; }
 .ask-jerome { margin: 100px 0; }
 .ask-inner .left-col {  width: 100%; }
 .ask-inner .right-col { float: left;  width: 100%;  position: relative; }
@@ -3420,6 +3420,10 @@ form#writereview-form .form-group {  margin-bottom: 40px; }
     width: 30px;
     height: auto;
 }
+.fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--next:not(:focus),
+.fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--prev:not(:focus) { transform:none; }
+.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr, .fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon { opacity:1; }
+
 
 /*===============-magento-common-classes-css-===============*/
 .columns,

@@ -272,7 +272,6 @@
     .clock-item img { max-width:150px;}
     .clock-item figure {  margin-bottom: 10px;    }
     .seller-name-col p {  margin-bottom: 10px;    }
-    .clock-inner .infobx{ top:90%; transform: translate(-50%, -90%);  }
     .ask-jerome-info p { font-size: 15px;  line-height: 22px; }
     .real-info h3 {  margin-bottom: 12px;  }
 	
@@ -403,6 +402,7 @@
 	.about-banner .container { width:100%; }
 	.about-content .left-col { width:40%;  margin-top: -390px; }
 	.about-content .right-col {  width: calc(100% - 40%); }
+	.clock-inner .infobx { top:80%; }
 	
 	
 	
