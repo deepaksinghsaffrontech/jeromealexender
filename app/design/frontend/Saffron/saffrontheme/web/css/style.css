@@ -3384,6 +3384,9 @@ form#writereview-form .form-group {  margin-bottom: 40px; }
     justify-content: center;
 }
 .sign-col .singin-dropdown li:nth-of-type(4) i:before { display: none; }
+#writereview-form .store-col .custom-radio label.active .fa:before {  content: "\f005"; }
+#writereview-form .store-col .custom-radio label.active .fa {  color: #053052; }
+
 
 /*===============-magento-common-classes-css-===============*/
 .columns,

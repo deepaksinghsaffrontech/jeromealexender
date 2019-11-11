@@ -85,13 +85,11 @@
 <script type="text/javascript"> 
 require(["jquery"], function(jQuery){
 	
-	jQuery("#writereview-form .store-col .custom-radio label").on("click", function(){
-		jQuery(this).toggleClass('active');
-		jQuery("#writereview-form .store-col .custom-radio label .fa").removeClass('fa-star').addClass('fa-star-o');
-		if( jQuery("#writereview-form .store-col .custom-radio label").hasClass('active') ){
-			jQuery(this).children().removeClass('fa-star-o').addClass('fa-star');
-		}
-	});
+	var writeReviewActive = function(){
+		jQuery("#writereview-form .store-col .custom-radio label").on("click", function(){
+			jQuery(this).toggleClass('active');
+		});
+	}
 	
 }); 
 
