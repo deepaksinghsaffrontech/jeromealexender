@@ -145,14 +145,15 @@
   <block class="Magento\Customer\Block\Account\RegisterLink" name="register-link">
                 <arguments>
                     <argument name="label" xsi:type="string" translate="true">Create Account</argument>
-					<argument name="class" xsi:type="string" translate="true">account-link</argument>
+					<argument name="css_class" xsi:type="string">account-link</argument>
+                            
                 </arguments>
     </block>
  <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer-services">
  <arguments>
  <argument name="label" xsi:type="string">Customer Services</argument>
  <argument name="path" xsi:type="string">customer-services</argument>
- <argument name="class" xsi:type="string">customer-services</argument>
+ <argument name="css_class" xsi:type="string">customer-services</argument>
  </arguments>
  </block>
  </referenceBlock>
