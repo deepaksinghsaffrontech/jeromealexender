@@ -1,13 +1,10 @@
 <?php
 $randid =$this->getRandid();
 $products  = $this->getAllproducts($randid['increment_id']);
-//echo "deepak1";
+echo"<pre>";print_r($products);
 if(!empty($randid)){
 if(!empty($products)){	
-	//echo"depak2";
 	
-	print_r($randid);
-	echo"<pre>";print_r($products);die;
 ?>
 
 <?php if( !empty($products['items'][0]['name']) ){?>
