@@ -42,14 +42,10 @@ $hours = $seconds / 60 /  60;
 <?php 
 
  $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
- $order = $objectManager->create('Magento\Sales\Model\Order')->load(153);
+ $order = $objectManager->create('Magento\Sales\Model\Order')->load(000000153);
     
 	
 	  $orderItems = $order->getAllItems();
-	
-foreach($orderItems as $item)
-{
-  echo "Order Item ID :".$item->getItemId(); 
-}
+	echo $orderItems->getItemId();
 
 ?>
