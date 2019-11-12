@@ -44,9 +44,9 @@ $hours = $seconds / 60 /  60;
  $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
  $order = $objectManager->create('Magento\Sales\Model\Order')->loadByIncrementId(000000153);
     
-	$order->getData();
+	
 	  $orderItems = $order->getAllItems();
-	echo"<pre>";print_r($orderItems->getData());
+	
 	
 	 foreach ($orderItems as $item) {
 		echo $item->getItemId();
