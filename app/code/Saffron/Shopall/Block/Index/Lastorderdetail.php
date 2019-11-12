@@ -39,7 +39,7 @@ public function getAllproducts($lastorderId)
 	}*/
 	 $product_id1 = $item->getId();
 	
-/*
+
    $product = $objectManager->create('Magento\Catalog\Model\Product')->load($product_id1);
     $itemQty['items'][$i]['quantity']=$item->getQtyOrdered() ;
 	$itemQty['items'][$i]['description']= $product->getShortDescription() ;
@@ -47,7 +47,7 @@ public function getAllproducts($lastorderId)
 	$itemQty['items'][$i]['productImage']= $product->getImage() ;
 	$itemQty['items'][$i]['producturl']= $product->getProductUrl() ;
 	$itemQty['items'][$i]['product_id']= $item->getId() ;
-	*/
+	
 	//$itemQty['items'][]=array('quantity'=>$item->getQtyOrdered(),'description'=>$product->getShortDescription(),'name'=>$item->getName(),'productImage'=>$product->getImage(),'producturl'=>$product->getProductUrl(),'price'=>$item->getPrice(),'product_id'=>$item->getId());/
 $i++;
     }
