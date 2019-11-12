@@ -33,7 +33,7 @@ public function getAllproducts($lastorderId)
 	  $product_id =  $product1[0];
 	}
     }
-
+   echo $item->getId()  ;
     $product = $objectManager->create('Magento\Catalog\Model\Product')->load($product_id);
     $itemQty['items'][$i]['quantity']=$item->getQtyOrdered() ;
 	$itemQty['items'][$i]['description']= $product->getShortDescription() ;
