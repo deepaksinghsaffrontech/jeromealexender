@@ -24,31 +24,11 @@ public function getAllproducts($lastorderId)
 	$itemQty['region']= $billingstate ;
 	$i=0;
     foreach ($orderItems as $item) {
-    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-    $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($item->getId());
-     $product_id = $item->getId();
-	if(!empty($product1)){
-	if(isset($product1[0])){
-            
-	  $product_id =  $product1[0];
-	}
-    }
 
-   $product = $objectManager->create('Magento\Catalog\Model\Product')->load($product_id);
-    $itemQty['items'][$i]['quantity']=$item->getQtyOrdered() ;
-	$itemQty['items'][$i]['description']= $product->getShortDescription() ;
-	$itemQty['items'][$i]['name']= $product->getName() ;
-	$itemQty['items'][$i]['productImage']= $product->getImage() ;
-	$itemQty['items'][$i]['producturl']= $product->getProductUrl() ;
-	$itemQty['items'][$i]['product_id']= $item->getId() ;
-	
-	//$itemQty['items'][]=array('quantity'=>$item->getQtyOrdered(),'description'=>$product->getShortDescription(),'name'=>$item->getName(),'productImage'=>$product->getImage(),'producturl'=>$product->getProductUrl(),'price'=>$item->getPrice(),'product_id'=>$item->getId());
-$i++;
+
     }
-	}else{
-	$itemQty['No_order'];		
-	}
-    return $itemQty;
+	
+    return $item;
 }
 
 
