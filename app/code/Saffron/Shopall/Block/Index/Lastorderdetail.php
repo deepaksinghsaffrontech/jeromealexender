@@ -27,6 +27,8 @@ public function getAllproducts($lastorderId)
     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
     $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($item->getId());
     
+	echo $item->getId() ;
+	
 	if(!empty($product1)){
 	if(isset($product1[0])){
             
