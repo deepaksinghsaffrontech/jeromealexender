@@ -1937,7 +1937,12 @@ select:not([disabled]):focus {  box-shadow: none; }
     border: 1px solid #6B6B6B;
     border-radius: 4px;
 }
-.qty-container { float: left;  width: 100%; }
+.qty-container { float: left;  width: 100%; position:relative; }
+.qty-input div.mage-error {
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+}
 .qty-container button {
     float: left;
     background: none;
