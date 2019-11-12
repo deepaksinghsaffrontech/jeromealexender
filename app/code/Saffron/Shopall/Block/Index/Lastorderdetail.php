@@ -27,8 +27,6 @@ public function getAllproducts($lastorderId)
     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
     $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($item->getId());
     
-	echo $item->getId() ;
-	
 	if(!empty($product1)){
 	if(isset($product1[0])){
             
@@ -56,7 +54,7 @@ $i++;
 	}else{
 	$itemQty['No_order'];		
 	}
-    return $itemQty;
+    return  $item;
 }
 
 
@@ -81,7 +79,7 @@ $orders =array();
 $now = new \DateTime();
 
 $date = date('m/d/Y h:i:s', time());
-$prev_date = date('Y-m-d h:i:s', strtotime($date .' -2 day'));
+$prev_date = date('Y-m-d h:i:s', strtotime($date .' -5 day'));
 
 
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
