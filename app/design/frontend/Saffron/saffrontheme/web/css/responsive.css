@@ -413,6 +413,7 @@
 
 @media (max-width:1024px) {
 	.account .columns { width: 100%; }
+	.bss-bt-quickview { display:none; }
 	
 }
 
