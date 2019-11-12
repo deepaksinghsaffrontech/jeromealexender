@@ -1,8 +1,6 @@
 <?php
 $randid =$this->getRandid();
 $products  = $this->getAllproducts($randid['increment_id']);
-echo"<pre>";print_r($randid);
-echo $products['items'][0]['product_id'];
 
 if(!empty($randid)){
 if(!empty($products)){	
@@ -39,18 +37,3 @@ $hours = $seconds / 60 /  60;
   </div>
   
 <?php }}}?> 
-
-<?php 
-/*
- $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
- $order = $objectManager->create('Magento\Sales\Model\Order')->loadByIncrementId(000000153);
-    
-	$order->getData();
-	  $orderItems = $order->getAllItems();
-	echo"<pre>";print_r($orderItems->getData());
-	
-	 foreach ($orderItems as $item) {
-		echo"<pre>";print_r($item->getData()); 
-	 }
-	*/
-?>
