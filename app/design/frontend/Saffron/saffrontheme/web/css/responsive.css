@@ -403,7 +403,8 @@
 	.about-content .left-col { width:40%;  margin-top: -390px; }
 	.about-content .right-col {  width: calc(100% - 40%); }
 	.clock-inner .infobx { top:80%; }
-	
+	.block-content .table-wrapper { float: left; width: 100%; overflow-x: auto; }
+	.sidebar button.action.tocart.primary {  padding: 14px; }
 	
 	
 	
@@ -446,7 +447,7 @@
     /*--/navigation-and-search-css--*/
 	.ask-jerome .inner .title-main { display: none; }
 	.table.data.wishlist a.action.towishlist {  margin: 20px 0 0;  display: flex; }
-	
+	.block-reviews-dashboard .block-content li.item { width: 100%; padding-right: 0; margin-bottom: 25px; }
 
 }
 
@@ -932,8 +933,9 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
     background: none;
     padding-left: 0;
 }
-
-.nav-sections .header.links li a[href="http://jeromealexender.projectdevelopment.co/customer/account/"] {
+.nav-sections .header.links li a[href="http://jeromealexender.projectdevelopment.co/customer/account/"],
+.nav-sections .header.links li a[href="https://new.jeromealexander.com/customer/account/customer/account/"],
+.nav-sections .header.links li a[href="https://jeromealexander.com/customer/account/customer/account/"] {
     background: url(/pub/media/themeimage/user2.png);
     background-repeat: no-repeat;
     background-position: left center;

@@ -3034,7 +3034,7 @@ ul.disc li {
 .block-content .box a {  text-decoration: underline; }
 .block-content .box-actions {  margin-top: 15px; }
 .block-dashboard-addresses a.action.edit { text-decoration: underline; }
-.customer-account-index .main .block {  margin-bottom: 70px; }
+.customer-account-index .main .block {  margin-bottom: 70px; float:left; width:100%; }
 .account .page-main { padding-top: 60px; }
 .account h1.page-title { font-size:30px; }
 .form-edit-account .fieldset>.field label span { margin-right: 3px; }
@@ -3439,6 +3439,12 @@ form#writereview-form .form-group {  margin-bottom: 40px; }
 .item:hover .bss-bt-quickview {  opacity: 1; }
 .nav-sections .header.links li.link.wishlist { display: none; }
 .minicart-items .update-cart-item {  padding: 12px 10px;  }
+.block-reviews-dashboard .block-content li.item {
+    float: left;
+    width: 50%;
+    margin-bottom: 35px;
+    padding-right: 30px;
+}
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
