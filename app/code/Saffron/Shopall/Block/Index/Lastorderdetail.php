@@ -28,16 +28,15 @@ public function getAllproducts($lastorderId)
     $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($item->getId());
      $product_id = $item->getId();
 	 
-	 print_r($item->getData());
 	 
-	if(!empty($product1)){
+	/*if(!empty($product1)){
 	if(isset($product1[0])){
             
 	  $product_id =  $product1[0];
 	}
-    }
+    }*/
 
-   $product = $objectManager->create('Magento\Catalog\Model\Product')->load($product_id);
+    $product = $objectManager->create('Magento\Catalog\Model\Product')->load($product_id);
     $itemQty['items'][$i]['quantity']=$item->getQtyOrdered() ;
 	$itemQty['items'][$i]['description']= $product->getShortDescription() ;
 	$itemQty['items'][$i]['name']= $product->getName() ;
@@ -51,7 +50,10 @@ $i++;
 	}else{
 	$itemQty['No_order'];		
 	}
-    return $itemQty;
+	
+	
+	return $product_id ;
+    ///return $itemQty;
 }
 
 
