@@ -49,7 +49,7 @@ $i++;
 	$itemQty['No_order'];		
 	}
 	
-	return $item ;
+	return $item->getId() ;
     //return $itemQty;
 }
 
