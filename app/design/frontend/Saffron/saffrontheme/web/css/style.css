@@ -3447,6 +3447,11 @@ form#writereview-form .form-group {  margin-bottom: 40px; }
 }
 
 .message.info { float:left; width:100%; }
+.account .toolbar .pages {
+    position: inherit;
+    width: auto;
+    margin-right: 20px;
+}
 
 
 
