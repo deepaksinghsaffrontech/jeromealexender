@@ -33,8 +33,8 @@ public function getAllproducts($lastorderId)
 	  $product_id =  $product1[0];
 	}
     }
-   echo $item->getId()  ;
-    $product = $objectManager->create('Magento\Catalog\Model\Product')->load($product_id);
+
+   $product = $objectManager->create('Magento\Catalog\Model\Product')->load($product_id);
     $itemQty['items'][$i]['quantity']=$item->getQtyOrdered() ;
 	$itemQty['items'][$i]['description']= $product->getShortDescription() ;
 	$itemQty['items'][$i]['name']= $product->getName() ;
@@ -73,7 +73,7 @@ $orders =array();
 $now = new \DateTime();
 
 $date = date('m/d/Y h:i:s', time());
-$prev_date = date('Y-m-d h:i:s', strtotime($date .' -5 day'));
+$prev_date = date('Y-m-d h:i:s', strtotime($date .' -90 day'));
 
 
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
