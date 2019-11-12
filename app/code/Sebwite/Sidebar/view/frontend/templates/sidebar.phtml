@@ -1,0 +1,59 @@
+<?php
+/**
+ * Category sidebar
+ *
+ * @var $block Sebwite\Sidebar\Block\Sidebar
+ */
+$categories = $block->getCategories();
+$brands     = $block->getBrands();
+?>
+
+<div class="sidebar-shop-category row-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+                     
+<ul class="sidebar-category" >
+
+    <?php
+    // Loop through categories
+    foreach ( $categories as $category ) :
+        ?>
+        <li class="shop-item <?php echo($block->isActive($category) ? ' active' : ''); ?>">
+            <a href="<?php echo $block->getCategoryUrl($category); ?>" title="<?php echo $category->getName(); ?>" class="item-name <?php echo($block->isActive($category) ? ' active' : ''); ?>">
+                <?php echo $category->getName(); ?>
+            </a>
+			 <i class="fa fa-angle-down"></i>
+            <?php if ( $category->hasChildren() ) : ?>
+                <!--<span class="expand"><?php echo $block->isActive($category) ? '<i class="fa fa-minus"></i>' : '<i class="fa fa-plus"></i>'; ?></span>-->
+            <?php endif; ?>
+
+            <?php echo $block->getChildCategoryView($category); ?>
+        </li>
+    <?php endforeach; ?>
+</ul>
+</div>
+<script type="text/javascript">
+	/* Simply invoke iffe of sidebarmodule */
+	require(['jquery','sidebarmodule'], function ($) {});
+</script>
+
+
+<script type="text/javascript">
+	require([ 'jquery'], function($){
+
+		$(document).ready(function(){	
+
+		$(".sidebar-category .shop-item .fa").on("click", function(){
+		$(this).next().slideToggle();
+		$(this).parent().siblings().children(".category-body").slideUp();
+		$(this).parent().toggleClass("active").siblings().removeClass("active");
+		$(".sidebar-category .shop-item .fa").addClass("fa-angle-down");
+
+		if( $(this).parent().hasClass("active")  ){
+			$(this).addClass("fa-angle-up").removeClass("fa-angle-down");
+		}
+	   });
+		
+		});	
+
+
+	});
+</script>

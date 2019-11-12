@@ -1,0 +1,30 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<small class="copyright">
+    <span><?= /* @escapeNotVerified */ $block->getCopyright() ?></span>
+</small>
+
+<script type="text/javascript">
+	
+	require([
+	  "jquery",
+	  "owlcarousel/minjs"
+	 ], function($,owlCarousel){
+		$(document).ready(function(){
+		 $('.satisfaction-carousel .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 40,
+            nav: true,
+            dots: false,
+            items:1,
+            smartSpeed: 500,
+        });
+			
+		});
+	});
+</script>
+

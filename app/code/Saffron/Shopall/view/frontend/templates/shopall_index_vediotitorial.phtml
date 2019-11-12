@@ -1,0 +1,16 @@
+<?php $vediourl= $this->getIfram();?>
+<?php //echo $this->getItem();?>
+
+<?php if(!empty($vediourl)){?>
+<?php $strvediourl  = preg_replace('#^https?://#', '', $vediourl );
+$strvediour = parse_url($strvediourl); 
+parse_str($strvediour['query'], $params); 
+?>
+ <iframe src="https://www.youtube.com/embed/<?php echo $params['v'] ;?>?autoplay=1" width="960" height="447" frameborder="0" allowfullscreen></iframe>
+<?php } else{
+	
+	echo '<div class="message info empty"><div>Video tutorial not available.</div></div>';
+	
+}?>
+
+

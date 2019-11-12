@@ -1,0 +1,98 @@
+<?php 
+$om = \Magento\Framework\App\ObjectManager::getInstance();
+$storeManager = $om->get('\Magento\Store\Model\StoreManagerInterface');
+$media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);?>
+<div class="about-banner" data-aos="fade" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+              <div class="container">
+                  <div class="about-caption">
+                      <figure>
+      <img src="<?php echo  $media_url; ?>wysiwyg/about-us/50years-img.png" alt="" class="img-fluid">
+                      </figure>  
+                      <h1>“Every woman deserves to feel beautiful”</h1>
+                      <span>Jerome Alexander</span>
+                  </div>
+                 
+              </div>
+           </div>
+           <!--/about-banner-->
+
+           <!--about-content--> 
+           <div class="about-content" >
+              <div class="container">
+                  
+                    <div class="left-col">
+                        <div class="about-section">
+                            <figure>
+                                <img src="<?php echo  $media_url; ?>wysiwyg/about-us/about-profile-image.jpg" alt="" class="img-fluid">
+                            </figure>   
+                            <div class="info sort-txt">
+                              <h2>About Jerome</h2>
+                              <h3>The Man Behind the Makeup</h3>
+                              <p><span id="jerome-para">Celebrity makeup artist. Cosmetics industry innovator. TV personality. Beauty educator. For 50 years, Jerome Alexander has brought professional beauty products into the homes of women across America </span> <span class="showText">and around the globe. As a legend in the beauty trade, the name Jerome Alexander has become synonymous with innovation, trendsetting, and education. Jerome’s role as a beauty educator began early in his career when he started selling beauty products to put himself through school. What he learned would power the building of an empire. Women didn’t simply want to buy cosmetics; they wanted what the cosmetic companies promised – beauty. Instead of simply selling products, he would show women how to properly apply the products to achieve the desired result. In 1976, Jerome Alexander changed the way women applied cosmetics by launching his line of professional-grade applicators, brushes, and sponges that included a detailed booklet of instructions. The professional brushes were quickly followed by another innovative concept: coordinating complimentary cosmetics in makeup kits – an idea that has since become an industry standard. After 50 years of helping women feel more beautiful, Jerome believes that his greatest accomplishments are founded in his role as an educator. His passion for helping women become more confident, more attractive, and more skilled in their beauty routines has driven each business decision, resulting in a brand that truly puts women first.</span></p>
+                              <a href="jajascript:void(0);" class="morePlus">More <i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-col">
+                        <div class="about-gallery">
+                            <div class="col-1960">
+                                <div class="web-col">
+                                    <img src="<?php echo  $media_url; ?>wysiwyg/about-us/image-1960.jpg" alt="" class="img-fluid img-w">
+                                    <img src="<?php echo  $media_url; ?>wysiwyg/about-us/image-1960-m.jpg" alt="" class="img-fluid img-m">
+                                </div>
+                            </div>
+                            <div class="col-1970">
+                                <div class="web-col">
+                                    <img src="<?php echo  $media_url; ?>wysiwyg/about-us/image-1970.jpg" alt="" class="img-fluid img-w">
+                                    <img src="<?php echo  $media_url; ?>wysiwyg/about-us/image-1970-m.jpg" alt="" class="img-fluid img-m">
+                                </div>
+                            </div>
+                            <div class="col-1980">
+                                <div class="web-col">
+                                    <img src="<?php echo  $media_url; ?>wysiwyg/about-us/image-1980.jpg" alt="" class="img-fluid img-w">
+                                    <img src="images/image-1980-m.jpg" alt="" class="img-fluid img-m">
+                                </div>
+                            </div>
+                            <div class="col-1990">
+                                <div class="web-col">
+                                    <img src="<?php echo  $media_url; ?>wysiwyg/about-us/image-1990.jpg" alt="" class="img-fluid img-w">
+                                    <img src="<?php echo  $media_url; ?>wysiwyg/about-us/image-1990-m.jpg" alt="" class="img-fluid img-m">
+                                </div>
+                            </div>
+                            <div class="col-2000">
+                                <div class="web-col">
+                                    <img src="<?php echo  $media_url; ?>wysiwyg/about-us/image-2000.jpg" alt="" class="img-fluid img-w">
+                                    <img src="<?php echo  $media_url; ?>wysiwyg/about-us/image-2000-m.jpg" alt="" class="img-fluid img-m">
+                                </div>
+                            </div>
+                            <div class="col-2010">
+                                <div class="web-col">
+                                    <img src="<?php echo  $media_url; ?>wysiwyg/about-us/image-2010.jpg" alt="" class="img-fluid img-w">
+                                    <img src="<?php echo  $media_url; ?>wysiwyg/about-us/image-2010-m.jpg" alt="" class="img-fluid img-m">
+                                </div>
+                            </div>
+                           
+                            
+
+                        </div>
+                    </div>
+             
+              </div>
+           </div>
+           <!--/about-content-->
+
+           <!--quote-info-->
+           <div class="quotes-info" data-aos="fade" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+              <div class="container">
+                <div class="quotes-inner">
+                  <h4>“My focus has always been on teaching women how to apply makeup. I want you to be your own makeup artist.”</h4>
+                  <span>Jerome Alexander</span>
+                </div>
+                
+              </div>
+           </div>
+		   
+		  
+		   
+		   
+<?php echo $block->getLayout()->createBlock('Saffron\Bestsellerproduct\Block\Bestsellerproduct')->setTemplate('bestsellerproduct.phtml')->toHtml();?> 		   

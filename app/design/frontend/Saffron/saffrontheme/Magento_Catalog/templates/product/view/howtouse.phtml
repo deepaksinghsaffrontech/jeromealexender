@@ -1,0 +1,9 @@
+<?php
+
+$_product = $block->getProduct();
+
+$myattribute = $_product->getResource()->getAttribute('howtouse')->getFrontend()->getValue($_product);
+
+echo $myattribute;
+
+?>

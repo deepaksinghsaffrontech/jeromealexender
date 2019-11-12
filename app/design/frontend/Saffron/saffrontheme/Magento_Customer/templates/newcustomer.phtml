@@ -1,0 +1,70 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Customer\Block\Form\Login\Info $block */
+
+ $om = \Magento\Framework\App\ObjectManager::getInstance();
+ $storeManager = $om->get('\Magento\Store\Model\StoreManagerInterface');
+ $mediaurl = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+?>
+<?php if ($block->getRegistration()->isAllowed()): ?>
+<!--<div class="block block-new-customer">
+    <div class="block-title">
+        <strong id="block-new-customer-heading" role="heading" aria-level="2"><?= $block->escapeHtml(__('New Customers')) ?></strong>
+    </div>
+    <div class="block-content" aria-labelledby="block-new-customer-heading">
+        <p><?= $block->escapeHtml(__('Creating an account has many benefits: check out faster, keep more than one address, track orders and more.')) ?></p>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <a href="<?= $block->escapeUrl($block->getCreateAccountUrl()) ?>" class="action create primary"><span><?= $block->escapeHtml(__('Create an Account')) ?></span></a>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<div class="col-md-6 col-12 right-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+                    <div class="create-bx account-bx">
+                        <div class="form-group">
+                          <h3>Don't have an account?</h3>
+                          <p class="text">Ready to start enjoying Jerome Alexander Registered <br> Customer Benefits!</p>
+                        </div>
+                          <div class="sign-feature">
+                              <div class="quick-item">
+                                <figure>
+                                  <img src="<?php echo $mediaurl ;?>themeimage/quick-checkout-icon.png" alt="" class="img-fluid">
+                                </figure>
+                                <p>Quick <br>Checkout</p>
+                              </div>
+                              <div class="quick-item">
+                                <figure>
+                                  <img src="<?php echo $mediaurl ;?>themeimage/single-click-icon.png" alt="" class="img-fluid">
+                                </figure>
+                                <p>Single Click <br>Reorders</p>
+                              </div>
+                              <div class="quick-item">
+                                <figure>
+                                  <img src="<?php echo $mediaurl ;?>themeimage/heart-icon.png" alt="" class="img-fluid">
+                                </figure>
+                                <p>JA <br>Love</p>
+                              </div>
+                          </div>
+
+                          <div class="form-group tm-col">
+                            <p>By preceding, you agree with our <a href="<?php echo $this->getUrl('terms-conditions')?>" class="tm-link">Terms and Conditions</a></p>
+                          </div>
+                          <div class="form-group btn-group">
+                            <a href="<?= $block->escapeUrl($block->getCreateAccountUrl()) ?>" class="btn btn-primary btn-4">Create an Account</a>
+                          </div>
+                    </div>
+
+               </div>
+
+
+
+<?php endif; ?>

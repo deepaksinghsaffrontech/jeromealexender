@@ -1,0 +1,106 @@
+<?php
+/**
+ * BSS Commerce Co.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://bsscommerce.com/Bss-Commerce-License.txt
+ *
+ * @category   BSS
+ * @package    Bss_Quickview
+ * @author     Extension Team
+ * @copyright  Copyright (c) 2019-2020 BSS Commerce Co. ( http://bsscommerce.com )
+ * @license    http://bsscommerce.com/Bss-Commerce-License.txt
+ */
+?>
+<?php $_product = $block->getProduct(); ?>
+<?php $buttonTitle = __('Add to Cart'); ?>
+
+<?php if(!empty($_product['shipping_info'])){?>
+<div class="product attribute overview">
+                          <h5>Shipping</h5>
+                          <p><?php echo $_product['shipping_info']; ?>.</p>
+                        </div>
+						
+<?php } ?>						
+<?php $buttonTitle = __('Add to Bag'); ?>
+<?php if ($_product->isSaleable()): ?>
+<div class="box-tocart">
+    <div class="fieldset">
+        <?php if ($block->shouldRenderQuantity()): ?>
+        <div class="field qty qty-col">
+            <label class="label" for="qty"><span><?= /* @escapeNotVerified */ __('Select a Quantity') ?></span></label>
+            <div class="qty-container">
+              <div class="qty-input">
+			  <button type="button" class="btnMin">-</button>
+                <input type="number"
+                       name="qty"
+                       id="qty"
+                       value="<?= /* @escapeNotVerified */ $block->getProductDefaultQty() * 1 ?>"
+                       title="<?= /* @escapeNotVerified */ __('Qty') ?>"
+                       class="input-text qty"
+                       data-validate="<?= $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>"
+                       />
+				<button type="button" class="btnAdd">+</button>
+            </div>
+			 </div>
+        </div>
+        <?php endif; ?>
+        <div class="actions">
+            <button type="submit"
+                    title="<?= /* @escapeNotVerified */ $buttonTitle ?>"
+                    class="action primary tocart"
+                    id="product-addtocart-button">
+                <span><?= /* @escapeNotVerified */ $buttonTitle ?></span>
+            </button>
+            <?= $block->getChildHtml('', true) ?>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
+<?php if ($block->isRedirectToCartEnabled()) : ?>
+    <script type="text/x-magento-init">
+        {
+            "#product_addtocart_form": {
+                "bss_quickview/catalog_product": {
+                    "radioCheckboxClosest": ".nested"
+                }
+            }
+        }
+    </script>
+<?php else : ?>
+    <script type="text/x-magento-init">
+    {
+        ".actions": {
+            "Bss_Quickview/js/bss_tocart": {
+            }
+        }
+    }
+    </script>
+<?php endif; ?>
+
+<script type="text/javascript"> 
+require(["jquery"], function(jQuery){
+  jQuery(document).ready(function(){
+    jQuery('.btnAdd').click(function() {
+		//alert('+++')
+      var oldVal = jQuery(this).parent().find("input").val();
+      if ( parseFloat(oldVal) >= 1 ) {
+        var newVal = parseFloat(oldVal) + 1;
+        jQuery(this).parent().find("input").val(newVal);
+      }
+    });
+
+    jQuery('.btnMin').click(function() {
+      var oldVal = jQuery(this).parent().find("input").val();
+      if ( parseFloat(oldVal) >= 2 ) {
+        var newVal = parseFloat(oldVal) - 1;
+        jQuery(this).parent().find("input").val(newVal);
+      }
+    });
+  });
+  });
+</script>

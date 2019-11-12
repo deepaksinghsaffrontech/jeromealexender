@@ -1,0 +1,61 @@
+<?php
+	$isLoggedIn = $block->isLoggedIn();
+?>
+<header class="header-top-inner" id="lucian_header">
+   <div class="content-menu">
+                      <ul class="header-top-menu">
+                          <li><a href="<?php echo $this->getUrl('ask-jerome/'); ?>">Ask Jerome</a></li>
+                          <li><a href="javascript:void(0);">Community Reviews</a></li>
+                          <li><a href="<?php echo $this->getUrl('contact/'); ?>">Contact Us</a></li>
+                      </ul>
+                    </div>
+					
+                    <div class="block block-search header-search">
+                      <div class="block block-content form-group">
+					  
+	 	   <?php //echo $this->getChildHtml('minicart') ?>
+	<?php echo $block->getLayout()->createBlock('Magento\Framework\View\Element\Template')->setTemplate('Magento_Search::form.mini.phtml')->toHtml();?> 
+				  
+                          <!--<input type="text" class="form-control" placeholder="Search the website">
+                          <button class="search-btn">
+                          <img src="<?php echo $this->getMediaurl()?>themeimage/search-icon.png" alt="">
+                          </button>-->
+                      </div>    
+                    </div>
+					
+					<div class="header-bag">
+                      <div class="sign-col">
+					 <?php if($isLoggedIn): ?>
+                      
+					  <a href="javascript:void(0);" class="singin-link">
+                              <i class="fa"><img src="<?php echo $this->getMediaurl()?>themeimage/user.png" alt=""></i>
+                              <span class="">Sign Out</span>
+                      </a> 
+					  <?php else :?>
+					  <a href="<?php echo $this->getUrl('customer/account/login/'); ?>" class="singin-link">
+                              <i class="fa"><img src="<?php echo $this->getMediaurl()?>themeimage/user.png" alt=""></i>
+                              <span class="">Sign In</span>
+                      </a>
+					  
+					 <?php endif; ?>	  
+					 </div>
+                      
+					  <div class="minicart-wrapper bag-col">
+                          <a href="javascript:void(0);" class="cart-link">
+                              <i class="fa"><img src="<?php echo $this->getMediaurl()?>themeimage/shopping_bag.png" alt=""></i>
+                              <span>Bag</span>
+                              <span class="cart-circle">0</span>
+                          </a>
+                      </div>
+					
+                    </div>
+						<div class="minicart-header">
+		<?php echo $this->getChildHtml('minicart') ?>
+	</div>
+                    
+   </header> 
+		
+	
+		
+				
+		

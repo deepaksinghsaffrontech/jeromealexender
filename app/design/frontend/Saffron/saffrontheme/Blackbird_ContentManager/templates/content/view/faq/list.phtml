@@ -1,0 +1,126 @@
+<?php
+/**
+ * Blackbird ContentManager Module
+ *
+ * NOTICE OF LICENSE
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to contact@bird.eu so we can send you a copy immediately.
+ *
+ * @category        Blackbird
+ * @package         Blackbird_ContentManager
+ * @copyright       Copyright (c) 2018 Blackbird (https://black.bird.eu)
+ * @author          Blackbird Team
+ * @license         https://www.advancedcontentmanager.com/license/
+ */
+?>
+<?php
+/**
+ * @see \Blackbird\ContentManager\Block\ContentList
+ * @var \Blackbird\ContentManager\Block\ContentList $block
+ */
+?>
+<?php
+$collection = $block->getCollection();
+/** @var \Blackbird\ContentManager\Model\ContentList $contentList */
+$contentList = $block->getContentList();
+$link = $block->getLink();
+?>
+
+
+<div class="banner-inner row-col" data-aos="fade" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+              <div class="container">
+                  <h1 data-aos="fade" data-aos-offset="150"  data-aos-easing="ease-in-sine">How can we help you?</h1>
+                  <!--<div class="header-search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="What are you looking for today?">
+                        <button class="search-btn">
+                          <img src="<?= $this->getUrl('pub/media') . 'themeimage/search-icon.png'; ?>" alt="Search">
+                        </button>
+                    </div>
+                  </div>-->
+                  <p>You can browse the FAQ topics below</p>
+              </div>
+          </div>
+          <!--/banner-notfront-->
+
+          <!--breadcrumb-->
+         <div class="breadcrumbs"  data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+              <ul class="items">
+                  <li class="item home"><a href="<?php echo $this->getUrl(''); ?>">Home</a></li>
+                  <li class="item"><?= $block->getTitle() ?></li>
+              </ul>
+          </div>
+
+  
+   
+   
+      <div class="faq-discription"> <div class="text-before"><?= $block->getTextBefore() ?></div> 
+        
+	
+
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('faq-block')->toHtml(); ?>	
+	    <!--	
+		<?php $i = 1 ;?>
+		
+		<?php if ($collection->count()) : ?>
+           <div class="faq-row row-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+            <?php foreach ($collection as $content) : ?>
+			<div class="faq-panel <?php if($i==1){echo 'in';}?>">
+            <h5><?= $content->getData('faq_faq_question'); ?><i class="fa fa-angle-down"></i></h5>
+            <div class="faq-body">
+              <p> <?= $content->getData('faq_answer'); ?></p>
+             </div>
+            </div>
+			<?php $i++; endforeach; ?>
+          </div>
+
+           
+
+
+        <?php else: ?>
+            <div class="message info empty">
+                <span><?= __('We can\'t find contents matching the selection.') ?></span>
+            </div>
+        <?php endif; ?>
+		-->
+
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('faq_info')->toHtml(); ?>		
+		
+		
+ <?php echo $block->getLayout()->createBlock('Saffron\Bestsellerproduct\Block\Bestsellerproduct')->setTemplate('bestsellerproduct.phtml')->toHtml();?> 
+       
+<script>
+    require([
+        'jquery'
+    ], function ($) {
+        $(document).ready(function(){
+            // move hero banner to top of the page
+            $('.banner-inner').detach().insertBefore('.page-main');
+            $('.breadcrumbs').detach().insertBefore('.page-main');
+  
+            // move the bottom outside main wrapper as well as it needs to have full width
+            //$('.job-posting').detach().insertAfter('#maincontent');
+        
+	//faq js
+	$(".faq-panel.in .faq-body").slideDown();
+	$(".faq-panel h5").on("click", function(){
+		$(this).next().slideToggle();
+		$(this).parent().siblings().children().next().slideUp();
+		$(this).parent().toggleClass("in").siblings().removeClass("in");
+		$(".faq-panel h5 .fa").removeClass("fa-angle-up").addClass("fa-angle-down");
+		if( $(this).parent().hasClass("in")  ){
+			$(this).children().addClass("fa-angle-up").removeClass("fa-angle-down");
+		}
+	});
+	$(".question-panel.in .question-body").slideDown();
+	$(".question-click h5").on("click", function(){
+		$(this).parent().next().slideToggle();
+		$(this).parent().parent().siblings().children().next().slideUp();
+		$(this).parent().toggleClass("in").siblings().removeClass("in");
+	});
+	//end faq js
+		
+		})
+    })
+</script>

@@ -1,0 +1,9 @@
+<?php //echo $_SERVER['REQUEST_URI'] ;?>
+<ul class="header-top-menu">
+<li <?php if(($_SERVER['REQUEST_URI']=='/ask-jerome')||($_SERVER['REQUEST_URI']=='/ask-jerome/')){echo 'class="active"';} ?> ><a href="<?php echo $this->getUrl('ask-jerome'); ?>" >Ask Jerome</a></li>
+<!--<li <?php if(($_SERVER['REQUEST_URI']=='/community-reviews')||($_SERVER['REQUEST_URI']=='/community-reviews/')){echo 'class="active"';} ?> ><a href="<?php echo $this->getUrl('community-reviews'); ?>" >Community Reviews</a></li>-->
+<li <?php if(($_SERVER['REQUEST_URI']=='/contact')||($_SERVER['REQUEST_URI']=='/contact/')){echo 'class="active"';} ?> ><a href="<?php echo $this->getUrl('contact'); ?>">Contact Us</a></li>
+</ul>
+
+
+

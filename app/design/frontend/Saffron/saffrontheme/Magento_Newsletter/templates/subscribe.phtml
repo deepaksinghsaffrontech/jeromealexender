@@ -1,0 +1,41 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Newsletter\Block\Subscribe $block */
+
+?>
+<div class="signup-box">
+    <h4>Fill Your Inbox with Beauty</h4>
+    <p>Receive 15% off your first order when you sign up for our newsletter! Plus, you’ll be the first to find out about new products and sale events!</p>
+
+	
+	<div class="form-group">
+        <form class="form subscribe"
+            novalidate
+            action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
+            method="post"
+            data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+            id="newsletter-validate-detail">
+          
+		  <div class="control">
+<input name="email" class="form-control" type="email" id="newsletter"
+                                placeholder="<?= $block->escapeHtml(__('Enter email address')) ?>"
+                                data-validate="{required:true, 'validate-email':true}"/>
+             </div>
+            
+		<button class="singup-btn" title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>" type="submit">
+                   <?= $block->escapeHtml(__('Sign up!')) ?>
+        </button>
+           
+        </form>
+		
+		
+		
+		
+    </div>
+</div>

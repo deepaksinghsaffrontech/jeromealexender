@@ -1,0 +1,52 @@
+
+@font-face {
+    font-family: 'BentonSans-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/BentonSans-Regular.otf'), url('../fonts/BentonSans-Regular.otf') format('OpenType');
+}
+
+@font-face {
+    font-family: 'BentonSans-Light';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/BentonSans-Light.otf'), url('../fonts/BentonSans-Light.otf') format('OpenType');
+}
+
+@font-face {
+    font-family: 'BentonSans-Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/BentonSans-Medium.otf'), url('../fonts/BentonSans-Medium.otf') format('OpenType');
+}
+
+@font-face {
+    font-family: 'BentonSans-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/BentonSans-Bold.otf'), url('../fonts/BentonSans-Bold.otf') format('OpenType');
+}
+@font-face {
+    font-family: 'BentonSans-Book';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/BentonSans-Book.otf'), url('../fonts/BentonSans-Book.otf') format('OpenType');
+}
+@font-face {
+    font-family: 'BentonSans-Black';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/BentonSans-Black.otf'), url('../fonts/BentonSans-Black.otf') format('OpenType');
+}
+
+@font-face {
+    font-family: 'GeorgiaRegular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/GeorgiaRegular.ttf'), url('../fonts/GeorgiaRegular.ttf') format('TrueType ');
+}
+
+
+
+.navigation li.level0 { display: flex;  justify-content: center; }
+.navigation > ul { display:flex; }

@@ -1,0 +1,107 @@
+<?php
+/**
+ * Copyright © 2015 PlazaThemes.com. All rights reserved.
+
+ * @author PlazaThemes Team <contact@plazathemes.com>
+ */
+ 
+if($this->getEnable()):
+$banners = $block->getBannerSlider();
+?>
+
+<div class="front-banner" >
+<div class="owl-carousel owl-theme">
+   
+   <?php $i = 1; ?>
+    <?php foreach ($banners as $banner): ?>
+	<?php $store_ids = explode(",",$banner['store_id']);
+		if(in_array($this->getIdStore(),$store_ids) || in_array('0',$store_ids)): ?>
+		<?php $url_image = $this->getMediaFolder().$banner['image']; ?>
+           <div class="item">
+		   
+		   <?php $url_image = $this->getMediaFolder().$banner['image']; ?>
+         
+				
+                  <img src="<?php echo $url_image; ?>" alt="<?php echo $banner['image_alt'] ?>">
+                  <div class="banner-caption">
+                      <h1><?php echo __($banner['name']) ?></h1>
+                      <a href="<?php echo $banner['click_url'] ?>" class="btn btn-primary"><?php echo __($banner['title1']) ?></a>
+                  </div>
+              
+				
+				
+				
+
+				
+            </div>
+		<?php $i++; ?>            
+    <?php endif; ?>            
+    <?php endforeach; ?>    
+
+	
+    </div>
+</div>
+
+<script type="text/javascript">
+	
+	require([
+	  "jquery",
+	  "owlcarousel/minjs"
+	 ], function($,owlCarousel){
+		$(document).ready(function(){
+		$('.front-banner .owl-carousel').owlCarousel({
+            loop: false,
+            margin: 40,
+            nav: false,
+            dots: false,
+            autoplay: false,
+	          touchDrag: false,
+            mouseDrag: false,
+            items:1,
+            smartSpeed: 500,
+        });
+			
+		});
+	});
+</script>
+<?php endif; ?>
+
+   <div class="banner-subtitle"  >
+                <div class="container">
+                  <!--<div class="advertise-bx">
+                    <button class="close-add"><i class="fa fa-times"></i></button>
+                    <div class="advertise-img">
+                      <img src="<?php echo $this->getMediaFolder()?>themeimage/hydrating-img.png" alt="" class="img-fluid">  
+                    </div>
+                    <div class="advertise-info">
+                      <p>Rafaela from Tampa has purchased a</p>
+                      <h6>Deluxe Airbrush 5PC</h6>
+                      <span>about 12 hours ago</span>
+                    </div>
+
+                  </div>-->
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner-subtitle')->toHtml(); ?>
+                <!--<div class="down-arrow-col">
+                    <img src="<?php echo $this->getMediaFolder()?>themeimage/down-arrow-img.png" alt="" class="img-fluid">
+                  </div>-->
+                </div>
+            </div>
+			
+			
+<?php /*
+$objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
+$orderDatamodel = $objectManager->get('Magento\Sales\Model\Order')->getCollection()->getLastItem();
+$orderId   =   $orderDatamodel->getId();
+$order = $objectManager->create('\Magento\Sales\Model\Order')->load($orderId);
+$orderItems = $order->getAllItems();
+
+foreach ($orderItems as $item) {
+
+   echo $product_name=   $item->getName();
+   echo $product_id=   $item->getProductId();
+   echo $price =   $item->getPrice();
+   echo $item->getImage();
+}
+*/
+
+?>			

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Saffron.com. All rights reserved.
+
+ * @author Saffron Team <contact@Saffron.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Saffron_Blog::elements" title="Blogs" module="Saffron_Blog" parent="Saffron_Bannerslider::bannerslider_banners" sortOrder="10"  resource="Saffron_Bannerslider::bannerslider_banners"/>
+
+        <add id="Saffron_Blog::post" title="Posts" module="Saffron_Blog" parent="Saffron_Blog::elements" sortOrder="10" action="blog/post/" resource="Saffron_Blog::post"/>
+
+        <add id="Saffron_Blog::category" title="Categories" module="Saffron_Blog" parent="Saffron_Blog::elements" sortOrder="20" action="blog/category/" resource="Saffron_Blog::category"/>
+
+        <!-- <add id="Saffron_Blog::import" title="Import" module="Saffron_Blog" parent="Saffron_Blog::elements" sortOrder="30" action="blog/import/" resource="Saffron_Blog::import"/> -->
+    </menu>
+</config>

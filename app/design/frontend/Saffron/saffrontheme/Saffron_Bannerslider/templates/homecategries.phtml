@@ -1,0 +1,37 @@
+<?php  $subcats =  $this->getHomecategries(); ?>    
+	 
+	 <div class="front-shop-category" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+                <div class="container">
+                  <h3 class="title-main">Shop by Category</h3>
+                  <div class="shop-category-carousel">
+                   
+	 <?php
+        foreach ($subcats as $subcat) {
+         $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+         $subcategory = $objectManager->create('Magento\Catalog\Model\Category')->load($subcat['entity_id']);   
+         $subcat_url = $subcat->getUrl();
+         $subcat_img = "";
+         $placeholder_img = "/media/placeholder.png";
+         ?>
+        <?php if($subcat->getIsActive()) : ?>
+        <?php //echo $subcategory['showhome'] ;?>
+		
+		 <?php if($subcategory['showhome']==1) : ?>
+           <div class="item">
+              <a href="<?php echo $subcat->getUrl() ;?>" class="category-link">
+              <figure>
+			 
+               <img src=" <?php echo $block->getMediaFolder().'catalog/category/'.$subcategory->getHomeimage();?>" alt="" class="img-fluid">
+              </figure>
+              <span class="name"><?php echo $subcat->getName() ;?></span>
+              </a>
+              </div>         
+                  
+		<?php endif ;?> 
+		<?php endif ;?> 
+		<?php  }  ?>
+     
+                
+                  </div>
+                </div>
+              </div>

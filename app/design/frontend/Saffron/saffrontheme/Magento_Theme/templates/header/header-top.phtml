@@ -1,0 +1,169 @@
+<?php
+	$isLoggedIn = $block->isLoggedIn();
+?>
+<style>
+.header.content {
+    display: none;
+}
+</style>
+
+<header id="lucian_header123" class="header-container">
+
+        <!--top-hearder-end-->
+		<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('top-hearder')->toHtml(); ?>
+		
+        <!--second-header-->
+        <div class="grey-background">
+            <div class="container">
+                <div class="row">
+                    <div class="track-order">
+                        <div class="col-md-12">
+                            <ul>
+                                <li><a href="<?php echo $this->getUrl('shipping-worldwide');?>">Shipping Worldwide</a></li>
+                                <li><a href="<?php echo $this->getUrl('stitching');?>">Stitching</a></li>
+                                <li><a href="<?php echo $this->getUrl('sales/guest/form/');?>">Track Order</a></li>
+                                <li><a href="<?php echo $this->getUrl('payments');?>">Payments</a></li>
+                                <li><a href="<?php echo $this->getUrl('contact');?>">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div class="header-wr visible-lg visible-md">
+		<div class="container">
+			<div class="header-content">
+				<div class="logo-home">
+					<?php echo $this->getChildHtml("logo"); ?>
+				</div>			
+				<div class="quick-access">
+					<?php echo $this->getChildHtml("top.search"); ?>					
+					<div class="link_hover clearfix">
+					<span class="icon"></span>
+					<?php if($customerSession->isLoggedIn()){ ?>
+					<a href="#"><span class="lnr lnr-user"></span><?php  echo 'Hi..'.$customerSession->getCustomer()->getName() ;?></a>
+					<?php }else{  ?>
+					<a href="#"><span class="lnr lnr-user"></span> Login / Sign Up</a>
+					<?php } ?>
+					<div class="toplinkwr">							
+					<div class="language-currency">								
+					<?php echo $this->getChildHtml("currency"); ?>								
+					<?php echo $this->getChildHtml("store_language"); ?>							
+					</div>													
+					<div class="top-link-dropdown">								
+					<?php echo $this->getChildHtml("header.links"); ?>							
+					</div>						
+					</div>					
+					
+					</div>											
+					<div class="top-cart-wrapper">
+						<?php echo $this->getChildHtml("minicart");?>					
+					</div>				
+					
+				</div>
+			</div>
+			
+		</div>
+		
+	
+	</div>	
+	
+	
+	
+</header>
+
+				<?php echo $block->getLayout()->createBlock('Plazathemes\Hozmegamenu\Block\Menu')->setTemplate('hozmegamenu.phtml')->toHtml();?>
+	
+<script type="text/javascript"> 
+require(["jquery"], function(jQuery){
+	jQuery(".header-mobile .open-icon").click(function() {
+		var chk=0;
+		if(jQuery('.header-mobile .my-account').hasClass('close-box') && (chk==0)) {
+			jQuery('.header-mobile .my-account').removeClass('close-box');
+			jQuery('.header-mobile .my-account').addClass('open-box'); 
+			jQuery('.header-mobile .open-icon').addClass('close-icon');    
+			chk=1;
+		}   
+		if(jQuery('.header-mobile .my-account').hasClass('open-box') && (chk==0)) {
+			jQuery('.header-mobile .my-account').removeClass('open-box');
+			jQuery('.header-mobile .my-account').addClass('close-box'); 
+			jQuery('.header-mobile .open-icon').removeClass('close-icon');   
+			chk=1;
+		} 
+	});  
+	jQuery(".header-mobile .close-icon").click(function() {
+		if(jQuery('.header-mobile .my-account').hasClass('open-box')) {
+			jQuery('.header-mobile .my-account').removeClass('open-box');
+			jQuery('.header-mobile .my-account').addClass('close-box');
+			jQuery('.header-mobile .open-icon').removeClass('close-icon'); 
+
+		}   
+	});
+	jQuery('#tabs-menu .tabs li a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+ 
+        // Show/Hide Tabs
+        jQuery('#tabs-menu ' + currentAttrValue).show().siblings().hide();
+ 
+        // Change/remove current tab to active
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+    });
+    if ( jQuery(window).width() < 600 ) {
+     	jQuery('.header-mobile .block-search .block-title').click(function(){
+    		jQuery('.header-mobile .block-search .block-content').append('<span class="close-icon">close-icon</span>').slideDown(300);  
+			jQuery('.header-mobile .block-search .block-content .close-icon').click(function(){
+				jQuery(this).parent('.header-mobile .block-search .block-content').slideUp(300); 
+				jQuery(this).remove();				
+			} );
+     	} ); 
+    }
+	
+	if(jQuery(window).width() < 992) {
+		jQuery('.minicart-moveable').insertAfter(jQuery('.mb-icon'));
+	}	
+	
+	jQuery(window).scroll(function(){
+		if(jQuery(this).scrollTop() > 140){
+			jQuery(".header-wr").addClass("fix-nav");
+		}else{
+			jQuery(".header-wr").removeClass("fix-nav");
+		}
+	});
+	
+	jQuery('#product-options-wrapper label').on('click', function(){
+	jQuery(this).toggleClass('active');		
+	jQuery(this).next('.control').toggle(500);
+	});
+	
+	jQuery('.close-top-btn').on('click', function(){
+	jQuery('.top-hearder').hide();
+	});
+	
+	//about page script for mobile
+	var characterCount = function(){
+		jQuery(".morePlus").click( function(){
+			jQuery(this).toggleClass("open");
+			if( jQuery(this).hasClass("open") ){
+				jQuery(this).children().removeClass("fa-plus").addClass("fa-minus");
+				jQuery(".about-section .showText").show();
+			}
+			else{
+				jQuery(this).children().addClass("fa-plus").removeClass("fa-minus");
+				jQuery(".about-section .showText").hide();
+			}
+		})
+	}
+	characterCount();
+	
+	
+	
+}); 
+
+
+
+</script>
+
+

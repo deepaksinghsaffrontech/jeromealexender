@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+* Copyright © 2015 Saffron.com. All rights reserved.
+
+* @author Saffron Team <contact@Saffron.com>
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+ 
+       <add id="Saffron_Testimonial::parent" title="Testimonial" module="Saffron_Testimonial" sortOrder="100" resource="Saffron_Testimonial::configuration" parent="Saffron_Bannerslider::parent" />	
+
+      <add id="Saffron_Testimonial::testimonial_testimos" title="Manage Testimonials" module="Saffron_Testimonial" sortOrder="10" parent="Saffron_Testimonial::parent" action="testimonialadmin/testimo" resource="Saffron_Testimonial::testimonial_testimos"/>
+
+        <add id="Saffron_Testimonial::settings" title="Settings" module="Saffron_Testimonial" sortOrder="20" parent="Saffron_Testimonial::parent" action="adminhtml/system_config/edit/section/testimonial" resource="Saffron_Testimonial::settings"/>
+    </menu>
+</config>

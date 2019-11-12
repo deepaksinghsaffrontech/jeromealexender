@@ -1,0 +1,24 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+	
+	 <move element="logo" destination="header-wrapper" before="-" />
+        <referenceBlock name="minicart" remove="false" />
+        <referenceContainer name="header.panel" remove="false" />
+        <referenceBlock name="top.search" remove="false" />
+        <referenceBlock name="catalog.compare.link" remove="false" />
+        <referenceBlock name="catalog.topnav" remove="false"/>
+        <referenceContainer name="footer-container"  remove="false"/>
+        <referenceContainer name="content">
+            <block class="Amasty\Checkout\Block\Onepage\CustomBlock\Block" name="top.custom_block" before="-">
+                <action method="setPosition">
+                    <argument name="position" xsi:type="string">top</argument>
+                </action>
+            </block>
+            <block class="Amasty\Checkout\Block\Onepage\CustomBlock\Block" name="bottom.custom_block" after="-">
+                <action method="setPosition">
+                    <argument name="position" xsi:type="string">bottom</argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,29 @@
+<?php //echo $_SERVER['REQUEST_URI'] ;?>
+<ul>
+<li <?php if(($_SERVER['REQUEST_URI']=='/customer-services')||($_SERVER['REQUEST_URI']=='/customer-services/')){echo 'class="active"';} ?> ><a href="<?php echo $this->getUrl('customer-services'); ?>" >Customer Services</a></li>
+<li <?php if(($_SERVER['REQUEST_URI']=='/contact')||($_SERVER['REQUEST_URI']=='/contact/')){echo 'class="active"';} ?> ><a href="<?php echo $this->getUrl('contact'); ?>" >Contact Us</a></li>
+<li <?php if(($_SERVER['REQUEST_URI']=='/sales/order/history')||($_SERVER['REQUEST_URI']=='/sales/order/history/')){echo 'class="active"';} ?> ><a href="<?php echo $this->getUrl('sales/order/history/'); ?>">Order Status</a></li>
+<li <?php if(($_SERVER['REQUEST_URI']=='/shipping-returns')||($_SERVER['REQUEST_URI']=='/shipping-returns/')){echo 'class="active"';} ?> ><a href="<?php echo $this->getUrl('shipping-returns'); ?>">Shipping &  Returns</a></li>
+<li <?php if(($_SERVER['REQUEST_URI']=='/store-locator')||($_SERVER['REQUEST_URI']=='/store-locator/')){echo 'class="active"';} ?> ><a href="<?php echo $this->getUrl('store-locator'); ?>">Store Locator</a></li>
+<li <?php if(($_SERVER['REQUEST_URI']=='/faq')||($_SERVER['REQUEST_URI']=='/faq/')){echo 'class="active"';} ?> ><a href="<?php echo $this->getUrl('faq'); ?>">FAQ</a></li>
+<li <?php if(($_SERVER['REQUEST_URI']=='/write-review')||($_SERVER['REQUEST_URI']=='/write-review/')){echo 'class="active"';} ?> ><a href="<?php echo $this->getUrl('write-review'); ?>">Write a Review</a></li>
+</ul>
+
+              
+			  
+<style>
+.cms-page-view .columns .sidebar-main .sidebar-shop-category {
+    display: none;
+}
+</style>			  
+
+<script>
+require([
+	'jquery',
+	], function () {
+	jQuery(document).ready(function($) {
+	 jQuery('#customer-service-cms').detach().insertAfter('.nav-sections');
+  
+  });
+});
+</script>			  
