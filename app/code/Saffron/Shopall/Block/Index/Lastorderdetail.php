@@ -23,8 +23,12 @@ public function getAllproducts($lastorderId)
 	$itemQty['order_name']= $customerName ;
 	$itemQty['region']= $billingstate ;
 	$i=0;
-    
-    return $orderItems;
+    foreach ($orderItems as $item) {
+
+
+    }
+	
+    return $item;
 }
 }
 
