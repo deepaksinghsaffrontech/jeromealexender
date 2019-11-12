@@ -3433,6 +3433,7 @@ form#writereview-form .form-group {  margin-bottom: 40px; }
 .fotorama__nav-wrap.fotorama__nav-wrap--horizontal {  margin-top: 30px; }
 .item:hover .bss-bt-quickview {  opacity: 1; }
 .nav-sections .header.links li.link.wishlist { display: none; }
+.minicart-items .update-cart-item {  padding: 12px 10px;  }
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
