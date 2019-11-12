@@ -1,7 +1,39 @@
 <?php
 $randid =$this->getRandid();
 $products  = $this->getAllproducts($randid['increment_id']);
-
-echo "<pre>";print_r($products);
-
+echo"<pre>";print_r($products);
+if(!empty($randid)){
+if(!empty($products)){	
+	
 ?>
+
+<?php if( !empty($products['items'][0]['name']) ){?>
+
+<div class="advertise-bx">
+<button class="close-add"><i class="fa fa-times"></i></button>
+  <a href="<?php  echo $products['items'][0]['producturl']?>" > 
+   <div class="advertise-img">
+   <?php if(!empty($products['items'][0]['productImage'])){ ?>
+   <img src=" <?php  echo  $this->getMedia().'pub/media/catalog/product'.$products['items'][0]['productImage']?>" alt="" class="img-fluid">  
+   <?php }else{  ?>
+   <img src=" <?php  echo  $this->getMedia().'pub/media/themeimage/placehoder.jpg' ;?>" alt="" class="img-fluid">  
+  
+   <?php } ?>
+
+   </div>
+   <div class="advertise-info">
+   <p><?php  echo $products['order_name']?> from <?php  echo $products['region']?> has purchased a</p>
+   <h6><?php  echo $products['items'][0]['name']?></h6>
+   <?php 
+  
+ $date1 = date('m/d/Y h:i:s', time());
+ $date2 = $products['order_date'];
+$seconds = strtotime($date1) - strtotime($date2);
+$hours = $seconds / 60 /  60;
+  ?>
+   <span>about <?php echo round($hours) ;?> hours ago</span>
+   </div> 
+   </a>
+  </div>
+  
+<?php }}}?> 
