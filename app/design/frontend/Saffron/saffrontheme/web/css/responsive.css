@@ -914,6 +914,32 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
     background-size: auto 18px;
     padding-left: 26px;
 }
+.nav-sections .header.links li.authorization-link
+ a[href="http://jeromealexender.projectdevelopment.co/customer/account/logout/"]:before,
+.nav-sections .header.links li.authorization-link
+ a[href="https://new.jeromealexander.com/customer/account/logout/"]:before,
+.nav-sections .header.links li.authorization-link
+ a[href="https://jeromealexander.com/customer/account/logout/"]:before {
+	 content: "\f08b";font-family: fontawesome;font-size: 18px;padding-right: 3px;
+}
+
+.nav-sections .header.links li.authorization-link 
+	a[href="http://jeromealexender.projectdevelopment.co/customer/account/logout/"],
+.nav-sections .header.links li.authorization-link 
+	a[href="https://new.jeromealexander.com/customer/account/logout/"],
+.nav-sections .header.links li.authorization-link 
+	a[href="https://jeromealexander.com/customer/account/logout/"]{
+    background: none;
+    padding-left: 0;
+}
+
+.nav-sections .header.links li a[href="http://jeromealexender.projectdevelopment.co/customer/account/"] {
+    background: url(/pub/media/themeimage/user2.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto 18px;
+    padding-left: 26px;
+}
 .nav-sections .header.links .header.links { padding-left:0; }
 .nav-sections .header.links li.greet.welcome span {  padding-left: 0; }
 .faq-row {  margin-top: 40px; }
