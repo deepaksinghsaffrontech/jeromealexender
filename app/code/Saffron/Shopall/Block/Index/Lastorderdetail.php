@@ -28,7 +28,7 @@ public function getAllproducts($lastorderId)
 
     }
 	
-    return $item;
+    return $orderItems->getData();
 }
 }
 
