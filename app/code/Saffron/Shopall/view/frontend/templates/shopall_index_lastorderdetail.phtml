@@ -52,7 +52,7 @@ $orderItems = $order->getAllItems();
 foreach($orderItems as $item)
 {
 	
-echo "SKU: " . addslashes($item->getSku());
+echo "SKU: " . addslashes($item->getSku()).'<br>';
        //echo "ID: " . addslashes($item->getId());
 	   $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
 $productId = $objectManager->get('Magento\Catalog\Model\Product')->getIdBySku($item->getSku());
