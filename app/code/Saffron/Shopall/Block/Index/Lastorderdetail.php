@@ -24,9 +24,12 @@ public function getAllproducts($lastorderId)
 	$itemQty['region']= $billingstate ;
 	$i=0;
     foreach ($orderItems as $item) {
+		
     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-    $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($item->getId());
-     $product_id = $item->getId();
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $productId = $objectManager->get('Magento\Catalog\Model\Product')->getIdBySku($item->getSku());
+	$product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($productId);
+     $product_id = $productId;
 	if(!empty($product1)){
 	if(isset($product1[0])){
             
@@ -40,7 +43,7 @@ public function getAllproducts($lastorderId)
 	$itemQty['items'][$i]['name']= $product->getName() ;
 	$itemQty['items'][$i]['productImage']= $product->getImage() ;
 	$itemQty['items'][$i]['producturl']= $product->getProductUrl() ;
-	$itemQty['items'][$i]['product_id']= $item->getId() ;
+	$itemQty['items'][$i]['product_id']= $productId ;
 	
 	//$itemQty['items'][]=array('quantity'=>$item->getQtyOrdered(),'description'=>$product->getShortDescription(),'name'=>$item->getName(),'productImage'=>$product->getImage(),'producturl'=>$product->getProductUrl(),'price'=>$item->getPrice(),'product_id'=>$item->getId());
 $i++;
