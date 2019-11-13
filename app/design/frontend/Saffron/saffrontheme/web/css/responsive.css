@@ -318,6 +318,10 @@
 	.about-content .container { max-width:100%; }
 	.about-section .info {  padding-right: 15px; }
 	.clock-inner .infobx { padding:8px 10px 10px; }
+	.blog-index-index .columns .column.main { width: 70%; }
+	.blog-index-index .sidebar-additional { width: 30%; padding-left: 4%; }
+	.blog-index-index .block-search { width: 100%; padding-left: 0; }
+	.blog-index-index .page-main .page-title-wrapper { width:100%; }
 }
 
 @media (min-width:768px) and (max-width:1024px) {
@@ -341,6 +345,7 @@
 	.about-banner { height:500px; }
 	.about-content .left-col { margin-top:-430px; }
 	.about-section h2 { font-size:41px; }
+	
 	
 
 }
@@ -408,6 +413,25 @@
 	.sidebar button.action.tocart.primary {  padding: 14px; }
 	.clock-inner .infobx h5 { font-size: 20px; }
 	.clock-inner .infobx { width:96%; }
+	.post-title-holder h2.post-title { font-size:18px; }
+	.blog-index-index .page-main {  margin-top: 30px; }
+	.blog-index-index .page-main .page-title-wrapper { width:100%; padding:0;}
+	.post-list li.post-holder { margin-bottom: 40px; }
+	.post-list li.post-holder .post-images { margin-bottom: 20px; }
+	.post-title-holder h2.post-title { font-size:18px; margin-top:15px; }
+	.blog-index-index .block-search .control {
+		position: inherit;
+		top: inherit;
+		left: inherit;
+		right: inherit;
+		margin-bottom: 20px;
+	}
+	.blog-index-index .block-search .control input { left: inherit;	position: inherit; }
+	.blog-index-index .sidebar-additional .block-content { float: left;	width: 100%; }
+	.blog-index-index .sidebar .widget.block:not(:last-child) { float: left; margin: 0; }
+	.blog-index-index .toolbar.toolbar-blog-posts {  margin-bottom: 0; }
+	.blog-index-index .columns .column.main { padding-bottom:0; }
+	.blog-index-index .sidebar-additional { margin-bottom:40px; }
 	
 	
 
