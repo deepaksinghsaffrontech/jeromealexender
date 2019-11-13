@@ -3453,6 +3453,25 @@ form#writereview-form .form-group {  margin-bottom: 40px; }
     margin-right: 20px;
 }
 .advertise-bx { display:none; }
+.blog-index-index .page-main .page-title-wrapper {
+    max-width: 1600px;
+    width: 94%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.post-content .post-info > div {  display: inline-block; }
+.post-description {
+    font-size: 16px !important;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+.post-title-holder h2.post-title {
+    margin-bottom: 10px;
+}
+.post-content a.post-read-more {
+    text-transform: capitalize;
+    text-decoration: underline;
+}
 
 
 /*===============-magento-common-classes-css-===============*/
