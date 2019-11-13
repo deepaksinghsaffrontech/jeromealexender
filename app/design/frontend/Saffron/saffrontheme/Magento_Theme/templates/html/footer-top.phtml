@@ -19,7 +19,7 @@
 
 <?php //echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('last_order_show')->toHtml(); ?>
 
-<span  id="lastorder"> </span>
+<span  id="lastorder" class="promotion-box"> </span>
 
 <div class="scroll-top">
   <a href="javascript:void(0);" class="scroll-link" id="goTop">
@@ -158,7 +158,7 @@ $(window).scroll(function() {
 
 
 setInterval(function(){
- 
+ $('#lastorder').addClass('promotion-hide');	
   $.ajax({
         url: "<?php echo $this->getBaseUrl()?>/shopall/index/lastorderdetail/",
         type: "GET",
@@ -166,6 +166,8 @@ setInterval(function(){
 			//alert(response);
 			
 		$('#lastorder').html(response);	
+		$('#lastorder').removeClass('promotion-hide');	
+		
 		
         }
 	  });
