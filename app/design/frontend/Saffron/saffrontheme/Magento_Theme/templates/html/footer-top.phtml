@@ -158,7 +158,7 @@ $(window).scroll(function() {
 
 
 setInterval(function(){
-	$('#lastorder').removeClass('promotion-hide');	
+	$('#lastorder').removeClass('promotion-show');	
 	
   $.ajax({
         url: "<?php echo $this->getBaseUrl()?>/shopall/index/lastorderdetail/",
@@ -167,7 +167,7 @@ setInterval(function(){
 			//alert(response);
 			
 		$('#lastorder').html(response);	
-		 $('#lastorder').addClass('promotion-hide');
+		 $('#lastorder').addClass('promotion-show');
 		
 		
         }
