@@ -54,6 +54,9 @@ foreach($orderItems as $item)
 	
 echo "SKU: " . addslashes($item->getSku());
        //echo "ID: " . addslashes($item->getId());
+	   $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$productId = $objectManager->get('Magento\Catalog\Model\Product')->getIdBySku($item->getSku());
+print_r($productId);
 }
 
 ?>
