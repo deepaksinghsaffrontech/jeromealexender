@@ -144,9 +144,9 @@ $(window).scroll(function() {
 		$(".singin-dropdown").slideToggle('slow');
 
 	 });
-	$(".close-add").on("click", function(){
-		$(".promotion-box").hide();
-	});
+	
+	
+
 	
 	
 	jQuery('body').on('click','.action-close',function() {
@@ -172,7 +172,11 @@ setInterval(function(){
 		
         }
 	  });
-},30000);
+},20000);
+
+$(".close-add").on("click", function(){
+	$(".promotion-box").hide();
+});
 
 
 });

@@ -3481,6 +3481,7 @@ form#writereview-form .form-group {  margin-bottom: 40px; }
 ol.post-list {  padding: 0; }
 .block-recent-posts .block-content .item { margin-bottom: 10px; }
 .block-recent-posts .block-content .item a { line-height: 24px; display: inline-block; }
+.diff-eye .fa { color: #053052; }
 
 
 /*===============-magento-common-classes-css-===============*/
