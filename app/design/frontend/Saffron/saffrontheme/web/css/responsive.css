@@ -317,7 +317,7 @@
 	.sitemap-index-index .page-title-wrapper { width:100%; }
 	.about-content .container { max-width:100%; }
 	.about-section .info {  padding-right: 15px; }
-
+	.clock-inner .infobx { padding:8px 10px 10px; }
 }
 
 @media (min-width:768px) and (max-width:1024px) {
@@ -341,6 +341,7 @@
 	.about-banner { height:500px; }
 	.about-content .left-col { margin-top:-430px; }
 	.about-section h2 { font-size:41px; }
+	
 
 }
 
@@ -402,10 +403,11 @@
 	.about-banner .container { width:100%; }
 	.about-content .left-col { width:40%;  margin-top: -390px; }
 	.about-content .right-col {  width: calc(100% - 40%); }
-	.clock-inner .infobx { top:80%; }
+	.clock-inner .infobx { top:89%; }
 	.block-content .table-wrapper { float: left; width: 100%; overflow-x: auto; }
 	.sidebar button.action.tocart.primary {  padding: 14px; }
-	
+	.clock-inner .infobx h5 { font-size: 20px; }
+	.clock-inner .infobx { width:96%; }
 	
 	
 

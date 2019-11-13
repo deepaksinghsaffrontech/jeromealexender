@@ -677,7 +677,7 @@ header .header-search .form-control:focus {
     background: #fff;
     padding: 13px 15px 15px;
     position: absolute;
-    top: 57%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -80%);
     max-width: 700px;
@@ -3452,7 +3452,7 @@ form#writereview-form .form-group {  margin-bottom: 40px; }
     width: auto;
     margin-right: 20px;
 }
-
+.advertise-bx { display:none; }
 
 
 /*===============-magento-common-classes-css-===============*/
