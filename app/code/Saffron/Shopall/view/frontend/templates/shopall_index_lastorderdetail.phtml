@@ -52,8 +52,8 @@ $orderItems = $order->getAllItems();
 foreach($orderItems as $item)
 {
 	
-	echo"<pre>";print_r($item);
-  echo "Order Item ID :".$item->getItemId(); 
+echo "SKU: " . addslashes($item->getSku());
+        echo "ID: " . addslashes($item->getId());
 }
 
 ?>
