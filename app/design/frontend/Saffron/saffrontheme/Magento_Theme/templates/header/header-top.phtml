@@ -159,7 +159,16 @@ require(["jquery"], function(jQuery){
 	characterCount();
 	
 	
-	
+	//advertise box setTimeOut script
+	function setTimeAd() {
+		setTimeout(function(){ 
+			jQuery(".advertise-bx").fadeIn();
+		}, 2000);
+		setTimeout(function(){ 
+			jQuery(".advertise-bx").fadeOut();
+		}, 10000);
+	}
+	setTimeAd();
 	
 }); 
 
