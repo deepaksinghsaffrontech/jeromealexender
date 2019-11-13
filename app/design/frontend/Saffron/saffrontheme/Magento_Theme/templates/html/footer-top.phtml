@@ -17,7 +17,10 @@
 </footer>
 	
 
-<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('last_order_show')->toHtml(); ?>
+<?php //echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('last_order_show')->toHtml(); ?>
+
+<span  id="lastorder"> </span>
+
 <div class="scroll-top">
   <a href="javascript:void(0);" class="scroll-link" id="goTop">
 	<i class="fa fa-angle-up"></i>
@@ -70,6 +73,7 @@
                         this.closeModal();
                     }
                 }]
+			
             };
 
             var popup = modal(options, $('#popup-modal1'));
@@ -150,7 +154,22 @@ $(window).scroll(function() {
 		//alert('++');
 	});
 	
- });	
+	});	
+
+
+setInterval(function(){
+ 
+  $.ajax({
+        url: "<?php echo $this->getBaseUrl()?>/shopall/index/lastorderdetail/",
+        type: "GET",
+        success: function(response){
+			//alert(response);
+			
+		$('#lastorder').html(response);	
+		
+        }
+	  });
+},5000);
 
 
 });
