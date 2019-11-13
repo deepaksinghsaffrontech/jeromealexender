@@ -3457,13 +3457,14 @@ form#writereview-form .form-group {  margin-bottom: 40px; }
     width: auto;
     margin-right: 20px;
 }
-.blog-index-index .page-main .page-title-wrapper {
+.blog-index-index .page-main .page-title-wrapper,
+.blog-post-view .page-main .page-title-wrapper{
     max-width: 1600px;
     width: 94%;
     margin: 0 auto;
     padding: 0 15px;
 }
-.post-content .post-info > div {  display: inline-block; }
+.post-info > div {  display: inline-block; }
 .post-description {
     font-size: 16px;
     line-height: 26px;
@@ -3482,6 +3483,11 @@ ol.post-list {  padding: 0; }
 .block-recent-posts .block-content .item { margin-bottom: 10px; }
 .block-recent-posts .block-content .item a { line-height: 24px; display: inline-block; }
 .diff-eye .fa { color: #053052; }
+.blog-post-view .post-images .post-info {  margin:30px 0 6px; }
+.blog-post-view .post-description p {  margin-bottom: 20px; }
+.block-compare .block-title, .block-reorder .block-title, .block-wishlist .block-title, .widget .block-title {
+    margin-bottom: 12px;
+}
 
 
 /*===============-magento-common-classes-css-===============*/

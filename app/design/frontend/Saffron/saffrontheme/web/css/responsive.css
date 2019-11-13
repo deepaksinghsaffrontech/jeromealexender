@@ -321,7 +321,8 @@
 	.blog-index-index .columns .column.main { width: 70%; }
 	.blog-index-index .sidebar-additional { width: 30%; padding-left: 4%; }
 	.blog-index-index .block-search { width: 100%; padding-left: 0; }
-	.blog-index-index .page-main .page-title-wrapper { width:100%; }
+	.blog-index-index .page-main .page-title-wrapper,
+	.blog-post-view .page-main .page-title-wrapper	{ width:100%; }
 }
 
 @media (min-width:768px) and (max-width:1024px) {
@@ -415,7 +416,8 @@
 	.clock-inner .infobx { width:96%; }
 	.post-title-holder h2.post-title { font-size:18px; }
 	.blog-index-index .page-main {  margin-top: 30px; }
-	.blog-index-index .page-main .page-title-wrapper { width:100%; padding:0;}
+	.blog-index-index .page-main .page-title-wrapper,
+	.blog-post-view .page-main .page-title-wrapper	{ width:100%; padding:0;}
 	.post-list li.post-holder { margin-bottom: 40px; }
 	.post-list li.post-holder .post-images { margin-bottom: 20px; }
 	.post-title-holder h2.post-title { font-size:18px; margin-top:15px; }
@@ -993,6 +995,8 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .contentmanager-contentlist-2 .faq-discription .front-best-seller {  padding-bottom: 0; }
 .faq-question .h30 {  font-size: 24px; }
 .minicart-items .update-cart-item {  margin-top: 18px; }
+.blog-post-view .page-main { margin-top:30px; }
+.blog-post-view h1 { font-size:24px; }
 
 
 }
