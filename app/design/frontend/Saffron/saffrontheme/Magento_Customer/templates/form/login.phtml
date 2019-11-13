@@ -85,8 +85,10 @@ $('#check-eye').click(function(){
        //alert('++')    
   if('password' == $('#password').attr('type')){
          $('#password').prop('type', 'text');
+		 $('#check-eye').addClass('diff-eye');
     }else{
          $('#password').prop('type', 'password');
+		  $('#check-eye').removeClass('diff-eye');
     }
 	
  });	
