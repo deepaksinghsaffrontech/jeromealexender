@@ -623,7 +623,15 @@
     .logo-col a { display: inline-block; margin-left: 32px;    }
     .minicart-wrapper .action.showcart img { height: 20px; width: auto;    }
     .sign-col .singin-link img { width: auto; height: 20px;    }
-    .block-search .control { border: none; margin: 0; padding: 0; position: fixed; left: 0; right: 0; width: 100%; top: 100px;       }
+    .block-search .control { border: none;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		left: -195px;
+		right: 0;
+		width: 100%;
+		top: 190%;
+		min-width: 320px;     }
     .block-search .minisearch.active  .control { background: #fff;  padding: 20px;  }
     .block-search .label:before { color:#b4b5b6; display: none; }
     header .header-search input { font-size:15px; }
