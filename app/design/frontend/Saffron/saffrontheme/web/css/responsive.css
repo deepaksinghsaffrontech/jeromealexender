@@ -321,8 +321,9 @@
 	.blog-index-index .columns .column.main,
 	.blog-post-view .columns .column.main	{ width: 70%; }
 	.blog-index-index .sidebar-additional,
-	.blog-post-view  .sidebar-additional	{ width: 30%; padding-left: 4%; }
-	.blog-index-index .block-search { width: 100%; padding-left: 0; }
+	.blog-post-view .sidebar-additional	{ width: 30%; padding-left: 4%; }
+	.blog-index-index .block-search,
+	.blog-post-view .block-search	{ width: 100%; padding-left: 0; }
 	.blog-index-index .page-main .page-title-wrapper,
 	.blog-post-view .page-main .page-title-wrapper	{ width:100%; }
 }
