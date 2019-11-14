@@ -20,17 +20,29 @@
 			<div class="custom-control custom-radio"><input id="customRadio17" name ="star" value="5" class="custom-control-input  required-entry" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio17"><i class="fa fa-star-o"></i></label></div>
 			</div> -->
 			
-			<span class="rating-star"  id="rating-form">
-				<input type="radio" name="rating" value="1"><span class="star"></span>
-
-				    <input type="radio" name="rating" value="2"><span class="star"></span>
-
-				    <input type="radio" name="rating" value="3"><span class="star"></span>
-
-				    <input type="radio" name="rating" value="4"><span class="star"></span>
-
-				    <input type="radio" name="rating" value="5"><span class="star"></span>
+			<div class="rating-star rating-star-new"  id="rating-form">
+				<span class="star-list">
+					<input type="radio" name="rating" value="1">
+					<span class="star"></span>
 				</span>
+				<span class="star-list">
+					 <input type="radio" name="rating" value="2">
+					 <span class="star"></span>
+				</span>
+				<span class="star-list">
+					 <input type="radio" name="rating" value="3">
+					 <span class="star"></span>
+				</span>
+				<span class="star-list">
+					<input type="radio" name="rating" value="4">
+					<span class="star"></span>
+				</span>
+				<span class="star-list">
+					 <input type="radio" name="rating" value="5">
+					 <span class="star"></span>
+				</span>
+				   
+				</div>
 
 			</div>
 		</div>
@@ -114,23 +126,24 @@ require(["jquery"], function(jQuery){
 
 
 <style>
-.rating-star {
+
+.rating-star-new-new{
     direction: rtl;
     font-size: 40px;
     unicode-bidi: bidi-override;
     display: inline-block;
 }
-.rating-star input {
+.rating-star-new input {
     opacity: 0;
     position: relative;
     left: -30px;
     z-index: 2;
     cursor: pointer;
 }
-.rating-star span.star:before {
+.rating-star-new span.star:before {
     color: #777777;
 }
-.rating-star span.star {
+.rating-star-new span.star {
     display: inline-block;
     font-family: FontAwesome;
     font-style: normal;
@@ -138,14 +151,14 @@ require(["jquery"], function(jQuery){
     position: relative;
     z-index: 1;
 }
-.rating-star span {
+.rating-star-new span {
     margin-left: -30px;
 }
-.rating-star span.star:before {
+.rating-star-new span.star:before {
     color: #777777;
     content:"\f006";
 }
-.rating-star input:hover + span.star:before, .rating-star input:hover + span.star ~ span.star:before, .rating-star input:checked + span.star:before, .rating-star input:checked + span.star ~ span.star:before {
+.rating-star-new input:hover + span.star:before, .rating-star-new input:hover + span.star ~ span.star:before, .rating-star-new input:checked + span.star:before, .rating-star-new input:checked + span.star ~ span.star:before {
     color: #ffd100;
     content:"\f005";
 }
