@@ -3504,8 +3504,8 @@ ol.post-list {  padding: 0; }
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
-    position: relative;
-    z-index: 1;
+    font-size: 28px;
+    margin: 0 10px 0 -30px;
 }
 .rating-star-new span.star:before { color: #c7c7c7;  content:"\f006"; }
 .rating-star-new input:hover + span.star:before, .rating-star-new input:hover + span.star ~ span.star:before, .rating-star-new input:checked + span.star:before, .rating-star-new input:checked + span.star ~ span.star:before {
@@ -3519,13 +3519,15 @@ ol.post-list {  padding: 0; }
     position: relative;
     margin-right: 8px;
 }
-.rating-star-new .star-list input[type="radio"] {
-    position: absolute;
+.rating-star-new input[type="radio"] {
+    margin: 0;
+    height: 28px;
+    width: 25px;
+    position: relative;
+    z-index: 1;
+    top: 3px;
     opacity: 0;
     cursor: pointer;
-    width: 28px;
-    height: 28px;
-    margin: 0;
 }
 
 
