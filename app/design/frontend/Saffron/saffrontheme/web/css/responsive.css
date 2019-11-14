@@ -9,7 +9,9 @@
 	/*--magento-navigation-css--*/
 	.navigation { z-index: 1; }
 	.navigation > ul{ padding:0; }
-	.nav-sections .navigation .level0>.level-top { display: block; padding: 20px 10px; line-height:20px;  }
+	.nav-sections .navigation .level0>.level-top { display: block; padding: 20px 10px; line-height:20px;
+		color:#053052;
+	}
 	.navigation li.level0:hover a { background: #ffdcd5;   }
     .nav-sections-item-content>.navigation {  background: none; position: initial;  }
     .navigation { max-width: 1600px; width: 100%; }
@@ -38,10 +40,10 @@
 	.menu-title-product span { margin-left: 4px; }
 	.navigation li.level0.nav-2 .menu-title-product span { display: none; }
 	.navigation .level0.parent>.level-top:after { content: "\f107"; font-family: fontawesome; padding-left: 6px;
-		font-size: 20px; position: relative; top: 2px; font-weight:600; }
+		font-size: 20px; position: relative; top: 2px; font-weight:600; line-height:16px; }
 	.navigation li.level0:last-child {  flex: 1.3; }
 	.navigation .level0.parent>.level-top:hover{ color:#053052; }
-	.navigation .level0.nav-1>.level-top {  top: 1px; }
+	/* .navigation .level0.nav-1>.level-top {  top: 1px; } */
 	.menu-product-list .product-name { text-decoration: underline; max-width:80%; }
 	
 	.caption-inner p {  font-size: 28px; line-height: 38px; }
