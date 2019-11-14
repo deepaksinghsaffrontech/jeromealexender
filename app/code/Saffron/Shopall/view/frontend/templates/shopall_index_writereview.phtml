@@ -9,9 +9,7 @@
 <form class="form contact" id="writereview-form" action="<?php echo $this->getUrl('shopall/index/writereview');?>" id="contact-form" method="post" data-hasrequired="* Required Fields" novalidate="novalidate">
 	<div class="row">
 		<div class="col-12 store-col">
-			<div class="form-group">
-				<label for="">Store <span>*</span></label>
-			
+			<div class="form-group"><label for="">Store <span>*</span></label>
 
 			<!--<div class="skin-radio-col rating-star">
 
@@ -22,21 +20,17 @@
 			<div class="custom-control custom-radio"><input id="customRadio17" name ="star" value="5" class="custom-control-input  required-entry" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio17"><i class="fa fa-star-o"></i></label></div>
 			</div> -->
 			
-			<div class="rating-star rating-star-new"  id="rating-form">
-				
-					<input type="radio" name="rating" value="1">
-					<span class="star"></span>
-					<input type="radio" name="rating" value="2">
-					<span class="star"></span>
-					<input type="radio" name="rating" value="3">
-					<span class="star"></span>
-					<input type="radio" name="rating" value="4">
-					<span class="star"></span>
-					<input type="radio" name="rating" value="5">
-					<span class="star"></span>
-				
-				   
-				</div>
+			<span class="rating-star rating-star-new"  id="rating-form">
+					<input type="radio" name="rating" value="1"><span class="star"></span>
+
+				    <input type="radio" name="rating" value="2"><span class="star"></span>
+
+				    <input type="radio" name="rating" value="3"><span class="star"></span>
+
+				    <input type="radio" name="rating" value="4"><span class="star"></span>
+
+				    <input type="radio" name="rating" value="5"><span class="star"></span>
+				</span>
 
 			</div>
 		</div>
@@ -110,7 +104,6 @@ require(["jquery"], function(jQuery){
 	jQuery('#rating-form').on('change','[name="rating"]',function(){
 	jQuery('#selected-rating').text(jQuery('[name="rating"]:checked').val());
    });
-   
 
 
 }); 
@@ -119,3 +112,49 @@ require(["jquery"], function(jQuery){
 
 </script>	
 
+
+<style>
+
+.rating-star-new-new{
+    direction: rtl;
+    font-size: 40px;
+    unicode-bidi: bidi-override;
+    display: inline-block;
+}
+.rating-star-new input {
+    opacity: 0;
+    position: relative;
+    left: -30px;
+    z-index: 2;
+    cursor: pointer;
+}
+.rating-star-new span.star:before {
+    color: #777777;
+}
+.rating-star-new span.star {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    z-index: 1;
+}
+.rating-star-new span {
+    margin-left: -30px;
+}
+.rating-star-new span.star:before {
+    color: #777777;
+    content:"\f006";
+}
+.rating-star-new input:hover + span.star:before, .rating-star-new input:hover + span.star ~ span.star:before, .rating-star-new input:checked + span.star:before, .rating-star-new input:checked + span.star ~ span.star:before {
+    color: #ffd100;
+    content:"\f005";
+}
+
+.selected-rating{
+    color: #ffd100;
+    font-weight: bold;
+    font-size: 42px;
+}
+
+</style>

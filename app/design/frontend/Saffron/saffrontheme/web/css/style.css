@@ -3491,45 +3491,6 @@ ol.post-list {  padding: 0; }
 .blog-post-view .columns { position: relative; z-index: 1; }
 .view-password-link.diff-eye i.fa.fa-eye-slash:before {  content: "\f06e"; }
 
-/*write review page rating star css*/
-.rating-star-new-new{
-    direction: rtl;
-    font-size: 40px;
-    unicode-bidi: bidi-override;
-    display: inline-block;
-}
-.rating-star-new span.star:before {  color: #c7c7c7; }
-.rating-star-new span.star {
-    display: inline-block;
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 28px;
-    margin: 0 10px 0 -30px;
-}
-.rating-star-new span.star:before { color: #c7c7c7;  content:"\f006"; }
-.rating-star-new input:hover + span.star:before, .rating-star-new input:checked + span.star:before
-{
-    color: #053052;
-    content:"\f005";
-}
-.selected-rating{ color: #053052; font-weight: bold;  font-size: 42px; }
-.rating-star-new { float: left;  width: 100%; }
-.rating-star-new .star-list {
-    display: inline-block;
-    position: relative;
-    margin-right: 8px;
-}
-.rating-star-new input[type="radio"] {
-    margin: 0;
-    height: 28px;
-    width: 25px;
-    position: relative;
-    z-index: 1;
-    top: 3px;
-    opacity: 0;
-    cursor: pointer;
-}
 
 
 /*===============-magento-common-classes-css-===============*/
