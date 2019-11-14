@@ -3488,7 +3488,10 @@ ol.post-list {  padding: 0; }
 .block-compare .block-title, .block-reorder .block-title, .block-wishlist .block-title, .widget .block-title {
     margin-bottom: 12px;
 }
-
+.blog-post-view .columns {
+    position: relative;
+    z-index: 1;
+}
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
