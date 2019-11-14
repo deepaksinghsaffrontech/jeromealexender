@@ -3508,7 +3508,8 @@ ol.post-list {  padding: 0; }
     margin: 0 10px 0 -30px;
 }
 .rating-star-new span.star:before { color: #c7c7c7;  content:"\f006"; }
-.rating-star-new input:hover + span.star:before, .rating-star-new input:hover + span.star ~ span.star:before, .rating-star-new input:checked + span.star:before, .rating-star-new input:checked + span.star ~ span.star:before {
+.rating-star-new input:hover + span.star:before, .rating-star-new input:checked + span.star:before
+{
     color: #053052;
     content:"\f005";
 }
