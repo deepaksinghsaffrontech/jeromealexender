@@ -271,7 +271,7 @@
 	
     .clock-inner .infobx p { font-size:13px; line-height:18px;  }
     .clock-item{ max-width:80%;}
-    .clock-item img { max-width:150px;}
+    .clock-item img { max-height:180px;}
     .clock-item figure {  margin-bottom: 10px;    }
     .seller-name-col p {  margin-bottom: 10px;    }
     .ask-jerome-info p { font-size: 15px;  line-height: 22px; }
@@ -375,7 +375,7 @@
     .real-left .realbx-col .btn { display: none;  }
     .rating-box {   width: calc(100% - 40px);  margin: -30px 20px 20px  }
     .watch-btn-mobile {  margin-left: 20px;    }
-    .clock-item img { max-width:80px; }
+    .clock-item img { max-height:90px; }
     .logo-col img {   max-width: 240px; }
     .logo-col { max-width: 100%; flex: 100%; text-align: center; padding:20px 15px; }
     .minicart-wrapper .action.showcart { padding: 20px 0; }

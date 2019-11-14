@@ -656,7 +656,7 @@ header .header-search .form-control:focus {
 }
 .clock-section {  overflow: hidden; }
 .clock-section, .clock-inner {  float: left;  width: 100%; }
-.clock-item img {  max-width: 220px; width: 100%; }
+.clock-item img { width: auto; max-height: 280px; }
 .clock-section .right-col {  position: relative; }
 .clock-section .right-col figure {  margin: 0; }
 .clock-image img{  width:100%; }
@@ -3488,10 +3488,8 @@ ol.post-list {  padding: 0; }
 .block-compare .block-title, .block-reorder .block-title, .block-wishlist .block-title, .widget .block-title {
     margin-bottom: 12px;
 }
-.blog-post-view .columns {
-    position: relative;
-    z-index: 1;
-}
+.blog-post-view .columns { position: relative; z-index: 1; }
+.view-password-link.diff-eye i.fa.fa-eye-slash:before {  content: "\f06e"; }
 
 /*===============-magento-common-classes-css-===============*/
 .columns,
