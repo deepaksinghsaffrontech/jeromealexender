@@ -17,16 +17,26 @@ $banners = $block->getBannerSlider();
 	<?php $store_ids = explode(",",$banner['store_id']);
 		if(in_array($this->getIdStore(),$store_ids) || in_array('0',$store_ids)): ?>
 		<?php $url_image = $this->getMediaFolder().$banner['image']; ?>
+		<?php $url_mobile_image = $this->getMediaFolder().$banner['title2']; ?>
            <div class="item">
-		   
-		   <?php $url_image = $this->getMediaFolder().$banner['image']; ?>
-         
-				
-                  <img src="<?php echo $url_image; ?>" alt="<?php echo $banner['image_alt'] ?>">
-                  <div class="banner-caption">
+		  
+		  <?php //$url_image = $this->getMediaFolder().$banner['image']; ?>
+		  
+		  
+          <a href="<?php echo $banner[' click_url'] ;?>">
+		  <img src="<?php echo $url_image; ?>" alt="<?php echo $banner['image_alt'] ?>">
+		  </a>
+		  
+		  
+		  <a href="<?php echo $banner[' click_url'] ;?>">
+		  <img src="<?php echo $url_mobile_image; ?>" alt="<?php echo $banner['image_alt'] ?>">
+		  </a>
+		  
+		  
+                  <!--<div class="banner-caption">
                       <h1><?php echo __($banner['name']) ?></h1>
                       <a href="<?php echo $banner['click_url'] ?>" class="btn btn-primary"><?php echo __($banner['title1']) ?></a>
-                  </div>
+                  </div>-->
               
 				
 				
