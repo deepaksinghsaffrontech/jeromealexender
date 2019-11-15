@@ -156,6 +156,7 @@
 	.get-social-row .mpinstagramfeed-photo { width: calc(16.666666666667% - 8px) !important; }
 	form#writereview-form .name-col input,
 	form#writereview-form	.email-col input { max-width: 600px; }
+	.frontBanner-mobile { display:none; }
 	
 	
 /*==============magento-common-classes-css=================*/
@@ -1002,7 +1003,7 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .blog-post-view .page-main { margin-top:30px; }
 .blog-post-view h1 { font-size:24px; }
 .blog-post-view .page-main .page-title-wrapper { width:100%; padding:0; }
-
+.frontBanner-desk { display:none; }
 
 }
 
