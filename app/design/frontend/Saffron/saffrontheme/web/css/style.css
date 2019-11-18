@@ -2819,15 +2819,15 @@ body.page-layout-1column.page-with-filter .column.main {  padding-top: 0; }
 body .mfp-iframe-holder .mfp-content {  max-width: 1180px; padding:30px 0; }
 .page-title-wrapper.product.banner-title-notfront h1.page-title {  opacity: 1; transform: none; }
 .mfp-iframe-holder .mfp-close {
-    top: 3px;
     color: #E2AF9F;
     z-index: 1;
     width: auto;
     background: none;
-    right: 6px;
     opacity: 1;
     font-size: 50px;
 }
+.fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon:not(:focus) { transform:none; }
+
 a.goto-product {  display: none; }
 .bss-quickview-catalog-product-view .product.info.detailed {  display: none; }
 div#ajax-goto + .product-info-main {  margin-top: 50px; }
