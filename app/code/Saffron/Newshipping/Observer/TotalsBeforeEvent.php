@@ -49,23 +49,30 @@ class TotalsBeforeEvent implements ObserverInterface
      $itemsCollection = $cart->getQuote()->getItemsCollection();
     $itemsVisible = $cart->getQuote()->getAllVisibleItems();
     $items = $cart->getQuote()->getAllItems();
+	$Product_id = array()
     foreach ($items as $item) {
     $productId = $item->getProductId();
     $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($productId);
     $product_id = $productId;
-    
-	  $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/test.log');
+    if($product_id  == '12'){
+		$Product_id  =  $productId;
+	}
+	
+	$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/test.log');
     $logger = new \Zend\Log\Logger();
     $logger->addWriter($writer);
 	
 	if(!empty($product1)){
 	if(isset($product1[0])){
-     $product_id =  $product1[0];
+   if($product1[0] == '12'){
+		$Product_id  =  $productId;
+	}
+	 
 	}
     }
     }
         
-    if($product_id =='12'){
+    if($Product_id[0] =='12'){
       
      if($region['country_id'] =='CA'){
         $name ='shipping not allowed  ';  
