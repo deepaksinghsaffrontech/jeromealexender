@@ -1,5 +1,5 @@
 <?php
-namespace Saffron\Costshepping\Observer;
+namespace Saffron\Newshipping\Observer;
 
 
 use Magento\Quote\Model\Quote;
