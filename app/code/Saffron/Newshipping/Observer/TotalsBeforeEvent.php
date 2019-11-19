@@ -64,7 +64,7 @@ class TotalsBeforeEvent implements ObserverInterface
     if($product_id =='12'){
       
      if($region['country_id'] =='CA'){
-          
+         $name ='deepak1';   
      }else if($region['region_id'] =='21'){
           
            $name ='deepak';   
