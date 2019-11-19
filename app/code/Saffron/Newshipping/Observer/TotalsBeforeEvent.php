@@ -61,7 +61,7 @@ class TotalsBeforeEvent implements ObserverInterface
     }
     }
         
-    if($product_id =='2'){
+    if($product_id =='12'){
       
      if($region['country_id'] =='CA'){
           
