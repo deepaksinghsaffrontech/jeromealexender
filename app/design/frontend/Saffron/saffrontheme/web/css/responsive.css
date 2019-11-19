@@ -562,7 +562,8 @@
     .social-links {  padding: 0 0 10px; }
     .footer-bottom h5 { font-size:17px; }
     .signup-box p{ font-size:16px; }
-    .banner-content-bx .text {  position: relative; bottom: inherit; top: -50px; margin: 0 auto; float: none; max-width: 90%; left: inherit;  }
+    .banner-content-bx .text {  position: relative; bottom: inherit; top:0px; margin: 0 auto; float: none; max-width: 100%; left: inherit; padding:15px;  }
+	.banner-content-bx h5 { font-size:24px; }
     .columns { width: 100%; float: left; padding:0; }
     .category-row {  margin-bottom: 15%; }
     .customer-reviews .name-section, .customer-reviews .descript-col { padding:15px; }
@@ -706,7 +707,7 @@
     .product.media { margin:30px 0; }
     .review-bx .name-section { padding-bottom: 0; }
 	.page-layout-2columns-left header .header-content {  border-bottom: 1px solid #DDE6EC; }
-	.shop-banner-content { margin-bottom:30px; }
+	.shop-banner-content { margin-bottom:40px; }
 	.shopbest-col-btm { padding-top:30px; }
 	.clock-section .left-col { padding:60px 20px; }
 	footer.page-footer { margin-top:0; }

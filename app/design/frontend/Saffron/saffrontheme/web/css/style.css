@@ -549,7 +549,7 @@ header .header-search .form-control:focus {
     margin: 20px 0;
     z-index: 1;
 }
-.real-women-row .video-col img{  cursor: pointer; width:100%; }
+.real-women-row .video-col img{ width:100%; }
 .rating-box .h-col,
 .rating-box .title-row,
 .rating-box .inner,
