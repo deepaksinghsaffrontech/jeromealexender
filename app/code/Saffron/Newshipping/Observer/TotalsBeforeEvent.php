@@ -54,6 +54,10 @@ class TotalsBeforeEvent implements ObserverInterface
     $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($productId);
     $product_id = $productId;
     
+	  $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/test.log');
+    $logger = new \Zend\Log\Logger();
+    $logger->addWriter($writer);
+	
 	if(!empty($product1)){
 	if(isset($product1[0])){
      $product_id =  $product1[0];
@@ -64,24 +68,23 @@ class TotalsBeforeEvent implements ObserverInterface
     if($product_id =='12'){
       
      if($region['country_id'] =='CA'){
-         $name ='deepak1';   
+        $name ='shipping not allowed  ';  
+       $logger->info('data' . json_encode($name)); die;
      }else if($region['region_id'] =='21'){
-          
-           $name ='deepak';   
+            $name ='shipping not allowed ';  
+         $logger->info('data' . json_encode($name)); die;
      }else{
-           $name ='ram';   
+           $name ='shipping allowe';   
           
       }
         
         
     }     
         
-    $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/test.log');
-    $logger = new \Zend\Log\Logger();
-    $logger->addWriter($writer);
-    $logger->info('id' . json_encode($product_id));
-    $logger->info( $region['region_id'].'OrderPlacebefore:'. $region['country_id']);
-    $logger->info('data' . json_encode($name));
+  
+    //$logger->info('id' . json_encode($product_id));
+    //$logger->info( $region['region_id'].'OrderPlacebefore:'. $region['country_id']);
+    //$logger->info('data' . json_encode($name));
     
     }
         
