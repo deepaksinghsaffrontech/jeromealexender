@@ -81,7 +81,7 @@ class TotalsBeforeEvent implements ObserverInterface
     $logger->addWriter($writer);
     $logger->info('data' . json_encode($product_id));
     $logger->info( $region['region_id'].'OrderPlacebefore:'. $region['country_id']);
-    //$logger->info('data' . json_encode($name));
+    $logger->info('data' . json_encode($name));
     
     }
         
