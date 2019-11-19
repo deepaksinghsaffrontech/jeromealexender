@@ -30,17 +30,17 @@ class TotalsBeforeEvent implements ObserverInterface
     public function execute(Observer $observer)
     {
         /** Fetch Address related data */
-        $shippingAssignment = $observer->getEvent()->getShippingAssignment();
+      /*  $shippingAssignment = $observer->getEvent()->getShippingAssignment();
         $address = $shippingAssignment->getShipping()->getAddress();
         // fetch quote data
-        /** @var Quote $quote */
+        
         $quote = $observer->getEvent()->getQuote();
         // fetch totals data
         $total = $observer->getEvent()->getTotal();
         $region = $address->getData();
        
         
-       /*  $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+         $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
         $cart = $objectManager->get('\Magento\Checkout\Model\Cart');
         // retrieve quote items collection
         $itemsCollection = $cart->getQuote()->getItemsCollection();
