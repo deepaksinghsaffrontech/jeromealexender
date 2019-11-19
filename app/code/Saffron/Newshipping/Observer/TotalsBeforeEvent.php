@@ -40,7 +40,7 @@ class TotalsBeforeEvent implements ObserverInterface
         $region = $address->getData();
        
         
-        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+       /*  $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
         $cart = $objectManager->get('\Magento\Checkout\Model\Cart');
         // retrieve quote items collection
         $itemsCollection = $cart->getQuote()->getItemsCollection();
@@ -48,7 +48,7 @@ class TotalsBeforeEvent implements ObserverInterface
         $itemsVisible = $cart->getQuote()->getAllVisibleItems();
         
         // retrieve quote items array
-    $items = $cart->getQuote()->getAllItems();
+   $items = $cart->getQuote()->getAllItems();
     foreach ($items as $item) {
     $productId = $item->getProductId();
     $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($productId);
@@ -74,7 +74,7 @@ class TotalsBeforeEvent implements ObserverInterface
       }
         
         
-    }    
+    }    */
         
         
         
@@ -83,7 +83,7 @@ class TotalsBeforeEvent implements ObserverInterface
         $logger->addWriter($writer);
         $logger->info('data' . json_encode($product_id));
         $logger->info( $region['region_id'].'OrderPlacebefore:'. $region['country_id']);
-        $logger->info('data' . json_encode($quote));
+        $logger->info('data' . json_encode($address->getData()));
     }
 }
 
