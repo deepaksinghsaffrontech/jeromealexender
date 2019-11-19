@@ -79,7 +79,7 @@ class TotalsBeforeEvent implements ObserverInterface
     $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/test.log');
     $logger = new \Zend\Log\Logger();
     $logger->addWriter($writer);
-    $logger->info('data' . json_encode($product_id));
+    $logger->info('id' . json_encode($product_id));
     $logger->info( $region['region_id'].'OrderPlacebefore:'. $region['country_id']);
     $logger->info('data' . json_encode($name));
     
