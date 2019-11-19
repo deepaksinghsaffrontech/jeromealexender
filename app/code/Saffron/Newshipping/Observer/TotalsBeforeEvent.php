@@ -1,5 +1,5 @@
 <?php
-namespace Saffron\Newshipping\Observer;
+namespace Saffron\Costshepping\Observer;
 
 
 use Magento\Quote\Model\Quote;
@@ -29,26 +29,19 @@ class TotalsBeforeEvent implements ObserverInterface
      */
     public function execute(Observer $observer)
     {
-        /** Fetch Address related data */
-      /*  $shippingAssignment = $observer->getEvent()->getShippingAssignment();
-        $address = $shippingAssignment->getShipping()->getAddress();
-        // fetch quote data
-        
-        $quote = $observer->getEvent()->getQuote();
-        // fetch totals data
-        $total = $observer->getEvent()->getTotal();
-        $region = $address->getData();
-       
-        
-         $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-        $cart = $objectManager->get('\Magento\Checkout\Model\Cart');
-        // retrieve quote items collection
-        $itemsCollection = $cart->getQuote()->getItemsCollection();
-         // get array of all items what can be display directly
-        $itemsVisible = $cart->getQuote()->getAllVisibleItems();
-        
-        // retrieve quote items array
-   $items = $cart->getQuote()->getAllItems();
+
+  if(($_SERVER['REQUEST_URI'] =='/checkout/') || ($_SERVER['REQUEST_URI'] =='/checkout') ){
+    $shippingAssignment = $observer->getEvent()->getShippingAssignment();
+    $address = $shippingAssignment->getShipping()->getAddress();
+    $quote = $observer->getEvent()->getQuote();
+    // fetch totals data
+    $total = $observer->getEvent()->getTotal();
+    $region = $address->getData();
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $cart = $objectManager->get('\Magento\Checkout\Model\Cart');
+     $itemsCollection = $cart->getQuote()->getItemsCollection();
+    $itemsVisible = $cart->getQuote()->getAllVisibleItems();
+    $items = $cart->getQuote()->getAllItems();
     foreach ($items as $item) {
     $productId = $item->getProductId();
     $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($productId);
@@ -74,76 +67,20 @@ class TotalsBeforeEvent implements ObserverInterface
       }
         
         
-    }    */
+    }     
+        
+    $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/test.log');
+    $logger = new \Zend\Log\Logger();
+    $logger->addWriter($writer);
+    $logger->info('data' . json_encode($product_id));
+    $logger->info( $region['region_id'].'OrderPlacebefore:'. $region['country_id']);
+    $logger->info('data' . json_encode($name));
+    
         
         
         
-        $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/test.log');
-        $logger = new \Zend\Log\Logger();
-        $logger->addWriter($writer);
-        $logger->info('data' . json_encode($product_id));
-        $logger->info( $region['region_id'].'OrderPlacebefore:'. $region['country_id']);
-        $logger->info('data' . json_encode($address->getData()));
     }
+        
+    }
+
 }
-
-
-
- /*class OrderPlacebefore implements ObserverInterface
-{
-    protected $_objectManager;
-
-    public function __construct(
-        \Magento\Framework\ObjectManagerInterface $objectManager
-    ) {
-        $this->_objectManager = $objectManager;
-    }
-
-   public function execute(\Magento\Framework\Event\Observer $observer)
-    {
-        $orderObserverData = $observer->getOrder()->getData();
-     
-	if(!empty($lastorderId)){
-    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-	
-    $order = $objectManager->create('Magento\Sales\Model\Order')->loadByIncrementId($orderObserverData['increment_id']);
-    $orderItems = $order->getAllItems();
-    $itemQty = array();
-	$billingAddress = $order->getBillingAddress();
-    $billingstate=$order->getBillingAddress()->getRegion();
-	$i=0;
-    foreach ($orderItems as $item) {
-		
-    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-   
-    $productId = $objectManager->get('Magento\Catalog\Model\Product')->getIdBySku($item->getSku());
-	$product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($productId);
-    $product_id = $productId;
-	if(!empty($product1)){
-	if(isset($product1[0])){
-     $product_id =  $product1[0];
-	}
-    }
-	
-
-  $i++;
-    }
-	}
-
- 
- 
- 
-       $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/test.log');
-        $logger = new \Zend\Log\Logger();
-        $logger->addWriter($writer);
-        $logger->info('OrderPlacebefore:');
-        $logger->info('data' . json_encode($orderObserverData));
-
-        echo"deepak";die;
-        
-
-          //echo"<pre>";print_r($orderObserverData);die;
-
-        
-    }
-}*/
