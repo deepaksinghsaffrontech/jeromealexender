@@ -30,6 +30,11 @@ class TotalsBeforeEvent implements ObserverInterface
     public function execute(Observer $observer)
     {
 
+    $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/test.log');
+    $logger = new \Zend\Log\Logger();
+    $logger->addWriter($writer);
+    $logger->info('data' . json_encode($_SERVER['REQUEST_URI'] ));
+
   if(($_SERVER['REQUEST_URI'] =='/checkout/') || ($_SERVER['REQUEST_URI'] =='/checkout') ){
     $shippingAssignment = $observer->getEvent()->getShippingAssignment();
     $address = $shippingAssignment->getShipping()->getAddress();
