@@ -27,19 +27,24 @@ class TotalsBeforeEvent implements ObserverInterface
      * @param Observer $observer
      * @return void
      */
-    public function execute(Observer $observer)
+ public function execute(Observer $observer)
     {
-
-   $url     = (explode("/",$_SERVER['REQUEST_URI']) );
-
-  if(($url[4] =='carts') || ($url[4] =='guest-carts') ){
+       //$ggg =  '\/rest\/default\/V1\/carts\/mine\/totals-information';
+        
+    $url     = (explode("/",$_SERVER['REQUEST_URI']) );
+   
+    
+    if(($url[4] == 'guest-carts')||($url[4] =='carts') ){
+    
     $shippingAssignment = $observer->getEvent()->getShippingAssignment();
     $address = $shippingAssignment->getShipping()->getAddress();
     $quote = $observer->getEvent()->getQuote();
     // fetch totals data
     $total = $observer->getEvent()->getTotal();
     $region = $address->getData();
+    
     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    
     $cart = $objectManager->get('\Magento\Checkout\Model\Cart');
      $itemsCollection = $cart->getQuote()->getItemsCollection();
     $itemsVisible = $cart->getQuote()->getAllVisibleItems();
@@ -76,13 +81,10 @@ class TotalsBeforeEvent implements ObserverInterface
     $logger->addWriter($writer);
     $logger->info('data' . json_encode($product_id));
     $logger->info( $region['region_id'].'OrderPlacebefore:'. $region['country_id']);
-    $logger->info('data' . json_encode($name));
+    //$logger->info('data' . json_encode($name));
     
-        
-        
-        
     }
         
-    }
+   }
 
 }
