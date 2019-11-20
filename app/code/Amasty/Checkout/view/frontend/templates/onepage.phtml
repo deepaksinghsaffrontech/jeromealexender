@@ -62,3 +62,24 @@ $helper = $block->getData('amcheckout_helper');
     <script src="https://maps.googleapis.com/maps/api/js?key=<?= $block->stripTags($apiKey) ?>&libraries=places&callback=amasty_checkout_gmaps_init" async defer></script>
     <?php endif ?>
 </div>
+
+<script type="text/javascript">
+require([ 'jquery'], function($){
+
+$(document).ready(function(){	
+
+jQuery("[name='country_id']").on('change', function() {
+  alert( jQuery(this).val());
+});
+
+
+jQuery("[name='region_id']").on('change', function() {
+  alert( jQuery(this).val());
+});	
+	
+	
+		});	
+
+	
+	});	
+</script>	
