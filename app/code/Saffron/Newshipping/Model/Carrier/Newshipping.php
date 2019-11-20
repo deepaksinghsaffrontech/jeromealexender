@@ -142,7 +142,7 @@ $region['region_id'] ;
 	}else if(($qty_item >= '2' )&&($subTotal<='48.99')){
 		$pricerang = '7.95';	
 	}else{
-		$pricerang = $Product_id[2];
+		$pricerang = $Product_id[1];
 		//$pricerang = '0.00';	
 	}
 	
