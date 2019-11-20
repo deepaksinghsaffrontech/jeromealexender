@@ -115,19 +115,20 @@ $region['region_id'] ;
 	$qty_item = $totalQuantity = $cart->getQuote()->getItemsQty();
 	$subTotal = $cart->getQuote()->getSubtotal();
 	$i=0;
+	$Product_id =  array();
 	foreach($items  as  $item){
 		   $productId = $item->getProductId(); 
 		   $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($productId);
             //if($productId  == '12'){
-		    //$Product_id[$i]  =  $productId;
+		    $Product_id[$i]  =  $productId;
 	       //}
 		   
-   if(!empty($product1)){
-	if(isset($product1[0] =='12')){
-    $Product_id[$i] =  $product1[0];
-	}
-    }
-		 
+/*if(!empty($product1)){
+		if($product1[0] == '12'){
+		   $Product_id[$i]  =  $productId;
+	      } 
+		  }
+		  */
 	$i++ ;}
 	
 	
@@ -142,7 +143,7 @@ $region['region_id'] ;
 	}else if(($qty_item >= '2' )&&($subTotal<='48.99')){
 		$pricerang = '7.95';	
 	}else{
-		$pricerang = $Product_id[1];
+		$pricerang = $Product_id[0];
 		//$pricerang = '0.00';	
 	}
 	
