@@ -78,7 +78,7 @@ $region['region_id']
      if($amount =='0.00'){
 		 
 		 $method->setCarrier('newshipping');
-        $method->setCarrierTitle();
+        $method->setCarrierTitle('Free Shipping');
  
         $method->setMethod('newshipping');
         $method->setMethodTitle('Free');
@@ -150,8 +150,8 @@ $region['region_id']
 	}else if(($qty_item >= '2' )&&($subTotal<='48.99')){
 		$pricerang = '7.95';	
 	}else{
-		$pricerang =  $Product_id[0]   ;
-		//$pricerang = '0.00';	
+		//$pricerang = $qty_item ;
+		$pricerang = '0.00';	
 	}
 	
 	
