@@ -60,8 +60,8 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
 		
 	//$address = $shippingAssignment->getShipping()->getAddress();
 	  //$region = $address->getData();
-	   $method = $this->_rateMethodFactory->create();
-	   
+	 $method = $this->_rateMethodFactory->create();   
+	
 	$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
     $cart = $objectManager->get('\Magento\Checkout\Model\Cart');
     $itemsCollection = $cart->getQuote()->getItemsCollection();
@@ -88,7 +88,7 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
 	   
 	   
  
-       $amount = $this->Shippingrangeprice();
+    $amount = $this->Shippingrangeprice();
  
      if($amount =='0.00'){
 		 
@@ -96,7 +96,7 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
         $method->setCarrierTitle('Free Shipping');
  
         $method->setMethod('newshipping');
-        $method->setMethodTitle($Product_id[0] );
+        $method->setMethodTitle('Free');
 	 }else{
 		 
 		 $method->setCarrier('newshipping');
