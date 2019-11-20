@@ -119,15 +119,15 @@ $region['region_id'] ;
 		   $productId = $item->getProductId(); 
 		   $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($productId);
             //if($productId  == '12'){
-		    $Product_id[$i]  =  $productId;
+		    //$Product_id[$i]  =  $productId;
 	       //}
 		   
-/*if(!empty($product1)){
-		if($product1[0] == '12'){
-		   $Product_id[$i]  =  $productId;
-	      } 
-		  }
-		  */
+   if(!empty($product1)){
+	if(isset($product1[0] =='12')){
+    $Product_id[$i] =  $product1[0];
+	}
+    }
+		 
 	$i++ ;}
 	
 	
