@@ -101,7 +101,7 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
 	$itemsCollection = $cart->getQuote()->getItemsCollection();
 	$itemsVisible = $cart->getQuote()->getAllVisibleItems();
 	$items = $cart->getQuote()->getAllItems();
-	$qty_item = count($items);
+	$qty_item = $totalQuantity = $cart->getQuote()->getItemsQty();
 	$subTotal = $cart->getQuote()->getSubtotal();
 	
 	
