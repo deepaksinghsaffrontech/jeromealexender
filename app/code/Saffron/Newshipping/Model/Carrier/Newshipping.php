@@ -57,7 +57,36 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
  
         /** @var \Magento\Quote\Model\Quote\Address\RateResult\Method $method */
 		
+		
+	//$address = $shippingAssignment->getShipping()->getAddress();
+	  //$region = $address->getData();
 	   $method = $this->_rateMethodFactory->create();
+	   
+	$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $cart = $objectManager->get('\Magento\Checkout\Model\Cart');
+    $itemsCollection = $cart->getQuote()->getItemsCollection();
+    $itemsVisible = $cart->getQuote()->getAllVisibleItems();
+    $items = $cart->getQuote()->getAllItems();
+	$Product_id = array()
+    foreach ($items as $item) {
+    $productId = $item->getProductId();
+    $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($productId);
+    $product_id = $productId;
+    if($product_id  == '12'){
+		$Product_id  =  $productId;
+	}
+	
+   if(!empty($product1)){
+   if(isset($product1[0])){
+   if($product1[0] == '12'){
+		$Product_id  =  $productId;
+	}
+	 
+	}
+    }
+    }
+	   
+	   
  
        $amount = $this->Shippingrangeprice();
  
@@ -67,7 +96,7 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
         $method->setCarrierTitle('Free Shipping');
  
         $method->setMethod('newshipping');
-        $method->setMethodTitle('Free');
+        $method->setMethodTitle($Product_id[0] );
 	 }else{
 		 
 		 $method->setCarrier('newshipping');
