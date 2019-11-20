@@ -115,7 +115,10 @@ $region['region_id'] ;
 	$qty_item = $totalQuantity = $cart->getQuote()->getItemsQty();
 	$subTotal = $cart->getQuote()->getSubtotal();
 	
-	
+	foreach($items  as  $item){
+		   $productId = $item->getProductId();
+		
+	}
 	
 	
 	
