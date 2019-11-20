@@ -118,16 +118,16 @@ $region['region_id'] ;
 	foreach($items  as  $item){
 		   $productId = $item->getProductId(); 
 		   $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($productId);
-            if($productId  == '12'){
+            //if($productId  == '12'){
 		    $Product_id[$i]  =  $productId;
-	       }
+	       //}
 		   
-	 if(!empty($product1)){
+/*if(!empty($product1)){
 		if($product1[0] == '12'){
 		   $Product_id[$i]  =  $productId;
 	      } 
 		  }
-		  
+		  */
 	$i++ ;}
 	
 	
@@ -143,7 +143,7 @@ $region['region_id'] ;
 		$pricerang = '7.95';	
 	}else{
 		$pricerang = $Product_id[0];
-		//$pricerang = '0.00';	
+		$pricerang = '0.00';	
 	}
 	
 	
