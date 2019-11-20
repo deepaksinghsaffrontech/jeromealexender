@@ -65,7 +65,7 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
     $quote =  $objectManager->get('Magento\Checkout\Model\Session')->getQuote();
     $address = $quote->getShippingAddress();
     $address->collectShippingRates();
-      $region = $address->getData();
+    $region = $address->getData();
 
 
 $region['country_id'];
@@ -117,27 +117,6 @@ $region['region_id'] ;
 	
 	
 	
-	$Product_id = array()
-   $i= 0;
-   foreach ($items as $item) {
- $Product_id  = $item->getProductId();
-   
-   
-   /* $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($productId);
-    $product_id = $productId;
-    if($product_id  == '12'){
-		$Product_id  =  $productId;
-	}
-	
-	if(!empty($product1)){
-	if(isset($product1[0])){
-   if($product1[0] == '12'){
-		$Product_id  =  $productId;
-	}
-	 
-	}
-    }*/
-   $i++; }
 	
 	
 	
