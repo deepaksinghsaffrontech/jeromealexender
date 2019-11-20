@@ -114,11 +114,21 @@ $region['region_id'] ;
 	$items = $cart->getQuote()->getAllItems();
 	$qty_item = $totalQuantity = $cart->getQuote()->getItemsQty();
 	$subTotal = $cart->getQuote()->getSubtotal();
-	
+	$i=0;
 	foreach($items  as  $item){
-		   $productId = $item->getProductId();
-		
-	}
+		   $productId = $item->getProductId(); 
+		   $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($productId);
+            if($product_id  == '12'){
+		    $Product_id[$i]  =  $productId;
+	       }
+		   
+	 if(!empty($product1)){
+		if($product1[0] == '12'){
+		   $Product_id[$i]  =  $productId;
+	      } 
+		  }
+		  
+	$i++ ;}
 	
 	
 	
