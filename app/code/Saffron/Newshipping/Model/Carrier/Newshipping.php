@@ -68,8 +68,8 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
       $region = $address->getData();
 
 
-$region['country_id']
-$region['region_id'] 
+$region['country_id'];
+$region['region_id'] ;
 
 
 	
