@@ -143,7 +143,7 @@ $region['region_id'] ;
 		$pricerang = '7.95';	
 	}else{
 		$pricerang = $Product_id[0];
-		$pricerang = '0.00';	
+		//$pricerang = '0.00';	
 	}
 	
 	
