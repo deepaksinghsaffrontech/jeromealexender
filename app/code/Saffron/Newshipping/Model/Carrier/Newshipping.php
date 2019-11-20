@@ -68,8 +68,8 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
     $region = $address->getData();
 
 
-$region['country_id'];
-$region['region_id'] ;
+     $region['country_id'];
+      $region['region_id'] ;
 
 
 	
@@ -92,14 +92,36 @@ $region['region_id'] ;
 	 }
       
 	  
- 
- 
-
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $cart = $objectManager->get('\Magento\Checkout\Model\Cart');
+    $itemsCollection = $cart->getQuote()->getItemsCollection();
+    $itemsVisible = $cart->getQuote()->getAllVisibleItems();
+    $items = $cart->getQuote()->getAllItems();
+	$Product_id = array();
+	
+	$i= 0;
+	foreach ($items as $item) {
+    $productId = $item->getProductId();
+    $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($productId);
+    $product_id = $productId;
+    if($product_id  == '12'){
+	echo $Product_id[$i]  =  $productId;
+    }
+	
+	/*if(!empty($product1)){
+	//if(isset($product1[0])){
+   if($product1[0] == '12'){
+		$Product_id  =  $product1[0];
+	}
+	 
+	//}
+    }*/
+     
+    $i++;
+    $i=0;
+    }
 	  
-	  
-	  
- 
-        /*you can fetch shipping price from different sources over some APIs, we used price from config.xml - xml node price*/
+	/*you can fetch shipping price from different sources over some APIs, we used price from config.xml - xml node price*/
         //$amount = $this->getConfigData('price');
        
         $method->setPrice($amount);
@@ -108,19 +130,22 @@ $region['region_id'] ;
  
         $result->append($method);
  
- 
-       if($region['country_id'] =='CA'){
-    
-  
-         }else if($region['region_id'] =='21'){
-           
-         
-         }else{
-         
-          return $result;
-       }
- 
+     if($Product_id[0] =='12'){
+      
+     if($region['country_id'] =='CA'){
         
+     }else if($region['region_id'] =='21'){
+       
+     }else{
+           return $result;
+          
+      }
+        
+  }  else{
+		return $result;
+	} 
+ 
+    
     }
 	
 	
