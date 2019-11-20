@@ -91,6 +91,13 @@ $region['region_id'] ;
         $method->setMethodTitle($this->getConfigData('name'));
 	 }
       
+	  
+ 
+ 
+
+	  
+	  
+	  
  
         /*you can fetch shipping price from different sources over some APIs, we used price from config.xml - xml node price*/
         //$amount = $this->getConfigData('price');
@@ -101,7 +108,19 @@ $region['region_id'] ;
  
         $result->append($method);
  
-        return $result;
+ 
+       if($region['country_id'] =='CA'){
+    
+  
+         }else if($region['region_id'] =='21'){
+           
+         
+         }else{
+         
+          return $result;
+       }
+ 
+        
     }
 	
 	
