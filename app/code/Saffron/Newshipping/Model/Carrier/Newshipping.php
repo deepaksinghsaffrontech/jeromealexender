@@ -64,10 +64,10 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
      if($amount =='0.00'){
 		 
 		 $method->setCarrier('newshipping');
-        $method->setCarrierTitle($this->getConfigData('title'));
+        $method->setCarrierTitle('Free Shipping');
  
         $method->setMethod('newshipping');
-        $method->setMethodTitle($this->getConfigData('name'));
+        $method->setMethodTitle('Free');
 	 }else{
 		 
 		 $method->setCarrier('newshipping');
