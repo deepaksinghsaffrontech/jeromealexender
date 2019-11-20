@@ -58,26 +58,15 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
         /** @var \Magento\Quote\Model\Quote\Address\RateResult\Method $method */
         $method = $this->_rateMethodFactory->create();
  
-       $amount = $this->Shippingrangeprice();
- 
- 
-       if($amount =='0.00'){
-		 $method->setCarrier('newshipping');
+        $method->setCarrier('newshipping');
         $method->setCarrierTitle($this->getConfigData('title'));
  
         $method->setMethod('newshipping');
-        $method->setMethodTitle($this->getConfigData('name')); 
-		   
-	   }else{
-		   
-		$method->setCarrier('newshipping');
-        $method->setCarrierTitle($this->getConfigData('title'));
+        $method->setMethodTitle($this->getConfigData('name'));
  
-        $method->setMethod('newshipping');
-        $method->setMethodTitle($this->getConfigData('name'));  
-		   
-	   }
-	   
+        /*you can fetch shipping price from different sources over some APIs, we used price from config.xml - xml node price*/
+        //$amount = $this->getConfigData('price');
+        $amount = $this->Shippingrangeprice();
         $method->setPrice($amount);
         $method->setPrice($amount);
         $method->setCost($amount);
@@ -103,15 +92,6 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
 	}else if(('40.00' <= $subTotal)&& ($subTotal <= '48.99')){
 		$pricerang = '9.95';
 	}else{
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	$pricerang = '0.00';	
 	}
 	/*$reposnse = array();
