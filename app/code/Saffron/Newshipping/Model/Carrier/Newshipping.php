@@ -122,7 +122,7 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
    }
 }
  
- if(isset($product1[0])){
+ if(isset($Product_id[0])){
     if($Product_id[0] =='12'){
       
 			 if($region['country_id'] =='CA'){
