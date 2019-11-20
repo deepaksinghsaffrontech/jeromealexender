@@ -56,17 +56,31 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
         $result = $this->_rateResultFactory->create();
  
         /** @var \Magento\Quote\Model\Quote\Address\RateResult\Method $method */
-        $method = $this->_rateMethodFactory->create();
+		
+	   $method = $this->_rateMethodFactory->create();
  
-        $method->setCarrier('newshipping');
+       $amount = $this->Shippingrangeprice();
+ 
+     if($amount =='0.00'){
+		 
+		 $method->setCarrier('newshipping');
         $method->setCarrierTitle($this->getConfigData('title'));
  
         $method->setMethod('newshipping');
         $method->setMethodTitle($this->getConfigData('name'));
+	 }else{
+		 
+		 $method->setCarrier('newshipping');
+        $method->setCarrierTitle($this->getConfigData('title'));
+ 
+        $method->setMethod('newshipping');
+        $method->setMethodTitle($this->getConfigData('name'));
+	 }
+      
  
         /*you can fetch shipping price from different sources over some APIs, we used price from config.xml - xml node price*/
         //$amount = $this->getConfigData('price');
-        $amount = $this->Shippingrangeprice();
+       
         $method->setPrice($amount);
         $method->setPrice($amount);
         $method->setCost($amount);
