@@ -61,13 +61,19 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
 	//$address = $shippingAssignment->getShipping()->getAddress();
 	  //$region = $address->getData();
 	 $method = $this->_rateMethodFactory->create();   
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance(); 
+    $quote =  $objectManager->get('Magento\Checkout\Model\Session')->getQuote();
+    $address = $quote->getShippingAddress();
+    $address->collectShippingRates();
+      $region = $address->getData();
+
 	
 	$amount = $this->Shippingrangeprice();
  
      if($amount =='0.00'){
 		 
 		 $method->setCarrier('newshipping');
-        $method->setCarrierTitle($request->getOrigCity());
+        $method->setCarrierTitle($region['region_id'] );
  
         $method->setMethod('newshipping');
         $method->setMethodTitle('Free');
