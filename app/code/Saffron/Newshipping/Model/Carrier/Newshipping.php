@@ -67,13 +67,18 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
     $address->collectShippingRates();
       $region = $address->getData();
 
+
+$region['country_id']
+$region['region_id'] 
+
+
 	
 	$amount = $this->Shippingrangeprice();
  
      if($amount =='0.00'){
 		 
 		 $method->setCarrier('newshipping');
-        $method->setCarrierTitle($region['region_id'] );
+        $method->setCarrierTitle();
  
         $method->setMethod('newshipping');
         $method->setMethodTitle('Free');
@@ -111,6 +116,33 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
 	$subTotal = $cart->getQuote()->getSubtotal();
 	
 	
+	
+	$Product_id = array()
+   $i= 0;
+   foreach ($items as $item) {
+ $Product_id  = $item->getProductId();
+   
+   
+   /* $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($productId);
+    $product_id = $productId;
+    if($product_id  == '12'){
+		$Product_id  =  $productId;
+	}
+	
+	if(!empty($product1)){
+	if(isset($product1[0])){
+   if($product1[0] == '12'){
+		$Product_id  =  $productId;
+	}
+	 
+	}
+    }*/
+   $i++; }
+	
+	
+	
+	
+	
 	if(($qty_item=='1' )&&($subTotal<='48.99')){
 		$pricerang = '5.95';
      //$pricerang = $qty_item ;
@@ -118,8 +150,8 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
 	}else if(($qty_item >= '2' )&&($subTotal<='48.99')){
 		$pricerang = '7.95';	
 	}else{
-		//$pricerang = $qty_item ;
-		$pricerang = '0.00';	
+		$pricerang =  $Product_id[0]   ;
+		//$pricerang = '0.00';	
 	}
 	
 	
