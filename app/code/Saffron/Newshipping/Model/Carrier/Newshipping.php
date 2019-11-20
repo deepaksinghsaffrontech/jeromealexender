@@ -104,6 +104,8 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
         $result->append($method);
  
  
+    if(($url[4] == 'guest-carts')||($url[4] =='carts') ){
+ 
     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
     $cart = $objectManager->get('\Magento\Checkout\Model\Cart');
     $itemsCollection = $cart->getQuote()->getItemsCollection();
@@ -134,12 +136,15 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
 				  
 			  }
         
- }  
- }
+     }  
+     }
    else{
 		return $result;
 	} 
- 
+	}else{
+		
+		return $result;
+	}
     
     }
 	
