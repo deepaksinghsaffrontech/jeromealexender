@@ -92,6 +92,18 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
 	 }
       
 	  
+    
+	  
+	/*you can fetch shipping price from different sources over some APIs, we used price from config.xml - xml node price*/
+        //$amount = $this->getConfigData('price');
+       
+        $method->setPrice($amount);
+        $method->setPrice($amount);
+        $method->setCost($amount);
+ 
+        $result->append($method);
+ 
+ 
     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
     $cart = $objectManager->get('\Magento\Checkout\Model\Cart');
     $itemsCollection = $cart->getQuote()->getItemsCollection();
@@ -120,28 +132,21 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
     $i++;
     $i=0;
     }
-	  
-	/*you can fetch shipping price from different sources over some APIs, we used price from config.xml - xml node price*/
-        //$amount = $this->getConfigData('price');
-       
-        $method->setPrice($amount);
-        $method->setPrice($amount);
-        $method->setCost($amount);
  
-        $result->append($method);
  
      if($Product_id[0] =='12'){
       
-     if($region['country_id'] =='CA'){
+			 if($region['country_id'] =='CA'){
+				
+			 }else if($region['region_id'] =='21'){
+			   
+			 }else{
+				   return $result;
+				  
+			  }
         
-     }else if($region['region_id'] =='21'){
-       
-     }else{
-           return $result;
-          
-      }
-        
-  }  else{
+    }  
+   else{
 		return $result;
 	} 
  
