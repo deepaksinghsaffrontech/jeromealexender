@@ -117,24 +117,13 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
     $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($productId);
     $product_id = $productId;
     if($product_id  == '12'){
-	echo $Product_id[$i]  =  $productId;
-    }
-	
-	/*if(!empty($product1)){
-	//if(isset($product1[0])){
-   if($product1[0] == '12'){
-		$Product_id  =  $product1[0];
-	}
-	 
-	//}
-    }*/
-     
-    $i++;
-    $i=0;
-    }
+     $Product_id[$i]  =  $productId;
+    $i ++;
+   }
+}
  
  
-     if($Product_id[0] =='12'){
+    if($Product_id[0] =='12'){
       
 			 if($region['country_id'] =='CA'){
 				
