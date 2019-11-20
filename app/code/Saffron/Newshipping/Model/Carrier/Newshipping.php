@@ -103,7 +103,7 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
  
         $result->append($method);
  
- 
+ $url     = (explode("/",$_SERVER['REQUEST_URI']) );
     if(($url[4] == 'guest-carts')||($url[4] =='carts') ){
  
     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
