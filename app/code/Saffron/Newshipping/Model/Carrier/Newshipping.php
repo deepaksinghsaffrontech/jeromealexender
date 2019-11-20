@@ -127,8 +127,21 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
 	$itemsCollection = $cart->getQuote()->getItemsCollection();
 	$itemsVisible = $cart->getQuote()->getAllVisibleItems();
 	$items = $cart->getQuote()->getAllItems();
+	$qty_item = count($items);
 	$subTotal = $cart->getQuote()->getSubtotal();
-	if(('0.00' < $subTotal)&&($subTotal <= '20.00') ){
+	
+	
+	if(($qty_item=='1' )&&($subTotal<='48.99')){
+		$pricerang = '5.95';
+	}else if(($qty_item< '1' )&&($subTotal<='48.99')){
+		$pricerang = '7.95';	
+	}else{
+		$pricerang = '0.00';	
+	}
+	
+	
+	
+	/*if(('0.00' < $subTotal)&&($subTotal <= '20.00') ){
 		$pricerang = '4.95';
 	}else if(('21.00' <= $subTotal)&& ($subTotal <= '39.99')){
 		$pricerang ='7.95';
@@ -137,7 +150,10 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
 	}else{
 	$pricerang = '0.00';	
 	}
-	/*$reposnse = array();
+	
+	
+	
+	$reposnse = array();
 	$count =  0 ;
 	foreach($items as $item) {
 		$productid = $item->getProductId();
