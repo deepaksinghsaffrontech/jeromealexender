@@ -129,7 +129,7 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
       
 			 if($region['country_id'] =='CA'){
 				
-			 }else if($region['region_id'] =='21'){
+			 }else if(($region['region_id'] =='21')||($region['region_id'] =='2')||( $region['region_id'] =='52') ){
 			   
 			 }else{
 				   return $result;
