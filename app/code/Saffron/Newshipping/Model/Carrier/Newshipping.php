@@ -118,7 +118,7 @@ $region['region_id'] ;
 	foreach($items  as  $item){
 		   $productId = $item->getProductId(); 
 		   $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($productId);
-            if($product_id  == '12'){
+            if($productId  == '12'){
 		    $Product_id[$i]  =  $productId;
 	       }
 		   
