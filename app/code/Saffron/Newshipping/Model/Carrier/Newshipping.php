@@ -109,7 +109,7 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
 		$pricerang = '5.95';
      //$pricerang = $qty_item ;
 
-	}else if(($qty_item < '1' )&&($subTotal<='48.99')){
+	}else if(($qty_item >= '2' )&&($subTotal<='48.99')){
 		$pricerang = '7.95';	
 	}else{
 		//$pricerang = $qty_item ;
