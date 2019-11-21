@@ -190,3 +190,11 @@ body.customer-account-create .page-wrapper .page-main {
 .contact-index-index .page-wrapper .page-main .page-title-wrapper {
     display: none;
 }
+
+#minicart-content-wrapper .block-content .bottom-cart .actions .primary .paypal-express-in-context-mini-cart-container {
+    display: none;
+}
+
+.cart-container .cart-summary .checkout .item .paypal-express-in-context-mini-cart-container {
+    display: none;
+}
