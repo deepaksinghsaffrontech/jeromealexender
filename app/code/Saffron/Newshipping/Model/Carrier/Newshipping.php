@@ -60,7 +60,7 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
 		
 	//$address = $shippingAssignment->getShipping()->getAddress();
 	  //$region = $address->getData();
-	 $method = $this->_rateMethodFactory->create();   
+	$method = $this->_rateMethodFactory->create();   
     $objectManager = \Magento\Framework\App\ObjectManager::getInstance(); 
     $quote =  $objectManager->get('Magento\Checkout\Model\Session')->getQuote();
     $address = $quote->getShippingAddress();
@@ -68,8 +68,7 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
     $region = $address->getData();
 
 
-     $region['country_id'];
-      $region['region_id'] ;
+   
 
 
 	
@@ -103,8 +102,13 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
  
         $result->append($method);
  
- $url     = (explode("/",$_SERVER['REQUEST_URI']) );
+    $url     = (explode("/",$_SERVER['REQUEST_URI']) );
+ 
+ 
     if(($url[4] == 'guest-carts')||($url[4] =='carts') ){
+ 
+      $region['country_id'];
+      $region['region_id'] ;
  
     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
     $cart = $objectManager->get('\Magento\Checkout\Model\Cart');
