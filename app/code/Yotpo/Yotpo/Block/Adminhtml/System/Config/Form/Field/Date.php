@@ -4,26 +4,26 @@ namespace Yotpo\Yotpo\Block\Adminhtml\System\Config\Form\Field;
 
 use Magento\Backend\Block\Template\Context;
 use Magento\Framework\Stdlib\DateTime;
-use Yotpo\Yotpo\Model\Config as YotpoConfig;
+use Yotpo\Yotpo\Helper\Data as YotpoHelper;
 
 class Date extends \Magento\Config\Block\System\Config\Form\Field
 {
     /**
-     * @var YotpoConfig
+     * @var YotpoHelper
      */
-    private $yotpoConfig;
+    protected $_yotpoHelper;
 
     /**
      * @param Context $context
-     * @param YotpoConfig $yotpoConfig
+     * @param YotpoHelper $yotpoHelper
      * @param array $data
      */
     public function __construct(
         Context $context,
-        YotpoConfig $yotpoConfig,
+        YotpoHelper $yotpoHelper,
         array $data = []
     ) {
-        $this->yotpoConfig = $yotpoConfig;
+        $this->_yotpoHelper = $yotpoHelper;
         parent::__construct($context, $data);
     }
 
@@ -31,7 +31,7 @@ class Date extends \Magento\Config\Block\System\Config\Form\Field
     {
         $element->setDateFormat(DateTime::DATE_INTERNAL_FORMAT);
         $element->setTimeFormat(null);
-        $element->setMinDate($this->yotpoConfig->getOrdersSyncAfterMinDate());
+        $element->setMinDate($this->_yotpoHelper->getOrdersSyncAfterMinDate());
         return parent::render($element);
     }
 }

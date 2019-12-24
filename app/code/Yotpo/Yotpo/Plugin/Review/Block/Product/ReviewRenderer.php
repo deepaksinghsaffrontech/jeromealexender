@@ -3,13 +3,32 @@
 namespace Yotpo\Yotpo\Plugin\Review\Block\Product;
 
 use Magento\Catalog\Model\Product;
-use Yotpo\Yotpo\Plugin\AbstractYotpoReviewsSummary;
+use Magento\Framework\View\Element\Context;
+use Yotpo\Yotpo\Helper\Data as YotpoHelper;
 
 /**
  * Plugin for ReviewRenderer Block
  */
-class ReviewRenderer extends AbstractYotpoReviewsSummary
+class ReviewRenderer
 {
+    /**
+     * @var Context
+     */
+    protected $_context;
+
+    /**
+     * @var YotpoHelper
+     */
+    protected $_yotpoHelper;
+
+    public function __construct(
+        Context $context,
+        YotpoHelper $yotpoHelper
+    ) {
+        $this->_context = $context;
+        $this->_yotpoHelper = $yotpoHelper;
+    }
+
     /**
      * Get review summary html
      *
@@ -28,17 +47,17 @@ class ReviewRenderer extends AbstractYotpoReviewsSummary
         $templateType = \Magento\Review\Block\Product\ReviewRenderer::DEFAULT_VIEW,
         $displayIfNoReviews = false
     ) {
-        if (!$this->_yotpoConfig->isEnabled()) {
+        if (!$this->_yotpoHelper->isEnabled()) {
             return $proceed($product, $templateType, $displayIfNoReviews);
         }
 
         $currentPage = $this->_context->getRequest()->getFullActionName();
 
-        if ($this->_yotpoConfig->isCategoryBottomlineEnabled()) {
+        if ($this->_yotpoHelper->isCategoryBottomlineEnabled()) {
             if (in_array($currentPage, ['cms_index_index', 'catalog_category_view'])) {
-                return $this->_getCategoryBottomLineHtml($product);
+                return $this->_yotpoHelper->getCategoryBottomLineHtml($product);
             }
-        } elseif (!$this->_yotpoConfig->isMdrEnabled()) {
+        } elseif (!$this->_yotpoHelper->isMdrEnabled()) {
             if (in_array($currentPage, ['cms_index_index', 'catalog_category_view'])) {
                 return $proceed($product, $templateType, $displayIfNoReviews);
             }

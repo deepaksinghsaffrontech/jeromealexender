@@ -5,61 +5,59 @@ namespace Yotpo\Yotpo\Controller\Adminhtml\Report;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Store\Model\ScopeInterface;
-use Yotpo\Yotpo\Model\Config as YotpoConfig;
+use Yotpo\Yotpo\Helper\Data as YotpoHelper;
 
 class Reviews extends \Magento\Backend\App\Action
 {
     /**
      * initialize:
      */
-    private $scope;
-    private $scopeId;
-    private $isEnabled;
-    private $appKey;
-    private $isAppKeyAndSecretSet;
+    protected $_scope;
+    protected $_scopeId;
+    protected $_isEnabled;
+    protected $_appKey;
+    protected $_isAppKeyAndSecretSet;
 
     /**
-     * @var PageFactory
-     */
-    private $resultPageFactory;
+    * @var PageFactory
+    */
+    protected $resultPageFactory;
 
     /**
-     * @var YotpoConfig
+     * @var YotpoHelper
      */
-    private $yotpoConfig;
+    protected $_yotpoHelper;
 
     /**
      * Constructor
      *
      * @param Context $context
      * @param PageFactory $resultPageFactory
-     * @param YotpoConfig $yotpoConfig
+     * @param YotpoHelper $yotpoHelper
      */
     public function __construct(
         Context $context,
         PageFactory $resultPageFactory,
-        YotpoConfig $yotpoConfig
+        YotpoHelper $yotpoHelper
     ) {
         parent::__construct($context);
         $this->resultPageFactory = $resultPageFactory;
-        $this->yotpoConfig = $yotpoConfig;
+        $this->_yotpoHelper = $yotpoHelper;
+        $this->_initiaize();
     }
 
-    private function initialize()
+    protected function _initiaize()
     {
-        if (($storeId = $this->getRequest()->getParam(ScopeInterface::SCOPE_STORE, 0))) {
-            $this->allStoreIds = [$storeId];
-        } elseif (($websiteId = $this->getRequest()->getParam(ScopeInterface::SCOPE_WEBSITE, 0))) {
-            $this->allStoreIds = $this->yotpoConfig->getStoreManager()->getWebsite($websiteId)->getStoreIds();
-        } else {
-            $this->allStoreIds = $this->yotpoConfig->getAllStoreIds(false);
+        if (($storeId = $this->getRequest()->getParam("store", 0))) {
+            $this->_scope = ScopeInterface::SCOPE_STORE;
+            $this->_scopeId = $storeId;
+        } elseif (($websiteId = $this->getRequest()->getParam("website", 0))) {
+            $this->_scope = ScopeInterface::SCOPE_WEBSITE;
+            $this->_scopeId = $websiteId;
         }
-        $this->allStoreIds = $this->yotpoConfig->filterDisabledStoreIds($this->allStoreIds);
-        $this->scopeId = ($this->allStoreIds) ? $this->allStoreIds[0] : null;
-
-        $this->isEnabled = ($this->allStoreIds) ? true : false;
-        $this->isAppKeyAndSecretSet = ($this->allStoreIds) ? true : false;
-        $this->appKey = ($this->scopeId) ? $this->yotpoConfig->getAppKey($this->scopeId, $this->scope) : null;
+        $this->_isEnabled = $this->_yotpoHelper->isEnabled($this->_scopeId, $this->_scope);
+        $this->_appKey = $this->_yotpoHelper->getAppKey($this->_scopeId, $this->_scope);
+        $this->_isAppKeyAndSecretSet = $this->_yotpoHelper->isAppKeyAndSecretSet($this->_scopeId, $this->_scope);
     }
 
     /**
@@ -69,10 +67,9 @@ class Reviews extends \Magento\Backend\App\Action
      */
     public function execute()
     {
-        $this->initialize();
         $resultPage = $this->resultPageFactory->create();
         $resultPage->getConfig()->getTitle()->set(__('Yotpo Reviews'));
-        if (!($this->isEnabled && $this->isAppKeyAndSecretSet)) {
+        if (!($this->_isEnabled && $this->_isAppKeyAndSecretSet)) {
             $resultPage->getLayout()->unsetElement('store_switcher');
         }
         return $resultPage;

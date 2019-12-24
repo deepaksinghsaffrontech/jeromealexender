@@ -5,7 +5,6 @@
 $status = $block->getStatus();
 ?>
 <!-- Yotpo Sync Status -->
-<div>Sync progress: <?= $status['total_orders_synced'] . '/' . $status['total_orders'] ?></div>
-<div>Last sync date: <?= $status['last_sync_date'] ?></div>
-<div>Total orders synced with Yotpo: <?= $status['total_orders_synced_all'] ?></div>
+<div>Orders Synced: <?= $status['total_orders_synced'] . '/' . $status['total_orders'] ?></div>
+<div>Last Sync Date: <?= $status['last_sync_date'] ?></div>
 <!--/ Yotpo Sync Status -->

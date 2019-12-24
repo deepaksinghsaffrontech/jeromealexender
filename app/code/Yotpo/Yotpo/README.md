@@ -12,9 +12,7 @@ This library will also include different version packages as magento 2 extension
 ## Requirements
 Magento 2.0+ (Up to module verion 2.4.5)
 
-Magento 2.1+ (Module version 2.7.5 up to 2.7.7)
-
-Magento 2.2+ (Module version 2.8.0 and above)
+Magento 2.1+ (Module version 2.7.5 and above)
 
 ## ✓ Install via [composer](https://getcomposer.org/download/) (recommended)
 Run the following command under your Magento 2 root dir:

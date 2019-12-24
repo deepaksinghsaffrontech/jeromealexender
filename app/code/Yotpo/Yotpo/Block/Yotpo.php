@@ -1,46 +1,30 @@
 <?php
 namespace Yotpo\Yotpo\Block;
 
-use Magento\Catalog\Helper\Image as CatalogImageHelper;
 use Magento\Framework\Registry;
 use Magento\Framework\View\Element\Template\Context;
-use Yotpo\Yotpo\Model\Config as YotpoConfig;
+use Yotpo\Yotpo\Helper\Data as YotpoHelper;
 
 class Yotpo extends \Magento\Framework\View\Element\Template
 {
     /**
-     * @var YotpoConfig
+     * @var YotpoHelper
      */
-    private $yotpoConfig;
-
-    /**
-     * @var Registry
-     */
-    private $coreRegistry;
-
-    /**
-     * @var CatalogImageHelper
-     */
-    private $catalogImageHelper;
+    protected $_yotpoHelper;
 
     /**
      * @method __construct
-     * @param  Context            $context
-     * @param  YotpoConfig        $yotpoConfig
-     * @param  Registry           $coreRegistry
-     * @param  CatalogImageHelper $catalogImageHelper
-     * @param  array              $data
+     * @param  Context     $context
+     * @param  YotpoHelper $yotpoHelper
+     * @param  Registry    $registry
+     * @param  array       $data
      */
     public function __construct(
         Context $context,
-        YotpoConfig $yotpoConfig,
-        Registry $coreRegistry,
-        CatalogImageHelper $catalogImageHelper,
+        YotpoHelper $yotpoHelper,
         array $data = []
     ) {
-        $this->yotpoConfig = $yotpoConfig;
-        $this->coreRegistry = $coreRegistry;
-        $this->catalogImageHelper = $catalogImageHelper;
+        $this->_yotpoHelper = $yotpoHelper;
         parent::__construct($context, $data);
     }
 
@@ -50,7 +34,7 @@ class Yotpo extends \Magento\Framework\View\Element\Template
      */
     public function isEnabled()
     {
-        return $this->yotpoConfig->isEnabled() && $this->yotpoConfig->isAppKeyAndSecretSet();
+        return $this->_yotpoHelper->isEnabled() && $this->_yotpoHelper->isAppKeyAndSecretSet();
     }
 
     /**
@@ -59,15 +43,12 @@ class Yotpo extends \Magento\Framework\View\Element\Template
      */
     public function getAppKey()
     {
-        return $this->yotpoConfig->getAppKey();
+        return $this->_yotpoHelper->getAppKey();
     }
 
     public function getProduct()
     {
-        if (is_null($this->getData('product'))) {
-            $this->setData('product', $this->coreRegistry->registry('current_product'));
-        }
-        return $this->getData('product');
+        return $this->_yotpoHelper->getCurrentProduct();
     }
 
     public function hasProduct()
@@ -115,37 +96,32 @@ class Yotpo extends \Magento\Framework\View\Element\Template
         return $this->getProduct()->getFinalPrice();
     }
 
-    /**
-     * @method getProductImageUrl
-     * @param  string  $imageId
-     * @return string|null
-     */
-    public function getProductImageUrl($imageId = 'product_page_image_large')
+    public function getProductImageUrl()
     {
         if (!$this->hasProduct()) {
             return null;
         }
-        return $this->catalogImageHelper->init($this->getProduct(), $imageId)->getUrl();
+        return $this->_yotpoHelper->getProductMainImageUrl($this->getProduct());
     }
 
     public function getCurrentCurrencyCode()
     {
-        return $this->yotpoConfig->getStoreManager()->getStore()->getCurrentCurrency()->getCode();
+        return $this->_yotpoHelper->getStoreManager()->getStore()->getCurrentCurrency()->getCode();
     }
 
     public function isRenderWidget()
     {
-        return $this->hasProduct() && ($this->yotpoConfig->isWidgetEnabled() || $this->getData('fromHelper'));
+        return $this->hasProduct() && ($this->_yotpoHelper->isWidgetEnabled() || $this->getData('fromHelper'));
     }
 
     public function isRenderBottomline()
     {
-        return $this->hasProduct() && ($this->yotpoConfig->isBottomlineEnabled() || $this->getData('fromHelper'));
+        return $this->_yotpoHelper->isBottomlineEnabled();
     }
 
     public function isRenderBottomlineQna()
     {
-        return $this->hasProduct() && $this->yotpoConfig->isBottomlineQnaEnabled();
+        return $this->_yotpoHelper->isBottomlineQnaEnabled();
     }
 
     public function escapeString($str)
@@ -155,6 +131,6 @@ class Yotpo extends \Magento\Framework\View\Element\Template
 
     public function getYotpoWidgetUrl()
     {
-        return $this->yotpoConfig->getYotpoWidgetUrl();
+        return $this->_yotpoHelper->getYotpoWidgetUrl();
     }
 }

@@ -4,43 +4,43 @@ namespace Yotpo\Yotpo\Block;
 use Magento\Checkout\Model\Session;
 use Magento\Framework\View\Element\Template\Context;
 use Magento\Sales\Api\OrderRepositoryInterface;
-use Yotpo\Yotpo\Model\Config as YotpoConfig;
+use Yotpo\Yotpo\Helper\Data as YotpoHelper;
 
 class Conversion extends \Magento\Framework\View\Element\Template
 {
     /**
-     * @var YotpoConfig
+     * @var YotpoHelper
      */
-    private $yotpoConfig;
+    protected $_yotpoHelper;
 
     /**
      * @var Session
      */
-    private $checkoutSession;
+    protected $_checkoutSession;
 
     /**
      * @var OrderRepositoryInterface
      */
-    private $orderRepository;
+    protected $_orderRepository;
 
     /**
      * @method __construct
      * @param  Context                  $context
-     * @param  YotpoConfig              $yotpoConfig
+     * @param  YotpoHelper              $yotpoHelper
      * @param  Session                  $checkoutSession
      * @param  OrderRepositoryInterface $orderRepository
      * @param  array                    $data
      */
     public function __construct(
         Context $context,
-        YotpoConfig $yotpoConfig,
+        YotpoHelper $yotpoHelper,
         Session $checkoutSession,
         OrderRepositoryInterface $orderRepository,
         array $data = []
     ) {
-        $this->yotpoConfig = $yotpoConfig;
-        $this->checkoutSession = $checkoutSession;
-        $this->orderRepository = $orderRepository;
+        $this->_yotpoHelper = $yotpoHelper;
+        $this->_checkoutSession = $checkoutSession;
+        $this->_orderRepository = $orderRepository;
         parent::__construct($context, $data);
     }
 
@@ -50,18 +50,18 @@ class Conversion extends \Magento\Framework\View\Element\Template
      */
     public function isEnabled()
     {
-        return $this->yotpoConfig->isEnabled() && $this->yotpoConfig->isAppKeyAndSecretSet();
+        return $this->_yotpoHelper->isEnabled() && $this->_yotpoHelper->isAppKeyAndSecretSet();
     }
 
     public function getOrderId()
     {
-        return $this->checkoutSession->getLastOrderId();
+        return $this->_checkoutSession->getLastOrderId();
     }
 
     public function getOrder()
     {
         if (!$this->hasData('order') && $this->getOrderId()) {
-            $this->setData('order', $this->orderRepository->get($this->getOrderId()));
+            $this->setData('order', $this->_orderRepository->get($this->getOrderId()));
         }
         return $this->getData('order');
     }
@@ -93,12 +93,12 @@ class Conversion extends \Magento\Framework\View\Element\Template
      */
     public function getJsonData()
     {
-        if (!($this->hasOrder() && $this->yotpoConfig->getAppKey())) {
+        if (!($this->hasOrder() && $this->_yotpoHelper->getAppKey())) {
             return null;
         }
         return json_encode(
             [
-            "orderId" => $this->getOrder()->getIncrementId(),
+            "orderId" => $this->getOrderId(),
             "orderAmount" => $this->getOrderAmount(),
             "orderCurrency" => $this->getOrderCurrency(),
             ]
@@ -111,13 +111,13 @@ class Conversion extends \Magento\Framework\View\Element\Template
      */
     public function getNoscriptSrc()
     {
-        if (!($this->hasOrder() && $this->yotpoConfig->getAppKey())) {
+        if (!($this->hasOrder() && $this->_yotpoHelper->getAppKey())) {
             return null;
         }
-        return $this->yotpoConfig->getYotpoNoSchemaApiUrl(
+        return $this->_yotpoHelper->getYotpoNoSchemaApiUrl(
             "conversion_tracking.gif?" . http_build_query(
                 [
-                "app_key" => $this->yotpoConfig->getAppKey(),
+                "app_key" => $this->_yotpoHelper->getAppKey(),
                 "order_id" => $this->getOrderId(),
                 "order_amount" => $this->getOrderAmount(),
                 "order_currency" => $this->getOrderCurrency(),
