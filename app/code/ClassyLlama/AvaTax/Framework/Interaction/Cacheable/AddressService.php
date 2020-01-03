@@ -24,12 +24,7 @@ use ClassyLlama\AvaTax\Model\Logger\AvaTaxLogger;
 use Magento\Framework\App\CacheInterface;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Phrase;
-use Zend\Serializer\Adapter\PhpSerialize;
 
-/**
- * Class AddressService
- * @package ClassyLlama\AvaTax\Framework\Interaction\Cacheable
- */
 class AddressService
 {
     /**
@@ -50,16 +45,9 @@ class AddressService
     protected $type = null;
 
     /**
-     * @var PhpSerialize
-     */
-    protected $phpSerialize;
-
-    /**
-     * AddressService constructor.
      * @param CacheInterface $cache
      * @param AvaTaxLogger $avaTaxLogger
      * @param Address $interactionAddress
-     * @param PhpSerialize $phpSerialize
      * @param MetaDataObjectFactory $metaDataObjectFactory
      * @param null $type
      */
@@ -67,14 +55,12 @@ class AddressService
         CacheInterface $cache,
         AvaTaxLogger $avaTaxLogger,
         Address $interactionAddress,
-        PhpSerialize $phpSerialize,
         MetaDataObjectFactory $metaDataObjectFactory,
         $type = null
     ) {
         $this->cache = $cache;
         $this->avaTaxLogger = $avaTaxLogger;
         $this->interactionAddress = $interactionAddress;
-        $this->phpSerialize = $phpSerialize;
         $this->metaDataObject = $metaDataObjectFactory->create(
             ['metaDataProperties' => \ClassyLlama\AvaTax\Framework\Interaction\Address::$validFields]
         );
@@ -92,23 +78,8 @@ class AddressService
     public function validate(ValidateRequest $validateRequest, $storeId)
     {
         $addressCacheKey = $this->getCacheKey($validateRequest->getAddress()) . $storeId;
-        $cacheData = $this->cache->load($addressCacheKey);
-        try {
-            /**
-             * Magento 2.2.x, 2.3.x
-             * - we can not use \Magento\Framework\Serialize\Serializer\Serialize::unserialize. Magento realization does
-             *   not allow us to control 'allowed_classes' restriction option of unserialize().
-             * - we can not use native PHP serialize() and unserialize() in our own realization, because it won't pass
-             *   Magento Coding Standard.
-             * Magento 2.1.x
-             * - \Magento\Framework\Serialize\Serializer\Serialize - class is absent
-             * Was chosen \Zend\Serializer\Adapter\PhpSerialize::unserialize. It exists in 2.1.x - 2.3.x
-             * It allows us to configure 'allowed_classes' restriction option (Magento 2.2.x, 2.3.x)
-             */
-            $validateResult = !empty($cacheData) ? $this->phpSerialize->unserialize($cacheData) : '';
-        } catch (\Throwable $exception) {
-            $validateResult = '';
-        }
+        $validateResult = @unserialize($this->cache->load($addressCacheKey));
+
         if ($validateResult instanceof ValidateResult) {
             $this->avaTaxLogger->addDebug('Loaded \AvaTax\ValidateResult from cache.', [
                 'request' => var_export($validateRequest, true),
@@ -122,7 +93,7 @@ class AddressService
             $addressService = $this->interactionAddress->getAddressService($this->type, $storeId);
             $validateResult = $addressService->validate($validateRequest);
 
-            $serializedValidateResult = $this->phpSerialize->serialize($validateResult);
+            $serializedValidateResult = serialize($validateResult);
             $this->cache->save($serializedValidateResult, $addressCacheKey, [Config::AVATAX_CACHE_TAG]);
 
             $validAddress =

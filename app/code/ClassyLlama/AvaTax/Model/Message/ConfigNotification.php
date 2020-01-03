@@ -80,7 +80,7 @@ class ConfigNotification implements MessageInterface
      */
     public function getIdentity()
     {
-        return sha1('AVATAX_CONFIG_NOTIFICATION');
+        return md5('AVATAX_CONFIG_NOTIFICATION');
     }
 
     /**

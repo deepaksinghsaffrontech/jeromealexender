@@ -56,9 +56,9 @@ class RegionFilterList extends \Magento\Directory\Model\Config\Source\Allregion
     }
 
     /**
-     * @inheritdoc
+     * @return array
      */
-    public function toOptionArray($isMultiselect = false)
+    public function toOptionArray()
     {
         if (!$this->_options) {
             $selectedCountries = $this->getCountryList();
@@ -101,9 +101,6 @@ class RegionFilterList extends \Magento\Directory\Model\Config\Source\Allregion
             uksort($this->_options, [$this, 'sortRegionCountries']);
         }
         $options = $this->_options;
-        if (!$isMultiselect) {
-            array_unshift($options, ['value' => '', 'label' => '']);
-        }
 
         return $options;
     }
