@@ -174,10 +174,7 @@ class ShippingInformationManagement
         $quoteAddress = null;
 
         $shouldValidateAddress = true;
-        if (
-            !is_null($shippingInformationExtension)
-            && $shippingInformationExtension->getShouldValidateAddress() !== null
-        ) {
+        if (!is_null($shippingInformationExtension)) {
             $shouldValidateAddress = $shippingInformationExtension->getShouldValidateAddress();
         }
 

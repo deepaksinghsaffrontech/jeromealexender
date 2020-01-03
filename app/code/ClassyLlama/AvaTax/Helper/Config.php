@@ -47,8 +47,6 @@ class Config extends AbstractHelper
 
     const XML_PATH_AVATAX_REGION_FILTER_LIST = 'tax/avatax/region_filter_list';
 
-    const XML_PATH_AVATAX_CALCULATE_BEFORE_DISCOUNT = 'tax/avatax/calculate_tax_before_discounts';
-
     const XML_PATH_AVATAX_LIVE_MODE = 'tax/avatax/live_mode';
 
     const XML_PATH_AVATAX_PRODUCTION_ACCOUNT_NUMBER = 'tax/avatax/production_account_number';
@@ -131,13 +129,9 @@ class Config extends AbstractHelper
 
     const XML_PATH_AVATAX_QUEUE_ADMIN_NOTIFICATION_ENABLED = 'tax/avatax/queue_admin_notification_enabled';
 
-    const XML_PATH_AVATAX_QUEUE_FAILURE_NOTIFICATION_ENABLED = 'tax/avatax/queue_failure_notification_enabled';
-
     const XML_PATH_AVATAX_ADMIN_NOTIFICATION_IGNORE_NATIVE_TAX_RULES = 'tax/avatax/ignore_native_tax_rules_notification';
 
     const XML_PATH_AVATAX_ADMIN_IS_SELLER_IMPORTER_OF_RECORD = 'tax/avatax/is_seller_importer_of_record';
-
-    const XML_PATH_AVATAX_SHIPPING_TAX_CODE = 'tax/avatax/shipping_tax_code';
     /**#@-*/
 
     /**
@@ -1051,7 +1045,7 @@ class Config extends AbstractHelper
      */
     public function getQueueFailureNotificationEnabled()
     {
-        return $this->scopeConfig->getValue(self::XML_PATH_AVATAX_QUEUE_FAILURE_NOTIFICATION_ENABLED);
+        return $this->scopeConfig->getValue(self::XML_PATH_AVATAX_QUEUE_FAILED_LIFETIME);
     }
 
     public function isNativeTaxRulesIgnored()
@@ -1077,34 +1071,5 @@ class Config extends AbstractHelper
             $isSellerImporterOfRecord = false;
         }
         return $isSellerImporterOfRecord;
-    }
-
-    /**
-     * @param $store
-     * @return mixed
-     */
-    public function getCalculateTaxBeforeDiscount($store)
-    {
-        return $this->scopeConfig->getValue(
-            self::XML_PATH_AVATAX_CALCULATE_BEFORE_DISCOUNT,
-            ScopeInterface::SCOPE_STORE,
-            $store
-        );
-    }
-
-    /**
-    * Get Shipping Tax Code.
-    *
-    * @param $store
-    *
-    * @return string
-    */
-    public function getShippingTaxCode($store = null)
-    {
-        return $this->scopeConfig->getValue(
-            self::XML_PATH_AVATAX_SHIPPING_TAX_CODE,
-            ScopeInterface::SCOPE_STORE,
-            $store
-        );
     }
 }

@@ -16,10 +16,6 @@
 namespace ClassyLlama\AvaTax\Framework\Interaction;
 
 use AvaTax\GetTaxResult;
-use AvaTax\TaxDetail;
-use AvaTax\TaxLine;
-use Magento\Framework\Api\DataObjectHelper;
-use Magento\Framework\App\ScopeInterface;
 use Magento\Tax\Model\TaxDetails\TaxDetails;
 use Magento\Tax\Model\Calculation;
 use Magento\Tax\Model\Calculation\CalculatorFactory;
@@ -87,7 +83,7 @@ class TaxCalculation extends \Magento\Tax\Model\TaxCalculation
         TaxDetailsItemInterfaceFactory $taxDetailsItemDataObjectFactory,
         StoreManagerInterface $storeManager,
         TaxClassManagementInterface $taxClassManagement,
-        DataObjectHelper $dataObjectHelper,
+        \Magento\Framework\Api\DataObjectHelper $dataObjectHelper,
         PriceCurrencyInterface $priceCurrency,
         AppliedTaxInterfaceFactory $appliedTaxDataObjectFactory,
         AppliedTaxRateInterfaceFactory $appliedTaxRateDataObjectFactory,
@@ -206,7 +202,39 @@ class TaxCalculation extends \Magento\Tax\Model\TaxCalculation
         }
 
         $rate = (float)($taxLine->getRate() * Tax::RATE_MULTIPLIER);
-        $rowTax = $tax = $this->convertCurrency($taxLine, $useBaseCurrency, $scope);
+        $tax = (float)$taxLine->getTax();
+
+        /**
+         * Magento uses base rates for determining what to charge a customer, not the currency rate (i.e., the non-base
+         * rate). Because of this, the base amounts are what is being sent to AvaTax for rate calculation. When we get
+         * the base tax amounts back from AvaTax, we have to convert those to the current store's currency using the
+         * \Magento\Framework\Pricing\PriceCurrencyInterface::convert() method. However if we simply convert the AvaTax
+         * base tax amount * currency multiplier, we may run into issues due to rounding.
+         *
+         * For example, a $9.90 USD base price * a 6% tax rate equals a tax amount of $0.59 (.594 rounded). Assume the
+         * current currency has a conversion rate of 2x. The price will display to the user as $19.80. There are two
+         * ways we can calculate the tax amount:
+         * 1. Multiply the tax amount received back from AvaTax, which would be $1.18 ($0.59 * 2).
+         * 2. Multiply using this formula (base price * currency rate) * tax rate) ((9.99 * 2) * .06)
+         *    which would be $1.19 (1.188 rounded)
+         *
+         * The second approach is more accurate and is what we are doing here.
+         */
+        if (!$useBaseCurrency) {
+            /**
+             * We could recalculate the amount using the same logic found in this class:
+             * @see \ClassyLlama\AvaTax\Framework\Interaction\Line::convertTaxQuoteDetailsItemToData,
+             * but using the taxable amount returned back from AvaTax is the only way to get an accurate amount as
+             * some items sent to AvaTax may be tax exempt
+             */
+            $taxableAmount = (float)$taxLine->getTaxable();
+            $amount = $this->priceCurrency->convert($taxableAmount, $scope);
+
+            $tax = $amount * $taxLine->getRate();
+            $tax = $this->calculationTool->round($tax);
+        }
+
+        $rowTax = $tax;
 
         /**
          * In native Magento, the "row_total_incl_tax" and "base_row_total_incl_tax" fields contain the tax before
@@ -277,7 +305,7 @@ class TaxCalculation extends \Magento\Tax\Model\TaxCalculation
             $priceInclTax = $this->calculationTool->round($priceInclTax);
         }
 
-        $appliedTax = $this->getAppliedTax($getTaxResult, $rowTax, $useBaseCurrency, $scope);
+        $appliedTax = $this->getAppliedTax($getTaxResult, $rowTax);
         $appliedTaxes = [
             $appliedTax->getTaxRateKey() => $appliedTax
         ];
@@ -303,15 +331,11 @@ class TaxCalculation extends \Magento\Tax\Model\TaxCalculation
      *
      * @param GetTaxResult $getTaxResult
      * @param float $rowTax
-     * @param bool $useBaseCurrency
-     * @param ScopeInterface $scope
      * @return \Magento\Tax\Api\Data\AppliedTaxInterface
      */
     protected function getAppliedTax(
         GetTaxResult $getTaxResult,
-        $rowTax,
-        $useBaseCurrency,
-        $scope
+        $rowTax
     ) {
         $totalPercent = 0.00;
         $taxNames = [];
@@ -366,13 +390,8 @@ class TaxCalculation extends \Magento\Tax\Model\TaxCalculation
         /* @var \AvaTax\TaxDetail $row */
         foreach ($getTaxResult->getTaxSummary() as $key => $row) {
             $arrayKey = $row->getJurisCode() . '_' . $row->getJurisName();
-            $ratePercent = ($row->getRate() * Tax::RATE_MULTIPLIER);
-            $tax = $this->convertCurrency($row, $useBaseCurrency, $scope);
-            $taxable = (float)$row->getTaxable();
-            if (!$useBaseCurrency) {
-                $taxable = $this->priceCurrency->convert($taxable, $scope);
-            }
 
+            $ratePercent = ($row->getRate() * Tax::RATE_MULTIPLIER);
             if (!isset($taxRatesByCode[$arrayKey])) {
                 $taxRatesByCode[$arrayKey] = [
                     // In case jurisdiction codes are duplicated, prepending the $key ensures we have a unique ID
@@ -382,16 +401,16 @@ class TaxCalculation extends \Magento\Tax\Model\TaxCalculation
                     // Prepend a string to the juris code to prevent false positives on comparison (e.g. '053' == '53)
                     'jurisCode' => 'AVATAX-' . $row->getJurisCode(),
                     // These two values will only be used in the conditional below
-                    'taxable' => $taxable,
-                    'tax' => $tax,
+                    'taxable' => (float)$row->getTaxable(),
+                    'tax' => (float)$row->getTax(),
                 ];
             } elseif ($taxRatesByCode[$arrayKey]['ratePercent'] != $ratePercent) {
                 /**
                  * There are rare situations in which a duplicate rate will have a slightly different percentage (see
                  * example in DocBlock above). In these cases, we will just determine the "effective" rate" ourselves.
                  */
-                $taxRatesByCode[$arrayKey]['taxable'] += $taxable;
-                $taxRatesByCode[$arrayKey]['tax'] += $tax;
+                $taxRatesByCode[$arrayKey]['taxable'] += (float)$row->getTaxable();
+                $taxRatesByCode[$arrayKey]['tax'] += (float)$row->getTax();
                 // Avoid division by 0
                 if ($taxRatesByCode[$arrayKey]['taxable'] > 0) {
                     $blendedRate = $taxRatesByCode[$arrayKey]['tax'] / $taxRatesByCode[$arrayKey]['taxable'];
@@ -537,54 +556,5 @@ class TaxCalculation extends \Magento\Tax\Model\TaxCalculation
             return $parentQuantity * $item->getQuantity();
         }
         return $item->getQuantity();
-    }
-
-    /**
-     * @param TaxDetail|TaxLine $row
-     * @param bool $useBaseCurrency
-     * @param ScopeInterface $scope
-     * @return float|int
-     */
-    public function convertCurrency(
-        $row,
-        $useBaseCurrency,
-        $scope
-    ) {
-        $tax = (float)$row->getTax();
-
-        /**
-         * Magento uses base rates for determining what to charge a customer, not the currency rate (i.e., the non-base
-         * rate). Because of this, the base amounts are what is being sent to AvaTax for rate calculation. When we get
-         * the base tax amounts back from AvaTax, we have to convert those to the current store's currency using the
-         * \Magento\Framework\Pricing\PriceCurrencyInterface::convert() method. However if we simply convert the AvaTax
-         * base tax amount * currency multiplier, we may run into issues due to rounding.
-         *
-         * For example, a $9.90 USD base price * a 6% tax rate equals a tax amount of $0.59 (.594 rounded). Assume the
-         * current currency has a conversion rate of 2x. The price will display to the user as $19.80. There are two
-         * ways we can calculate the tax amount:
-         * 1. Multiply the tax amount received back from AvaTax, which would be $1.18 ($0.59 * 2).
-         * 2. Multiply using this formula (base price * currency rate) * tax rate) ((9.99 * 2) * .06)
-         *    which would be $1.19 (1.188 rounded)
-         *
-         * The second approach is more accurate and is what we are doing here.
-         */
-        if (!$useBaseCurrency) {
-            /**
-             * We could recalculate the amount using the same logic found in this class:
-             * @see \ClassyLlama\AvaTax\Framework\Interaction\Line::convertTaxQuoteDetailsItemToData,
-             * but using the taxable amount returned back from AvaTax is the only way to get an accurate amount as
-             * some items sent to AvaTax may be tax exempt
-             */
-            $taxableAmount = (float)$row->getTaxable();
-            $rate = $row->getRate();
-            if (abs($taxableAmount * $rate - $tax) < 0.005) {
-                $tax = $this->priceCurrency->convert($taxableAmount, $scope) * $rate;
-            } else {
-                $tax = $this->priceCurrency->convert($tax, $scope);
-            }
-            $tax = $this->calculationTool->round($tax);
-        }
-
-        return $tax;
     }
 }
