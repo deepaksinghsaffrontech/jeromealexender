@@ -124,12 +124,12 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
     $product_id = $productId;
     if(($product_id  == '12')||($product_id  == '34')){
      $Product_id[$i]  =  $productId;
-    $i ++;
+     $i ++;
    }
 }
  
  if(isset($Product_id[0])){
-    if(($product_id  == '12')||($product_id  == '34')){
+    if(($Product_id[0] =='12')||($Product_id[0] =='34')){
       
 			 if($region['country_id'] =='CA'){
 				
