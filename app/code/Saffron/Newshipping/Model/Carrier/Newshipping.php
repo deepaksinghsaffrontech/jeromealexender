@@ -122,7 +122,7 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
     $productId = $item->getProductId();
     $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($productId);
     $product_id = $productId;
-    if($product_id  == '12'){
+    if(($product_id  == '12')||($product_id  == '34')){
      $Product_id[$i]  =  $productId;
     $i ++;
    }
