@@ -198,3 +198,6 @@ body.customer-account-create .page-wrapper .page-main {
 .cart-container .cart-summary .checkout .item .paypal-express-in-context-mini-cart-container {
     display: none;
 }
+.checkout-index-index .authentication-dropdown .modal-inner-wrap header.modal-header {
+    display: none;
+}
