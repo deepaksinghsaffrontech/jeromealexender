@@ -106,9 +106,9 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
  
  
     if(($url[4] == 'guest-carts')||($url[4] =='carts') ){
- 
-      $region['country_id'];
-      $region['region_id'] ;
+    if(isset($region['country_id'])){$region['country_id'];}
+    if(isset($region['region_id'])){ $region['region_id'];}
+     
  
     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
     $cart = $objectManager->get('\Magento\Checkout\Model\Cart');
