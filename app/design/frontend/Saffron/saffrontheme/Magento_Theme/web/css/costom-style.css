@@ -201,3 +201,8 @@ body.customer-account-create .page-wrapper .page-main {
 .checkout-index-index .authentication-dropdown .modal-inner-wrap header.modal-header {
     display: none;
 }
+
+.checkout-index-index select {
+	padding-top: 5px;
+    padding-bottom: 5px;
+}
