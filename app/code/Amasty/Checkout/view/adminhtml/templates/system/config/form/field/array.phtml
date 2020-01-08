@@ -1,0 +1,45 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2019 Amasty (https://www.amasty.com)
+ * @package Amasty_Checkout
+ */
+?>
+<?php /** @var \Amasty\Checkout\Model\Config\DragAndDrop $this */
+$sortedBlocks = $this->getSortedBlockNames();
+?>
+<table class="admin__control-table" data-mage-init='{"amastyDraggableFieldArray": {}}'>
+    <tbody data-role="row-container" id="row-container">
+    <input id="block_management_inherit"
+           name="groups[block_names][fields][block_management][inherit]"
+           type="text"
+           value="0"
+           hidden>
+    <?php foreach ($sortedBlocks as $sortOrder => $blockInfo) : ?>
+        <tr>
+            <td class="col-draggable">
+                <div data-role="draggable-handle" class="draggable-handle" title="Sort Rows"></div>
+            </td>
+            <input data-role="sort-order"
+                   type="hidden"
+                   name="groups[block_names][fields][<?= $blockInfo['block_code'] ?>][sort_order]"
+                   value="<?= $sortOrder ?>"/>
+            <td class="col-blocks">
+                <label for="amasty_checkout_block_names_<?= $blockInfo['block_code'] ?>" class="am-label">
+                    <span><?= $blockInfo['block_name'] ?></span>
+                </label>
+            </td>
+            <td>
+                <input id="amasty_checkout_block_names_<?= $blockInfo['block_code'] ?>"
+                       name="groups[block_names][fields][<?= $blockInfo['block_code'] ?>][value]"
+                       value="<?= $blockInfo['block_value'] ?>"
+                       placeholder="<?= $blockInfo['block_value'] ?>"
+                       class="input-text"
+                       type="text"
+                       data-required="0"
+                       data-meta-field-name="label"/>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>

@@ -142,6 +142,24 @@ require(["jquery"], function(jQuery){
 	jQuery('.top-hearder').hide();
 	});
 	
+	//about page script for mobile
+	var characterCount = function(){
+		jQuery(".morePlus").click( function(){
+			jQuery(this).toggleClass("open");
+			if( jQuery(this).hasClass("open") ){
+				jQuery(this).children().removeClass("fa-plus").addClass("fa-minus");
+				jQuery(".about-section .showText").show();
+			}
+			else{
+				jQuery(this).children().addClass("fa-plus").removeClass("fa-minus");
+				jQuery(".about-section .showText").hide();
+			}
+		})
+	}
+	characterCount();
+	
+	
+	
 	
 }); 
 

@@ -8,7 +8,15 @@
 <page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="default_head_blocks"/>
     <body>
-	
+        <referenceContainer name="after.body.start">
+     <block class="Magento\Cms\Block\Block" name="google_gtm">
+		<arguments>
+		<argument name="block_id" xsi:type="string">google_gtm</argument>
+		</arguments>
+	 </block>
+	</referenceContainer>
+       	
+
 	<block name="require.js" class="Magento\Framework\View\Element\Template" template="Magento_Theme::page/js/require_js.phtml" />
       <referenceContainer name="after.body.start">
             <block class="Magento\RequireJs\Block\Html\Head\Config" name="requirejs-config"/>
@@ -18,7 +26,9 @@
             <block class="Magento\Theme\Block\Html\Notices" name="global_notices" template="Magento_Theme::html/notices.phtml"/>
      </referenceContainer>
 	 
-	
+	 <referenceContainer name="content">
+        <block class="Magento\Framework\View\Element\Template" name="refresh.minicart" template="{vendor}_{module}::refreshMinicart.phtml"  />
+    </referenceContainer>
 	 
      <referenceContainer name="header.container">
             <container name="header.link" htmlClass="panel wrapper" htmlTag="div" before="-">
@@ -49,8 +59,8 @@
 			</container>
         </referenceContainer>
 		<referenceBlock name="skip_to_content" remove="true"/>
-		<referenceBlock name="register-link" remove="true"/>	
-		
+		<!--<referenceBlock name="register-link" remove="true"/>-->	
+		 
         <referenceContainer name="header-wrapper" htmlClass="header-content" after="-">
 			
 			
@@ -137,6 +147,24 @@
          <container name="top.container" as="topContainer" label="After Page Header Top" htmlTag="div" htmlClass="top-container"/>
             <block class="Magento\Theme\Block\Html\Breadcrumbs" name="breadcrumbs" as="breadcrumbs"/>
         </referenceContainer>
+		
+<referenceBlock name="header.links">
+ 
+  <block class="Magento\Customer\Block\Account\RegisterLink" name="register-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Create Account</argument>
+					<argument name="css_class" xsi:type="string">account-link</argument>
+                            
+                </arguments>
+    </block>
+ <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer-services">
+ <arguments>
+ <argument name="label" xsi:type="string">Customer Services</argument>
+ <argument name="path" xsi:type="string">customer-services</argument>
+ <argument name="css_class" xsi:type="string">customer-services</argument>
+ </arguments>
+ </block>
+ </referenceBlock>
         <referenceContainer name="columns.top">
             <block class="Magento\Theme\Block\Html\Title" name="page.main.title" template="Magento_Theme::html/title.phtml"/>
             <container name="page.messages" htmlTag="div" htmlClass="page messages">

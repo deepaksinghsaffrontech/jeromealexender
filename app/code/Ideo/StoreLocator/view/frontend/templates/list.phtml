@@ -25,26 +25,23 @@ $googleApiKey = $block->getGoogleApiKey();
 
 
 		  
-<div class="sidebar sidebar-main">
-              <div class="sidebar-list row-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
-                <ul>
-                  <li><a href="<?php echo $this->getUrl('customer-services/'); ?>">Customer Services</a></li>
-                  <li><a href="<?php echo $this->getUrl('contact/'); ?>">Contact Us</a></li>
-                  <li><a href="<?php echo $this->getUrl('customer/account/login/'); ?>">Order Status</a></li>
-                  <li><a href="<?php echo $this->getUrl('shipping-returns/'); ?>">Shipping & Returns</a></li>
-                  <li><a href="<?php echo $this->getUrl('store-locator/'); ?>">Store Locator</a></li>
-                  <li><a href="<?php echo $this->getUrl('faq/'); ?>">FAQ</a></li>
-                  <li><a href="<?php echo $this->getUrl('write-review/'); ?>">Write & Review</a></li>
-                </ul>
-              </div>
-            </div>		  
+<div class="sidebar-ask">
+    <div class="sidebar-list row-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+     <?php echo $this->getLayout()->createBlock("Magento\Framework\View\Element\Template")->setTemplate("Magento_Theme::header/costom-sidebar.phtml")->toHtml();?>              
+    </div>
+</div>		  
 <?php if($googleApiKey === null): ?>
 <p class="message-error error message">
     <span><?php echo __('Google Api Key is not set!'); ?></span>
 </p>
 <?php else: ?>
+
+
 <div class="store-locator-module"  data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
-    <div ng-app="ideoMapsApp">
+ <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('store-locator')->toHtml(); ?>	
+
+
+ <!--<div ng-app="ideoMapsApp">
         <div ng-controller="mapController" ng-init="init()">
             <div class="store-locator-navigation">
                 <input type="text" ng-model="search" placeholder="<?php echo __('Search'); ?>" ng-keypress="searchKeyPress($event)" ng-change="searchChange()">
@@ -123,8 +120,9 @@ $googleApiKey = $block->getGoogleApiKey();
             </div>
             <div id="map-container" class="store-locator-map"></div>
         </div>
-    </div>
+    </div>-->
 </div>
+
 
 <script>
     var mapModule = angular.module('ideoMapsApp', []);

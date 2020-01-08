@@ -128,15 +128,7 @@ class Banner extends \Magento\Backend\Block\Widget\Form\Generic
 			]
 		);
 		
-		$elements['title2'] = $fieldset->addField(
-			'title2',
-			'text',
-			[
-				'name' => 'title2',
-				'label' => __('Title 2'),
-				'title' => __('Title 2'),
-			]
-		);
+		
 		
 		$elements['status'] = $fieldset->addField(
 			'status',
@@ -171,6 +163,21 @@ class Banner extends \Magento\Backend\Block\Widget\Form\Generic
 			]
 		);
 
+    $elements['title2'] = $fieldset->addField(
+			'title2',
+			'image',
+			[
+				/*'name' => 'title2',
+				'label' => __('Title 2'),
+				'title' => __('Title 2'),*/
+				'title' => __('Mobile Banner Image'),
+				'label' => __('Mobile Banner Image'),
+				'name' => 'title2',
+				'note' => 'Allow image type: jpg, jpeg, gif, png',
+				
+			]
+		);
+		
 		$elements['image'] = $fieldset->addField(
 			'image',
 			'image',

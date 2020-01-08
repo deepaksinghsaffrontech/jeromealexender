@@ -60,27 +60,163 @@ $content = $block->getContent();
 $contentType = $content->getContentType();
 //$repeaterValues = $content->getContentCollection('about_us_gasser_images', '*');
 $identifier = $contentType->getIdentifier();
+$askjerome = $contentType->load(1)->getContentCollection()->setPageSize(4);  
+$om = \Magento\Framework\App\ObjectManager::getInstance();
+$storeManager = $om->get('\Magento\Store\Model\StoreManagerInterface');
+$media_url =$storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
 ?>
-<!--<img src="http://localhost/gassernew/pub/media/contentmanager/content/image.png" class="ct-image" alt="">-->
-<?php if (!empty($block->getTitle())) : ?>
-        <div class="block-title">
-            <strong><?= $block->getTitle() ?></strong>
-        </div>
-    <?php endif; ?>
 
 
-<img src="<?= $content->getImage('thimble_images')?>" />
-
-<?= $content->getData('asfjerome_video'); ?>			
+<div class="ask-detail-banner row-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+			<div class="container">
+			<?php if(!empty($content->getData('asfjerome_banner'))){?>
+				<figure>
+					<img src="<?php echo $media_url ; ?>contentmanager/content/<?php echo $content->getData('asfjerome_banner'); ?>" alt="<?php echo $content->getData('asfjerome_title'); ?>" class="img-fluid">
+				</figure>
+			<?php }else{ ?>	
 			
-<div class="test_title">
-<?= $content->getData('asfjerome_title'); ?>
-</div>
-<?php print_r($content->getData('asfjerome_interested')); ?>
-<div class="test_name">
-<?= $content->getData('ask_description'); ?>
-</div>
-<?php echo date('jS \of F Y',strtotime($content->getData('created_at'))); ?>
+			<figure>
+					<img src="<?php echo $media_url ; ?>contentmanager/content/42160348_s_1.jpg" alt="<?php echo $content->getData('asfjerome_title'); ?>" class="img-fluid">
+				</figure>
+			<?php }?>
+				<div class="ask-caption">
+					<div class="tag-title">
+						<?php $interested= (explode(",",$content->getData('asfjerome_interested'))); ?>
+						<?php foreach($interested as $item){?>
+						<span> <?php echo $item ;?></span>
+					   <?php }?>
+					</div>
+					<div class="title">
+						<h1><?php echo $content->getData('asfjerome_title'); ?></h1>
+						<span><?php echo date('jS \of F Y',strtotime($content->getData('created_at'))); ?></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+  <div class="breadcrumbs">
+              <ul class="items">
+				  <li class="item home"><a href="<?php echo $this->getUrl('');?>">Home</a></li>
+				  <li class="item"><a href="<?php echo $this->getUrl('ask-jerome/');?>">Ask Jerome</a></li>
+                  <li class="item"><?php echo $content->getData('asfjerome_title'); ?></li>
+              </ul>
+          </div>
+		  
+		  
+		  
+	 <div class="ask-jerome-detail-container" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
+						
+
+					  <div class="jerome-description row-col">
+					  <div class="content">
+					  <?= $content->getData('ask_description'); ?>
+		             </div>
+		  
+		              	<div class="social-col ask-social-col">
+									<ul class="social-links">
+									<li class="beauty-li">SHARE BEAUTY</li>
+									<li class="facebook-link">
+										<a href="https://www.facebook.com/sharer/sharer.php?u=<?= $content->getLinkUrl(); ?>">
+											<img src="<?php echo  $media_url ; ?>themeimage/facebook-icon.png" alt="facebook" target="_blank" rel="nofollow">
+										</a>
+									</li>
+									<li class="twitter-link">
+										<a href="http://twitter.com/home?status=<?= $content->getLinkUrl(); ?>">
+											<img src="<?php echo  $media_url ; ?>themeimage/twitter-icon.png" alt="twitter" target="_blank" rel="nofollow">
+										</a>
+									</li>
+									<li class="pinterest-link">
+										<a href="http://pinterest.com/pin/create/button/?url=<?= $content->getLinkUrl(); ?>" target="_blank" rel="nofollow">
+											<img src="<?php echo  $media_url ; ?>themeimage/pinterest-icon.png" alt="pinterest">
+										</a>
+									</li>
+									<li class="email-link">
+										<a href="javascript:void(0);">
+											<img src="<?php echo  $media_url ; ?>themeimage/envelope-icon.png" alt="envelope" target="_blank" rel="nofollow">
+										</a>
+									</li>
+									<li class="link-link">
+										<a href="javascript:void(0);">
+											<img src="<?php echo  $media_url ; ?>themeimage/link-icon.png" alt="link" target="_blank" rel="nofollow">	
+										</a>
+									</li>
+									</ul>
+								</div>
+		            
+		             
+					 
+					 
+					<div class="other-tutorials popular-tutorials  row-col">
+							<h2 class="h30 center">Other Tutorials You Might Love</h2>	
+							
+							<div class="row">
+							<?php foreach($askjerome as $testimonial){?>
+						
+						<?php $testimonialValues = $testimonial->load($testimonial->getData('entity_id')); ?>	
+							<?php //echo"<pre>";print_r($testimonialValues);?>
+					
+								
+								<?php //echo $testimonialValues['thimble_images']; ?>
+								<?php //echo $testimonialValues['Id']; ?>
+								<?php //echo $testimonialValues['asfjerome_like_to']; ?>
+								
+								
+					<div class="col-md-3 col-12">
+					<div class="popular-item">
+					<div class="video-col">
+					
+					<img src="<?php echo $media_url ; ?>contentmanager/content/<?php echo $testimonialValues['thimble_images'] ;?>" class="img-fluid" />
+			       <div class="play-tutorial">
+					<?php if($testimonialValues['asfjerome_like_to']=='read' ){?>
+					<a href="javascript:void(0);" class="icon click-me bt-action"  data="More Info"  onclick="popupFunction(<?php echo $testimonial->getData('entity_id') ;?>)" id="video_titorial_<?php echo $testimonial->getData('entity_id'); ?>" >
+					<i class="fa"><img src="<?php echo $media_url ;?>themeimage/arrow-right-white.png"></i>
+					<span>Play Tutorial</span>
+					</a>
+					<?php } else {?>
+					
+					<a href="<?= $this->getBaseUrl() . $testimonialValues['url_key']; ?>" class="icon click-me bt-action"  data="More Info"  >
+					<i class="fa"><img src="<?php echo $media_url ;?>themeimage/arrow-right-white.png"></i>
+					<span>Read Tutorial</span>
+					</a>
+					<?php }?>
+					</div>
+					</div>
+					<div class="info-col">
+				    <p><?php echo $testimonialValues['asfjerome_title']; ?></p>
+					
+							<?php if($testimonialValues['asfjerome_like_to']=='read' ){?>
+					<a href="<?= $this->getBaseUrl() . $testimonialValues['url_key']; ?>" class="read-more-link">
+					Read More</a>
+							<?php }?>
+				
+					</div>
+					</div>
+					</div>
+								
+					<input type="hidden"  id="idvedio-<?php echo $testimonial->getData('entity_id'); ?>" name="vedio" value="<?= $testimonialValues['asfjerome_video']; ?>" >
+							
+								
+							<?php }?>
+
+							</div>
+						</div>			 
+					 
+					 
+					 
+					 
+	</div>
+	</div>	  
+		  
+
+
+
+
+
+		
+			
+
+
+
 
 
 
@@ -90,31 +226,14 @@ $identifier = $contentType->getIdentifier();
     ], function ($) {
         $(document).ready(function(){
             // move hero banner to top of the page
-            $('#my-gasser-hero-image').detach().insertAfter('.page-wrapper > .page-header');
+            $('.ask-detail-banner').detach().insertAfter('.page-wrapper > .nav-sections');
 
             // move the bottom outside main wrapper as well as it needs to have full width
-            //$('.job-posting').detach().insertAfter('#maincontent');
+    $('.breadcrumb').detach().insertAfter('.page-wrapper > .nav-sections > .sask-detail-banner');
         })
     })
 </script>
 
-<style>
 
-.test_name_content .ct-field .testimonial-content {
-    font-family: Montserrat,Medium;
-    color: #8F89A2;
-    font-size: 14px;
-    line-height: 28px;
-}
 
-.testimonial-detail {
-    width: 90%;
-    margin: 0 auto;
-}
 
-.testimonial-with-out-images-content {
-    float: left;
-    width: 100%;
-}
-
-</style>

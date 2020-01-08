@@ -160,61 +160,65 @@ class Sidebar extends Template
     public function getChildCategoryView($category, $html = '', $level = 1)
     {	
         // Check if category has children
-        if ( $category->hasChildren() )
-        {
+        //if ( $category->hasChildren() )
+        //{
 
             //$childCategories = $this->getSubcategories($category);
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
 $subcategory = $objectManager->create('Magento\Catalog\Model\Category')->load($category->getId());           
 $childCategories = $subcategory->getChildrenCategories();
-            if ( count($childCategories) > 0 )
-            {
+            //if ( count($childCategories) > 0 )
+            //{
 
-                $html .= '<ul class="o-list o-list--unstyled">';                                                                               
+                //$html .= '<ul class="o-list o-list--unstyled">';                                                                               
 
                 // Loop through children categories
-                foreach ( $childCategories as $childCategory )
-                {
+                //foreach ( $childCategories as $childCategory )
+                //{
 
-                    $html .= '<li class="level' . $level . ($this->isActive($childCategory) ? ' active' : '') . '">';
-                    $html .= '<a href="' . $this->getCategoryUrl($childCategory) . '" title="' . $childCategory->getName() . '" class="' . ($this->isActive($childCategory) ? 'is-active' : '') . '">' . $childCategory->getName() . '</a>';
+                    //$html .= '<li class="level' . $level . ($this->isActive($childCategory) ? ' active' : '') . '">';
+                    //$html .= '<a href="' . $this->getCategoryUrl($childCategory) . '" title="' . $childCategory->getName() . '" class="' . ($this->isActive($childCategory) ? 'is-active' : '') . '">' . $childCategory->getName() . '</a>';
 
-                    if ( $childCategory->hasChildren() )
+                    /*if ( $childCategory->hasChildren() )
                     {
                         if ( $this->isActive($childCategory) )
                         {
-                            $html .= '<span class="expanded"><i class="fa fa-minus"></i></span>';
+                            //$html .= '<span class="expanded"><i class="fa fa-minus"></i></span>';
                         }
                         else
                         {
-                            $html .= '<span class="expand"><i class="fa fa-plus"></i></span>';
+                            //$html .= '<span class="expand"><i class="fa fa-plus"></i></span>';
                         }
-                    }
+                    }*/
 
-                    if ( $childCategory->hasChildren() )
+                    if ($category->getId()!="3" )
                     {
-                    $html .= '<ul class="o-list o-list--unstyled">';
+                    $html .= '<ul class="category-body">';
+					$html .= '<li>';
+					$html .= '<a href="javascript:void(0)"     title="' . $subcategory->getUrl() . '"  onclick="popupSubcategory(' .$category->getId(). ')"  > Shop All ' . $subcategory->getName() . '</a>';
+                    $html .= '</li>';
                     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();		
 					$productCollection = $objectManager->create('Magento\Catalog\Model\ResourceModel\Product\CollectionFactory');
 					$collection = $productCollection->create()
 							->addAttributeToSelect('*')
-							->addCategoryFilter($childCategory)->load();
+							->addCategoryFilter($subcategory)->load();
                      //$html .= $this->getChildCategoryView($childCategory, '', ($level + 1));
                     foreach ($collection as $product){
-					$html .= '<li class="level' . $level . '">';
-                    $html .= '<a href="' . $product->getProductUrl() . '"     title="' . $product->getName() . '">' . $product->getName() . '</a>';
-                     $html .= '</li>';
+					$product_url = $this->getBaseUrl().$product['url_key'];	
+					$html .= '<li>';
+                    $html .= '<a href="' . $product_url . '"     title="' . $product->getName() . '">' . $product->getName() . '</a>';
+                    $html .= '</li>';
 					}
 					
 					 $html .= '</ul>';
 					
 					}
 
-                    $html .= '</li>';
-                }
-                $html .= '</ul>';
-            }
-        }
+                    //$html .= '</li>';
+                //}
+                //$html .= '</ul>';
+            //}
+        //}
 
         return $html;
     }

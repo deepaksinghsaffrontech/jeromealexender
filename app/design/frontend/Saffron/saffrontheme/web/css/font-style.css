@@ -48,4 +48,5 @@
 
 
 
-
+.navigation li.level0 { display: flex;  justify-content: center; }
+.navigation > ul { display:flex; }

@@ -1,0 +1,19 @@
+{
+    "name": "yotpo/module-yotpo",
+    "description": "Yotpo Reviews extension for Magento2",
+    "version": "2.8.1",
+    "require": {
+        "php": "~5.5.0|~5.6.0|^7.0",
+        "magento/framework": ">=100.1.0"
+    },
+    "type": "magento2-module",
+    "autoload": {
+        "files": [
+            "cli_commands.php",
+            "registration.php"
+        ],
+        "psr-4": {
+            "Yotpo\\Yotpo\\": ""
+        }
+    }
+}

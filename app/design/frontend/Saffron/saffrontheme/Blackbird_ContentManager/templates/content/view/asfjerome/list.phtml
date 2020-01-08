@@ -36,12 +36,19 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 
 <div class="breadcrumbs">
               <ul class="items">
-                  <li class="item home"><a href="index.html">Home</a></li>
+                  <li class="item home"><a href="<?php echo $this->getUrl(''); ?>">Home</a></li>
                   <li class="item">Ask Jerome</li>
               </ul>
           </div>
 
+	<div class="ask-container">
+
       <div class="sidebar-ask">
+		<div class="filter-tutorials-m">
+			<img src="<?php echo $this->getUrl('pub/media') .'themeimage/filter-icon.jpg' ?>" />
+			<span>Filter Tutorials</span>
+			<i class="fa fa-minus" aria-hidden="true"></i>
+		</div>
          <div class="sidebar-filter row-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
              <h5>Choose all that apply:</h5>
                <h6>I'm interested in:</h6>
@@ -108,7 +115,18 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
              </div>
 					
 					
-					
+			<div class="ask-jerome-banner banner-notfront row-col">
+					<figure>
+						<?= $block->getTextBefore() ?>
+					</figure>
+					<div class="caption-inner">
+					<?php if (!empty($block->getTitle())) : ?>
+					 <h1 class="title-main"><?= $block->getTitle() ?></h1>
+					<?php endif; ?>
+							
+						<?= $block->getTextAfter() ?>
+					</div>
+				</div>	
                     
 					
 					
@@ -116,18 +134,7 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
                       <!--ask-jerome-inner-->
                       <div class="ask-jerome-inner row-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
 						
-						<div class="ask-jerome-banner banner-notfront row-col">
-							<figure>
-								<?= $block->getTextBefore() ?>
-							</figure>
-							<div class="caption-inner">
-							<?php if (!empty($block->getTitle())) : ?>
-                             <h1 class="title-main"><?= $block->getTitle() ?></h1>
-	                        <?php endif; ?>
-									
-								<?= $block->getTextAfter() ?>
-							</div>
-						</div>
+						
 						
 						
 						
@@ -140,13 +147,18 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 				<?php if ($collection->count()) : ?>
             
 		         <?php foreach ($collection as $content) : ?>
+				 <?php $interested= (explode(",",$content->getData('asfjerome_like_to'))); 
+				 //print_r($interested);
+				 ?>
+				 <?php if($content->getData('asfjerome_like_to')== 'videos'){ ?>
+				
 				<div class="col-md-4 col-12">
 					<div class="popular-item">
 					<div class="video-col">
 					
 					<img src="<?= $content->getImage('thimble_images')?>" class="img-fluid" />
 			       <div class="play-tutorial">
-					<a href="javascript:void(0);" class="icon">
+					<a href="javascript:void(0);" class="icon click-me bt-action"  data="More Info" onclick="popupFunction(<?php echo $content->getId();?>)" id="video_titorial_<?php echo $content->getId(); ?>" >
 					<i class="fa"><img src="<?php echo $base_url ;?>pub/media/themeimage/arrow-right-white.png"></i>
 					<span>Play Tutorial</span>
 					</a>
@@ -154,11 +166,49 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 					</div>
 					<div class="info-col">
 				    <p><?= $content->getData('asfjerome_title'); ?></p>
-					<a href="<?= $content->getLinkUrl(); ?>" class="read-more-link">Read More</a>
+					<!--<a href="<?= $content->getLinkUrl(); ?>" class="read-more-link">Read More</a>-->
+					<?php //echo $content->getData('asfjerome_like_to') ;?>
 					</div>
 					</div>
 					</div>
+ <input type="hidden"  id="idvedio-<?php echo $content->getId();?>" name="vedio" value="<?= $content->getData('asfjerome_video'); ?>" >
+									
+					<?php } ?>	
 	   <?php endforeach; ?>
+	   
+	    <?php foreach ($collection as $content) : ?>
+				 <?php $interested= (explode(",",$content->getData('asfjerome_like_to'))); 
+				 //print_r($interested);
+				 ?>
+				 <?php if($content->getData('asfjerome_like_to')== 'read'){ ?>
+				
+				<div class="col-md-4 col-12">
+					<div class="popular-item">
+					<div class="video-col">
+					
+				    <img src="<?= $content->getImage('thimble_images')?>" class="img-fluid" />
+			        <div class="play-tutorial">
+					<a href="<?= $content->getLinkUrl(); ?>" class="icon click-me bt-action"  data="More Info"   >
+					<i class="fa"><img src="<?php echo $base_url ;?>pub/media/themeimage/arrow-right-white.png"></i>
+					<span>Read Tutorial</span>
+					</a>
+					
+					
+					</div>
+					</div>
+					<div class="info-col">
+				    <p><?= $content->getData('asfjerome_title'); ?></p>
+					<a href="<?= $content->getLinkUrl(); ?>" class="read-more-link">Read More</a>
+					<?php //echo $content->getData('asfjerome_like_to') ;?>
+					</div>
+					</div>
+					</div>
+					
+                     <input type="hidden"  id="idvedio-<?php echo $content->getId();?>" name="vedio" value="<?= $content->getData('asfjerome_video'); ?>" >
+					
+				 <?php } ?>	
+	   <?php endforeach; ?>
+	   
 	   <?php else: ?>
             <div class="message info empty">
                 <span><?= __('We can\'t find contents matching the selection.') ?></span>
@@ -181,23 +231,15 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 				</div>
 				</div>
 		<!--/popular-tutorials-->
-				              		
-                          
-
-                         
-
-                      </div>
+				   </div>
                     <!--/ask-jerome-inner-->
 
                    
                    
                     </div>
-            
-             
-
-
+        
           
-
+		</div>
 
 
 
@@ -219,10 +261,6 @@ $base_url = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfac
 					
 			
           
-
-		 
-
- 
 
 
 
@@ -261,7 +299,13 @@ require([
     jQuery(".btn1").click(function(){
 	var baseurl = '<?php echo $base_url.'ask-jerome'?>';	
 	window.location.href = baseurl;	
-	});	
+	});
+
+	//filter tutorials jQuery
+	jQuery(".filter-tutorials-m").on("click", function(){
+		jQuery(this).next(".sidebar-filter").slideToggle();	
+	})
+
    });
 });
 </script>

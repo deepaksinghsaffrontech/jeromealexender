@@ -24,8 +24,18 @@ $isLoggedIn = $customerSession->isLoggedIn() ;
 	<?php if($isLoggedIn): ?>
      <a href="javascript:void(0);" class="singin-link">
       <i class="fa"><img src="<?php echo $mediaUrl ;?>themeimage/user.png" alt=""></i>
-        <span class="">Sign Out</span>
+        <span class=""><?php echo   $customerSession->getCustomerData()->getFirstname(); ?>..</span>
        </a> 
+	   
+	 <div class="singin-dropdown">
+		<ul>
+		
+		<li><a href="<?php echo $this->getUrl('customer/account/create/');?>"><i class="fa"><img src="<?php echo $mediaUrl;?>themeimage/user2.png" alt=""></i >My Account</a></li>
+		<li><a href="<?php echo $this->getUrl('checkout/cart/');?>"><i class="fa"><img src="<?php echo $mediaUrl;?>themeimage/shopping_bag2.png" alt=""></i> Shopping Bag</a></li>
+		<li><a href="<?php echo $this->getUrl('customer-services/');?>"><i class="fa fa-headphones"></i> Customer Service</a></li>
+		<li><a href="<?php echo $this->getUrl('customer/account/logout/');?>">Sign Out</a></li>
+		</ul>
+	</div>  
 	<?php else :?>
 	<!--<a href="<?php echo $this->getUrl('customer/account/login/'); ?>" class="singin-link">
      <i class="fa"><img src="<?php echo $mediaUrl;?>themeimage/user.png" alt=""></i>
@@ -52,10 +62,8 @@ $isLoggedIn = $customerSession->isLoggedIn() ;
 <div data-block="minicart" class="minicart-wrapper bag-col">
     <a class="action showcart" href="<?= /* @escapeNotVerified */ $block->getShoppingCartUrl() ?>"
        data-bind="scope: 'minicart_content'">
-    <i class="fa"><img src="<?php echo $mediaUrl ;?>themeimage/shopping_bag.png" alt=""></i>
-
-	  <span class="bag"><?= /* @escapeNotVerified */ __('Bag') ?></span>
-        <span class="counter qty empty"
+    <i class="fa"><img src="<?php echo $mediaUrl ;?>themeimage/shopping_bag.png" alt="">
+	<span class="counter qty empty"
               data-bind="css: { empty: !!getCartParam('summary_count') == false }, blockLoader: isLoading">
             <span class="counter-number"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span>
             <span class="counter-label">
@@ -65,6 +73,10 @@ $isLoggedIn = $customerSession->isLoggedIn() ;
             <!-- /ko -->
             </span>
         </span>
+	</i>
+
+	  <span class="bag"><?= /* @escapeNotVerified */ __('Bag') ?></span>
+        
     </a>
     <?php if ($block->getIsNeedToDisplaySideBar()): ?>
         <div class="block block-minicart"
@@ -113,3 +125,14 @@ $isLoggedIn = $customerSession->isLoggedIn() ;
     }
   }
   </script>
+  
+  
+ <script>
+  require([
+    'Magento_Customer/js/customer-data'
+  ], function (customerData) {
+    var sections = ['cart'];
+    customerData.invalidate(sections);
+  });
+</script> 
+  

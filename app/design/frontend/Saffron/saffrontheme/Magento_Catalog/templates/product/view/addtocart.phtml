@@ -9,14 +9,25 @@
 /** @var $block \Magento\Catalog\Block\Product\View */
 ?>
 <?php $_product = $block->getProduct(); ?>
-<?php $buttonTitle = __('Add to Cart'); ?>
+
+
+<?php if(!empty($_product['shipping_info'])){?>
+<div class="product attribute overview">
+                          <h5>Shipping</h5>
+                          <p><?php echo $_product['shipping_info']; ?>.</p>
+                        </div>
+						
+<?php } ?>						
+<?php $buttonTitle = __('Add to Bag'); ?>
 <?php if ($_product->isSaleable()): ?>
 <div class="box-tocart">
     <div class="fieldset">
         <?php if ($block->shouldRenderQuantity()): ?>
-        <div class="field qty">
-            <label class="label" for="qty"><span><?= /* @escapeNotVerified */ __('Qty') ?></span></label>
-            <div class="control">
+        <div class="field qty qty-col">
+            <label class="label" for="qty"><span><?= /* @escapeNotVerified */ __('Select a Quantity') ?></span></label>
+            <div class="qty-container">
+              <div class="qty-input">
+			  <button type="button" class="btnMin">-</button>
                 <input type="number"
                        name="qty"
                        id="qty"
@@ -25,7 +36,9 @@
                        class="input-text qty"
                        data-validate="<?= $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>"
                        />
+				<button type="button" class="btnAdd">+</button>
             </div>
+			 </div>
         </div>
         <?php endif; ?>
         <div class="actions">
@@ -46,4 +59,27 @@
             "Magento_Catalog/js/validate-product": {}
         }
     }
+</script>
+
+<script type="text/javascript"> 
+require(["jquery"], function(jQuery){
+  jQuery(document).ready(function(){
+    jQuery('.btnAdd').click(function() {
+		//alert('+++')
+      var oldVal = jQuery(this).parent().find("input").val();
+      if ( parseFloat(oldVal) >= 1 ) {
+        var newVal = parseFloat(oldVal) + 1;
+        jQuery(this).parent().find("input").val(newVal);
+      }
+    });
+
+    jQuery('.btnMin').click(function() {
+      var oldVal = jQuery(this).parent().find("input").val();
+      if ( parseFloat(oldVal) >= 2 ) {
+        var newVal = parseFloat(oldVal) - 1;
+        jQuery(this).parent().find("input").val(newVal);
+      }
+    });
+  });
+  });
 </script>

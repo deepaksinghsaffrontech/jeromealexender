@@ -4,7 +4,7 @@
                 <div class="container">
                   <h3 class="title-main">Shop by Category</h3>
                   <div class="shop-category-carousel">
-                    <div class="owl-carousel owl-theme">
+                   
 	 <?php
         foreach ($subcats as $subcat) {
          $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
@@ -31,42 +31,7 @@
 		<?php endif ;?> 
 		<?php  }  ?>
      
-                </div>
+                
                   </div>
                 </div>
               </div>
-<script type="text/javascript">
-	
-	require([
-	  "jquery",
-	  "owlcarousel/minjs"
-	 ], function($,owlCarousel){
-		$(document).ready(function(){
-		    $('.front-shop-category .owl-carousel').owlCarousel({
-            loop: true,
-            margin: 50,
-            nav: true,
-            dots: false,
-            smartSpeed: 500,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                500: {
-                    items: 2
-                },
-                600: {
-                    items: 3
-                },
-                992: {
-                    items: 4
-                },
-                1199: {
-                    items: 6
-                }
-            }
-        });
-			
-		});
-	});
-</script>

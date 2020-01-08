@@ -1,23 +1,37 @@
 <!--footer-->
-<footer class="page-footer"  data-aos="fade" data-aos-offset="100"  data-aos-easing="ease-in-sine">
+<div id="popup-modal1" style="display:none;">
+   <div id="popup-image"></div>
+
+</div>
+
+<footer class="page-footer">
   <!--footer-top-->
   <div class="footer-top">
 	<div class="container">
-			<p>No Risk. Jerome Alexander <span>100% Satisfaction Guarantee</span>.</p>
-			<p>Free Shipping on Orders over $50</p>
-	</div>
+	<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-top')->toHtml(); ?>
+ </div>
   </div>    
 <div class="footer-bottom">
 <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_bottom')->toHtml(); ?>	
  </div>
 </footer>
+	
+
+<?php //echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('last_order_show')->toHtml(); ?>
+
+<span  id="lastorder" class="promotion-box"> </span>
 
 <div class="scroll-top">
   <a href="javascript:void(0);" class="scroll-link" id="goTop">
 	<i class="fa fa-angle-up"></i>
   </a>
 </div>	 
-	 
+<div id="loderpop" class="loader-wrapper">	
+	<div class="loader-inner">
+		<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+		<span class="sr-only">Loading...</span>
+	</div>
+</div>	 
 <script type="text/javascript">
     require(['aos'], function (AOS) {
 		AOS.init({
@@ -29,6 +43,76 @@
 		
 </script>
 
+
+
+
+
+
+
+
+<script>
+    require(
+        [
+            'jquery',
+            'Magento_Ui/js/modal/modal'
+        ],
+        function(
+            $,
+            modal
+        ) {
+            var options = {
+                type: 'popup',
+                responsive: true,
+                innerScroll: true,
+				removalDelay: 7000 ,
+                //title: 'popup modal title',
+                buttons: [{
+                    text: $.mage.__('Continue'),        
+                    class: '',
+                    click: function () {
+                        this.closeModal();
+                    }
+                }]
+			
+            };
+
+            var popup = modal(options, $('#popup-modal1'));
+            //function popupFunction(obj){ 
+			
+			//alert(var obj)
+			//$("#popup-modal1").modal("openModal");
+            //};
+
+        }
+    );
+</script>
+ 
+
+
+  <script type="text/javascript">
+function popupFunction(obj)
+{
+jQuery(document).ready(function($){
+  //alert(obj);
+  var vediourl = $("#idvedio-"+obj).val();
+  $("#loderpop").addClass("showpopup");
+  //alert(vediourl);
+  $.ajax({
+        url: "<?php echo $this->getBaseUrl()?>/shopall/index/Vediotitorial/",
+        type: "GET",
+        data:  {"id":obj,"vediourl":vediourl},
+        success: function(response){
+			//alert(response);
+			
+		$('#popup-image').html(response);	
+		$("#popup-modal1").modal("openModal");
+		 $("#loderpop").removeClass("showpopup");
+        }
+	  });
+ 
+});
+}
+</script>
 
 <script type="text/javascript">
 require([ 'jquery'], function($){
@@ -49,15 +133,53 @@ $(window).scroll(function() {
 		}, 800);
 		return false;
 	});
-
-   $(".sign-col .singin-link").on("click", function(){
+	
+	$(document).click( function(){
+		$(".singin-dropdown").fadeOut();
+		$(".sign-col .singin-link").removeClass("active");
+	})
+    $(".sign-col .singin-link").on("click", function(e){
+		e.stopPropagation();
 		$(this).toggleClass('active');
 		$(".singin-dropdown").slideToggle('slow');
 
 	 });
+	
+	
 
 	
- });	
+	
+	jQuery('body').on('click','.action-close',function() {
+		$('#popup-image').html('');
+		//alert('++');
+	});
+	
+	
+
+	
+	
+	
+	
+	});	
+
+
+setInterval(function(){
+	$('#lastorder').removeClass('promotion-show');	
+	
+  $.ajax({
+        url: "<?php echo $this->getBaseUrl()?>/shopall/index/lastorderdetail/",
+        type: "GET",
+        success: function(response){
+			//alert(response);
+			
+		$('#lastorder').html(response);	
+		 $('#lastorder').addClass('promotion-show');
+		
+		
+        }
+	  });
+},20000);
+
 
 
 });

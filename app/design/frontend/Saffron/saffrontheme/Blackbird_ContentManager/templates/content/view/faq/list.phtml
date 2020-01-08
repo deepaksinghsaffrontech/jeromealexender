@@ -31,14 +31,14 @@ $link = $block->getLink();
 <div class="banner-inner row-col" data-aos="fade" data-aos-offset="150"  data-aos-easing="ease-in-sine">
               <div class="container">
                   <h1 data-aos="fade" data-aos-offset="150"  data-aos-easing="ease-in-sine">How can we help you?</h1>
-                  <div class="header-search">
+                  <!--<div class="header-search">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="What are you looking for today?">
                         <button class="search-btn">
-                          <img src="images/search-icon.png" alt="">
+                          <img src="<?= $this->getUrl('pub/media') . 'themeimage/search-icon.png'; ?>" alt="Search">
                         </button>
                     </div>
-                  </div>
+                  </div>-->
                   <p>You can browse the FAQ topics below</p>
               </div>
           </div>
@@ -47,7 +47,7 @@ $link = $block->getLink();
           <!--breadcrumb-->
          <div class="breadcrumbs"  data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
               <ul class="items">
-                  <li class="item home"><a href="index.php">Home</a></li>
+                  <li class="item home"><a href="<?php echo $this->getUrl(''); ?>">Home</a></li>
                   <li class="item"><?= $block->getTitle() ?></li>
               </ul>
           </div>
@@ -55,20 +55,24 @@ $link = $block->getLink();
   
    
    
-
+      <div class="faq-discription"> <div class="text-before"><?= $block->getTextBefore() ?></div> 
         
-		
+	
+
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('faq-block')->toHtml(); ?>	
+	    <!--	
+		<?php $i = 1 ;?>
 		
 		<?php if ($collection->count()) : ?>
            <div class="faq-row row-col" data-aos="fade-up" data-aos-offset="150"  data-aos-easing="ease-in-sine">
             <?php foreach ($collection as $content) : ?>
-			<div class="faq-panel in">
+			<div class="faq-panel <?php if($i==1){echo 'in';}?>">
             <h5><?= $content->getData('faq_faq_question'); ?><i class="fa fa-angle-down"></i></h5>
             <div class="faq-body">
               <p> <?= $content->getData('faq_answer'); ?></p>
              </div>
             </div>
-			<?php endforeach; ?>
+			<?php $i++; endforeach; ?>
           </div>
 
            
@@ -79,7 +83,11 @@ $link = $block->getLink();
                 <span><?= __('We can\'t find contents matching the selection.') ?></span>
             </div>
         <?php endif; ?>
+		-->
 
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('faq_info')->toHtml(); ?>		
+		
+		
  <?php echo $block->getLayout()->createBlock('Saffron\Bestsellerproduct\Block\Bestsellerproduct')->setTemplate('bestsellerproduct.phtml')->toHtml();?> 
        
 <script>
@@ -94,30 +102,24 @@ $link = $block->getLink();
             // move the bottom outside main wrapper as well as it needs to have full width
             //$('.job-posting').detach().insertAfter('#maincontent');
         
+	//faq js
 	$(".faq-panel.in .faq-body").slideDown();
 	$(".faq-panel h5").on("click", function(){
 		$(this).next().slideToggle();
 		$(this).parent().siblings().children().next().slideUp();
 		$(this).parent().toggleClass("in").siblings().removeClass("in");
-		
 		$(".faq-panel h5 .fa").removeClass("fa-angle-up").addClass("fa-angle-down");
-		
 		if( $(this).parent().hasClass("in")  ){
 			$(this).children().addClass("fa-angle-up").removeClass("fa-angle-down");
 		}
 	});
-	//end faq js
-
-	//faq js
 	$(".question-panel.in .question-body").slideDown();
 	$(".question-click h5").on("click", function(){
 		$(this).parent().next().slideToggle();
 		$(this).parent().parent().siblings().children().next().slideUp();
 		$(this).parent().toggleClass("in").siblings().removeClass("in");
-		
-				
-		
 	});
+	//end faq js
 		
 		})
     })

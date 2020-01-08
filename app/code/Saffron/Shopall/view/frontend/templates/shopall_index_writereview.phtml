@@ -1,0 +1,114 @@
+<div class="customer-review " data-aos="fade-up" data-aos-offset="150" data-aos-easing="ease-in-sine">
+<div class="write-review-form">
+<div class="title-col">
+<div class="form-group">
+<h1>Write a Review</h1>
+</div>
+</div>
+
+<form class="form contact" id="writereview-form" action="<?php echo $this->getUrl('shopall/index/writereview');?>" id="contact-form" method="post" data-hasrequired="* Required Fields" novalidate="novalidate">
+	<div class="row">
+		<div class="col-12 store-col">
+			<div class="form-group"><label for="">Store <span>*</span></label>
+
+			<!--<div class="skin-radio-col rating-star">
+
+			<div class="custom-control custom-radio"><input id="customRadio13" name ="star" value="1" class="custom-control-input  required-entry" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio13"><i class="fa fa-star-o"></i></label></div>
+			<div class="custom-control custom-radio"><input id="customRadio14" name ="star" value="2" class="custom-control-input  required-entry" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio14"><i class="fa fa-star-o"></i></label></div>
+			<div class="custom-control custom-radio"><input id="customRadio15" name ="star" value="3" class="custom-control-input  required-entry" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio15"><i class="fa fa-star-o"></i></label></div>
+			<div class="custom-control custom-radio"><input id="customRadio16" name ="star" value="4" class="custom-control-input  required-entry" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio16"><i class="fa fa-star-o"></i></label></div>
+			<div class="custom-control custom-radio"><input id="customRadio17" name ="star" value="5" class="custom-control-input  required-entry" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio17"><i class="fa fa-star-o"></i></label></div>
+			</div> -->
+			
+			<span class="rating-star rating-star-new"  id="rating-form">
+					<input type="radio" name="rating" value="1"><span class="star"></span>
+
+				    <input type="radio" name="rating" value="2"><span class="star"></span>
+
+				    <input type="radio" name="rating" value="3"><span class="star"></span>
+
+				    <input type="radio" name="rating" value="4"><span class="star"></span>
+
+				    <input type="radio" name="rating" value="5"><span class="star"></span>
+				</span>
+
+			</div>
+		</div>
+
+
+		<div class="col-12 name-col">
+			<div class="form-group"><label for="">First Name <span>*</span></label> 
+			<input class="form-control" type="text" name="user_name"  value="" data-validate="{required:true}"/>
+			</div>
+		</div>
+
+		<div class="col-12 email-col">
+			<div class="form-group"><label for="">Email <span>*</span></label> 
+			<input class="form-control" type="text" name="email"  value="" data-validate="{required:true, 'validate-email':true}"/>
+			</div>
+		</div>
+
+		<div class="col-12 review-comment-col">
+			<div class="form-group"><label for="">Review <span>*</span></label> <textarea id="" class="form-control" name="review" value="" rows="10" data-validate="{required:true}"></textarea></div>
+		</div>
+			   
+		<div class="col-12 age-radio-col">
+			<div class="form-group"><label for="">Age</label>
+			<div class="custom-control custom-radio"><input id="customRadio1" name="age" value="65+" class="custom-control-input" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio1">65+</label></div>
+			<div class="custom-control custom-radio"><input id="customRadio2"  name="age" value="55-64" class="custom-control-input" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio2">55-64</label></div>
+			<div class="custom-control custom-radio"><input id="customRadio3" name="age" value="45-54" class="custom-control-input" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio3">45-54</label></div>
+			<div class="custom-control custom-radio"><input id="customRadio4" name="age" value="35-44" class="custom-control-input" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio4">35-44</label></div>
+			<div class="custom-control custom-radio"><input id="customRadio5" name="age" value="25-34" class="custom-control-input" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio5">25-34</label></div>
+			<div class="custom-control custom-radio"><input id="customRadio6" name="age" value="18-24" class="custom-control-input" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio6">18-24</label></div>
+			</div>
+		</div>
+		<div class="col-12 skin-radio-col">
+			<div class="form-group"><label for="">Skin Type</label>
+			<div class="custom-control custom-radio"><input id="customRadio7" name ="skin" value="Normal" class="custom-control-input  " name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio7">Normal</label></div>
+			<div class="custom-control custom-radio"><input id="customRadio8" name ="skin" value="Dry" class="custom-control-input " name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio8">Dry</label></div>
+			<div class="custom-control custom-radio"><input id="customRadio9" name ="skin" value="Oily" class="custom-control-input  " name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio9">Oily</label></div>
+			<div class="custom-control custom-radio"><input id="customRadio10" name ="skin" value="Combination" class="custom-control-input  " name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio10">Combination</label></div>
+			<div class="custom-control custom-radio"><input id="customRadio11" name ="skin" value="Lines" class="custom-control-input" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio11">Lines</label></div>
+			<div class="custom-control custom-radio"><input id="customRadio12" name ="skin" value="Acne Prone" class="custom-control-input" name="customRadio" type="radio" /> <label class="custom-control-label" for="customRadio12">Acne Prone</label></div>
+			</div>
+		</div>	   
+			   
+		<div class="col-12 done-col">	   
+			<div class="form-group">
+			 <button class="action submit btn btn-primary done-btn" title="Submit">Done</button>
+			</div>
+		</div>  
+  </div> 
+</form>
+</div>
+</div>
+
+
+
+
+<script type="text/x-magento-init">
+    {
+        "#writereview-form": {
+            "validation": {}
+        }
+    }
+</script>
+
+<script type="text/javascript"> 
+require(["jquery"], function(jQuery){
+	
+	jQuery("#writereview-form .store-col .custom-radio label").on("click", function(){
+		jQuery(this).toggleClass('active');
+	});
+	
+	jQuery('#rating-form').on('change','[name="rating"]',function(){
+	jQuery('#selected-rating').text(jQuery('[name="rating"]:checked').val());
+   });
+
+
+}); 
+
+
+
+</script>	
+

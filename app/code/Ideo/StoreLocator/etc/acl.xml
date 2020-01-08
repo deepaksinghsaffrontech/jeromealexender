@@ -9,12 +9,12 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Ideo_Core::configuration">
+                <!--<resource id="Ideo_Core::configuration">
                     <resource id="Ideo_StoreLocator::configuration" title="Store Locator" sortOrder="10">
                         <resource id="Ideo_StoreLocator::stores" title="Stores" sortOrder="10" />
                         <resource id="Ideo_StoreLocator::categories" title="Categories" sortOrder="20" />
                     </resource>
-                </resource>
+                </resource>-->
             </resource>
         </resources>
     </acl>
