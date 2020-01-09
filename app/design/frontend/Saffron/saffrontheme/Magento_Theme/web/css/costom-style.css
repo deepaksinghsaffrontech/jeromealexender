@@ -206,3 +206,16 @@ body.customer-account-create .page-wrapper .page-main {
 	padding-top: 5px;
     padding-bottom: 5px;
 }
+.product-info-main .stock.unavailable span {
+    color: white;
+    text-align: right;
+    position: relative;
+}
+.product-info-main .stock.unavailable span:before {
+    position: absolute;
+    content: "Sold Out";
+    color: red;
+    font-size: 15px;
+    text-align: right;
+    right: 0;
+}
