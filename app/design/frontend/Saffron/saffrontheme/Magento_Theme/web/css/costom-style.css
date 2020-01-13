@@ -219,3 +219,28 @@ body.customer-account-create .page-wrapper .page-main {
     text-align: right;
     right: 0;
 }
+.customer-account-createpassword  main#maincontent {
+    text-align: center;
+    width: 100%;
+    padding: 50px 0;
+    background: #f9f8f8;
+}
+
+.customer-account-createpassword main#maincontent h1.page-title {
+    font-family: "BentonSans-Regular";
+    font-size: 28px;
+}
+
+.customer-account-createpassword main#maincontent form {
+    text-align: left;
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5%;
+    background: #fff;
+}
+
+.customer-account-createpassword main#maincontent form button.action.submit {
+    padding: 14px 20px;
+    font-size: 18px;
+}
