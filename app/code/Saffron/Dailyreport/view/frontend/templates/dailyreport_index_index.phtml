@@ -1,1 +1,14 @@
-Demo Page
+ <?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+/** @var \Magento\Catalog\Model\ResourceModel\Product\Collection $productCollection */
+$productCollection = $objectManager->create('Magento\Sales\Model\ResourceModel\Report\Collection');
+/** Apply filters here */
+$collection = $productCollection->addAttributeToSelect('*')
+            ->load();
+
+
+echo count($collection);
+foreach ($collection as $product){
+     echo 'Name  =  '.$product->getName().'<br>';
+}  
+?>
