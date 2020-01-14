@@ -180,7 +180,18 @@ setInterval(function(){
 	  });
 },20000);
 
-
+jQuery( document ).ready(function() {
+   jQuery('input[name="postcode"]').bind('keyup','keydown', function(event) {
+    var inputLength = event.target.value;
+	var fisrtzip  = inputLength.slice(0, 1)
+     if(fisrtzip == '-'){
+		//alert('please remove -') ;
+		jQuery('input[name="postcode"]').val(inputLength.slice(1))
+		
+	}
+  
+  }) ;
+});
 
 });
 </script>	
