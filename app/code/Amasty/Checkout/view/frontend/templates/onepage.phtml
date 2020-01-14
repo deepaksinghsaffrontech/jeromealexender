@@ -62,3 +62,22 @@ $helper = $block->getData('amcheckout_helper');
     <script src="https://maps.googleapis.com/maps/api/js?key=<?= $block->stripTags($apiKey) ?>&libraries=places&callback=amasty_checkout_gmaps_init" async defer></script>
     <?php endif ?>
 </div>
+
+
+<script type="text/javascript">
+require([ 'jquery'], function($){
+jQuery( document ).ready(function() {
+   jQuery('input[name="postcode"]').bind('keyup','keydown', function(event) {
+    var inputLength = event.target.value;
+	var fisrtzip  = inputLength.slice(0, 1)
+     if(fisrtzip == '-'){
+		//alert('please remove -') ;
+		jQuery('input[name="postcode"]').val(inputLength.slice(1))
+		
+	}
+  
+  }) ;
+});
+
+});
+</script>	
