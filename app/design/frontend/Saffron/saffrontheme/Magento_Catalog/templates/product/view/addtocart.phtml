@@ -26,7 +26,7 @@
         <div class="field qty qty-col">
             <label class="label" for="qty"><span><?= /* @escapeNotVerified */ __('Select a Quantity') ?></span></label>
 			
-			<?php echo $_product['show_qty']; ?>
+			<?php if($_product['show_qty'] != '1'){ ?>
             <div class="qty-container">
               <div class="qty-input">
 			  <button type="button" class="btnMin">-</button>
@@ -42,6 +42,7 @@
             </div>
 			 </div>
 			 
+			<?php }?>
 			 
         </div>
         <?php endif; ?>
