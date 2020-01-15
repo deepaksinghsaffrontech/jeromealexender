@@ -26,7 +26,7 @@
         <div class="field qty qty-col">
             <label class="label" for="qty"><span><?= /* @escapeNotVerified */ __('Select a Quantity') ?></span></label>
 			
-			<?php echo $_product['show_qty']; ?>
+			<?php echo "<pre>";print_r($_product->getData()); ?>
             <div class="qty-container">
               <div class="qty-input">
 			  <button type="button" class="btnMin">-</button>
