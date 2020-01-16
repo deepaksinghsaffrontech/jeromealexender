@@ -76,7 +76,7 @@ $orders =array();
 $now = new \DateTime();
 
 $date = date('m/d/Y h:i:s', time());
-$prev_date = date('Y-m-d h:i:s', strtotime($date .' -3 day'));
+$prev_date = date('Y-m-d h:i:s', strtotime($date .' -2 day'));
 
 
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
