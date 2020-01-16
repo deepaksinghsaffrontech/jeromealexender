@@ -16,8 +16,7 @@ public function getAllproducts($lastorderId)
     $orderItems = $order->getAllItems();
     $itemQty = array();
 	$billingAddress = $order->getBillingAddress();
-    $customerName = $billingAddress->getFirstname() . ' ' . 
-    $billingAddress->getLastname();
+    $customerName = $billingAddress->getFirstname() ;
 	$billingstate=$order->getBillingAddress()->getRegion();
 	$itemQty['order_date']= $order->getCreatedAt() ;
 	$itemQty['order_name']= $customerName ;
