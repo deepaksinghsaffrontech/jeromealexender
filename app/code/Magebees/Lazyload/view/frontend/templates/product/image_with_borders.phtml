@@ -12,7 +12,7 @@ if(isset($config['loadingicon'])) {
       style="width:<?= /* @escapeNotVerified */ $block->getWidth() ?>px;">
     <span class="product-image-wrapper"
           style="padding-bottom: <?= /* @escapeNotVerified */ ($block->getRatio() * 100) ?>%;">
-		<img class="product-image-photo magebees_lazyload"
+		<img class="product-image-photo magebees_lazyload" style="width: 20% !important;"
             <?= /* @escapeNotVerified */ $block->getCustomAttributes() ?>
              src="<?= /* @escapeNotVerified */ $image_url ?>"			 
              data-src="<?= /* @escapeNotVerified */ $block->getImageUrl() ?>"
