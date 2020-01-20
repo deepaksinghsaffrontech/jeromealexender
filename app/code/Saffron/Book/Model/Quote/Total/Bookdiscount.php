@@ -30,7 +30,7 @@ class Bookdiscount extends \Magento\Quote\Model\Quote\Address\Total\AbstractTota
 		$subtotal = $total -> getTotalAmount('subtotal');
 		if ($enabled && $minimumOrderAmount <= $subtotal) {
 			// $bookdiscount = $quote->getbookdiscount();
-		    $bookdiscount=$this->helperData->getCustomFeeBookdiscount();
+		    $bookdiscount=  -12 ; //$this->helperData->getCustomFeeBookdiscount();
 			// Try to test with sample value
 			//$bookdiscount = 12;
 			$total -> setTotalAmount('bookdiscount', $bookdiscount);
