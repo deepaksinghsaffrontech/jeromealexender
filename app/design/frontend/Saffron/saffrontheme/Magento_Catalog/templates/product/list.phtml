@@ -387,7 +387,7 @@ $(document).ready(function($){
   var n = str.includes("?");
    var url = new URL(str);
   var c = url.searchParams.get("id");
-	if((n == true)){
+	if((C != '')){
     $("#loderpop").addClass("showpopup");
 	 $.ajax({
         url: "<?php echo $this->getBaseUrl()?>shopall/index/shopcategries/",
