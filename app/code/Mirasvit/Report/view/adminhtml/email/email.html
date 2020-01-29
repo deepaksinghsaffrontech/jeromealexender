@@ -10,21 +10,36 @@
 <body>
 
 {{inlinecss file="Mirasvit_Report::css/_email.css"}}
-<img src="https://jeromealexander.com/pub/media/logo/stores/1/logo-header-1.png.png" title="jeromealexander" alt="jeromealexander" class="email-logo">
-<table class="wrapper" width="100%">
-    <tr>
-        <td class="wrapper-inner" align="center">
-            <table class="main" align="center">
-                <tr>
-                    <td class="main-content">
-                        <h1>{{var subject}}</h1>
+<table border="0" cellpadding="0"; cellspacing="0"; style="max-width:600px; width:100%; margin:0 auto;">
+	<tbody>
+			<tr>
+				<td align="center">
+					<img src="https://jeromealexander.com/pub/media/logo/stores/1/logo-header-1.png.png" title="jeromealexander" alt="jeromealexander" class="email-logo" style="max-width:200px; width:100%;">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table class="wrapper" width="100%">
+						<tr>
+							<td class="wrapper-inner" align="center">
+								<table class="main" align="center">
+									<tr>
+										<td class="main-content">
+											<h1>{{var subject}}</h1>
 
-                        <div class="mst-report__email">
-                            {{var blocks|raw}}
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
+											<div class="mst-report__email">
+												{{var blocks|raw}}
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+	</tbody>
 </table>
+
+
+
