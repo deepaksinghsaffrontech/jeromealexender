@@ -247,3 +247,20 @@ body.customer-account-create .page-wrapper .page-main {
 .price-label {
     display: none !important;
 }
+.cms-container table, .cms-container table th, .cms-container table td {
+border: 1px solid;
+}
+
+.cms-container table {
+margin: 20px 0;
+}
+
+.cms-table {
+    float: left;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.cms-table table {
+    width: 100%;
+}
