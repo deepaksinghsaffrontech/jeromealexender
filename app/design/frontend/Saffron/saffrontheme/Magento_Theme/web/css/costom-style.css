@@ -244,3 +244,6 @@ body.customer-account-create .page-wrapper .page-main {
     padding: 14px 20px;
     font-size: 18px;
 }
+.price-label {
+    display: none !important;
+}
