@@ -264,3 +264,7 @@ margin: 20px 0;
 .cms-table table {
     width: 100%;
 }
+.cms-table table {
+    width: 100%;
+    table-layout: fixed;
+}
