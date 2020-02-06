@@ -41,12 +41,12 @@
       data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>"
       data-mage-init='{"validation":{}}'>
   
-       <div class="field name form-group required">
+       <div class="field name form-group half required">
             <label class="label" for="name"><?= $block->escapeHtml(__('First Name')) ?> <span>*</span></label>
            <input name="name" id="name" title="<?= $block->escapeHtmlAttr(__('First Name')) ?>" value="<?= $block->escapeHtmlAttr($this->helper('Magento\Contact\Helper\Data')->getPostValue('name') ?: $this->helper('Magento\Contact\Helper\Data')->getUserName()) ?>" class="input-text" type="text" data-validate="{required:true}"/>
        </div>
 	   
-	   <div class="field name form-group required">
+	   <div class="field name form-group half required">
             <label class="label" for="name"><?= $block->escapeHtml(__('Last Name')) ?> <span>*</span></label>
            <input name="lastname" id="lastname" title="<?= $block->escapeHtmlAttr(__('Last Name')) ?>" value="<?= $block->escapeHtmlAttr($this->helper('Magento\Contact\Helper\Data')->getPostValue('lastname') ?: $this->helper('Magento\Contact\Helper\Data')->getUserName()) ?>" class="input-text" type="text" data-validate="{required:true}"/>
        </div>
