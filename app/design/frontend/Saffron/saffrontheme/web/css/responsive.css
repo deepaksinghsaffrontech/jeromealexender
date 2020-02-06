@@ -157,7 +157,9 @@
 	form#writereview-form .name-col input,
 	form#writereview-form	.email-col input { max-width: 600px; }
 	.frontBanner-mobile { display:none; }
-	
+	.form-group.half { width: 50%;}
+     form#contact-form {margin: 0 -15px;}
+    form#contact-form .form-group {padding: 0 15px;}
 	
 /*==============magento-common-classes-css=================*/
     .column.main{
