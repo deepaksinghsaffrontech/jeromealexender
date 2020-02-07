@@ -3567,3 +3567,4 @@ ol.post-list {  padding: 0; }
     text-decoration: line-through;
     margin-left: 4px;
 }
+.product-info-main .product-info-price .price-box { min-width:200px }
