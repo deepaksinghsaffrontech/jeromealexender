@@ -3555,4 +3555,15 @@ ol.post-list {  padding: 0; }
     min-width: 100%;
     width: 100%;
 }
+
+.product-info-main .stock.unavailable span:before {width:90px;}
 .form-control {  height: 44px; }
+.price-box.price-final_price span.special-price, .price-box.price-final_price .old-price {
+    display: inline-block;
+}
+
+.price-box.price-final_price .old-price .price {
+    font-family: "BentonSans-regular";
+    text-decoration: line-through;
+    margin-left: 4px;
+}

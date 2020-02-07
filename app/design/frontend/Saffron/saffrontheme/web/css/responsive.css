@@ -180,7 +180,9 @@
     .product.media { width:57%; float: left;}
     .product-info-main { float:right; width:40%;  }
 
-    
+  .navigation li.level0:nth-last-of-type(2) {
+    flex: 1.3;
+   }
 }
 
 @media (min-width: 992px) {
