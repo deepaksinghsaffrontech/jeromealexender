@@ -1010,7 +1010,12 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .blog-post-view h1 { font-size:24px; }
 .blog-post-view .page-main .page-title-wrapper { width:100%; padding:0; }
 .frontBanner-desk { display:none; }
-
+.front-banner .owl-theme .owl-nav button.owl-next, .front-banner .owl-theme .owl-nav button.owl-next:hover {
+    right: 5px;
+}
+.front-banner .owl-theme .owl-nav button.owl-prev, .front-banner .owl-theme .owl-nav button.owl-prev:hover {
+    left: 5px;
+}
 }
 
 
