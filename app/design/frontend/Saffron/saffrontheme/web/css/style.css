@@ -3571,3 +3571,10 @@ ol.post-list {  padding: 0; }
 .price-box.price-final_price span.normal-price {
     display: inline-block;
 }
+.front-banner .owl-theme .owl-nav button.owl-prev, .front-banner .owl-theme .owl-nav button.owl-prev:hover {
+    left: 20px;
+}
+
+.front-banner .owl-theme .owl-nav button.owl-next,  .front-banner .owl-theme .owl-nav button.owl-next:hover {
+    right: 20px;
+}
