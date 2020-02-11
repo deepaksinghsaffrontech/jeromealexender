@@ -3578,3 +3578,7 @@ ol.post-list {  padding: 0; }
 .front-banner .owl-theme .owl-nav button.owl-next,  .front-banner .owl-theme .owl-nav button.owl-next:hover {
     right: 20px;
 }
+
+.front-banner .owl-theme .owl-nav {
+    margin: 0;
+}
