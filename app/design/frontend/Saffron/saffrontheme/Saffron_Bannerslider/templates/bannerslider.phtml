@@ -59,13 +59,13 @@ $banners = $block->getBannerSlider();
 	 ], function($,owlCarousel){
 		$(document).ready(function(){
 		$('.front-banner .owl-carousel').owlCarousel({
-            loop: false,
+            loop: true,
             margin: 40,
-            nav: false,
+            nav: true,
             dots: false,
-            autoplay: false,
-	          touchDrag: false,
-            mouseDrag: false,
+            autoplay: true,
+	        touchDrag: true,
+            mouseDrag: true,
             items:1,
             smartSpeed: 500,
         });
