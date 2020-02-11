@@ -53,7 +53,7 @@
     .sidebar-ask { width: 20.83333333%; float: left; padding-right: 2%;    }
     .ask-jerome-banner { float: left; width: 79.16666667%;    }
 	.column-ask {   width: calc(100% - 20.83333333%);   float: left; }
-	.contentmanager-contentlist-1 .column-ask {  margin-left: 20.83333333%;  width: calc(100% - 20.83333333%);   float: left; }
+	.contentmanager-contentlist-1 .column-ask {    width: calc(100% - 20.83333333%);   float: left; }
 	.filter-tutorials-m { display:none; }
     .page-main { padding:0; }
     .navigation .level0.active>.level-top, .navigation .level0.has-active>.level-top { 
@@ -306,7 +306,7 @@
 	.page-layout-2columns-left .sidebar-main	{ width: 24.83333333%; }
     .column-ask, .page-layout-2columns-left .column.main,
 	.ask-jerome-banner, .store-locator-module	{ width: 75.16666667%;  }
-	.contentmanager-contentlist-1 .column-ask { margin-left: 24.833333%;  width: calc(100% - 24.83333333%);	}
+	.contentmanager-contentlist-1 .column-ask {   width: calc(100% - 24.83333333%);	}
 	
 	.side-btn .btn { padding: 10px 5px;  font-size: 16px;	}
 	.sidebar-category li.shop-item .item-name {	
