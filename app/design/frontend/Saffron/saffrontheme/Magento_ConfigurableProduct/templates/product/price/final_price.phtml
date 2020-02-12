@@ -19,24 +19,23 @@ $finalPriceModel = $block->getPriceType('final_price');
 $idSuffix = $block->getIdSuffix() ? $block->getIdSuffix() : '';
 $schema = ($block->getZone() == 'item_view') ? true : false;
 ?>
-
 <span class="normal-price">
     <?php
-        $arguments = [
-            'display_label' => __('As low as'),
-            'price_id' => $block->getPriceId('product-price-' . $idSuffix),
-            'price_type' => 'finalPrice',
-            'include_container' => true,
-            'schema' => $schema
-        ];
-
-        /* @noEscape */ echo $block->renderAmount($finalPriceModel->getAmount(), $arguments);
+    $arguments = [
+        'display_label' => __('As low as'),
+        'price_id' => $block->getPriceId('product-price-' . $idSuffix),
+        'price_type' => 'finalPrice',
+        'include_container' => true,
+        'schema' => $schema,
+    ];
+    /* @noEscape */ echo $block->renderAmount($finalPriceModel->getAmount(), $arguments);
     ?>
 </span>
 
 <?php //if (!$block->isProductList() && $block->hasSpecialPrice()): ?>
-    <?php if ($block->hasSpecialPrice()): ?>
-	<span class="old-price sly-old-price">
+<?php if ($block->hasSpecialPrice()): ?>
+    <!--<span class="old-price sly-old-price no-display">-->
+        <span class="old-price sly-old-price">
         <?php /* @escapeNotVerified */ echo $block->renderAmount($priceModel->getAmount(), [
             'display_label'     => __('Regular Price'),
             'price_id'          => $block->getPriceId('old-price-' . $idSuffix),
@@ -58,3 +57,31 @@ $schema = ($block->getZone() == 'item_view') ? true : false;
         </span>
     <?php endif?>
 <?php endif; ?>
+
+
+
+
+<?php if($finalPriceModel->getAmount() < $priceModel->getAmount()) : ?>
+        <!--<span class="old-price sly-old-price no-display config-old" style="text-decoration: line-through;">
+            <?= $block->renderAmount($priceModel->getAmount(), [
+                'price_id'          => $block->getPriceId('old-price-' . $idSuffix),
+                'price_type'        => 'oldPrice',
+                'include_container' => true,
+                'skip_adjustments'  => true
+            ]); ?>
+        </span> -->
+        <?php 
+
+            $array = (array)$priceModel->getAmount();
+            $prefix = chr(0).'*'.chr(0);
+            $price = $array[$prefix.'amount'];
+
+            $array = (array)$finalPriceModel->getAmount();
+            $prefix = chr(0).'*'.chr(0);
+            $finalPrice = $array[$prefix.'amount'];
+
+            $percentage = 100 - round(($finalPrice / $price)*100);
+
+            echo "<span class='percent-amt'> You Save: ".$percentage."%</span>";
+        ?>
+    <?php endif; ?>
