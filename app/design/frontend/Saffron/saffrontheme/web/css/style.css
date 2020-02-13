@@ -3439,7 +3439,7 @@ form#writereview-form .form-group {  margin-bottom: 40px; }
 .fotorama__wrap--css3 .fotorama__arr:not(:focus), .fotorama__wrap--css3 .fotorama__fullscreen-icon:not(:focus) {
 	display:block !important;
 }
-.fotorama__stage__frame .fotorama__img { max-height:400px; }
+.fotorama__stage__frame .fotorama__img { max-height:700px; }
 .fotorama__nav-wrap.fotorama__nav-wrap--horizontal {  margin-top: 30px; }
 .item:hover .bss-bt-quickview {  opacity: 1; }
 .nav-sections .header.links li.link.wishlist { display: none; }
