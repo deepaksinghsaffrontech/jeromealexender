@@ -107,7 +107,10 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                            ?>
 							</p>
                            <span class="price-span"><?= /* @escapeNotVerified */ $block->getProductPrice($_product) ?>
-						   <?php echo $_product['bogo']; ?>
+						   <?php  if($_product['bogo']=='1'){
+								echo '<span class="list-bogo">BOGO</span>'
+								
+							} ?>
                         </span>
                       </div>
 						
@@ -274,7 +277,10 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                            ?>
 					</p>
                            <span class="price-span"><?= /* @escapeNotVerified */ $block->getProductPrice($_product) ?>
-						    <?php echo $_product['bogo']; ?>
+						    <?php  if($_product['bogo']=='1'){
+								echo '<span class="list-bogo">BOGO</span>'
+								
+							} ?>
                         </span>
                       </div>
 						
