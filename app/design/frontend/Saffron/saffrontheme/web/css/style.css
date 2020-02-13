@@ -3582,3 +3582,14 @@ ol.post-list {  padding: 0; }
 .front-banner .owl-theme .owl-nav {
     margin: 0;
 }
+span.percent-amt {
+    color: green;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "BentonSans-regular";
+}
+
+span.list-bogo {
+    color: #e49479;
+    font-size: 14px;
+}
