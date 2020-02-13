@@ -3593,3 +3593,8 @@ span.list-bogo {
     color: #e49479;
     font-size: 14px;
 }
+span.detail-list-bogo {
+    color: #e49479;
+    font-size: 14px;
+    float: right;
+}
