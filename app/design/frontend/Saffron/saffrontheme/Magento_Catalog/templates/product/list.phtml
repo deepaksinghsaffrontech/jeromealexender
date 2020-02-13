@@ -107,6 +107,7 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                            ?>
 							</p>
                            <span class="price-span"><?= /* @escapeNotVerified */ $block->getProductPrice($_product) ?>
+						   <?php echo $_product['bogo']; ?>
                         </span>
                       </div>
 						
@@ -273,6 +274,7 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                            ?>
 					</p>
                            <span class="price-span"><?= /* @escapeNotVerified */ $block->getProductPrice($_product) ?>
+						    <?php echo $_product['bogo']; ?>
                         </span>
                       </div>
 						
