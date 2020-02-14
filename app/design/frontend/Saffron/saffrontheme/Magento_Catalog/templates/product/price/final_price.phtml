@@ -9,6 +9,15 @@
 ?>
 
 <?php
+
+
+$productId = $block->getSaleableItem()->getId();
+
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$productStockObj = $objectManager->get('Magento\CatalogInventory\Api\StockRegistryInterface')->getStockItem($productId);
+
+
 /** @var \Magento\Catalog\Pricing\Render\FinalPriceBox $block */
 
 /** ex: \Magento\Catalog\Pricing\Price\RegularPrice */
@@ -22,6 +31,7 @@ $idSuffix = $block->getIdSuffix() ? $block->getIdSuffix() : '';
 $schema = ($block->getZone() == 'item_view') ? true : false;
 ?>
 <?php if ($block->hasSpecialPrice()): ?>
+<?php if ($productStockObj->getIsInStock()):?> 
     <span class="special-price">
         <?php /* @escapeNotVerified */ echo $block->renderAmount($finalPriceModel->getAmount(), [
             'display_label'     => __('Special Price'),
@@ -60,7 +70,7 @@ $schema = ($block->getZone() == 'item_view') ? true : false;
         </span>
     <?php endif?>
 <?php endif; ?>
-
+<?php endif; ?> 
 
 <?php if($finalPriceModel->getAmount() < $priceModel->getAmount()) : ?>
        <!-- <span class="old-price sly-old-price no-display config-old" style="text-decoration: line-through;">
