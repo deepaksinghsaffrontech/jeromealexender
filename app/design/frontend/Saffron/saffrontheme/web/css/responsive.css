@@ -1016,6 +1016,9 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .front-banner .owl-theme .owl-nav button.owl-prev, .front-banner .owl-theme .owl-nav button.owl-prev:hover {
     left: 5px;
 }
+.catalog-product-view .product.media .gallery-placeholder {
+    margin: 0 auto;
+}
 }
 
 
