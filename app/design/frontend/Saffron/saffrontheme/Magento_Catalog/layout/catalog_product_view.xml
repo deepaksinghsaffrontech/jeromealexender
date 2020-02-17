@@ -19,6 +19,11 @@
                 <argument translate="true" name="title" xsi:type="string">Skincare Active</argument>
              </arguments>
           </block>
+		  <block class="Magento\Catalog\Block\Product\View" name="ingredients.tab" as="ingredients " template="product/view/ingredients.phtml" group="detailed_info" >
+             <arguments>
+                <argument translate="true" name="title" xsi:type="string">Ingredients</argument>
+             </arguments>
+          </block>
 	</referenceBlock>
 	
         <move element="page.main.title" destination="product.info.main" before="-"/>

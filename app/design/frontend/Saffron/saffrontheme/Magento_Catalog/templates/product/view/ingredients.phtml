@@ -1,0 +1,10 @@
+
+<?php
+
+$_product = $block->getProduct();
+
+$myattribute = $_product->getResource()->getAttribute('ingredients')->getFrontend()->getValue($_product);
+
+echo $myattribute;
+
+?>
