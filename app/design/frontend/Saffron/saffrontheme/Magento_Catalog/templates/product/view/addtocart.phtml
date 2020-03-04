@@ -14,6 +14,16 @@
 <?php echo $_product['foundation_shades']; ?>
 <?php echo $_product['key_of_group']; ?>
 
+<?php 
+
+$swatchHelper=$objectManager->get("Magento\Swatches\Helper\Media");
+
+// brand logo is my Visual Swatch attribute 
+$optionIdvalue = $_product['foundation_shades']; 
+$swatchHelper->getSwatchesByOptionsId($optionIdvalue);
+echo $hashcodeData[$optionIdvalue]['value'];
+?>
+
 <?php
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();  
 $prodColl = $objectManager->create('Magento\Catalog\Model\ResourceModel\Product\Collection');
