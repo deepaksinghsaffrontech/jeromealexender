@@ -24,7 +24,7 @@ $collection = $prodColl->addAttributeToSelect('*')
                        ->load();
   foreach ($collection as  $item) {
   echo $item->getSku() ;
-  echo $item->getUrl() ;
+  //echo $item->getUrl() ;
 
 $productRepository = $objectManager->get('\Magento\Catalog\Model\ProductRepository');
 $productObj = $productRepository->get($item->getSku());
