@@ -13,9 +13,6 @@
 <?php if($_product['make_simple_as_group'] == '1'){ ?>
 <?php echo $_product['foundation_shades']; ?>
 <?php echo $_product['key_of_group']; ?>
-
-
-
 <?php
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();  
 $prodColl = $objectManager->create('Magento\Catalog\Model\ResourceModel\Product\Collection');
@@ -27,14 +24,13 @@ $productRepository = $objectManager->get('\Magento\Catalog\Model\ProductReposito
 $product = $productRepository->get($item->getSku());
 //echo $product->getProductUrl() . '<br>';
 //echo $product['foundation_shades']; 
-
-
-$attr = $product->getResource()->getAttribute('foundation_shades');
+$swatchHelper=$objectManager->get("Magento\Swatches\Helper\Data");
+ $hashcodeData = $swatchHelper->getSwatchesByOptionsId($product['foundation_shades']);
+ echo  $hashcodeData[$product['foundation_shades']]['value'];
+ $attr = $product->getResource()->getAttribute('foundation_shades');
  if ($attr->usesSource()) {
       echo $optionText = $attr->getSource()->getOptionText($product['foundation_shades']);
  }
-
-
 }                     
 
 ?>
