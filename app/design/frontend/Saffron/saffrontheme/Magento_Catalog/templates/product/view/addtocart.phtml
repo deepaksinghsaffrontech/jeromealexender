@@ -24,7 +24,11 @@ $collection = $prodColl->addAttributeToSelect('*')
                        ->load();
   foreach ($collection as  $item) {
   echo $item->getSku() ;
-
+  echo $item->getUrl() ;
+$attr = $item->getResource()->getAttribute('foundation_shades');
+ if ($attr->usesSource()) {
+       echo $optionText = $attr->getSource()->getOptionText($optionId);
+ }
                        }                     
 
  ?>
