@@ -23,8 +23,7 @@ $collection = $prodColl->addAttributeToSelect('*')
                        ->addAttributeToFilter('key_of_group', ['eq'=> $_product['key_of_group']])
                        ->load();
   foreach ($collection as  $item) {
-      $productId = $objectManager->get('Magento\Catalog\Model\Product')->getIdBySku($item->getSku());
-echo '<pre>'; print_r($productId->getData());
+  echo $item->getSku() ;
 
                        }                     
 
