@@ -29,12 +29,14 @@ echo '<pre>'; print_r($collection->getData());
 
 <?php 
 
-$swatchHelper=$objectManager->get("Magento\Swatches\Helper\Swatch");
+$swatchHelper=$objectManager->get("Magento\Swatches\Helper\Data");
 
 // brand logo is my Visual Swatch attribute 
 $optionIdvalue = $_product['foundation_shades']; 
-$swatchHelper->getSwatchesByOptionsId($optionIdvalue);
-echo $hashcodeData[$optionIdvalue]['value'];
+$swatchData = $swatchHelper->getSwatchesByOptionsId([$optionIdvalue]);
+echo '<pre>'; print_r($swatchData->getData());
+//$swatchHelper->getSwatchesByOptionsId($optionIdvalue);
+//echo $hashcodeData[$optionIdvalue]['value'];
 ?>
 <?php } ?>
 
