@@ -23,10 +23,10 @@ $collection = $prodColl->addAttributeToSelect('*')
 $productRepository = $objectManager->get('\Magento\Catalog\Model\ProductRepository');
 $product = $productRepository->get($item->getSku());
 //echo $product->getProductUrl() . '<br>';
-//echo $product['foundation_shades']; 
-$swatchHelper=$objectManager->get("Magento\Swatches\Helper\Data");
+echo $product['foundation_shades']; 
+$swatchHelper=$objectManager->get('Magento\Swatches\Helper\Data');
  $hashcodeData = $swatchHelper->getSwatchesByOptionsId($product['foundation_shades']);
- print_r($hashcodeData);
+ //($hashcodeData);
 
  //echo  $hashcodeData[$product['foundation_shades']]['value'];
  $attr = $product->getResource()->getAttribute('foundation_shades');
