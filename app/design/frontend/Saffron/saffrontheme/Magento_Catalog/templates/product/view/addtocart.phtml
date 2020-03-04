@@ -13,6 +13,18 @@
 <?php if($_product['make_simple_as_group'] == '1'){ ?>
 <?php echo $_product['foundation_shades']; ?>
 <?php echo $_product['key_of_group']; ?>
+
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();  
+$prodColl = $objectManager->create('Magento\Catalog\Model\ResourceModel\Product\Collection');
+$collection = $prodColl->addAttributeToSelect('*')
+                       ->addAttributeToFilter('key_of_group', ['eq'=> $_product['key_of_group']])
+                       ->load();
+
+echo '<pre>'; print_r($collection->getData());
+
+ ?>
+
 <?php } ?>
 
 
