@@ -25,11 +25,11 @@ $collection = $prodColl->addAttributeToSelect('*')
   foreach ($collection as  $item) {
 $productRepository = $objectManager->get('\Magento\Catalog\Model\ProductRepository');
 $product = $productRepository->get($item->getSku());
-echo $product->getProductUrl() . '<br>';
-echo $product['foundation_shades']; 
+//echo $product->getProductUrl() . '<br>';
+//echo $product['foundation_shades']; 
 
 
-$attr = $product->getResource()->getAttribute('color');
+$attr = $product->getResource()->getAttribute('foundation_shades');
  if ($attr->usesSource()) {
       echo $optionText = $attr->getSource()->getOptionText($product['foundation_shades']);
  }
