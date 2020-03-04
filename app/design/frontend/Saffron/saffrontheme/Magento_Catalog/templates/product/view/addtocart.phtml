@@ -10,6 +10,10 @@
 ?>
 <?php $_product = $block->getProduct(); ?>
 
+<?php if($_product['make_simple_as_group'] == '1'){ ?>
+<?php echo $_product['foundation_shades']; ?>
+<?php } ?>
+
 
 <?php if(!empty($_product['shipping_info'])){?>
 <div class="product attribute overview">
