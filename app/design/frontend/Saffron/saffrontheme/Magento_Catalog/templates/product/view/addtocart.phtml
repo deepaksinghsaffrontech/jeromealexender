@@ -33,7 +33,7 @@ $swatchHelper=$objectManager->get("Magento\Swatches\Helper\Data");
 
 // brand logo is my Visual Swatch attribute 
 $optionIdvalue = $_product['foundation_shades']; 
-$swatchData = $swatchHelper->getSwatchesByOptionsId([$optionIdvalue]);
+$swatchData = $swatchHelper->getSwatchesByOptionsId($optionIdvalue);
 echo '<pre>'; print_r($swatchData->getData());
 //$swatchHelper->getSwatchesByOptionsId($optionIdvalue);
 //echo $hashcodeData[$optionIdvalue]['value'];
