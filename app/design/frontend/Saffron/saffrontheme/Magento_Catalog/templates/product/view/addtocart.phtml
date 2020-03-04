@@ -23,25 +23,21 @@ $collection = $prodColl->addAttributeToSelect('*')
                        ->addAttributeToFilter('key_of_group', ['eq'=> $_product['key_of_group']])
                        ->load();
   foreach ($collection as  $item) {
-  echo $item->getSku() ;
-  //echo $item->getUrl() ;
-
 $productRepository = $objectManager->get('\Magento\Catalog\Model\ProductRepository');
 $product = $productRepository->get($item->getSku());
-
-
-echo $product->getEntityId() . '<br>';
-echo $product->getName() . '<br>';
-echo $product->getSKU() . '<br>';
-echo $product->getPrice() . '<br>';
-echo $product->getSpecialPrice() . '<br>';
-echo $product->getTypeId() . '<br>';
 echo $product->getProductUrl() . '<br>';
-                      
 echo $product['foundation_shades']; 
-                       }                     
 
- ?>
+
+$attr = $product->getResource()->getAttribute('color');
+ if ($attr->usesSource()) {
+      echo $optionText = $attr->getSource()->getOptionText($product['foundation_shades']);
+ }
+
+
+}                     
+
+?>
 
 <?php 
 
