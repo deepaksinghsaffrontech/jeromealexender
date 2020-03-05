@@ -29,10 +29,7 @@ $tableName = $resource->getTableName('eav_attribute_option_swatch');
 $sql = "Select * FROM " . $tableName . " WHERE  option_id= ".$product['foundation_shades'];
 
 $result = $connection->fetchAll($sql); 
- if($product['foundation_shades'] == $_product['foundation_shades']){
-
-  $active ="selected" ;
- }
+ 
 
 //$swatchHelper = $objectManager->get('Magento\Swatches\Helper\Data');
  //$hashcodeData = $swatchHelper->getSwatchesByOptionsId(11);
