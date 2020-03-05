@@ -37,12 +37,12 @@ $result = $connection->fetchAll($sql);
 
  $attr = $product->getResource()->getAttribute('foundation_shades');
  
- if ($attr->usesSource()) {
-      echo '<li style="background: '.$result[0]['value'].' no-repeat center;
-    background-size: initial;"    class="swatch-option  '.$actives.' " > <a href=" '.$product->getProductUrl().'">'. $optionText = $attr->getSource()->getOptionText($product['foundation_shades']) .'</li>';
+ if ($attr->usesSource()) {?>
+      <li style="background: <?php echo $result[0]['value'] ;?> no-repeat center;
+    background-size: initial;"    class="swatch-option  <?php echo $active ; ?>" > <a href=" <?php echo $product->getProductUrl() ;?>"><?php echo  $optionText = $attr->getSource()->getOptionText($product['foundation_shades']) ?></li>;
 
       //$attr->getSource()->getOptionSwatch($product['foundation_shades']);
- }
+ <?php }
 
 }                     
 echo '</ul>';
