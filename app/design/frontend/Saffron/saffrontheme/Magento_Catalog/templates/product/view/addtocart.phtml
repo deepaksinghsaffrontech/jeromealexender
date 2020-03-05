@@ -30,9 +30,9 @@ $connection = $resource->getConnection();
 $tableName = $resource->getTableName('eav_attribute_option_swatch');
 //SELECT * FROM `eav_attribute_option_swatch` WHERE `option_id`=11
 
-$sql = "Select * FROM " . $tableName . "option_id=".$product['foundation_shades'];
+echo $sql = "Select * FROM " . $tableName . "option_id=".$product['foundation_shades'];
 
-$result = $connection->fetchAll($sql); 
+//$result = $connection->fetchAll($sql); 
 
 //echo"<pre>";print_r($result->getData());
 
