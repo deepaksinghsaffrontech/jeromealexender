@@ -33,6 +33,8 @@ $swatchHelper = $objectManager->get('Magento\Swatches\Helper\Data');
  echo '<ul>';
  if ($attr->usesSource()) {
       echo '<li> <a href=" '.$product->getProductUrl().'">'. $optionText = $attr->getSource()->getOptionText($product['foundation_shades']) .'</li>';
+
+      $attr->getSource()->getOptionSwatch ($product['foundation_shades']);
  }
 echo '</ul>';
 }                     
