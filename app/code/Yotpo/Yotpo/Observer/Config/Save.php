@@ -2,17 +2,15 @@
 
 namespace Yotpo\Yotpo\Observer\Config;
 
-use Magento\Config\Model\ResourceModel\Config as ResourceConfig;
 use Magento\Framework\App\Cache\Type\Config;
 use Magento\Framework\App\Cache\TypeListInterface;
 use Magento\Framework\App\Config\ReinitableConfigInterface;
 use Magento\Framework\App\Config\ScopeConfigInterface;
-use Magento\Framework\App\ScopeInterface as AppScopeInterface;
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Store\Model\ScopeInterface;
-use Yotpo\Yotpo\Helper\ApiClient as YotpoApiClient;
-use Yotpo\Yotpo\Helper\Data as YotpoHelper;
+use Yotpo\Yotpo\Model\AbstractApi as YotpoApi;
+use Yotpo\Yotpo\Model\Config as YotpoConfig;
 
 class Save implements ObserverInterface
 {
@@ -21,47 +19,40 @@ class Save implements ObserverInterface
      *
      * @var ScopeConfigInterface
      */
-    protected $_appConfig;
+    private $appConfig;
 
     /**
      * @var TypeListInterface
      */
-    protected $_cacheTypeList;
+    private $cacheTypeList;
 
     /**
-     * @var ResourceConfig
+     * @var YotpoConfig
      */
-    protected $_resourceConfig;
+    private $yotpoConfig;
 
     /**
-     * @var YotpoHelper
+     * @var YotpoApi
      */
-    protected $_yotpoHelper;
+    private $yotpoApi;
 
     /**
-     * @var YotpoApiClient
-     */
-    protected $_yotpoApi;
-
-    /**
-     * @param TypeListInterface         $cacheTypeList
-     * @param ReinitableConfigInterface $config
-     * @param ResourceConfig            $resourceConfig
-     * @param YotpoHelper               $yotpoHelper
-     * @param YotpoApiClient            $yotpoApi
+     * @method __construct
+     * @param  TypeListInterface         $cacheTypeList
+     * @param  ReinitableConfigInterface $config
+     * @param  YotpoConfig               $yotpoConfig
+     * @param  YotpoApi                  $yotpoApi
      */
     public function __construct(
         TypeListInterface $cacheTypeList,
         ReinitableConfigInterface $config,
-        ResourceConfig $resourceConfig,
-        YotpoHelper $yotpoHelper,
-        YotpoApiClient $yotpoApi
+        YotpoConfig $yotpoConfig,
+        YotpoApi $yotpoApi
     ) {
-        $this->_cacheTypeList = $cacheTypeList;
-        $this->_appConfig = $config;
-        $this->_resourceConfig = $resourceConfig;
-        $this->_yotpoHelper = $yotpoHelper;
-        $this->_yotpoApi = $yotpoApi;
+        $this->cacheTypeList = $cacheTypeList;
+        $this->appConfig = $config;
+        $this->yotpoConfig = $yotpoConfig;
+        $this->yotpoApi = $yotpoApi;
     }
 
     /**
@@ -71,34 +62,61 @@ class Save implements ObserverInterface
     {
         $changedPaths = (array)$observer->getEvent()->getChangedPaths();
         if ($changedPaths) {
-            $this->_cacheTypeList->cleanType(Config::TYPE_IDENTIFIER);
-            $this->_appConfig->reinit();
+            $this->cacheTypeList->cleanType(Config::TYPE_IDENTIFIER);
+            $this->appConfig->reinit();
 
-            $scope = $scopes = null;
+            $scope = $scopes = \Magento\Framework\App\Config\ScopeConfigInterface::SCOPE_TYPE_DEFAULT;
             if (($scopeId = $observer->getEvent()->getStore())) {
                 $scope = ScopeInterface::SCOPE_STORE;
                 $scopes = ScopeInterface::SCOPE_STORES;
             } elseif (($scopeId = $observer->getEvent()->getWebsite())) {
                 $scope = ScopeInterface::SCOPE_WEBSITE;
+                $scopes = ScopeInterface::SCOPE_WEBSITES;
+            } else {
+                $scopeId = 0;
             }
 
-            if (in_array(YotpoHelper::XML_PATH_YOTPO_DEBUG_MODE_ENABLED, $changedPaths)) {
-                $this->_yotpoHelper->log(
-                    "Yotpo Debug mode " . (($this->_yotpoHelper->isDebugMode(($scopeId ?: null), ($scope ?: null))) ? 'started' : 'stopped'),
-                    "error",
-                    ['$app_key' => $this->_yotpoHelper->getAppKey(($scopeId ?: null), ($scope ?: null)), '$scope' => ($scope ?: 'default'), '$scopeId' => $scopeId]
+            $appKey = $this->yotpoConfig->getAppKey($scopeId, $scope);
+
+            if (in_array(YotpoConfig::XML_PATH_YOTPO_DEBUG_MODE_ENABLED, $changedPaths)) {
+                $this->yotpoConfig->log(
+                    "Yotpo Debug mode " . (($this->yotpoConfig->isDebugMode($scopeId, $scope)) ? 'started' : 'stopped'),
+                    "info",
+                    ['$app_key' => $appKey, '$scope' => ($scope ?: 'default'), '$scopeId' => $scopeId]
                 );
             }
 
-            if ($scope !== ScopeInterface::SCOPE_STORE) {
+            if ($scope !== ScopeInterface::SCOPE_STORE && !$this->yotpoConfig->isSingleStoreMode()) {
+                $this->resetStoreCredentials($scopeId, $scopes);
                 return true;
             }
-            if ($this->_yotpoHelper->isEnabled(($scopeId ?: null), ($scope ?: null)) && !($this->_yotpoApi->oauthAuthentication(($scopeId ?: null), ($scope ?: null)))) {
-                $this->_resourceConfig->saveConfig(YotpoHelper::XML_PATH_YOTPO_APP_KEY, null, ($scopes ?: AppScopeInterface::SCOPE_DEFAULT), ($scopeId ?: 0));
-                $this->_resourceConfig->saveConfig(YotpoHelper::XML_PATH_YOTPO_SECRET, null, ($scopes ?: AppScopeInterface::SCOPE_DEFAULT), ($scopeId ?: 0));
-                $this->_resourceConfig->saveConfig(YotpoHelper::XML_PATH_YOTPO_ENABLED, null, ($scopes ?: AppScopeInterface::SCOPE_DEFAULT), ($scopeId ?: 0));
+
+            //Check if appKey is unique:
+            if ($appKey) {
+                foreach ($this->yotpoConfig->getAllStoreIds() as $key => $storeId) {
+                    if (($scopeId && $storeId !== $scopeId) && $this->yotpoConfig->getAppKey($storeId) === $appKey) {
+                        $this->resetStoreCredentials($scopeId, $scopes);
+                        throw new \Exception(__("The APP KEY you've entered is already in use by another store on this system. Note that Yotpo requires a unique set of APP KEY & SECRET for each store."));
+                    }
+                }
+            }
+
+            if ($this->yotpoConfig->isEnabled($scopeId, $scope) && !($this->yotpoApi->oauthAuthentication($scopeId, $scope))) {
+                $this->resetStoreCredentials($scopeId, $scopes);
                 throw new \Exception(__("Please make sure the APP KEY and SECRET you've entered are correct"));
             }
         }
+    }
+
+    /**
+     * @method resetStoreCredentials
+     * @param  int|null              $scopeId
+     * @param  string|null           $scopes
+     */
+    private function resetStoreCredentials($scopeId = null, $scopes = ScopeInterface::SCOPE_STORES)
+    {
+        $this->yotpoConfig->resetStoreCredentials($scopeId, $scopes);
+        $this->cacheTypeList->cleanType(Config::TYPE_IDENTIFIER);
+        $this->appConfig->reinit();
     }
 }
