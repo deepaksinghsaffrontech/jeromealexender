@@ -20,13 +20,13 @@ $collection = $prodColl->addAttributeToSelect('*')
                        ->addAttributeToFilter('key_of_group', ['eq'=> $_product['key_of_group']])
                        ->load();
 
- $collectiondata=($collection->getData());
-if($collectiondata['type_id']=='simple'){
-  echo '<ul class="costom-color-swatch">
+ //$collectiondata=($collection->getData());
 
 
-  ';
+
+  echo '<ul class="costom-color-swatch">';
   foreach ($collection as  $item) {
+    if($item['type_id'] == 'simple'){
 $productRepository = $objectManager->get('\Magento\Catalog\Model\ProductRepository');
 $product = $productRepository->get($item->getSku());
 //echo $product['foundation_shades']; 
@@ -55,11 +55,11 @@ $result = $connection->fetchAll($sql);
       
  <?php }
 
-}                     
+}   }                   
 echo '</ul>';
 ?>
 
-<?php } } } ?>
+<?php } } ?>
 
 
 <?php if(!empty($_product['shipping_info'])){?>
