@@ -35,7 +35,7 @@ $attr = $product->getResource()->getAttribute('foundation_shades');/if($_product
 }
  echo '<ul class="costom-color-swatch">';
  if ($attr->usesSource()) {
-      echo '<li class="swatch-option '.$active.' style="background: '.$result[0]['value'].' no-repeat center;"> <a href=" '.$product->getProductUrl().'">'.$optionText = $attr->getSource()->getOptionText($product['foundation_shades']) .'</li>';
+      echo '<li class="swatch-option '.$active.'" style="background: '.$result[0]['value'].' no-repeat center;"> <a href=" '.$product->getProductUrl().'">'.$optionText = $attr->getSource()->getOptionText($product['foundation_shades']) .'</li>';
 
       //$attr->getSource()->getOptionSwatch($product['foundation_shades']);
  }
