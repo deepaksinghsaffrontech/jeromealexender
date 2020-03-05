@@ -32,7 +32,7 @@ $sql = "Select * FROM " . $tableName . " WHERE  option_id= ".$product['foundatio
 $result = $connection->fetchAll($sql); 
  if($product['foundation_shades'] == $_product['foundation_shades']){
 
-  $active ="selected" ;
+  echo $active ="selected" ;
  }
 
  $attr = $product->getResource()->getAttribute('foundation_shades');
