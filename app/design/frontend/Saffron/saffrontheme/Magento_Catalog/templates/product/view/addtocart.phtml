@@ -42,7 +42,7 @@ $result = $connection->fetchAll($sql);
  
  if ($attr->usesSource()) {?>
       <li style="background: <?php echo $result[0]['value'] ;?> no-repeat center;
-    background-size: initial;"    class="swatch-option  <?php echo $active ; ?>" > <a href=" <?php echo $product->getProductUrl() ;?>"><span><?php echo  $optionText = $attr->getSource()->getOptionText($product['foundation_shades']) ?> </span></li>;
+    background-size: initial;"    class="swatch-option  <?php echo $active ; ?>" > <a href=" <?php echo $product->getProductUrl() ;?>"><span><?php //echo  $optionText = $attr->getSource()->getOptionText($product['foundation_shades']) ?> </span></li>
 
       
  <?php }
