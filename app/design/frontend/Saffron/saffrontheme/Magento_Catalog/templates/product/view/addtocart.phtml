@@ -12,7 +12,7 @@
 
 <?php if($_product['make_simple_as_group'] == '1'){ ?>
 <?php //echo $_product['foundation_shades']; ?>
-<?php if(!empty($_product['key_of_group'])){?>
+<?php //if(!empty($_product['key_of_group'])){?>
 <?php
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();  
 $prodColl = $objectManager->create('Magento\Catalog\Model\ResourceModel\Product\Collection');
@@ -45,7 +45,8 @@ echo '</ul>';
 
 ?>
 
-<?php } } ?>
+<?php //} 
+} ?>
 
 
 <?php if(!empty($_product['shipping_info'])){?>
