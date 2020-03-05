@@ -33,15 +33,18 @@ $result = $connection->fetchAll($sql);
  if($product['foundation_shades'] == $_product['foundation_shades']){
 
    $active ="selected" ;
+ }else{
+
+  $active ="";
  }
 
  $attr = $product->getResource()->getAttribute('foundation_shades');
  
  if ($attr->usesSource()) {?>
       <li style="background: <?php echo $result[0]['value'] ;?> no-repeat center;
-    background-size: initial;"    class="swatch-option  <?php //echo $active ; ?>" > <a href=" <?php echo $product->getProductUrl() ;?>"><?php echo  $optionText = $attr->getSource()->getOptionText($product['foundation_shades']) ?></li>;
+    background-size: initial;"    class="swatch-option  <?php echo $active ; ?>" > <a href=" <?php echo $product->getProductUrl() ;?>"><span><?php echo  $optionText = $attr->getSource()->getOptionText($product['foundation_shades']) ?> </span></li>;
 
-      //$attr->getSource()->getOptionSwatch($product['foundation_shades']);
+      
  <?php }
 
 }                     
