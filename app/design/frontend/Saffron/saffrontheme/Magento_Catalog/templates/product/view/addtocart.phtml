@@ -24,7 +24,19 @@ $productRepository = $objectManager->get('\Magento\Catalog\Model\ProductReposito
 $product = $productRepository->get($item->getSku());
 //echo $product->getProductUrl() . '<br>';
 echo $product['foundation_shades']; 
-$swatchHelper = $objectManager->get('Magento\Swatches\Helper\Data');
+
+$resource = $objectManager->get('Magento\Framework\App\ResourceConnection');
+$connection = $resource->getConnection();
+$tableName = $resource->getTableName('eav_attribute_option_swatch');
+//SELECT * FROM `eav_attribute_option_swatch` WHERE `option_id`=11
+
+$sql = "Select * FROM " . $tableName . "option_id=".$product['foundation_shades'];
+
+$result = $connection->fetchAll($sql); 
+
+echo"<pre>";print_r($result->getData());
+
+//$swatchHelper = $objectManager->get('Magento\Swatches\Helper\Data');
  //$hashcodeData = $swatchHelper->getSwatchesByOptionsId(11);
  //($hashcodeData);
 
@@ -34,7 +46,7 @@ $swatchHelper = $objectManager->get('Magento\Swatches\Helper\Data');
  if ($attr->usesSource()) {
       echo '<li> <a href=" '.$product->getProductUrl().'">'. $optionText = $attr->getSource()->getOptionText($product['foundation_shades']) .'</li>';
 
-      $attr->getSource()->getOptionSwatch($product['foundation_shades']);
+      //$attr->getSource()->getOptionSwatch($product['foundation_shades']);
  }
 echo '</ul>';
 }                     
