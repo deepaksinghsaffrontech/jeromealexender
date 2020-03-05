@@ -19,7 +19,10 @@ $prodColl = $objectManager->create('Magento\Catalog\Model\ResourceModel\Product\
 $collection = $prodColl->addAttributeToSelect('*')
                        ->addAttributeToFilter('key_of_group', ['eq'=> $_product['key_of_group']])
                        ->load();
-  echo '<ul class="costom-color-swatch">';
+  echo '<ul class="costom-color-swatch">
+
+<span  class="swatch-attribute-label">Select a Shade</span>
+  ';
   foreach ($collection as  $item) {
 $productRepository = $objectManager->get('\Magento\Catalog\Model\ProductRepository');
 $product = $productRepository->get($item->getSku());
