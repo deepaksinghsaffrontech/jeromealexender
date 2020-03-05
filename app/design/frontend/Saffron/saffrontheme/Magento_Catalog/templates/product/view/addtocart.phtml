@@ -19,6 +19,9 @@ $prodColl = $objectManager->create('Magento\Catalog\Model\ResourceModel\Product\
 $collection = $prodColl->addAttributeToSelect('*')
                        ->addAttributeToFilter('key_of_group', ['eq'=> $_product['key_of_group']])
                        ->load();
+
+echo"<pre>";print_r($collection->getData());
+
   echo '<ul class="costom-color-swatch">
 
 
