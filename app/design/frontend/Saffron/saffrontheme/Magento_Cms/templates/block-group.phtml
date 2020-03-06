@@ -421,29 +421,7 @@ require([
 	'jquery',
 	], function () {
 	jQuery(document).ready(function($) {
-	        //increase-decrease input quantity javascript
-		var i = 0;
-		var x = document.querySelector('#IncDec');
-		function addValue(){
-			jQuery('.btnAdd').click(function(){
-				if( x.value >= i ){
-					i++;
-					var y = x.value = i;
-				}
-			})
-		}
-		addValue();
-		
-		function decValue(){
-			jQuery('.btnMin').click(function(){
-				if( x.value >= 1 ){
-					i--;
-					var y = x.value = i;
-				}
-			})
-		}
-		decValue();
-
+	   
 
 		jQuery(function() {
         jQuery('a[href*=\\#]:not([href=\\#])').on('click', function() {
