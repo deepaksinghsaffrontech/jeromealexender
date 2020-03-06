@@ -10,7 +10,7 @@
 <?php  foreach ($skulist as  $item) {
 
 echo $item ;
-
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();  
 $productRepository = $objectManager->get('\Magento\Catalog\Model\ProductRepository');
 $product = $productRepository->get($item);
 //echo $product['foundation_shades']; 
