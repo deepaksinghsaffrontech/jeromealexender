@@ -1,15 +1,7 @@
 
-<?php  $myVar = $block->getData('product_sku');
-//print_r($myVar);
-?>
-
-
+<?php  $myVar = $block->getData('product_sku');?>
 <?php $skulist = explode(",",$myVar); ?>
-
-
 <?php  foreach ($skulist as  $item) {
-
-echo $item ;
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();  
 $productRepository = $objectManager->get('\Magento\Catalog\Model\ProductRepository');
 $product = $productRepository->get($item);
@@ -19,11 +11,26 @@ $resource = $objectManager->get('Magento\Framework\App\ResourceConnection');
 $connection = $resource->getConnection();
 $tableName = $resource->getTableName('eav_attribute_option_swatch');
 $sql = "Select * FROM " . $tableName . " WHERE  option_id= ".$product['foundation_shades'];
-
 $result = $connection->fetchAll($sql);
- $attr = $product->getResource()->getAttribute('foundation_shades');
+$attr = $product->getResource()->getAttribute('foundation_shades');
 
 ?>
+
+ <?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+
+  $listBlock = $objectManager->get('\Magento\Catalog\Block\Product\ListProduct');
+
+  $addToCartUrl =  $listBlock->getAddToCartUrl($product); ?>
+
+  <form data-role="tocart-form" action="<?php echo $addToCartUrl; ?>" method="post"> 
+
+    <?php echo $block->getBlockHtml('formkey')?>
+
+     <button type="submit" title="Add to Cart" class="action tocart primary">
+
+       <span>Add to Cart</span>
+     </button>
+ </form>
 
 
 <?php  if ($attr->usesSource()) {?>
