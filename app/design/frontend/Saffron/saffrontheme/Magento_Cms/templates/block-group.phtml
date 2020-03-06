@@ -421,11 +421,35 @@ require([
 	'jquery',
 	], function () {
 	jQuery(document).ready(function($) {
-	   
+	   //increase-decrease input quantity javascript
+		var i = 0;
+		var x = document.querySelector('#IncDec');
+		function addValue(){
+			jQuery('.btnAdd').click(function(){
+				if( x.value >= i ){
+					i++;
+					var y = x.value = i;
+				}
+			})
+		}
+		addValue();
+		
+		function decValue(){
+			jQuery('.btnMin').click(function(){
+				if( x.value >= 1 ){
+					i--;
+					var y = x.value = i;
+				}
+			})
+		}
+		decValue();
+	});
 
-		jQuery(function() {
+    //onclick anchor scroll div javascript
+    jQuery(function() {
         jQuery('a[href*=\\#]:not([href=\\#])').on('click', function() {
-            var target = $(this.hash);
+            var target = jQuery(this.hash);
+            alert('+++');
             target = target.length ? target : jQuery('[name=' + this.hash.substr(1) +']');
             if (target.length) {
                 jQuery('html,body').animate({
@@ -434,7 +458,6 @@ require([
                 return false;
             }
         });
-  });
 });
 });	
 </script>	
