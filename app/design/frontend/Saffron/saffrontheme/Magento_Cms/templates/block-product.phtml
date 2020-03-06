@@ -52,10 +52,10 @@ $product = $productRepository->get($item);?>
 <div class="newaddtocartcontaint tab-content <?php if($i=='1'){echo 'current';}?>"  id="tab-<?php echo $i ;?>" >
 
  <form data-role="tocart-form" action="<?php echo $addToCartUrl; ?>" method="post"> 
-   <!-- <div class="quanty-col">
-        <input id="IncDec"  name="qty" type="number" value="1"  data-validate="{"required-number":true,"validate-item-quantity":{"minAllowed":1,"maxAllowed":10000}}"/> 
+   <div class="quanty-col">
+        <input id="IncDec" class="IncDec" name="qty" type="number" value="1"  data-validate="{"required-number":true,"validate-item-quantity":{"minAllowed":1,"maxAllowed":10000}}"/> 
 
-        <button class="btnAdd" type="button">+</button> <button class="btnMin" type="button">-</button></div>-->
+        <button class="btnAdd" type="button">+</button> <button class="btnMin" type="button">-</button></div>
     <?php echo $block->getBlockHtml('formkey')?>
 
      <button type="submit" title="Add to Cart" class="action tocart  buynow-link">
