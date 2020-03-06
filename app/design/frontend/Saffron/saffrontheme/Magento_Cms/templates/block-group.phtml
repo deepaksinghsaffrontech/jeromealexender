@@ -413,3 +413,39 @@ ul.footer-muenu-ul li { padding: 0 6px; }
 }
 
 </style>
+
+
+
+
+<script>
+require([
+	'jquery',
+	], function () {
+	jQuery(document).ready(function($) {
+	        //increase-decrease input quantity javascript
+		var i = 0;
+		var x = document.querySelector('#IncDec');
+		function addValue(){
+			jQuery('.btnAdd').click(function(){
+				if( x.value >= i ){
+					i++;
+					var y = x.value = i;
+				}
+			})
+		}
+		addValue();
+		
+		function decValue(){
+			jQuery('.btnMin').click(function(){
+				if( x.value >= 1 ){
+					i--;
+					var y = x.value = i;
+				}
+			})
+		}
+		decValue();
+  });
+});
+</script>	
+
+ 
