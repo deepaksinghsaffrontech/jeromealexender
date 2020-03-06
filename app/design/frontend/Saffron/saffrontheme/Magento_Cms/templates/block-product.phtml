@@ -22,12 +22,7 @@ $attr = $product->getResource()->getAttribute('foundation_shades');
 
 ?>
 
- <?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-
-  $listBlock = $objectManager->get('\Magento\Catalog\Block\Product\ListProduct');
-
-  $addToCartUrl =  $listBlock->getAddToCartUrl($product); ?>
-
+ 
 <?php  if ($attr->usesSource()) {?>
     <li style="background: <?php echo $result[0]['value'] ;?> no-repeat center;
     background-size: initial;"    class="swatch-option tab-link <?php if($i=='1'){echo 'current';}?>" data-tab="tab-<?php echo $i ;?>"  > 
@@ -50,8 +45,13 @@ $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
 $productRepository = $objectManager->get('\Magento\Catalog\Model\ProductRepository');
 $product = $productRepository->get($item);
 
-echo $item ;
+//echo $item ;
 ?>
+<?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+
+  $listBlock = $objectManager->get('\Magento\Catalog\Block\Product\ListProduct');
+
+  $addToCartUrl =  $listBlock->getAddToCartUrl($product); ?>
 
 
 <div class="newaddtocartcontaint tab-content <?php if($i=='1'){echo 'current';}?>"  id="tab-<?php echo $i ;?>" >
