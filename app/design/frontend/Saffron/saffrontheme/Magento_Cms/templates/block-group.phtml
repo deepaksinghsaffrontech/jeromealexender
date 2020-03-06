@@ -428,7 +428,7 @@ require([
 	   jQuery(function() {
         jQuery('a[href*=\\#]:not([href=\\#])').on('click', function() {
             var target = jQuery(this.hash);
-            alert('+++');
+            //alert('+++');
             target = target.length ? target : jQuery('[name=' + this.hash.substr(1) +']');
             if (target.length) {
                 jQuery('html,body').animate({
