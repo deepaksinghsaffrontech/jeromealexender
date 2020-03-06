@@ -136,8 +136,9 @@ require([
 
     
     jQuery('ul.tabs li').click(function(){
+        alert('+++')
         var tab_id = $(this).attr('data-tab');
-
+          alert(tab_id);
         jQuery('ul.tabs li').removeClass('current');
         jQuery('.tab-content').removeClass('current');
 
