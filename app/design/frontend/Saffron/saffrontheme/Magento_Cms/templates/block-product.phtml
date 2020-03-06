@@ -43,10 +43,15 @@ $attr = $product->getResource()->getAttribute('foundation_shades');
 
  <?php  $i++ ;}  ?>
 </ul>
+
+
 <?php  $i= 1;foreach ($skulist as  $item) {
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();  
 $productRepository = $objectManager->get('\Magento\Catalog\Model\ProductRepository');
-$product = $productRepository->get($item);?>
+$product = $productRepository->get($item);
+
+echo $item ;
+?>
 
 
 <div class="newaddtocartcontaint tab-content <?php if($i=='1'){echo 'current';}?>"  id="tab-<?php echo $i ;?>" >
