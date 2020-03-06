@@ -8,7 +8,7 @@
 
 <?php echo '<ul class="costom-color-swatch">';
 foreach ($skulist as  $item) {
-if($item['type_id'] == 'simple'){
+
 $productRepository = $objectManager->get('\Magento\Catalog\Model\ProductRepository');
 $product = $productRepository->get($item);
 //echo $product['foundation_shades']; 
@@ -27,16 +27,18 @@ $result = $connection->fetchAll($sql);
  }
 
  $attr = $product->getResource()->getAttribute('foundation_shades');
- 
- if ($attr->usesSource()) {?>
+?>
+
+
+<?php  if ($attr->usesSource()) {?>
       <li style="background: <?php echo $result[0]['value'] ;?> no-repeat center;
-    background-size: initial;"    class="swatch-option  <?php echo $active ; ?>" > <a href=" <?php echo $product->getProductUrl() ;?>"><span><?php //echo  $optionText = $attr->getSource()->getOptionText($product['foundation_shades']) ?> </span>
+    background-size: initial;"    class="swatch-option  <?php echo $active ; ?>" > <a href=" <?php echo $product->getProductUrl() ;?>"><span><?php echo  $optionText = $attr->getSource()->getOptionText($product['foundation_shades']) ?> </span>
     </a>
     </li>
 
       
- <?php }
+ <?php }?>
 
-}   }                   
-echo '</ul>';
+<?php}                   
+
 ?>
