@@ -422,9 +422,7 @@ require([
 	], function () {
 	jQuery(document).ready(function($) {
 	   
-     function myFunction(obj){
-     	alert(obj);
-     }
+     
 	   //increase-decrease input quantity javascript
 		var i = 0;
 		var x = document.querySelector('#IncDec');
@@ -448,7 +446,10 @@ require([
 		}
 		decValue();
 
-
+      function myFunction(obj){
+     	alert(obj);
+       }
+       
 
 		jQuery(function() {
         jQuery('a[href*=\\#]:not([href=\\#])').on('click', function() {
