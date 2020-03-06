@@ -13,7 +13,24 @@ echo $item ;
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();  
 $productRepository = $objectManager->get('\Magento\Catalog\Model\ProductRepository');
 $product = $productRepository->get($item);
-echo $product['foundation_shades']; 
+//echo $product['foundation_shades']; 
+
+$resource = $objectManager->get('Magento\Framework\App\ResourceConnection');
+$connection = $resource->getConnection();
+$tableName = $resource->getTableName('eav_attribute_option_swatch');
+$sql = "Select * FROM " . $tableName . " WHERE  option_id= ".$product['foundation_shades'];
+
+$result = $connection->fetchAll($sql);
+ $attr = $product->getResource()->getAttribute('foundation_shades');
+
 ?>
+
+
+<?php  if ($attr->usesSource()) {?>
+      <li style="background: <?php echo $result[0]['value'] ;?> no-repeat center;
+    background-size: initial;"    class="swatch-option " > <a href=" <?php echo $product->getProductUrl() ;?>"><span><?php echo  $optionText = $attr->getSource()->getOptionText($product['foundation_shades']) ?> </span>
+    </a>
+    </li>
+
 
  <?php }  ?>
