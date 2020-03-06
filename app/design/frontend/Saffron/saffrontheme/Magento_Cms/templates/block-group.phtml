@@ -1,1 +1,409 @@
-jhjhj
+   <div class="airtint-wrapper">
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('celebrating-header')->toHtml(); ?>
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('celebrating-collection')->toHtml(); ?>
+
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('celebrating-product')->toHtml(); ?>
+
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('celebrating-list-product')->toHtml(); ?>
+
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('celebrating-jeroam')->toHtml(); ?>
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('celebrating-footer')->toHtml(); ?>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+	
+body{
+    font-family: "BentonSans-Regular";
+    line-height: normal;
+    color:#c07f6c;
+    font-size: 16px;
+}
+a { color:#c07f6c; }
+a:hover { text-decoration: none;  color:#c07f6c; }
+li { list-style: none;}
+p { line-height:26px; }
+ul {   padding: 0; margin:0; }
+b, strong { font-family: "BentonSans-Medium"; font-weight:normal;}
+h1,h2,h3,h4,h5,h6 { color:#530774; font-family: "BentonSans-Medium"; line-height:150%; }
+h1, h2, h3 { font-size:26px;   margin:0 0 15px; } 
+h4 {  font-size: 18px; }
+.row-section {float: left; width: 100%;}
+header.header-airtint {
+    background: #530774;
+    text-align: center;
+    padding: 35px 0;
+}
+header.header-airtint .container {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center; position:relative;
+}
+.buynow-link {
+    background: #c1739a;
+    color: #fff;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: normal;
+}
+.buynow-link:hover { color: #fff; }
+.banner-landing img {  width: 100%; }
+
+.tint-featured {  padding: 60px 0;  text-align: center; }
+.tint-featured .featured-para {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto 50px;
+}
+.tint-featured .tint-col {  border-right: 1px solid #e5ddda; display: flex;  display: -webkit-flex; margin-bottom:60px; }
+.tint-featured .tint-col:nth-of-type(4) { border: none; }
+.tint-item p {  margin: 0; }
+.foundation-shades h2 {
+    margin-bottom: 30px;
+}
+.qty-buy-col {
+    margin: 50px 0 30px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shipped-txt p {
+    color: #4c4b49;
+    font-style: italic;
+}
+
+.shades-notes {
+    background: #d89b89;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.shades-notes .container {
+    max-width: 1020px;
+}
+
+.shades-notes h5 {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.shades-notes-bx {
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 0 15px;
+    border-right: 1px solid #eeb09f;
+}
+.shades-notes-bx:last-child {  border-right: none; }
+.shades-notes-bx p {
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+    line-height: 24px;
+}
+
+.shades-notes-bx b {
+    font-weight: 400;
+}
+.foundation-shades {
+    background: #faf3fa;
+    text-align: center;
+    padding: 50px 0 20px;
+}
+.magicminerals-product.set1 {
+    padding-top: 100px;
+    
+}
+.magicminerals-product.set2 {  
+    padding: 80px 0;
+}
+.magicminerals-set {
+    background-color: #fff;
+    background-image: linear-gradient(170deg, #f3d5ed 0%, #fff 10%, #fff 43%);
+}
+
+.magicminerals-product {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.magicminerals-product .container {
+    max-width: 1000px;
+}
+.magicminerals-product h3,
+.creator-section h3 span {
+    font-family: "BentonSans-Regular";
+}
+.magicminerals-inner{
+    display: flex;
+    display: -webkit-flex; text-align: left;
+}
+.creator-section .container {
+    display: flex;
+    display: -webkit-flex;
+}
+.magicminerals-inner .image-bx,
+.creator-section .jerome-pic {
+    max-width: 40%;
+    flex: 0 0 40%;
+}
+.magicminerals-inner .text-bx,
+.creator-section .jerome-info {
+    max-width: 60%;
+    flex: 0 0 60%;
+}
+.magicminerals-product.set1 h3 {
+    margin-bottom: 80px;
+}
+.magicminerals-product h4 {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+.magicminerals-inner figure {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.magicminerals-product.set2 .image-bx {
+    order: 2;
+}
+.video-section {
+    background: #fcefe7;
+    text-align: center;
+    padding: 60px 0 40px;
+}
+
+.video-section h3 {
+    margin-bottom: 40px;
+}
+.find-shades {
+    padding: 70px 0;
+    text-align: center;
+}
+
+.find-shades h3 {
+    margin-bottom: 40px;
+}
+.find-shades-list li {
+    float: left;
+    width: 25%;
+}
+.creator-section {
+    padding: 50px 0 80px;
+    background:#faf3fa;
+
+}
+.jerome-info span.small-text {
+    color: #6c655d;
+}
+.jerome-info span.small-text {
+    color: #530774;
+    margin: 0 0 35px;
+    display: block;
+}
+.creator-section h3 b {
+    font-family:"BentonSans-Bold";
+}
+.jerome-pic figure {
+    margin: 0;
+}
+
+.jerome-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer.footer-landing {
+    float: left;
+    width: 100%;
+    background: #530774;
+    padding: 80px 0;
+    text-align: center;
+}
+ul.footer-muenu-ul li {
+    padding:0 22px; border-right:1px solid; color: #fff; line-height:12px;
+}
+ul.footer-muenu-ul li a {  color: #fff; }
+ul.footer-muenu-ul li:last-child {  border: none; }
+
+.footer-landing li {   display: inline-block; }
+.footer-menu {padding: 0 0 70px;}
+.social-list-ul a {
+    font-size: 26px;
+    color: #c1739b;
+    margin: 0 10px;
+}
+.quanty-col input {
+    height: 40px;
+    border: 1px solid #ccc;
+    width: 90px;
+    padding: 5px 35px 5px 5px;
+    text-align: center;
+}
+
+.quanty-col {
+    width: 90px;
+    position: relative;
+	margin-right:20px;
+}
+.quanty-col button{
+	 position: absolute;
+	 right: 0;
+    width: 30px;
+    height: 20px;
+    background: #eaeaea;
+    border: 1px solid #ccc;
+	padding: 0;
+    color: #333;
+    outline: none;
+}
+button.btnAdd { top:0; border-bottom:none; }
+button.btnMin { bottom:0;  }
+.para-list {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.para-list span {
+    font-size: 20px;
+    color: #c07097;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.para-list span:before {content: "";width: 4px;height: 4px;background: #530774;border-radius: 50%;position: absolute;top: 10px;left: 0;}
+ul.featured-ul {
+    float: left;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+ul.featured-ul li {
+    flex: 1;
+    padding: 15px 30px;
+    border-right: 1px solid #f4dcdc;
+}
+.featured-collection ul.featured-ul:first-child {border-bottom: 1px solid #f4dcdc;}
+
+ul.featured-ul .para-span {
+    color: #c07097;
+    line-height: 24px;
+}
+
+ul.featured-ul .title-span {
+    color: #530774;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+    font-family: "BentonSans-Medium";
+   
+}
+
+ul.featured-ul span {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+}
+
+ul.featured-ul  span.circle-span {
+    display: inline-flex;
+    background: #f3dbd9;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    text-align: center;
+    justify-content: center;
+    line-height: 36px;
+    margin-bottom: 15px;
+    color: #530774;
+    font-family: "BentonSans-Medium";
+}
+ul.featured-ul li:last-child {
+    border: none;
+}
+
+.featured-collection {
+    margin-bottom: 40px;
+    float: left;
+    width: 100%;
+}
+
+/*================================================
+                Media Quaries
+  ================================================*/
+
+@media ( min-width:768px ){
+	.jerome-pic { padding-right: 20px; }
+	span.buynow-span { position: absolute; right: 0; }
+}  
+@media ( min-width:768px ) and ( max-width:1024px ) {
+.magicminerals-product.set1, 
+.magicminerals-product.set2 { background-size: 150px auto; }
+
+}
+@media ( min-width:768px ) and ( max-width:991px ) {
+ul.footer-muenu-ul li { padding: 0 6px; }	
+
+}
+
+
+@media ( max-width:767px ){
+    header.header-airtint { padding:15px 0;}
+    header.header-airtint .container { flex-direction: column; }
+    span.logo-span {     margin-bottom: 25px;     }
+    span.logo-span img {  max-width: 200px;     }
+    .banner-landing img { min-height: 170px; object-fit: cover; object-position: 60% 0; }
+	.tint-featured { padding:30px 0 40px; }
+	h1, h2, h3 { font-size:22px;  }
+	.tint-featured .tint-col { border:none; }
+	.tint-featured .tint-col { margin-bottom:30px; }
+	.shades-notes-bx { width:100%; border-bottom:1px solid #eeb09f;border-right:none;
+	padding:15px 0; }
+	.magicminerals-product.set1	{ padding-top: 80px; background-size: 80px auto; }
+	.magicminerals-product.set1 h3 { margin-bottom: 40px; }
+	.magicminerals-inner .image-bx, .creator-section .jerome-pic,
+	.magicminerals-inner .text-bx, .creator-section .jerome-info	{
+		max-width: 100%; flex: 0 0 100%; }
+	.magicminerals-inner, .creator-section .container { flex-direction: column; }
+	.magicminerals-product h4 { font-size: 20px; margin-bottom: 12px; }
+	.magicminerals-product.set2 .image-bx { order:inherit; }
+	.magicminerals-product.set2 { padding: 50px 0; background-size: 80px auto; }
+	.find-shades-list li { width:50%; }
+	.find-shades h3 { margin-bottom: 25px; }
+	.find-shades { padding:40px 0;}
+	.jerome-pic {  margin-bottom: 30px; }
+	.jerome-info br { display: none; }
+	.jerome-info span.small-text { margin-bottom:18px; }
+	.creator-section { padding-bottom:20px; }
+	footer.footer-landing { padding:30px 0; }
+	ul.footer-muenu-ul li { padding: 12px 0; border-right: none; display: block; }
+	.footer-menu { padding-bottom:30px; }
+}
+
+
+
+</style>
