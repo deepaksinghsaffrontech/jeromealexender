@@ -6,7 +6,7 @@
 <div class="container">
  <div class="shades-boxes">   
 <h2>Foundation Shades</h2>
-
+    <ul class="tabs">
 <?php $i= 1;  foreach ($skulist as  $item) {
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();  
 $productRepository = $objectManager->get('\Magento\Catalog\Model\ProductRepository');
@@ -42,7 +42,7 @@ $attr = $product->getResource()->getAttribute('foundation_shades');
 
 
  <?php  $i++ ;}  ?>
-
+</ul>
 <?php  $i= 1;foreach ($skulist as  $item) {
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();  
 $productRepository = $objectManager->get('\Magento\Catalog\Model\ProductRepository');
