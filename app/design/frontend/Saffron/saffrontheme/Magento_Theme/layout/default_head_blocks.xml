@@ -18,9 +18,7 @@
 		  <css src="css/style.css" media='all'  /> 
 		  <css src="mage/calendar.css"/>
           <css src="mage/calendar.css"/>
-		  <css src="css/landing-style2.css" media='all'  />
 		  <css src='Magento_Theme::css/costom-style.css' media='all' />
 		  <css src="css/responsive.css" media='all'  />
-
 	</head>
 </page>
