@@ -422,6 +422,22 @@ require([
 	], function () {
 	jQuery(document).ready(function($) {
 	   
+
+
+
+	   jQuery(function() {
+        jQuery('a[href*=\\#]:not([href=\\#])').on('click', function() {
+            var target = jQuery(this.hash);
+            alert('+++');
+            target = target.length ? target : jQuery('[name=' + this.hash.substr(1) +']');
+            if (target.length) {
+                jQuery('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        });
+     });
      
 	   //increase-decrease input quantity javascript
 		var i = 0;
@@ -446,24 +462,9 @@ require([
 		}
 		decValue();
 
-      function myFunction(obj){
-     	alert(obj);
-       }
        
 
-		jQuery(function() {
-        jQuery('a[href*=\\#]:not([href=\\#])').on('click', function() {
-            var target = jQuery(this.hash);
-            alert('+++');
-            target = target.length ? target : jQuery('[name=' + this.hash.substr(1) +']');
-            if (target.length) {
-                jQuery('html,body').animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-                return false;
-            }
-        });
-     });
+		
 	
 
 
