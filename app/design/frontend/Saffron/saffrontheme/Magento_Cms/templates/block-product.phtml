@@ -31,7 +31,7 @@ $attr = $product->getResource()->getAttribute('foundation_shades');
 <?php  if ($attr->usesSource()) {?>
     <li style="background: <?php echo $result[0]['value'] ;?> no-repeat center;
     background-size: initial;"    class="swatch-option tab-link <?php if($i=='1'){echo 'current';}?>" data-tab="tab-<?php echo $i ;?>"  > 
-    <a href=" <?php echo $product->getProductUrl() ;?>">
+    <a href="javascript:void(0); <?php //echo $product->getProductUrl() ;?>">
     </a>
     <span> <?php echo  $optionText = $attr->getSource()->getOptionText($product['foundation_shades']) ?>
     </span>
@@ -88,7 +88,11 @@ $product = $productRepository->get($item);?>
 
 
 <style type="text/css">
-
+.shades-boxes li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 
         ul.tabs{
             margin: 0px;
