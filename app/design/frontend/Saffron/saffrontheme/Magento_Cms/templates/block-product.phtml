@@ -54,7 +54,7 @@ $product = $productRepository->get($item);?>
  <form data-role="tocart-form" action="<?php echo $addToCartUrl; ?>" method="post"> 
    <div class="quanty-col">
 
-        <input id="IncDec-<?php echo $i ;?>"  name="qty" type="number" value="1"  data-validate="{"required-number":true,"validate-item-quantity":{"minAllowed":1,"maxAllowed":10000}}"   /> 
+        <input id="IncDec"  name="qty" type="number" value="1"  data-validate="{"required-number":true,"validate-item-quantity":{"minAllowed":1,"maxAllowed":10000}}"   /> 
 
         <button class="btnAdd" type="button">+</button> <button class="btnMin" type="button">-</button></div>
     <?php echo $block->getBlockHtml('formkey')?>
@@ -67,44 +67,7 @@ $product = $productRepository->get($item);?>
 
 
 
-
-<script>
-require([
-    'jquery',
-    ], function () {
-    jQuery(document).ready(function($) {
-       
-       //increase-decrease input quantity javascript
-        var i = 0;
-        var x = document.querySelector('#IncDec-<?php echo $i ;?>');
-        function addValue(){
-            jQuery('.btnAdd').click(function(){
-                if( x.value >= i ){
-                    i++;
-                    var y = x.value = i;
-                }
-            })
-        }
-        addValue();
-        
-        function decValue(){
-            jQuery('.btnMin').click(function(){
-                if( x.value >= 1 ){
-                    i--;
-                    var y = x.value = i;
-                }
-            })
-        }
-        decValue();
-
-       
-
-    });
-
-    //onclick anchor scroll div javascript
-    
-}); 
-</script>   
+ 
 </div>
 
 
