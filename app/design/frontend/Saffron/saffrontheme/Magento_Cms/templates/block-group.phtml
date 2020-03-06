@@ -22,7 +22,6 @@
 
 
 <style type="text/css">
-	
 body{
     font-family: "BentonSans-Regular";
     line-height: normal;
@@ -63,7 +62,7 @@ header.header-airtint .container {
 .buynow-link:hover { color: #fff; }
 .banner-landing img {  width: 100%; }
 
-.tint-featured {  padding: 60px 0;  text-align: center; }
+.tint-featured {  padding: 40px 0 80px;  text-align: center; }
 .tint-featured .featured-para {
     max-width: 700px;
     width: 100%;
@@ -127,22 +126,17 @@ header.header-airtint .container {
     text-align: center;
     padding: 50px 0 20px;
 }
-.magicminerals-product.set1 {
-    padding-top: 100px;
-    
-}
-.magicminerals-product.set2 {  
-    padding: 80px 0;
-}
 .magicminerals-set {
     background-color: #fff;
     background-image: linear-gradient(170deg, #f3d5ed 0%, #fff 10%, #fff 43%);
+    padding-top:100px;
 }
 
 .magicminerals-product {
     float: left;
     width: 100%;
     text-align: center;
+    padding-bottom:80px;
 }
 
 .magicminerals-product .container {
@@ -155,6 +149,7 @@ header.header-airtint .container {
 .magicminerals-inner{
     display: flex;
     display: -webkit-flex; text-align: left;
+    align-items: center;
 }
 .creator-section .container {
     display: flex;
@@ -175,7 +170,7 @@ header.header-airtint .container {
 }
 .magicminerals-product h4 {
     font-size: 24px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 .magicminerals-inner figure {
     margin: 0;
@@ -281,7 +276,6 @@ button.btnMin { bottom:0;  }
 .para-list {
     float: left;
     width: 100%;
-    text-align: center;
     margin-bottom: 50px;
 }
 
@@ -297,18 +291,7 @@ button.btnMin { bottom:0;  }
 ul.featured-ul {
     float: left;
     width: 100%;
-    display: flex;
-    display: -webkit-flex;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
 }
-ul.featured-ul li {
-    flex: 1;
-    padding: 15px 30px;
-    border-right: 1px solid #f4dcdc;
-}
-.featured-collection ul.featured-ul:first-child {border-bottom: 1px solid #f4dcdc;}
-
 ul.featured-ul .para-span {
     color: #c07097;
     line-height: 24px;
@@ -342,10 +325,6 @@ ul.featured-ul  span.circle-span {
     color: #530774;
     font-family: "BentonSans-Medium";
 }
-ul.featured-ul li:last-child {
-    border: none;
-}
-
 .featured-collection {
     margin-bottom: 40px;
     float: left;
@@ -355,11 +334,22 @@ ul.featured-ul li:last-child {
 /*================================================
                 Media Quaries
   ================================================*/
+@media ( min-width: 1200px ) {
+      .container {  max-width: 1020px;  } 
+
+}
 
 @media ( min-width:768px ){
 	.jerome-pic { padding-right: 20px; }
-	span.buynow-span { position: absolute; right: 0; }
+    span.buynow-span { position: absolute; right: 0; }
+    ul.featured-ul {  display: flex;   display: -webkit-flex;  padding-bottom: 15px;  margin-bottom: 15px;  }
+    ul.featured-ul li {  flex: 1;  padding: 20px 30px;  border-right: 1px solid #f4dcdc;   }
+    .featured-collection ul.featured-ul:first-child {border-bottom: 1px solid #f4dcdc;}
+    .para-list { display: flex; display: -webkit-flex; text-align: left; justify-content: center; }
+    .para-list span:first-child:before { display: none; }
+    ul.featured-ul li:last-child {   border: none;     }
 }  
+
 @media ( min-width:768px ) and ( max-width:1024px ) {
 .magicminerals-product.set1, 
 .magicminerals-product.set2 { background-size: 150px auto; }
@@ -383,7 +373,6 @@ ul.footer-muenu-ul li { padding: 0 6px; }
 	.tint-featured .tint-col { margin-bottom:30px; }
 	.shades-notes-bx { width:100%; border-bottom:1px solid #eeb09f;border-right:none;
 	padding:15px 0; }
-	.magicminerals-product.set1	{ padding-top: 80px; background-size: 80px auto; }
 	.magicminerals-product.set1 h3 { margin-bottom: 40px; }
 	.magicminerals-inner .image-bx, .creator-section .jerome-pic,
 	.magicminerals-inner .text-bx, .creator-section .jerome-info	{
@@ -391,7 +380,6 @@ ul.footer-muenu-ul li { padding: 0 6px; }
 	.magicminerals-inner, .creator-section .container { flex-direction: column; }
 	.magicminerals-product h4 { font-size: 20px; margin-bottom: 12px; }
 	.magicminerals-product.set2 .image-bx { order:inherit; }
-	.magicminerals-product.set2 { padding: 50px 0; background-size: 80px auto; }
 	.find-shades-list li { width:50%; }
 	.find-shades h3 { margin-bottom: 25px; }
 	.find-shades { padding:40px 0;}
@@ -401,8 +389,18 @@ ul.footer-muenu-ul li { padding: 0 6px; }
 	.creator-section { padding-bottom:20px; }
 	footer.footer-landing { padding:30px 0; }
 	ul.footer-muenu-ul li { padding: 12px 0; border-right: none; display: block; }
-	.footer-menu { padding-bottom:30px; }
+    .footer-menu { padding-bottom:30px; }
+    ul.featured-ul li {  border: 1px solid #f4dcdc;  padding: 20px;  margin-bottom: 20px;   }
+    ul.featured-ul br { display: none; }
+    .featured-collection { margin-bottom:0; }
+    .para-list span { text-align: left;  display: block; margin-bottom: 10px; }
+    .magicminerals-product { padding-bottom:40px; }
+    .magicminerals-inner .text-bx { text-align:center; }
+    .magicminerals-inner .image-bx {    margin-bottom: 20px;     }
+    .magicminerals-set { padding-top:50px; }
+    .para-list { margin-bottom:30px; }
 }
+
 
 .cms-celebrating-50-years-of-beauty .page-wrapper .page-main {
     padding: 0px 0px;
@@ -445,6 +443,19 @@ require([
 			})
 		}
 		decValue();
+
+
+		jQuery(function() {
+        jQuery('a[href*=\\#]:not([href=\\#])').on('click', function() {
+            var target = $(this.hash);
+            target = target.length ? target : jQuery('[name=' + this.hash.substr(1) +']');
+            if (target.length) {
+                jQuery('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        });
   });
 });
 </script>	
