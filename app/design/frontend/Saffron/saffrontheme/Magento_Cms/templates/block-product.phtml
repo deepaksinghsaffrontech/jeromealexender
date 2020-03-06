@@ -7,7 +7,7 @@
  <div class="shades-boxes">   
 <h2>Foundation Shades</h2>
 
-<?php  foreach ($skulist as  $item) {
+<?php $i= 1;  foreach ($skulist as  $item) {
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();  
 $productRepository = $objectManager->get('\Magento\Catalog\Model\ProductRepository');
 $product = $productRepository->get($item);
@@ -28,20 +28,28 @@ $attr = $product->getResource()->getAttribute('foundation_shades');
 
   $addToCartUrl =  $listBlock->getAddToCartUrl($product); ?>
 
-
-
-
 <?php  if ($attr->usesSource()) {?>
-    <div style="background: <?php echo $result[0]['value'] ;?> no-repeat center;
-    background-size: initial;"    class="swatch-option " > 
+    <li style="background: <?php echo $result[0]['value'] ;?> no-repeat center;
+    background-size: initial;"    class="swatch-option tab-link <?php if($i=='1'){echo 'current';}?>" data-tab="tab-<?php echo $i ;?>"  > 
     <a href=" <?php echo $product->getProductUrl() ;?>">
     </a>
     <span> <?php echo  $optionText = $attr->getSource()->getOptionText($product['foundation_shades']) ?>
     </span>
-    </div>
+    </li>
 <?php }?>
 
-<div class="qty-buy-col">
+
+
+
+ <?php  $i++ ;}  ?>
+
+<?php  $i= 1;foreach ($skulist as  $item) {
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();  
+$productRepository = $objectManager->get('\Magento\Catalog\Model\ProductRepository');
+$product = $productRepository->get($item);?>
+
+
+<div class="qty-buy-col tab-content <?php if($i=='1'){echo 'current';}?>"  id="tab-<?php echo $i ;?>" >
 
  <form data-role="tocart-form" action="<?php echo $addToCartUrl; ?>" method="post"> 
     <div class="quanty-col"><input id="IncDec"  name="qty" type="number" value="1"  data-validate="{"required-number":true,"validate-item-quantity":{"minAllowed":1,"maxAllowed":10000}}"/> <button class="btnAdd" type="button">+</button> <button class="btnMin" type="button">-</button></div>
@@ -56,9 +64,8 @@ $attr = $product->getResource()->getAttribute('foundation_shades');
 </div>
 
 
- <?php }  ?>
 
-
+<?php $i++ ;}?>
 
 
 
@@ -77,29 +84,6 @@ $attr = $product->getResource()->getAttribute('foundation_shades');
 
 
 
-<div class="container">
-
-    <ul class="tabs">
-        <li class="tab-link current" data-tab="tab-1">Tab One</li>
-        <li class="tab-link" data-tab="tab-2">Tab Two</li>
-        <li class="tab-link" data-tab="tab-3">Tab Three</li>
-        <li class="tab-link" data-tab="tab-4">Tab Four</li>
-    </ul>
-
-    <div id="tab-1" class="tab-content current">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </div>
-    <div id="tab-2" class="tab-content">
-         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-    <div id="tab-3" class="tab-content">
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    </div>
-    <div id="tab-4" class="tab-content">
-        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </div>
-
-</div><!-- container -->
 
 
 
