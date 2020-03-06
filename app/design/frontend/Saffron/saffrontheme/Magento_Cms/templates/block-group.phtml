@@ -421,6 +421,10 @@ require([
 	'jquery',
 	], function () {
 	jQuery(document).ready(function($) {
+	   
+     function myFunction(obj){
+     	alert(obj);
+     }
 	   //increase-decrease input quantity javascript
 		var i = 0;
 		var x = document.querySelector('.IncDec');
@@ -443,10 +447,10 @@ require([
 			})
 		}
 		decValue();
-	});
 
-    //onclick anchor scroll div javascript
-    jQuery(function() {
+
+
+		jQuery(function() {
         jQuery('a[href*=\\#]:not([href=\\#])').on('click', function() {
             var target = jQuery(this.hash);
             alert('+++');
@@ -458,7 +462,14 @@ require([
                 return false;
             }
         });
-});
+     });
+	
+
+
+	});
+
+    //onclick anchor scroll div javascript
+    
 });	
 </script>	
 
