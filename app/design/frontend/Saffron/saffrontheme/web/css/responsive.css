@@ -1018,10 +1018,31 @@ body .modal-popup.confirm .modal-inner-wrap { width:90%; }
 .product-info-main .product-info-stock-sku .product.attribute.sku {
 	display: inline-block; margin-left: 5px;
 }
-.catalog-product-view .product-info-main .page-title-wrapper h1, .product-info-main .page-title-wrapper h1.page-title {  margin-bottom: 15px; }
+.catalog-product-view .product-info-main .page-title-wrapper h1, .product-info-main .page-title-wrapper h1.page-title {  margin-bottom: 15px; font-size:24px; }
 .product.media { margin-bottom: 15px; }
 .fotorama__nav-wrap.fotorama__nav-wrap--horizontal { margin-top: 10px; }
 .product-options-wrapper .swatch-opt { margin-top: 0; }
+.fotorama__arr--next { right:-25px; }
+.fotorama__arr--prev { left:-25px; }
+
+.catalog-product-view .product.media .gallery-placeholder { width:100%; }
+.product.media .fotorama__stage {
+    width: 100% !important;
+    height: 300px !important;
+    min-width: 300px;
+}
+.product.media .fotorama__stage__shaft.fotorama__grab {
+    width: 100% !important;
+    max-width: 100%;
+    min-width: 300px;
+}
+.fotorama__stage__frame .fotorama__img {
+    max-width: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
 
