@@ -55,8 +55,8 @@ foreach($categrie['categries_id'] as $item){
 						<?php 
 						$short_description = $_product->getShortDescription();
 	                    $short_description = preg_replace("/<img[^>]+\>/i", "", $short_description); 
-                         if (strlen($short_description) > 100){
-                        echo strip_tags(substr($short_description, 0, strpos($short_description,' ',100))).'...';
+                         if (strlen($short_description) > 20){
+                        echo strip_tags(substr($short_description, 0, strpos($short_description,' ',20))).'...';
                            } 
                        else { 
                        echo strip_tags($short_description); 
