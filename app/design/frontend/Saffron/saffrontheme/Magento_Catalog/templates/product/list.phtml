@@ -99,8 +99,8 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
 					    <?php 
 							$short_description = $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description');
 	                      $short_description = preg_replace("/<img[^>]+\>/i", "", $short_description); 
-                         if (strlen($short_description) > 100){
-                        echo strip_tags(substr($short_description, 0, strpos($short_description,' ',100))).'...';
+                         if (strlen($short_description) > 130){
+                        echo strip_tags(substr($short_description, 0, strpos($short_description,' ',130))).'...';
                            } 
                        else { 
                       echo strip_tags($short_description); 
