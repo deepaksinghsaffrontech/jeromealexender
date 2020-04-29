@@ -110,7 +110,7 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
     if(isset($region['region_id'])){ $region['region_id'];}
      
  
-    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+ $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
     $cart = $objectManager->get('\Magento\Checkout\Model\Cart');
     $itemsCollection = $cart->getQuote()->getItemsCollection();
     $itemsVisible = $cart->getQuote()->getAllVisibleItems();
@@ -122,26 +122,31 @@ class Newshipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implem
     $productId = $item->getProductId();
     $product1 = $objectManager->create('Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable')->getParentIdsByChild($productId);
     $product_id = $productId;
-    if(($product_id  == '12')||($product_id  == '34')||($product_id  == '33')||($product_id  == '32')||($product_id  == '74')||($product_id  == '76') ||($product_id  == '144')||($product_id  == '143')||($product_id  == '145')||($product_id  == '138')||($product_id  == '129')||($product_id  == '107')||($product_id  == '142')){
+     $_product = $objectManager->get('Magento\Catalog\Model\Product')->load($product_id);
+    $shippigcheck = $_product->getData('not_allow_shipping');
+      if(($shippigcheck == '1')){
      $Product_id[$i]  =  $productId;
      $i ++;
-   }
-}
+      }
+	}
+
  
  if(isset($Product_id[0])){
-    if(($Product_id[0] =='12')||($Product_id[0] =='34')||($Product_id[0] =='33')||($Product_id[0] =='32')||($Product_id[0] =='74')||($Product_id[0] =='76')||($Product_id[0] =='143')||($Product_id[0] =='144')||($Product_id[0] =='145') ||($Product_id[0]  == '138')||($Product_id[0]  == '129')||($Product_id[0]  == '107')||($Product_id[0]  == '142')){
-      
-			 if($region['country_id'] =='CA'){
+	$_product = $objectManager->get('Magento\Catalog\Model\Product')->load($product_id);
+    $shippigcheck = $_product->getData('not_allow_shipping'); 
+	 
+    if(($shippigcheck == '1')){
+      if($region['country_id'] =='CA'){
 				
-			 }else if(($region['region_id'] =='21')||($region['region_id'] =='2')||( $region['region_id'] =='52') ){
+		}else if(($region['region_id'] =='21')||($region['region_id'] =='2')||( $region['region_id'] =='52') ){
 			   
-			 }else{
-				   return $result;
+		}else{
+			   return $result;
 				  
-			  }
+		}
         
      }  
-     }
+   }
    else{
 		return $result;
 	} 
